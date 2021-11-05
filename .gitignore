@@ -5,3 +5,10 @@
 *.erb.orig
 tmp/*
 mybook-pdf/*
+*.pdf
+kzbook-pdf/*
+images_orig/*
+imagesBase/*
+node_modules/*
+contents_orig/*
+drafts/*

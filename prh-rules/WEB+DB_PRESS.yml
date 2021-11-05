@@ -2463,7 +2463,7 @@ rules:
     pattern:  /(?:([^/.])\bgithub)|(?:github\b([^/.]))/
   - expected: $1GitHub$2
     pattern:  /(?:([^/.])\bGithub)|(?:Github\b([^/.]))/
-  - expected: Git
+  - expected: git
     pattern:  /\bGit\b/i
   - expected: Gmail
     pattern:  /\bGmail\b/i
@@ -2942,7 +2942,6 @@ rules:
     pattern:  /\bVMware\b/i
   - expected: WARファイル
     pattern:  /\bWARファイル\b/i
-  - expected: Web
   - expected: Web
     pattern:
       - ウェブ

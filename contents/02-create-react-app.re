@@ -1,38 +1,42 @@
 = スタートプロジェクトの作成
 
 //abstract{
-  この章では、「create-react-app」と言う、reactアプリケーションの雛形がコマンドひとつで作成できる優れものを使用して、
+  本章では、「create-react-app」と言う、reactアプリケーションのひな型がコマンドひとつで作成できる優れものを使用して、
 スタート用のアプリケーションを作成し、ブラウザで表示するまでを行います。
 
-　また、作成するプロジェクトは、Typescriptを使用します。コード記法の指摘・修正を行えるよう「eslint」、「prettier」の設定も行います。
+　また、作成するプロジェクトは、TypesScriptを使用します。コード記法の指摘・修正を行えるよう「eslint」、「prettier」の設定も行います。
 
 //}
 =={sec-01command} create-react-appコマンド
-Reactアプリケーションを作成するためには、
-
+Reactアプリケーションを作成するためには、@<br>{}
+@<br>{}
  * 「nodeプロジェクト」に必要なpackage.jsonを作成
  * reactなど必要なライブラリのインストール
- * 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(babel使用)
- * 出力するファイルを纏める(バンドルする-webpack使用)
+ * 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(Babel使用)
+ * 出力するファイルをまとめる(バンドルする - webpack使用)
 
- など、reactライブラリのインストール以外にも、babelやwebpackをインストールして設定ファイルを作成し、
- 使用するライブラリーによっては、babelのプラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業が大変です。
+ など、reactライブラリのインストール以外にも、Babelやwebpackをインストールして設定ファイルを作成し、
+ 使用するライブラリによっては、Babelのプラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業がたいへんです。
 
- しかし、「そんなメンドウなことは、やってられない。」ので、
- すぐにでもコードを書き始めることのできるスタート用アプリケーションが、reactの開発元であるFacebookから提供されています。
+ しかし、「そんなメンドウなことは、やってられない。」と誰しもが思ったか、
+ すぐにでもコードを書き始めることのできるスタート用アプリケーションが、reactの開発元のFacebookから提供されています。
 
- 更に、そのスタート用アプリケーションは、コマンド一発でインストールすることができます。
+ さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
 
  ターミナルを起動し、プロジェクトフォルダを作成するフォルダへ移動します。
 
 //terminal[][create-react-appでスタート用アプリケーション作成]{
-  $ > yarn create react-app プロジェクト名 --template typescript
+  $ > npx create react-app プロジェクト名 --template typescript
 //}
 
-で、「プロジェクト名」のフォルダが作成され必要なライブラリがインストールされます。
+で、「プロジェクト名」のフォルダが作成され、スグにでも開発に取りかかれます。
+
+#@# create-react-app やる夫 注釈
+
+
 
 //terminal[][]{
-  Success! Created yourproject at /Users/tmkkz/Documents/Devs/playground/yourproject
+  Success! Created yourproject at yourproject_path
   Inside that directory, you can run several commands:
 
     yarn start
@@ -59,25 +63,25 @@ Reactアプリケーションを作成するためには、
 で、プロジェクト作成が完了します。
 
 //note[github]{
-  ここまでの作業は、githubにあります。以下のコマンドでクローンしてください。
+  ここまでの作業は、GitHubにあります。
 
-//terminal[][githubから]{
+//terminal[][GitHubから]{
     $ > git clone -b 00_create-react-app https://github.com/tmkkz/yaruo.git
 //}
 
 //}
 
 =={sec-02yarnstart} アプリケーションを実行
-アプリケーションが作成出来ましたので、実行してみます。
+アプリケーションが作成できましたので、実行してみます。
 
 ターミナルに表示されているように、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 //terminal[][]{
   $ > cd プロジェクト名
-  $ > yarn start
+  $ > npm start
 //}
 
-すると、webpackに同梱されている開発用のweb serverが起動し、ディフォルトでは、port:3000でアプリケーションへアクセスできます。
+すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトでは、port:3000でアプリケーションへアクセスできます。
 
 //terminal[][]{
 Compiled successfully!
@@ -85,7 +89,7 @@ Compiled successfully!
 You can now view yourproject in the browser.
 
   Local:            http://localhost:3000
-  On Your Network:  http://192.168.1.10:3000
+  On Your Network:  http://pcのローカルIPアドレス:3000
 
 Note that the development build is not optimized.
 To create a production build, use yarn build.

@@ -2,13 +2,15 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}Node.jsについて}{\reset@font\mtcSSfont 2}{subsection.1.1.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}Node.jsのインストールの前に}{\reset@font\mtcSSfont 8}{subsection.1.1.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.3}nvm}{\reset@font\mtcSSfont 9}{subsection.1.1.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}yarn}{\reset@font\mtcSfont 15}{section.1.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}yarnとは？}{\reset@font\mtcSSfont 15}{subsection.1.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Package Manager(npm,yarn)}{\reset@font\mtcSfont 15}{section.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Package managerとは？}{\reset@font\mtcSSfont 15}{subsection.1.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}npmとは？}{\reset@font\mtcSSfont 15}{subsection.1.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.3}yarnとは？}{\reset@font\mtcSSfont 15}{subsection.1.2.3}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Microsoft Visual Studio Code + 拡張機能}{\reset@font\mtcSfont 16}{section.1.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.1}VSCodeのインストール}{\reset@font\mtcSSfont 16}{subsection.1.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.2}VSCodeの拡張機能}{\reset@font\mtcSSfont 17}{subsection.1.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.3}Eslint}{\reset@font\mtcSSfont 18}{subsection.1.3.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.4}Prettier}{\reset@font\mtcSSfont 19}{subsection.1.3.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Google Chrome + 拡張機能}{\reset@font\mtcSfont 20}{section.1.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Google Chromeのインストール}{\reset@font\mtcSSfont 20}{subsection.1.4.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}第1章のまとめ}{\reset@font\mtcSfont 25}{section.1.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.4}Prettier}{\reset@font\mtcSSfont 18}{subsection.1.3.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Google Chrome + 拡張機能}{\reset@font\mtcSfont 19}{section.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Google Chromeのインストール}{\reset@font\mtcSSfont 19}{subsection.1.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}第1章のまとめ}{\reset@font\mtcSfont 24}{section.1.5}}

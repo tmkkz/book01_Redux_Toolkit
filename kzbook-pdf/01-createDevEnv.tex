@@ -11,12 +11,10 @@
 「なぜ、これらが必要なのか？」\\[0pt]
 
   は、とりあえず置いといて\\[0pt]
-    * Node.js\\[0pt]
-    * yarn\\[0pt]
-    * Microsoft Visual Studio Code + 拡張機能\\[0pt]
-    * Google Chrome + 拡張機能\\[0pt]
-
-
+  　・ Node.js\\[0pt]
+  　・ yarn\\[0pt]
+  　・ Microsoft Visual Studio Code + 拡張機能\\[0pt]
+  　・ Google Chrome + 拡張機能\\[0pt]
 をインストールしてください。これらは、すべて無償で提供されています。\\[0pt]
 \\[0pt]
 なお、これらの準備が整っている方は、本章を読み飛ばしていただいてもかまいません。
@@ -58,7 +56,7 @@
 \clearpage
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[_082507357]{リスト1.1: }\seqsplit{  const http = require('http');
+\begin{starterprogram}[_862077035]{リスト1.1: }\seqsplit{  const http = require('http');
 
   const hostname = '127.0.0.1';
   const port = 3000;
@@ -77,7 +75,7 @@
 このスクリプトを「app.js」のファイル名で保存し、実行します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_161885662]{リスト1.2: app.jsを実行}\seqsplit{  \textgreater{} node app.jp
+\begin{starterterminal}[_824521234]{リスト1.2: app.jsを実行}\seqsplit{  \textgreater{} node app.jp
   Server running at http://127.0.0.1:3000/
 }\end{starterterminal}
 
@@ -195,7 +193,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGit
 お使いのTerminalから以下のコマンドを実行してください。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_217808539]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.37.2/install.sh \textbar{} bash}\end{starterterminal}
+\begin{starterterminal}[_347960161]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
 
 インストール完了後には、.zshrcへ以下を追加してください。
 
@@ -205,7 +203,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGit
 \ParagraphEnd
 
 \paragraph*{Windows}
-nvm{-}windowsのリリースページ:\url{https://github.com/coreybutler/nvm-windows/releases/tag/1.1.7}より、
+nvm{-}windowsのリリースページ:\url{https://github.com/coreybutler/nvm-windows/releases/tag/1.1.8}より、
 最新版をダウンロードしインストールしてください。
 
 \ParagraphEnd
@@ -317,7 +315,7 @@ This is a partial list. For a complete list, visit https://nodejs.org/download/r
 
 \paragraph*{Node.js 最新LTS版をインストール}
 それでは、最新のLTS版をインストールします。
-インストールは、Mac、Windowsとも、「nvm install インストールするバージョン番号」でインストールできます。
+インストールは、Mac、Windowsとも、「nvm install xx.yy.zz(インストールするバージョン番号)」でインストールできます。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Mac OSX}\seqsplit{\textgreater{} nvm install v14.15.2
@@ -372,7 +370,7 @@ nvm use 14.15.2}\end{starterterminal}
 
 \paragraph*{使用するNode.jsのバージョン切り替え}
 先ほどの「インストールされているNode.jsのバージョン表示」で、現在使われているNode.jsのバージョンも表示されています。
-使用するNode.jsのバージョンを変更する場合には、「nvm use 使用するバージョン番号」で切り替えます。
+使用するNode.jsのバージョンを変更する場合には、「nvm use xx.yy.xx(使用するバージョン番号)」で切り替えます。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Node.jsのバージョン確認と切替}\seqsplit{\textdollar{} \textgreater{} node {-}v
@@ -386,16 +384,28 @@ v12.18.3}\end{starterterminal}
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
-\section{yarn}
+\section{Package Manager(npm,yarn)}
 \keeplastskip{
   \label{sec:1-2}
   \label{sec-yarn}
   \par\nobreak
 }
 
-\subsection{yarnとは？}
+\subsection{Package managerとは？}
 \keeplastskip{
   \label{sec:1-2-1}
+  \par\nobreak
+}
+
+\subsection{npmとは？}
+\keeplastskip{
+  \label{sec:1-2-2}
+  \par\nobreak
+}
+
+\subsection{yarnとは？}
+\keeplastskip{
+  \label{sec:1-2-3}
   \par\nobreak
 }
 
@@ -410,11 +420,11 @@ npmと比較して
 
 \subsubsection*{yarnのインストール}
 \keeplastskip{
-  \label{sec:1-2-1-1}
+  \label{sec:1-2-3-1}
   \par\nobreak
 }
 
-Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールである「npm」がインストールされています。
+Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールの「npm」がインストールされています。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{npmのバージョン確認}\seqsplit{\textdollar{} \textgreater{} npm {-}v
@@ -425,7 +435,7 @@ yarnをインストールするために、この「npm」コマンドを使用�
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{yarnのインストール}\seqsplit{\textdollar{} \textgreater{} npm install {-}g yarn}\end{starterterminal}
 
-コマンドオプションの「{-}g」は、global指定でPC全体でコマンドが使用できるようになります。
+コマンドオプションの「{-}g」は、global指定することによりPC全体でコマンドが使用できます。
 {-}gオプションなしでは、そのプロジェクトでのみ有効となります。
 
 yarnの使い方は、今後使う機会毎に説明します。
@@ -439,14 +449,14 @@ yarnの使い方は、今後使う機会毎に説明します。
 
 Microsoft社が無料で提供している「テキストエディタ」です。Electron:\url{https://www.electronjs.org/}をベースにしたオープンソースで開発されています。
 
-Electronは、Github社が「Atom(テキストエディタ)」を開発するために構築したフレームワークで、
-HTML・CSS・JavaScriptを使用して、Windows、Mac、Linuxのマルチプラットフォームで動作するアプリケーションを開発することができます。
+Electronは、GitHub社が「Atom(テキストエディタ)」を開発するために構築したフレームワークで、
+HTML・CSS・JavaScriptを使用して、Windows、Mac、Linuxのマルチプラットフォームで動作するアプリケーションを開発できます。
 
 Visual Studio Code(以後は、VSCodeと表記します。)は、コードを記述する「テキストエディタ」として非常に優秀ですが、
 拡張機能(Google ChromeやFirefoxなどのブラウザ同様に拡張機能が多くの開発者により公開されています。)を追加することで
 JavaScript以外の言語(C\#、pythonなど)でも使えます。
 
-デバッグなども行えるため、Web開発を行う上出は、事実上の標準と言っても良いかもしれません。有料では、Jetbrains社:\url{https://www.jetbrains.com/}の
+デバッグなども行えるため、Web開発では、事実上の標準と言っても良いでしょう。有料では、Jetbrains社:\url{https://www.jetbrains.com/}の
 Webstormがありますが、今回は、無償のVSCodeを使用します。
 
 \subsection{VSCodeのインストール}
@@ -455,14 +465,13 @@ Webstormがありますが、今回は、無償のVSCodeを使用します。
   \par\nobreak
 }
 
-VSCodeのインストールは、
-
+VSCodeのインストールは\\[0pt]
 本家サイト
 \url{https://code.visualstudio.com/}
 
 から、ダウンロード後インストールしてください。
 
-または、以下の方法でもインストールすることができます。
+または、以下の方法でもインストールできます。
 
 \subsubsection*{Windows}
 \keeplastskip{
@@ -470,26 +479,26 @@ VSCodeのインストールは、
   \par\nobreak
 }
 
-パッケージマネージャーに「Chocolatey」をお使いの方は、
+パッケージマネージャーに「Chocolatey」をお使いの方は、\\[0pt]
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Chocolatey}\seqsplit{  choco install vscode}\end{starterterminal}
 
-にて、インストールすることができます。
+にて、インストールできます。
 
-\subsubsection*{Mac OSX}
+\subsubsection*{macOS}
 \keeplastskip{
   \label{sec:1-3-1-2}
   \par\nobreak
 }
 
-パッケージマネージャーに「brew」をお使いの方は、
+パッケージマネージャーに「brew」をお使いの方は、\\[0pt]
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Homebrew}\seqsplit{  \textdollar{} \textgreater{} brew update
   \textdollar{} \textgreater{} brew cask install visual{-}studio{-}code}\end{starterterminal}
 
-にて、インストールすることができます。
+にて、インストールできます。
 
 \subsection{VSCodeの拡張機能}
 \keeplastskip{
@@ -497,7 +506,7 @@ VSCodeのインストールは、
   \par\nobreak
 }
 
-VSCodeは、プラグイン形式で拡張機能を追加することができます。
+VSCodeは、プラグイン形式で拡張機能を追加できます。
 
 React、Reduxを使用したプロジェクトでは、以下をインストールすると便利です。
 
@@ -511,23 +520,9 @@ VSCodeを起動し、左ツールバーの拡張機能アイコンをクリッ�
 
 ここの検索窓に拡張機能の名前、キーワードを入力して検索します。
 
-\subsubsection*{Bracket Pair Colorizer}
-\keeplastskip{
-  \label{sec:1-3-2-1}
-  \par\nobreak
-}
-
-対になるカッコ「｛」、「｝」を同じ色で表示してくれます。
-
-\begin{reviewimage}[H]%%01_05vscodeExtension_bracketsPair
-\includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_05vscodeExtension_bracketsPair.png}%
-\reviewimagecaption{Beautify}
-\label{image:01-createDevEnv:01_05vscodeExtension_bracketsPair}
-\end{reviewimage}
-
 \subsubsection*{Debugger for Chrome}
 \keeplastskip{
-  \label{sec:1-3-2-2}
+  \label{sec:1-3-2-1}
   \par\nobreak
 }
 
@@ -576,9 +571,9 @@ Eslintと同じように、コード記法の間違いの指摘・修正やコ�
   \par\nobreak
 }
 
-既に、ご存じだと思いますが、ブラウザシェアで1位になっているGoogle社が提供するブラウザです。
+ご存じGoogle社が提供するブラウザです。
 
-PCへインストールされていない方は、
+PCへインストールされていない方は、\\[0pt]
 
 \subsection{Google Chromeのインストール}
 \keeplastskip{
@@ -595,17 +590,17 @@ Google Chrome:\url{https://www.google.com/intl/ja/chrome/}
 \end{reviewimage}
 
 ===　Google Chromeの拡張機能
-こちらも、VSCodeと同様に拡張機能を追加することで、更に便利に使うことができます。
+こちらも、VSCodeと同様に拡張機能を追加することで、さらに便利に使うことができます。
 
 React、Reduxの開発では、以下の拡張機能は必須と言っても良いほどです。
 
-拡張機能のインストールは、chromeウェブストアで検索してください。
+拡張機能のインストールは、Chrome Web storeで検索してください。
 
-chromeウェブストア:\url{https://chrome.google.com/webstore/category/extensions?hl=ja}
+Chrome Web store:\url{https://chrome.google.com/webstore/category/extensions?hl=ja}
 
 \begin{reviewimage}[H]%%01_13chromeWebstore
 \includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_13chromeWebstore.png}%
-\reviewimagecaption{chromeウェブストア}
+\reviewimagecaption{Chrome Web store}
 \label{image:01-createDevEnv:01_13chromeWebstore}
 \end{reviewimage}
 
@@ -616,7 +611,7 @@ chromeウェブストア:\url{https://chrome.google.com/webstore/category/extens
 }
 
 Reactを使用して作成したページは、最終的にはページ出力用JavaScriptに変換され、ブラウザで表示されるときにはHTMLとして出力されます。
-この拡張機能を使うと、Google ChromeのDevToolsにComponentsタブが作成され、Props、Stateを確認することができます。
+この拡張機能を使うと、Google ChromeのDevToolsにComponentsタブが作成され、Props、Stateを確認できます。
 
 React Developer Tools
 
@@ -636,7 +631,7 @@ React Developer Tools
   \par\nobreak
 }
 
-後ほど、Reduxの章で改めて説明しますが、「タイムトラベルデバッグ(実行されたアクションを遡る)」が簡単にできるようになります。
+のちほど、Reduxの章であらためて説明しますが、「タイムトラベルデバッグ(実行されたアクションをさかのぼる)」が簡単にできます。
 また、実行されたアクション、変更されたStateが「新」「旧」とあり、どの部分が変更されたのかも確かめるのも簡単です。
 
 Redxu DevTools
