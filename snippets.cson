@@ -20,6 +20,12 @@
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 '.source.review':
+  'Chapter':
+    'prefix': 'ch'
+    'body': '={chap-heading}'
+  'Section':
+    'prefix': 'sec'
+    'body': '=={sec-heading}'
   'Single Line Comment':
     'prefix': 'slc'
     'body': '#@#'

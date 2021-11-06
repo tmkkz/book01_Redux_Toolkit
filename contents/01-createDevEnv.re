@@ -9,7 +9,6 @@
 
   は、とりあえず置いといて@<br>{}
   　・ Node.js@<br>{}
-  　・ yarn@<br>{}
   　・ Microsoft Visual Studio Code + 拡張機能@<br>{}
   　・ Google Chrome + 拡張機能@<br>{}
 をインストールしてください。これらは、すべて無償で提供されています。@<br>{}
@@ -65,14 +64,14 @@
 //image[01_00browser_helloWorld][app.jsの実行][scale=1.0]
 //clearpage
 
-通常のHTMLに埋め込まれたJavaScriptをブラウザからで実行すると、
-OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)などは制限されますが、
+通常のHTMLに埋め込まれたJavaScriptをブラウザから実行すると、
+OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)ことなどは制限されますが、
 Node.jsで実行するとOSの機能も使用できます。
 
 //note[]{
 詳しくは、本家の「@<href>{https://nodejs.org/ja/about/, Node.jsとは}」を参照してください。
 //}
-
+#@# Denoがあることを伝える
 //clearpage
 
 ==== Node.jsについて
@@ -124,9 +123,9 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 
 nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、バージョンを切り替えることが簡単にできます。
 
-GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
+Hub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
 
-Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がGitHub上で公開されています。
+Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がHub上で公開されています。
 コマンドが本家と少し違いますが、複数バージョンのインストール・バージョンの切り替えなど機能は問題ありません。
 
 ===== nvmのインストール
@@ -342,40 +341,44 @@ v12.18.3
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
+#@+++
+  comment here
 
-=={sec-yarn} Package Manager(npm,yarn)
-=== Package managerとは？
-=== npmとは？
-=== yarnとは？
+    =={sec-yarn} Package Manager(npm,yarn)
+    === Package managerとは？
+    === npmとは？
+    === yarnとは？
 
-yarnは、nodeプロジェクトにおいて必要な機能を簡単に追加できるようにするnpm(node package manager)互換の
-package management tool(パッケージ管理ツール)です。
+    yarnは、nodeプロジェクトにおいて必要な機能を簡単に追加できるようにするnpm(node package manager)互換の
+    package management tool(パッケージ管理ツール)です。
 
-npmと比較して
-* パッケージのインストールが早い
-* コマンドがnpmよりも簡潔
-* npmよりもパッケージのバージョン管理がしっかりしている
-などの利点があります。
+    npmと比較して
+    * パッケージのインストールが早い
+    * コマンドがnpmよりも簡潔
+    * npmよりもパッケージのバージョン管理がしっかりしている
+    などの利点があります。
 
-==== yarnのインストール
+    ==== yarnのインストール
 
-Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールの「npm」がインストールされています。
+    Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールの「npm」がインストールされています。
 
-//terminal[][npmのバージョン確認]{
-$ > npm -v
-6.14.6
-//}
+    //terminal[][npmのバージョン確認]{
+    $ > npm -v
+    6.14.6
+    //}
 
-yarnをインストールするために、この「npm」コマンドを使用します。
+    yarnをインストールするために、この「npm」コマンドを使用します。
 
-//terminal[][yarnのインストール]{
-$ > npm install -g yarn
-//}
+    //terminal[][yarnのインストール]{
+    $ > npm install -g yarn
+    //}
 
-コマンドオプションの「-g」は、global指定することによりPC全体でコマンドが使用できます。
--gオプションなしでは、そのプロジェクトでのみ有効となります。
+    コマンドオプションの「-g」は、global指定することによりPC全体でコマンドが使用できます。
+    -gオプションなしでは、そのプロジェクトでのみ有効となります。
 
-yarnの使い方は、今後使う機会毎に説明します。
+    yarnの使い方は、今後使う機会毎に説明します。
+
+#@---
 
 =={sec-vscode} Microsoft Visual Studio Code + 拡張機能
 Microsoft社が無料で提供している「テキストエディタ」です。Electron:@<href>{https://www.electronjs.org/}をベースにしたオープンソースで開発されています。
@@ -401,9 +404,15 @@ VSCodeのインストールは@<br>{}
 または、以下の方法でもインストールできます。
 
 ==== Windows
-パッケージマネージャーに「Chocolatey」をお使いの方は、@<br>{}
+パッケージマネージャー「Chocolatey」をお使いの方は、@<br>{}
 //terminal[][Chocolatey]{
   choco install vscode
+//}
+にて、インストールできます。
+
+パッケージマネージャー「winget」をお使いの方は、@<br>{}
+//terminal[][winget]{
+  winget install -e --id Microsoft.VisualStudioCode
 //}
 にて、インストールできます。
 
@@ -485,7 +494,6 @@ React、Reduxの開発環境は、できましたでしょうか？
 
  * nvm
  * node
- * yarn
  * VSCode + 拡張機能
  * Google Chrome + 拡張機能
 
