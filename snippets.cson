@@ -19,97 +19,148 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+#b	太字
+#br	改行
+#chap	章番号
+#chapref	章番号+タイトル
+#cmd/	コマンド実行結果
+#code	コード
+#column	コラム
+#dlist	用語リスト
+#emlist/	リスト（非採番）
+#emlistnum/	行番号付きリスト（非採番）
+#fn	脚注(参照)
+#fn/	脚注
+#hd	見出し（参照）
+#href	リンク
+#icon	アイコン
+#img	図表（参照）
+#img/	図表
+#indepimg/	図表（非採番）
+#kw	キーワード
+#label	ラベル（参照）
+#label/	ラベル
+#lead/	リード文
+#list	リスト(参照)
+#list/	リスト
+#listnum/	行番号付きリスト
+#olist	番号付き箇条書き
+#quote/	引用
+#ruby	振り仮名
+#table	テーブル（参照）
+#table/	テーブル
+#title	章タイトル
+#tt	等幅
+#u	下線
+#ulist	番号なし箇条書き
 '.source.review':
   'Chapter':
     'prefix': 'ch'
-    'body': '={chap-heading}'
+    'body': '={${1:chap-heading}}$0'
+  'Chapter Reference':
+    'prefix': 'chapref'
+    'body': '@<chapref>{${1:chapter-heading}}$0'
   'Section':
     'prefix': 'sec'
-    'body': '=={sec-heading}'
+    'body': '=={${1:sec-heading}}$0'
+  'Section Reference':
+    'prefix': 'secref'
+    'body': '@<secref>{${1:chap-id}|${2:sec-heading}}$0'
+  'UnOrderd List':
+    'prefix': 'ulist'
+    'body': ' * ${1:1段深くは**使う}\n'
+  'Orderd List':
+    'prefix': 'olist'
+    'body': ' 1. ${1:続けるなら番号増やす}\n'
+  'Defines List':
+    'prefix': 'dlist'
+    'body': ': ${1:用語}\n\t${2:解説}\n'
   'Single Line Comment':
     'prefix': 'slc'
-    'body': '#@#'
+    'body': '#@#$0'
   'Multi-line Comment':
     'prefix': 'mlc'
     'body': """
       #@+++
-        comment here
+        ${1:comment here}
       #@---
-      """
+    """
   'Bold':
     'prefix': 'bld'
-    'body': '@<b>{}'
+    'body': '@<b>{${1:太字にする単語}}$0'
   'Strong':
     'prefix': 'strng'
-    'body': '@<strong>{}'
+    'body': '@<strong>{${1:強調する単語}}$0'
   'Program List':
-    'prefix': 'plst'
+    'prefix': 'plist'
     'body': """
-      //list[label][desc]{
+      //list[${1:label}][${2:desc}]{
 
-      //}
-      """
+      //}\n$0
+    """
+  'Program List Reference':
+    'prefix': 'plist/'
+    'body': '@<list>{${1:label of list}}$0'
   'Terminal':
     'prefix': 'term'
     'body': """
-      //terminal[label][desc]{
+      //terminal[${1:label}][${2:desc}]{
 
-      //}
-      """
+      //}\n$0
+    """
   'Footnote':
     'prefix': 'ftn'
     'body': """
-      本文テキスト@<fn>{label}
+      @<fn<{${1:label}}
 
-      //footnote[label][脚注テキスト]
-      """
+      //footnote[${2:label}][${3:脚注テキスト}]$0
+    """
   'Image':
     'prefix': 'img'
-    'body': '//image[fileName][desc][scale=1.0]'
-  'Note':
-    'prefix': 'note'
-    'body': """
-      //note[note title]{
-        note text
-      //}
-      """
+    'body': '//image[${1:fileName}][${2:desc}][scale=1.0]$0'
   'New Line':
     'prefix': 'br'
-    'body': '@<br>{}'
+    'body': '@<br>{}$0'
   'Empty Line':
     'prefix': 'kugyo'
-    'body': '//blankline'
+    'body': '//blankline$0'
   'Gaiyou':
     'prefix': 'gaiyou'
     'body': """
       //abstract{
-        概要テキスト
-      //}
-      """
+        ${1:概要テキスト}
+      //}$0
+    """
+  'Note':
+    'prefix': 'note'
+    'body': """
+      //note[${1:title}]{
+
+      //}$0
+    """
   'Column':
     'prefix': 'clm'
     'body': """
       ===[column]
-
-
-      ===[/column]
-      """
+        ${1:column text}
+      ===[/column]$0
+    """
   'URL':
     'prefix': 'url'
-    'body': '@<href>{url}'
+    'body': '@<href>{${1:url}}'
   'Link':
     'prefix': 'link'
-    'body': '@<href>{url, テキスト}'
+    'body': '@<href>{${1:url}, ${2:テキスト}}'
   'quote':
     'prefix': 'quote'
     'body': """
       //quote{
-
-      //}
-      """
+        ${1:quote text}
+      //}$0
+    """
   'Comment in List':
     'prefix': 'cil'
-    'body': '@<balloon>{}'
+    'body': '@<balloon>{${1:text in program list}}'
   'New Page':
     'prefix': 'newpage'
     'body': '//clearpage'
