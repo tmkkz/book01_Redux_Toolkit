@@ -164,3 +164,6 @@
   'New Page':
     'prefix': 'newpage'
     'body': '//clearpage'
+  'Baloon':
+    'prefix': 'baln'
+    'body': '@<balloon>{${1:comment}}$0'

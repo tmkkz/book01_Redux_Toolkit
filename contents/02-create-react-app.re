@@ -63,7 +63,7 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 
 で、プロジェクト作成が完了します。
 
-////quote{
+//quote{
  コンソールには、Facebookが関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
 
 　： yarn start
@@ -217,7 +217,7 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 
 
-=={sec-03lint} eslint、prettierのインストールと設定
+=={sec-03lint} eslint、prettier
 
 「lint」は、C言語用のコンパイラよりも詳細で厳密なチェックを行うプログラムです。
 コンパイル前にコードをチェックするために使われます。
@@ -257,85 +257,233 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 になります。
 @<br>{}
 
+==={sec-03eslint} eslint、prettierのインストール
 
+create-react-appを使用して作成したスタートアッププロジェクトには、eslintは導入済みですので設定し直し、必要な関連パッケージをインストールします。
 
-
-#@# ここから 古い
-しかし、残念ながらEslint、Prettierにも@<br>{}
-
- * 多くのプラグインがある
- * EslintとPrettierが競合する部分もある
-など、メンドウなことがたくさんあります。
-@<br>{}
-
-
-
-この「Eslint、Prettier」のインストール・設定についても以下の方法で簡単に解決ができます。
-
-eslint-config
-@<href>{https://www.npmjs.com/package/@abhijithvijayan/eslint-config}
-
-こちらは、自分で使われている「Eslint、Prettier」のプラグイン・設定を公開し、
-コマンド一発でインストール完了すうるようにしてくれています。
-
-//terminal[][コマンド一発でインストール]{
-  $ > npx install-peerdeps @abhijithvijayan/eslint-config --dev --yarn
+ターミナルに以下のように「eslint --init」と初期化コマンドを入力します。
+//terminal[][eslintの初期化]{
+　　$ npx eslint --init
 //}
 
+「?」が行頭にある質問と選択枝が表示されますので、カーソルキーで選択枝を選びエンターキーで次ぎの質問に移ります。
+//terminal[][eslintの質問に答える]{
+  ? How would you like to use ESLint? …
+  ❯ To check syntax only　　　　　　　　　　　　@<balloon>{選択したものに　＞ が表示される}
+    To check syntax and find problems
+    To check syntax, find problems, and enforce code style
+//}
 
-このプロジェクトは、
+最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
+//terminal[][eslintへの答え]{
+  ✔ How would you like to use ESLint? · syntax
+  ✔ What type of modules does your project use? · esm
+  ✔ Which framework does your project use? · react
+  ✔ Does your project use TypeScript? · No / Yes　　　　@<balloon>{Yesを選択}
+  ✔ Where does your code run? · browser
+  ✔ What format do you want your config file to be in? · JavaScript
+  Local ESLint installation not found.
+  The config that you've selected requires the following dependencies:
 
- * React
- * Typescript
-を使っていますので、
+  eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest eslint@latest
+  ✔ Would you like to install them now with npm? · No / Yes
+//}
 
-プロジェクトのルートフォルダに、「.eslintrc.json」ファイルを作成し、以下のように設定をしてください。
-
-私の好みで、Prettierにて
-
- * 必要な箇所には、セミコロンを付ける
- * 文字列は、ダブルクォートで囲む
-と、しています。
-
-それ以外では、airbnbを元に基本的なルールが設定してあります。ルールは、「.eslintrc.json」で上書きできますので
-ご自分の好みで変更してください。
-
-//list[][.eslintrc.json]{
-  {
-    "extends": [
-      "@abhijithvijayan/eslint-config/typescript",
-      "@abhijithvijayan/eslint-config/react"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "rules": {
-      "react/jsx-props-no-spreading": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          "semi": true,
-          "singleQuote": false
-        }
-      ]
-    }
+//list[][package.jsonにeslint関連のパッケージがインストールされました。]{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-react": "^7.27.0"
   }
 //}
 
+また、eslintの設定ファイル「.eslintrc.js」が作成されています。
+//list[][.eslint.js]{
+  module.exports = {
+      "env": {
+          "browser": true,
+          "es2021": true
+      },
+      "extends": "plugin:react/recommended",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+          "ecmaFeatures": {
+              "jsx": true
+          },
+          "ecmaVersion": 12,
+          "sourceType": "module"
+      },
+      "plugins": [
+          "react",
+          "@typescript-eslint"
+      ],
+      "rules": {
+      }
+  };
+//}
+
+設定ファイル「.eslint.js」で、どのようなルールが適用されるのかを確認します。
+適用されるルールが、「current_rules.txt」に書き出されます。
+//terminal[][eslint設定で適用されるルール]{
+　$ npx eslint --print-config .eslint.js > current_rules.txt
+//}
+
+
+eslintで使用するルールは一般的なものをベースにしたいので、あのairbnbのルールをインストールします。
+//terminal[][airbnbのルーツのインストール]{
+ $  npx install-peerdeps --dev eslint-config-airbnb
+    install-peerdeps v3.0.3
+    It seems as if you are using Yarn.
+    Would you like to use Yarn for the installation? (y/n) n@<balloon>{yarnを使っているのか聞かれるので、noである「n」を入力}
+//}
+
+airbnbのルールをインストールしたので、設定ファイルに追加します。
+//list[][.eslint.jsへairbnbルールを適用]{
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb",  　　　@<balloon>{airbnbのルール}
+      "airbnb/hooks", @<balloon>{airbnbのReact hooksのルール}
+  ],
+//}
+
+再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
+@<br>{}
+@<br>{}
+次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の4行を追加しました。
+//list[][.eslint.jsのextends部分]{
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "plugin:import/recommended",
+      "plugin:import/typescript",
+  ],
+//}
+
+TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更する。
+//list[][.eslint.jsのparserOptions部分]{
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "tsconfigRootDir": __dirname,
+    "project": ["./tsconfig.json"],
+  },
+//}
+
+これでルールの適用は完了したが、都合の悪いルールは設定ファイルにてルールの上書をする。
+//list[][.eslint.jsのrulesへ追加]{
+  "rules": {
+      "import/extensions": [
+          "error",
+          {
+            js: "never",
+            jsx: "never",
+            ts: "never",
+            tsx: "never",
+          },
+        ],
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            extensions: [".jsx", ".tsx"],
+          },
+        ],
+        "react/react-in-jsx-scope": "off",
+        "no-void": [
+          "error",
+          {
+            allowAsStatement: true,
+          },
+        ],
+  }
+//}
+
+ここからは、Prettierのインストールと設定する。
+//terminal[][Prettierのインストール]{
+  $ npm install -D prettier eslint-config-prettier
+//}
+
+インストールが完了すると、package.jsonに追加されます。
+//list[][package.json]{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.4.1"
+  }
+//}
+
+Pretterのチェックを「.eslint.js」へ追加します。
+//list[][.eslint.js]{
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "plugin:import/recommended",
+      "plugin:import/typescript",
+      "prettier",　　　@<balloon>{prettierを追加}
+  ],
+//}
+
+pritterの設定ファイル「.prettierrc」を追加します。設定可能なオプションは、
+@<href>{https://prettier.io/docs/en/options.html, Prettierオプション}で確認できます。
+
+ほぼすべてがデフォルトでも良いのですが、create-react-appがシングルクオートなので設定します。
+//list[][.prettierrc]{
+  {
+    "singleQuote": true
+  }
+//}
+
+eslintとprettierが衝突すると検出・修正ループに入りますので、チェックします。
+//terminal[][eslint、prettierの衝突検出]{
+  $ npx eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'
+    No rules that are unnecessary or conflict with Prettier were found.
+//}
+
+無事に衝突なしとなりました。
+
+package.jsonにチェック用のスクリプトコマンドを追加します。
+//list[][package.json]{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",　@<balloon>{eslint用コマンドを追加}
+    "eject": "react-scripts eject"
+  },
+//}
+
+
 Eslint、Prettierの設定が完了しましたので、srcフォルダにある「App.tsx」を開いてみると、
-コーディング規約に外れるものは指摘されています。
+ルールから外れるものは指摘されています。
 
 //image[03_eslint_prettier][Eslint、Prettierに怒られてます][scale=1.0,pos=H]
 
 =={sec-04fix} eslint、prettierの指摘を修正
-ESlint、Prettierは指摘するだけではなく、修正案の提示・修正(できるものだけですが・・・)までしてくれます。
+ESlint、Prettierは指摘するだけではなく、修正案の提示・修正(できるものだけですが...)までしてくれます。
 
-VSCode側で設定を行うと、ファイルを保存する度に自動で修正をいれることもできます。
+VSCodeにPrettier拡張機能を追加してあれば、
+以下のように、VSCode側で設定すると、ファイルを保存する度に自動で修正をいれることもできます。
 
 私は、修正を自分のタイミングで行いたいのでVSCode側の設定は行っていません。
 
-もし、VSCode側の設定を行いたい場合には、VSCodeで@<br>{}
-[File] -> [Preferences] -> [Settings] にて、以下の各項目を検索して設定するか、settings.jsonへ追加してください。
+もし、VSCode側の設定をする場合には、VSCodeで@<br>{}
+[File]->[Preferences]->[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加してください。
 
 //list[][VSCodeの設定]{
 "editor.formatOnSave": true,
@@ -359,33 +507,35 @@ VSCode側で設定を行うと、ファイルを保存する度に自動で修�
 //}
 
 
-VSCode上で、
+VSCode上で、@<br>{}
 
  * 赤波線で指摘されている
- * 問題タブひ表示ｓれている
+ * 問題タブに表示されている
 
 ものを修正します。
 
-App.tsxの赤波線の上で「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、
-画面のようにポップアップが表示されます。
-
-//image[04_eslint_prettier_fix][ポップアップが表示][scale=1.0,pos=H]
+App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no-use-before-define」が表示されます。、
+さらに、「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、修正方法が提示されます。
 
 「Fix all auto-fixable problems」を選択すると、自動修復可能なものを修正してくれます。
 
+//image[04_eslint_prettier_fix][ポップアップが表示][scale=1.0,pos=H]
+
+
 //note[]{
-  筆者がVSCodeを日本語化していないのは、エラーメッセージでググる場合を考えてのことです。英語での情報の方が的確なページをみつけやすいと思います。
+  筆者がVSCodeを日本語化していないのは、エラーメッセージでググる場合を考えてのことです。
+  英語でのエラーメッセージの方が的確なページをみつけやすいと考えています。
 //}
 
-以下のように、修正されたました。
+では、指摘されている点を修正していきます。
 
-//image[05_eslint_prettier_fixdone][修正後][scale=1.0,pos=H]
 
-自動修正できない問題が残りました。問題点は、このファイルはTypescriptを使用していますので、@<br>{}
-「関数Appの戻り値の型が指定されていない！」@<br>{}
-と言うことです。
 
-ついでに、Arrow関数へ書き換えておきます。
+//list[][App.tsx]{
+  // React17からは、JSXでReactのインポートが不要になりましたので、以下の行を削除します。
+  import React from 'react';
+//}
+
 
 //list[][App.tsx]{
   import React, { ReactElement } from "react";
@@ -397,9 +547,9 @@ App.tsxの赤波線の上で「コマンドキー(Windowsでは、ctrl)　+ ピ�
       <div className="App">
 //}
 
-このように、戻り値の型を指定することで指摘を修正することができました。
+このように、戻り値の型を指定することで指摘を修正できました。
 
-//image[06_eslint_prettier_fixdoneAll][全ての問題の修正完了][scale=1.0,pos=H]
+//image[06_eslint_prettier_fixdoneAll][すべての問題の修正完了][scale=1.0,pos=H]
 
 =={sec-chap02review} 第2章のまとめ
 Reactを使用したアプリケーションは、スタートアップ用のアプリケーションがコマンド一発でインストールできます。
@@ -407,10 +557,10 @@ Reactを使用したアプリケーションは、スタートアップ用のア
 より良いコーディングをするためにも、Eslint、Prettierを導入しましょう。
 
 //note[]{
-  ここまでの内容は、github上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
 
-//terminal[][github]{
-  $ > git clone -b 01_eslint_prettier https://github.com/tmkkz/yaruo.git
-//}
+  //terminal[][GitHub]{
+    $ > git clone -b 01_eslint_prettier https://github.com/tmkkz/yaruo.git
+  //}
 
 //}
