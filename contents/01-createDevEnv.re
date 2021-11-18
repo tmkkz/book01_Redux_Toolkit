@@ -90,12 +90,14 @@ LTS版、最新版は以下のロードマップにより更新されます。
 //clearpage
 
 Node.jsのReleases:@<href>{https://nodejs.org/ja/about/releases/}にあるように、
-Node.jsは、各年の4月、10月にリリースされ、
-* Current
-* Active
-* Maintenance
+Node.jsは、各年の4月、10月にリリースされ、@<br>{}
+
+ * Current
+ * Active
+ * Maintenance
 のフェーズを経ますが、メジャーバージョン番号が偶数のものだけが、Active期間を経て長期サポートされます。
 
+//blankline
 上記トップページにあるNode.js 14は、2023/4/30までの長期サポートとなります。
 実際のプロジェクトで使用する場合は、よほどの理由がない限りは最新のLTS版を使用します。
 
@@ -106,15 +108,19 @@ Node.jsは、各年の4月、10月にリリースされ、
 Node.jsは、ロードマップにより定期的にバージョンアップされます。又、Node.js自体の不具合の修正などで
 マイナーバージョンアップも行われます。
 
+//blankline
 プロジェクト開発中のマイナーバージョンアップでも検証が必要になりますが、
 メジャーバージョンアップの場合はさらに大きな検証が必要になります。
 場合によっては、ソースコードの大幅な改良をしなければならなくなります。
 
+//blankline
 それを避けるためにも、プロジェクト毎にNode.jsのバージョンは固定して開発します。
 
+//blankline
 通常は、OSにインストールできるNode.jsのバージョンはひとつですが、長期にわたるサポートや新規プロジェクト開発のためには、
 複数のNode.jsのバージョンを切り替えて使用できるしくみを用意しましょう。
 
+//blankline
 私が使用しているのは、nvm(node version manager):@<href>{https://github.com/nvm-sh/nvm}です。
 いろいろなバージョンのNode.jsを、簡単にインストール・アンインストール・切替ができます。
 
@@ -123,8 +129,10 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 
 nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、バージョンを切り替えることが簡単にできます。
 
-Hub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
+//blankline
+GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
 
+//blankline
 Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がHub上で公開されています。
 コマンドが本家と少し違いますが、複数バージョンのインストール・バージョンの切り替えなど機能は問題ありません。
 
@@ -341,55 +349,19 @@ v12.18.3
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
-#@+++
-  comment here
-
-    =={sec-yarn} Package Manager(npm,yarn)
-    === Package managerとは？
-    === npmとは？
-    === yarnとは？
-
-    yarnは、nodeプロジェクトにおいて必要な機能を簡単に追加できるようにするnpm(node package manager)互換の
-    package management tool(パッケージ管理ツール)です。
-
-    npmと比較して
-    * パッケージのインストールが早い
-    * コマンドがnpmよりも簡潔
-    * npmよりもパッケージのバージョン管理がしっかりしている
-    などの利点があります。
-
-    ==== yarnのインストール
-
-    Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールの「npm」がインストールされています。
-
-    //terminal[][npmのバージョン確認]{
-    $ > npm -v
-    6.14.6
-    //}
-
-    yarnをインストールするために、この「npm」コマンドを使用します。
-
-    //terminal[][yarnのインストール]{
-    $ > npm install -g yarn
-    //}
-
-    コマンドオプションの「-g」は、global指定することによりPC全体でコマンドが使用できます。
-    -gオプションなしでは、そのプロジェクトでのみ有効となります。
-
-    yarnの使い方は、今後使う機会毎に説明します。
-
-#@---
-
 =={sec-vscode} Microsoft Visual Studio Code + 拡張機能
 Microsoft社が無料で提供している「テキストエディタ」です。Electron:@<href>{https://www.electronjs.org/}をベースにしたオープンソースで開発されています。
 
+//blankline
 Electronは、GitHub社が「Atom(テキストエディタ)」を開発するために構築したフレームワークで、
 HTML・CSS・JavaScriptを使用して、Windows、Mac、Linuxのマルチプラットフォームで動作するアプリケーションを開発できます。
 
+//blankline
 Visual Studio Code(以後は、VSCodeと表記します。)は、コードを記述する「テキストエディタ」として非常に優秀ですが、
 拡張機能(Google ChromeやFirefoxなどのブラウザ同様に拡張機能が多くの開発者により公開されています。)を追加することで
 JavaScript以外の言語(C#、pythonなど)でも使えます。
 
+//blankline
 デバッグなども行えるため、Web開発では、事実上の標準と言っても良いでしょう。有料では、Jetbrains社:@<href>{https://www.jetbrains.com/}の
 Webstormがありますが、今回は、無償のVSCodeを使用します。
 

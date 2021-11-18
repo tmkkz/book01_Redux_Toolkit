@@ -1,7 +1,7 @@
 \chapter{スタートプロジェクトの作成}
 \label{chap:02-create-react-app}
 \begin{starterabstract}
-  本章では、「create{-}react{-}app」と言う、reactアプリケーションのひな型がコマンドひとつで作成できる優れものを使用して、
+  本章では、reactアプリケーションのひな型がコマンドひとつで作成できる「create{-}react{-}app」を使用して、
 スタート用のアプリケーションを作成し、ブラウザで表示するまでを行います。
 
 　また、作成するプロジェクトは、TypesScriptを使用します。コード記法の指摘・修正を行えるよう「eslint」、「prettier」の設定も行います。
@@ -16,27 +16,41 @@
 }
 
 Reactアプリケーションをゼロから作成するためには、\\[0pt]
-\\[0pt]
-* 「nodeプロジェクト」に必要なpackage.jsonを作成
-* reactなど必要なライブラリのインストール
-* 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(Babel使用)
-* 出力するファイルをまとめる(バンドルする {-} webpack使用)
+
+\begin{starteritemize}
+\item 「nodeプロジェクト」に必要なpackage.jsonを作成
+\item reactなど必要なライブラリのインストール
+\item 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(Babel使用)
+\item 出力するファイルをまとめる(バンドルする {-} webpack使用)
+\end{starteritemize}
+
+\vspace*{\baselineskip}
 
 など、reactライブラリのインストール以外にも、Babelやwebpackをインストールして設定ファイルを作成しなくてはなりません。
 
+\vspace*{\baselineskip}
+
 また、使用するライブラリによっては、Babelのプラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業がたいへんです。
+
+\vspace*{\baselineskip}
 
 しかし、「そんなメンドウなことは、やってられない。」と誰しもが思ったか、
 すぐにでもコードを書き始めることのできるスタート用アプリケーションが、react開発元のFacebookから提供されています。
 
+\vspace*{\baselineskip}
+
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
 
+\vspace*{\baselineskip}
+
+では、実際に手を動かしましょう。
 ターミナルを起動し、プロジェクトフォルダを作成するフォルダへ移動します。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{create{-}react{-}appでスタート用アプリケーション作成}\seqsplit{  \textdollar{} \textgreater{} npx create react{-}app プロジェクト名 {-}{-}template typescript}\end{starterterminal}
 
-で、「プロジェクト名」のフォルダが作成され、スグにでも開発に取りかかれます。
+エンターキーを押すと、作業が始まり「プロジェクト名」のフォルダが作成され、
+以下のように表示されればスグにでも開発に取りかかれます。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{}\seqsplit{  Success! Created yourproject at yourproject\textunderscore{}path
@@ -61,12 +75,9 @@ Reactアプリケーションをゼロから作成するためには、\\[0pt]
     yarn start
 
   Happy hacking!}\end{starterterminal}
-
-で、プロジェクト作成が完了します。
-
 \begin{starterquote}
 
-コンソールには、Facebookが関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
+ターミナルには、Facebookが関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
 
 \begin{description}
 \item[yarn start] \mbox{} \\
@@ -79,10 +90,14 @@ Reactアプリケーションをゼロから作成するためには、\\[0pt]
 ツール(create{-}react{-}app)を取り除き、依存関係、設定ファイル、スクリプトをappディレクトリにコピーする。
 \end{description}
 
-　と、あります。
+と、あります。
 
-　yarnは、pnp(プラグ＆プレイ{-}依存関係(node\textunderscore{}modulesフォルダ以下にインストールされるパッケージ)を仮想化してロードする機能)を
+\vspace*{\baselineskip}
+
+yarnは、pnp(プラグ＆プレイ{-}依存関係(node\textunderscore{}modulesフォルダ以下にインストールされるパッケージ)を仮想化してロードする機能)を
 導入したv2で大きく変わっています。今ではv3もリリースされています。
+
+\vspace*{\baselineskip}
 
 PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノード・パッケージマネージャー)を使っています。
 
@@ -90,13 +105,9 @@ PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノ
 \begin{starternote}[]{github}
 
 ここまでの作業は、GitHubにあります。
-\textless{}!{-}{-} textlint{-}disable {-}{-}\textgreater{}
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{GitHubから}\seqsplit{    \textdollar{} \textgreater{} git clone {-}b 00\textunderscore{}create{-}react{-}app https://github.com/yaruo{-}react{-}redux/yaruo{-}blog.git}\end{starterterminal}
-
-\textless{}!{-}{-} textlit{-}enable {-}{-}\textgreater{}
-
+\begin{starterterminal}[]{GitHubから}\seqsplit{\textdollar{} \textgreater{} git clone {-}b 01\textunderscore{}create{-}react{-}app https://github.com/yaruo{-}react{-}redux/yaruo{-}diary.git}\end{starterterminal}
 \end{starternote}
 
 \section{アプリケーションを実行}
@@ -111,8 +122,8 @@ PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノ
 ターミナルに表示されているように、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{}\seqsplit{  \textdollar{} \textgreater{} cd プロジェクト名
-  \textdollar{} \textgreater{} npm start}\end{starterterminal}
+\begin{starterterminal}[]{}\seqsplit{\textdollar{} cd プロジェクト名
+\textdollar{} npm start}\end{starterterminal}
 
 すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトでは、port:3000でアプリケーションへアクセスできます。
 
@@ -172,7 +183,9 @@ create{-}react{-}appで作成された中身は、以下となります(使用�
   └── yarn.lock}\end{starterterminal}
 
 package.jsonファイルは、Node.jsを使用するプロジェクトの設計図にあたるものです。
-\\[0pt]
+
+\vspace*{\baselineskip}
+
 Node.jsを使うプロジェクトを開始する場合には、プロジェクトフォルダで「npm init」を行うと対話形式で「package.json」を作成しますが、
 create{-}react{-}appコマンドを使用すると、package.jsonも以下のように作成されます。
 
@@ -222,15 +235,17 @@ create{-}react{-}appコマンドを使用すると、package.jsonも以下のよ
   \}}\end{starterprogram}
 
 package.json内にある「scripts」にあるものがコマンドになります。react{-}scriptsは、npmスクリプトを連続、または、並列に実行してくれるものです。
-\\[0pt]
+
+\vspace*{\baselineskip}
 
 package.jsonの「dependencies」には、実行に必要でインストール済みのnpmパッケージが記載されています。
 必要なnpmパッケージをインストールすると、ここに自動的に追記されます。
-\\[0pt]
-また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
-\\[0pt]
 
-\section{eslint、prettier}
+\vspace*{\baselineskip}
+
+また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
+
+\section{eslint、prettierとは？}
 \keeplastskip{
   \label{sec:2-4}
   \label{sec-03lint}
@@ -240,14 +255,21 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 「lint」は、C言語用のコンパイラよりも詳細で厳密なチェックを行うプログラムです。
 コンパイル前にコードをチェックするために使われます。
 
+\vspace*{\baselineskip}
+
 それが、いつしかコードをチェック・解析することを「lint」、lintを行うプログラムをlinterと呼ぶようになったそうです。
+
+\vspace*{\baselineskip}
 
 JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろん、Java、HTML、Pythonなどにもlinterがあります。
 
-「eslint」は、JavaScriptで指定されたルールと違うコードの書き方をしている部分を指摘してくれます。
-その指定されたルールとは、たいていの場合にはJavaScriptに詳しい人達が決めたもので、良く使われるものは、かの有名なAirBnBの開発チームのものです。
+\vspace*{\baselineskip}
 
+「eslint」は、設定ファイルで指定されたルールと違うコードの書き方をしている部分を指摘してくれます。
+その指定されたルールとは、たいていの場合にはJavaScriptに詳しい人達が決めたもので、良く使われるものは、かの有名なAirBnBの開発チームのものです。
 もちろん、ルールは改変・追加もできます。
+
+\vspace*{\baselineskip}
 
 チェックしてくれるのは、たとえば、\\[0pt]
 
@@ -257,10 +279,16 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 \item 分割代入の使用を推奨
 \end{starteritemize}
 
+\vspace*{\baselineskip}
+
 などがありますが、何をチェックし指摘するのかは、チーム毎、プロジェクト毎に自由に決めることができます。
+
+\vspace*{\baselineskip}
 
 「prettier」は、コードを整形(インデント、改行など)してくれるツールです。
 実は、eslintでもコード整形はできるのですが、コード整形はprettierの方が優れいます。
+
+\vspace*{\baselineskip}
 
 そのために、\\[0pt]
 
@@ -269,18 +297,9 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 \item コード整形は、prettier
 \end{starteritemize}
 
+\vspace*{\baselineskip}
+
 と、得意なものに任せます。
-\\[0pt]
-
-この便利な機能こそが、第1章で紹介した\\[0pt]
-
-\begin{starteritemize}
-\item Eslint
-\item Prettier
-\end{starteritemize}
-
-になります。
-\\[0pt]
 
 \subsection{eslint、prettierのインストール}
 \keeplastskip{
@@ -301,14 +320,14 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
 ターミナルに以下のように「eslint {-}{-}init」と初期化コマンドを入力します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslintの初期化}\seqsplit{　　\textdollar{} npx eslint {-}{-}init}\end{starterterminal}
+\begin{starterterminal}[]{eslintの初期化}\seqsplit{\textdollar{} npx eslint {-}{-}init}\end{starterterminal}
 
 「?」が行頭にある質問と選択枝が表示されますので、カーソルキーで選択枝を選びエンターキーで次ぎの質問に移ります。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{eslintの質問に答える}\seqsplit{  ? How would you like to use ESLint? …
-  ❯ To check syntax only　　　　　　　　　　　　{\reviewballoon{選択したものに　＞ が表示される}}
-    To check syntax and find problems
+    To check syntax only　　　　　　　　　　　　
+  \textgreater{} To check syntax and find problems    {\reviewballoon{選択したものに　＞ が表示される}}
     To check syntax, find problems, and enforce code style}\end{starterterminal}
 
 最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
@@ -324,7 +343,7 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
   The config that you've selected requires the following dependencies:
 
   eslint{-}plugin{-}react@latest @typescript{-}eslint/eslint{-}plugin@latest @typescript{-}eslint/parser@latest eslint@latest
-  ✔ Would you like to install them now with npm? · No / Yes}\end{starterterminal}
+  ✔ Would you like to install them now with npm? · No / Yes  {\reviewballoon{Yesを選択}}}\end{starterterminal}
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.jsonにeslint関連のパッケージがインストールされました。}\seqsplit{  "devDependencies": \{
     "@typescript{-}eslint/eslint{-}plugin": "\textasciicircum{}5.4.0",
@@ -365,10 +384,17 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
 設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
 適用されるルールが、「current\textunderscore{}rules.txt」に書き出されます。
 
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslint設定で適用されるルール}\seqsplit{　\textdollar{} npx eslint {-}{-}print{-}config .eslintrc.js \textgreater{} current\textunderscore{}rules.txt}\end{starterterminal}
+\vspace*{\baselineskip}
 
-eslintで使用するルールは一般的なものをベースにしたいので、あのairbnbのルールをインストールします。
+書き出されたルールは、ルール名に適用方法\{"off(適用しない)","warn(警告)","error(エラー)"\}が記されています。
+表記は、\{0,1,2\}の数字で表示される場合もあります。
+同じルールがあった場合には、後から読み込まれたものが上書きされます。
+個別に上書きしたいものは「.eslintrc.js」ファイルの「rules」セクションに追加します。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{eslint設定で適用されるルール}\seqsplit{\textdollar{} npx eslint {-}{-}print{-}config .eslintrc.js \textgreater{} current\textunderscore{}rules.txt}\end{starterterminal}
+
+eslintで使用するルールは一般的なものをベースにしたいので、airbnbのルールをインストールします。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{airbnbのルーツのインストール}\seqsplit{ \textdollar{}  npx install{-}peerdeps {-}{-}dev eslint{-}config{-}airbnb
@@ -419,6 +445,59 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
 
 これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
 
+「import/extensions」は、インポート宣言でnode\textunderscore{}modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
+で、相対パスからのimportは、拡張子が必要と言うルールです。
+
+現在はすべてがエラー、node\textunderscore{}modules下のパッケージ内の指定された拡張子は除外となっていますが、
+node\textunderscore{}modules下以外でも\{js,jsx,ts,tsx\}は除外したいのでルールを追加します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{import/extensionsの現時点}\seqsplit{  "import/extensions": [
+    "error",
+    "ignorePackages",
+    \{
+      "js": "never",
+      "mjs": "never",
+      "jsx": "never"
+    \}
+  ],}\end{starterprogram}
+
+「react/jsx{-}filename{-}extension」は、JSXを含むファイルの拡張子を制限するルールです。
+
+現時点では、拡張子「.jsx」に制限されていますが、拡張子「.tsx」も追加したいのでルールに追加します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{react/jsx{-}filename{-}extentionの現時点}\seqsplit{  "react/jsx{-}filename{-}extension": [
+    "error",
+    \{
+      "extensions": [
+        ".jsx"
+      ]
+    \}
+  ],}\end{starterprogram}
+
+「react/react{-}in{-}jsx{-}scope」は、JSXファイルに「import React from 'react'」がない場合にはエラーにしてくれるのですが
+React17からは、「import React from 'react'」を書かなくてもよくなりました。そのため、このルールをOFFにします。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{react/react{-}in{-}jsx{-}scope}\seqsplit{  "react/react{-}in{-}jsx{-}scope": [
+    "error"
+  ],}\end{starterprogram}
+
+「react/function{-}component{-}definition」は、関数コンポーネントに特定の関数タイプを強制します。
+現時点では、functionの使用を強制されるので、アロー関数強制に変更します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{react/function{-}component{-}definitionの現在}\seqsplit{  "react/function{-}component{-}definition": [
+    "error",
+    \{
+      "namedComponents": "function{-}expression",
+      "unnamedComponents": "function{-}expression"
+    \}
+  ],}\end{starterprogram}
+
+上書きしたいルールを、「.eslintrc.js」へ追加します。
+
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.eslintrc.jsのrulesへ追加}\seqsplit{  "rules": \{
       "import/extensions": [
@@ -437,10 +516,11 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
           \},
         ],
         "react/react{-}in{-}jsx{-}scope": "off",
-        "no{-}void": [
+        "react/function{-}component{-}definition": [
           "error",
           \{
-            allowAsStatement: true,
+            namedComponents: "arrow{-}function",
+            unnamedComponents: "arrow{-}function",
           \},
         ],
   \}}\end{starterprogram}
@@ -452,7 +532,7 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
   \par\nobreak
 }
 
-ここからは、Prettierのインストールと設定する。
+ここからは、Prettierのインストールと設定をします。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Prettierのインストール}\seqsplit{  \textdollar{} npm install {-}D prettier eslint{-}config{-}prettier}\end{starterterminal}
@@ -489,12 +569,12 @@ Pretterのチェックを「.eslintrc.js」へ追加します。
 
 pritterの設定ファイル「.prettierrc」を追加します。設定可能なオプションは、
 Prettierオプション\footnote{\url{https://prettier.io/docs/en/options.html}}で確認できます。
-
 ほぼすべてがデフォルトでも良いのですが、create{-}react{-}appがシングルクオートなので設定します。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.prettierrc}\seqsplit{  \{
-    "singleQuote": true
+    "singleQuote": true,
+    "jsxSingleQuote": true
   \}}\end{starterprogram}
 
 eslintとprettierが衝突すると検出・修正ループに入りますので、チェックします。
@@ -508,24 +588,24 @@ eslintとprettierが衝突すると検出・修正ループに入りますので
 package.jsonにスクリプトコマンドを追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{package.json}\seqsplit{  "scripts": \{
-    "start": "react{-}scripts start",
-    "build": "react{-}scripts build",
-    "test": "react{-}scripts test",
-    "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'",　           {\reviewballoon{lint:チェック}}
-    "fix": "npm run format \&\& npm run lint:fix",             {\reviewballoon{fix:整形してチェックして自動修復}}
-    "format": "prettier {-}{-}write 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{format:整形}}
-    "lint:fix": "eslint {-}{-}fix 'src/**/*.\{js,jsx,ts,tsx\}'",   {\reviewballoon{lint:fix チェックして修復}}
-    "eject": "react{-}scripts eject"
-  \},}\end{starterprogram}
+\begin{starterprogram}[]{package.json}\seqsplit{"scripts": \{
+  "start": "react{-}scripts start",
+  "build": "react{-}scripts build",
+  "test": "react{-}scripts test",
+  "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{lint:チェック}}
+  "fix": "npm run format \&\& npm run lint:fix", {\reviewballoon{fix:整形してチェックして自動修復}}
+  "format": "prettier {-}{-}write 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{format:整形}}
+  "lint:fix": "eslint {-}{-}fix 'src/**/*.\{js,jsx,ts,tsx\}'",  {\reviewballoon{lint:fixチェック後修復}}
+  "eject": "react{-}scripts eject"
+\},}\end{starterprogram}
 
 Eslint、Prettierの設定が完了しましたので、srcフォルダにある「App.tsx」を開いてみると、
 ルールから外れるものは指摘されています。
 
-\begin{reviewimage}[H]%%03_eslint_prettier
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/03_eslint_prettier.png}%
+\begin{reviewimage}[H]%%032_app_tsx_error
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/032_app_tsx_error.png}%
 \reviewimagecaption{Eslint、Prettierに怒られてます}
-\label{image:02-create-react-app:03_eslint_prettier}
+\label{image:02-create-react-app:032_app_tsx_error}
 \end{reviewimage}
 
 \section{eslint、prettierの指摘を修正}
@@ -537,14 +617,20 @@ Eslint、Prettierの設定が完了しましたので、srcフォルダにある
 
 ESlint、Prettierは指摘するだけではなく、修正案の提示・修正(できるものだけですが...)までしてくれます。
 
+\vspace*{\baselineskip}
+
 VSCodeにPrettier拡張機能を追加してあれば、
 以下のように、VSCode側で設定すると、ファイルを保存する度に自動で修正をいれることもできます。
 
+\vspace*{\baselineskip}
+
 私は、修正を自分のタイミングで行いたいのでVSCode側の設定は行っていません。
+
+\vspace*{\baselineskip}
 
 もし、VSCode側の設定をする場合には、VSCodeで\\[0pt]
 [File]{-}\textgreater{}[Preferences]{-}\textgreater{}[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加するか、
-このプロジェクト用には、プロジェクトフォルダ直下に「.vscode」フォルダを作成し、「settings.json」ファイルへ書き込みます。
+このプロジェクトのみ適用の場合は、プロジェクトフォルダ直下に「.vscode」フォルダを作成し、「settings.json」ファイルへ書き込みます。
 
 ユーザー設定ファイルの内容が、この設定で上書きされます。
 
@@ -575,23 +661,34 @@ VSCode上で、\\[0pt]
 \item 問題タブに表示されている
 \end{starteritemize}
 
+\vspace*{\baselineskip}
+
 ものを修正します。
+
+\vspace*{\baselineskip}
 
 まずは、.eslintrc.js自体に問題があるようです。
 
 赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no{-}use{-}before{-}define」が表示されます。、
 さらに、「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、修正方法が提示されます。
 
-.eslintrc.jsファイルでの指摘は、以下の通り「es6モジュールの書き方へ移行しろ！」と怒られています。
+\begin{reviewimage}%%031_eslint_error
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/031_eslint_error.png}%
+\reviewimagecaption{.eslintrc.jsの指摘}
+\label{image:02-create-react-app:031_eslint_error}
+\end{reviewimage}
+
+.eslintrc.jsファイルでの指摘は、「es6モジュールの書き方へ移行しろ！」とのことです。
 以下のように、.eslintrc.jsを変更します。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.eslintrc.js}\seqsplit{  const config = \{
-      env: \{
-          browser: true,
-          es2021: true
+      "env": \{
+          "browser": true,
+          "es2021": true
       \},
-      extends: [
+      "extends": [
+          "eslint:recommended",
           "plugin:react/recommended",
           "airbnb",
           "airbnb/hooks",
@@ -601,47 +698,48 @@ VSCode上で、\\[0pt]
           "plugin:import/typescript",
           "prettier",
       ],
-      parser: "@typescript{-}eslint/parser",
-      parserOptions: \{
-          ecmaFeatures: \{
-              jsx: true
+      "parser": "@typescript{-}eslint/parser",
+      "parserOptions": \{
+          "ecmaFeatures": \{
+              "jsx": true
           \},
-          ecmaVersion: 12,
-          sourceType: "module",
-          tsconfigRootDir: \textunderscore{}\textunderscore{}dirname,
-          project: ["./tsconfig.json"],
+          "ecmaVersion": 12,
+          "sourceType": "module",
+          "tsconfigRootDir": \textunderscore{}\textunderscore{}dirname,
+          "project": ["./tsconfig.json"],
       \},
-      plugins: [
+      "plugins": [
           "react",
-          "@typescript{-}eslint",
+          "@typescript{-}eslint"
       ],
-      rules: \{
+      "rules": \{
           "import/extensions": [
-          "error",
-          \{
-              js: "never",
-              jsx: "never",
-              ts: "never",
-              tsx: "never",
-          \},
-          ],
-          "react/jsx{-}filename{-}extension": [
-          "error",
-          \{
-              extensions: [".jsx", ".tsx"],
-          \},
-          ],
-          "react/react{-}in{-}jsx{-}scope": "off",
-          "no{-}void": [
-          "error",
-          \{
-              allowAsStatement: true,
-          \},
-          ],
+              "error",
+              \{
+                js: "never",
+                jsx: "never",
+                ts: "never",
+                tsx: "never",
+              \},
+            ],
+            "react/jsx{-}filename{-}extension": [
+              "error",
+              \{
+                extensions: [".jsx", ".tsx"],
+              \},
+            ],
+            "react/react{-}in{-}jsx{-}scope": "off",
+            "react/function{-}component{-}definition": [
+              "error",
+              \{
+                namedComponents: "arrow{-}function",
+                unnamedComponents: "arrow{-}function",
+              \},
+            ],
       \}
   \};
 
-  module.exports = config;
+  export default config
 }\end{starterprogram}
 
 このように修正して保存すると、次の指摘がきます。
@@ -657,8 +755,12 @@ The file must be included in at least one of the projects provided.
 これは、ファイルが「どこからもimportされていない」場合に表示されるエラーです。
 「.eslintrc.js」は、ESLintの設定ファイルですので、どこからもインポートされていません。
 
-解消法は、「npx elsint {-}{-}init」でファイルを作成した際にjson形式、または、yaml(yml)形式を選択するか
-または、.eslintrc.jsファイル自体をチェックの対象から除外します。
+\vspace*{\baselineskip}
+
+解消法は、「npx elsint {-}{-}init」でファイルを作成した際に「.eslitrc」ファイルをjson形式、
+または、yaml(yml)形式で作成を選択するか、.eslintrc.jsファイル自体をチェックの対象から除外します。
+
+\vspace*{\baselineskip}
 
 今回は、JavaScript形式で作成したのでチェック除外のための、「.eslintignore」ファイルをプロジェクトフォルダ直下に作成し、
 lint.jsやconfig.jsのパターンが含まれるファイル、パッケージがインストールされるnode\textunderscore{}modulesフォルダなどを除外するように指定します。
@@ -721,34 +823,6 @@ lint.jsやconfig.jsのパターンが含まれるファイル、パッケージ�
 
   export default App;}\end{starterprogram}
 
-最後に「reportWebVitals.ts」を修正します。
-
-\begin{reviewimage}%%033_reportWebVitals_error
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/033_reportWebVitals_error.png}%
-\reviewimagecaption{reportWebVitals.tsの修正}
-\label{image:02-create-react-app:033_reportWebVitals_error}
-\end{reviewimage}
-
-これは、Quick Fixを選択すると、「Add void operator to ignore」と出ますので、それを選択します。
-
-\def\startercodeblockfontsize{}
-\begin{starterprogram}[]{reportWebVitals.ts}\seqsplit{  import \{ ReportHandler \} from 'web{-}vitals';
-
-  const reportWebVitals = (onPerfEntry?: ReportHandler) =\textgreater{} \{
-    if (onPerfEntry \&\& onPerfEntry instanceof Function) \{
-      void import('web{-}vitals').then((\{ getCLS, getFID, getFCP, getLCP, getTTFB \}) =\textgreater{} \{
-        getCLS(onPerfEntry);
-        getFID(onPerfEntry);
-        getFCP(onPerfEntry);
-        getLCP(onPerfEntry);
-        getTTFB(onPerfEntry);
-      \});
-    \}
-  \};
-
-  export default reportWebVitals;
-}\end{starterprogram}
-
 これで現時点での指摘はすべて修正できました。
 
 \begin{reviewimage}[H]%%06_eslint_prettier_fixdoneAll
@@ -766,16 +840,14 @@ lint.jsやconfig.jsのパターンが含まれるファイル、パッケージ�
 
 Reactを使用したアプリケーションは、スタートアップ用のアプリケーションがコマンド一発でインストールできます。
 
-より良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
+\vspace*{\baselineskip}
+
+バグの混入を防いだりより良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
 
 \begin{starternote}[]{}
 
 ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
-\textless{}!{-}{-} textlint{-}disable {-}{-}\textgreater{}
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{GitHub}\seqsplit{  \textdollar{} \textgreater{} git clone {-}b 01\textunderscore{}eslint\textunderscore{}prettier https://github.com/tmkkz/yaruo.git}\end{starterterminal}
-
-\textless{}!{-}{-} textlint{-}enable {-}{-}\textgreater{}
-
+\begin{starterterminal}[]{GitHub}\seqsplit{  \textdollar{} \textgreater{} git clone {-}b 02\textunderscore{}eslint\textunderscore{}prettier https://github.com/yaruo{-}react{-}redux/yaruo{-}diary.git}\end{starterterminal}
 \end{starternote}
