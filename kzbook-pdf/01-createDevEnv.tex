@@ -12,7 +12,6 @@
 
   は、とりあえず置いといて\\[0pt]
   　・ Node.js\\[0pt]
-  　・ yarn\\[0pt]
   　・ Microsoft Visual Studio Code + 拡張機能\\[0pt]
   　・ Google Chrome + 拡張機能\\[0pt]
 をインストールしてください。これらは、すべて無償で提供されています。\\[0pt]
@@ -56,7 +55,7 @@
 \clearpage
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[_862077035]{リスト1.1: }\seqsplit{  const http = require('http');
+\begin{starterprogram}[_984064844]{リスト1.1: }\seqsplit{  const http = require('http');
 
   const hostname = '127.0.0.1';
   const port = 3000;
@@ -75,7 +74,7 @@
 このスクリプトを「app.js」のファイル名で保存し、実行します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_824521234]{リスト1.2: app.jsを実行}\seqsplit{  \textgreater{} node app.jp
+\begin{starterterminal}[_022103517]{リスト1.2: app.jsを実行}\seqsplit{  \textgreater{} node app.jp
   Server running at http://127.0.0.1:3000/
 }\end{starterterminal}
 
@@ -90,8 +89,8 @@
 \clearpage
 
 
-通常のHTMLに埋め込まれたJavaScriptをブラウザからで実行すると、
-OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)などは制限されますが、
+通常のHTMLに埋め込まれたJavaScriptをブラウザから実行すると、
+OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)ことなどは制限されますが、
 Node.jsで実行するとOSの機能も使用できます。
 
 \begin{starternote}[]{}
@@ -183,9 +182,9 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 
 nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、バージョンを切り替えることが簡単にできます。
 
-GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
+Hub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
 
-Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGitHub上で公開されています。
+Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がHub上で公開されています。
 コマンドが本家と少し違いますが、複数バージョンのインストール・バージョンの切り替えなど機能は問題ありません。
 
 \paragraph*{nvmのインストール}
@@ -193,7 +192,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGit
 お使いのTerminalから以下のコマンドを実行してください。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_347960161]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
+\begin{starterterminal}[_080915400]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
 
 インストール完了後には、.zshrcへ以下を追加してください。
 
@@ -384,65 +383,9 @@ v12.18.3}\end{starterterminal}
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
-\section{Package Manager(npm,yarn)}
-\keeplastskip{
-  \label{sec:1-2}
-  \label{sec-yarn}
-  \par\nobreak
-}
-
-\subsection{Package managerとは？}
-\keeplastskip{
-  \label{sec:1-2-1}
-  \par\nobreak
-}
-
-\subsection{npmとは？}
-\keeplastskip{
-  \label{sec:1-2-2}
-  \par\nobreak
-}
-
-\subsection{yarnとは？}
-\keeplastskip{
-  \label{sec:1-2-3}
-  \par\nobreak
-}
-
-yarnは、nodeプロジェクトにおいて必要な機能を簡単に追加できるようにするnpm(node package manager)互換の
-package management tool(パッケージ管理ツール)です。
-
-npmと比較して
-* パッケージのインストールが早い
-* コマンドがnpmよりも簡潔
-* npmよりもパッケージのバージョン管理がしっかりしている
-などの利点があります。
-
-\subsubsection*{yarnのインストール}
-\keeplastskip{
-  \label{sec:1-2-3-1}
-  \par\nobreak
-}
-
-Node.jsをインストールした時点で、Node.jsのパッケージ管理ツールの「npm」がインストールされています。
-
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[]{npmのバージョン確認}\seqsplit{\textdollar{} \textgreater{} npm {-}v
-6.14.6}\end{starterterminal}
-
-yarnをインストールするために、この「npm」コマンドを使用します。
-
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[]{yarnのインストール}\seqsplit{\textdollar{} \textgreater{} npm install {-}g yarn}\end{starterterminal}
-
-コマンドオプションの「{-}g」は、global指定することによりPC全体でコマンドが使用できます。
-{-}gオプションなしでは、そのプロジェクトでのみ有効となります。
-
-yarnの使い方は、今後使う機会毎に説明します。
-
 \section{Microsoft Visual Studio Code + 拡張機能}
 \keeplastskip{
-  \label{sec:1-3}
+  \label{sec:1-2}
   \label{sec-vscode}
   \par\nobreak
 }
@@ -461,7 +404,7 @@ Webstormがありますが、今回は、無償のVSCodeを使用します。
 
 \subsection{VSCodeのインストール}
 \keeplastskip{
-  \label{sec:1-3-1}
+  \label{sec:1-2-1}
   \par\nobreak
 }
 
@@ -475,20 +418,27 @@ VSCodeのインストールは\\[0pt]
 
 \subsubsection*{Windows}
 \keeplastskip{
-  \label{sec:1-3-1-1}
+  \label{sec:1-2-1-1}
   \par\nobreak
 }
 
-パッケージマネージャーに「Chocolatey」をお使いの方は、\\[0pt]
+パッケージマネージャー「Chocolatey」をお使いの方は、\\[0pt]
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{Chocolatey}\seqsplit{  choco install vscode}\end{starterterminal}
 
 にて、インストールできます。
 
+パッケージマネージャー「winget」をお使いの方は、\\[0pt]
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{winget}\seqsplit{  winget install {-}e {-}{-}id Microsoft.VisualStudioCode}\end{starterterminal}
+
+にて、インストールできます。
+
 \subsubsection*{macOS}
 \keeplastskip{
-  \label{sec:1-3-1-2}
+  \label{sec:1-2-1-2}
   \par\nobreak
 }
 
@@ -502,7 +452,7 @@ VSCodeのインストールは\\[0pt]
 
 \subsection{VSCodeの拡張機能}
 \keeplastskip{
-  \label{sec:1-3-2}
+  \label{sec:1-2-2}
   \par\nobreak
 }
 
@@ -522,7 +472,7 @@ VSCodeを起動し、左ツールバーの拡張機能アイコンをクリッ�
 
 \subsubsection*{Debugger for Chrome}
 \keeplastskip{
-  \label{sec:1-3-2-1}
+  \label{sec:1-2-2-1}
   \par\nobreak
 }
 
@@ -538,7 +488,7 @@ ChromeのDevToolsは、非常に強力です。また、ChromeにもReact、Redu
 
 \subsection{Eslint}
 \keeplastskip{
-  \label{sec:1-3-3}
+  \label{sec:1-2-3}
   \par\nobreak
 }
 
@@ -552,7 +502,7 @@ ChromeのDevToolsは、非常に強力です。また、ChromeにもReact、Redu
 
 \subsection{Prettier}
 \keeplastskip{
-  \label{sec:1-3-4}
+  \label{sec:1-2-4}
   \par\nobreak
 }
 
@@ -566,7 +516,7 @@ Eslintと同じように、コード記法の間違いの指摘・修正やコ�
 
 \section{Google Chrome + 拡張機能}
 \keeplastskip{
-  \label{sec:1-4}
+  \label{sec:1-3}
   \label{sec-chrome}
   \par\nobreak
 }
@@ -577,7 +527,7 @@ PCへインストールされていない方は、\\[0pt]
 
 \subsection{Google Chromeのインストール}
 \keeplastskip{
-  \label{sec:1-4-1}
+  \label{sec:1-3-1}
   \par\nobreak
 }
 
@@ -606,7 +556,7 @@ Chrome Web store:\url{https://chrome.google.com/webstore/category/extensions?hl=
 
 \subsubsection*{React Developer Tools}
 \keeplastskip{
-  \label{sec:1-4-1-1}
+  \label{sec:1-3-1-1}
   \par\nobreak
 }
 
@@ -627,7 +577,7 @@ React Developer Tools
 
 \subsubsection*{Redux DevTools}
 \keeplastskip{
-  \label{sec:1-4-1-2}
+  \label{sec:1-3-1-2}
   \par\nobreak
 }
 
@@ -643,7 +593,7 @@ Redxu DevTools
 
 \section{第1章のまとめ}
 \keeplastskip{
-  \label{sec:1-5}
+  \label{sec:1-4}
   \label{sec-chap01review}
   \par\nobreak
 }
@@ -653,7 +603,6 @@ React、Reduxの開発環境は、できましたでしょうか？
 \begin{starteritemize}
 \item nvm
 \item node
-\item yarn
 \item VSCode + 拡張機能
 \item Google Chrome + 拡張機能
 \end{starteritemize}

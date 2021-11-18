@@ -66,21 +66,21 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 //quote{
  コンソールには、Facebookが関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
 
-　： yarn start
+ : yarn start
     開発用サーバの開始。
-  : yarn build
+ : yarn build
     製品用に静的はファイルにアプリケーションをまとめる。
-  : yarn test
+ : yarn test
     テストランナーの開始。
-  : yarn eject
+ : yarn eject
     ツール(create-react-app)を取り除き、依存関係、設定ファイル、スクリプトをappディレクトリにコピーする。
 
-@<br>{}
+
 　と、あります。
 
 　yarnは、pnp(プラグ＆プレイ-依存関係(node_modulesフォルダ以下にインストールされるパッケージ)を仮想化してロードする機能)を
 導入したv2で大きく変わっています。今ではv3もリリースされています。
-@<br>{}
+
   PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノード・パッケージマネージャー)を使っています。
 //}
 
@@ -88,11 +88,11 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 
 //note[github]{
   ここまでの作業は、GitHubにあります。
-
+<!-- textlint-disable -->
 //terminal[][GitHubから]{
     $ > git clone -b 00_create-react-app https://github.com/yaruo-react-redux/yaruo-blog.git
 //}
-
+<!-- textlit-enable -->
 //}
 
 =={sec-02yarnstart} アプリケーションを実行
@@ -558,9 +558,9 @@ Reactを使用したアプリケーションは、スタートアップ用のア
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
-
-  //terminal[][GitHub]{
-    $ > git clone -b 01_eslint_prettier https://github.com/tmkkz/yaruo.git
-  //}
-
+<!-- textlint-disable -->
+//terminal[][GitHub]{
+  $ > git clone -b 01_eslint_prettier https://github.com/tmkkz/yaruo.git
+//}
+<!-- textlint-enable -->
 //}
