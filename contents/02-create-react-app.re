@@ -259,6 +259,7 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 
 ==={sec-03eslint} eslint、prettierのインストール
 
+===={sec-03eslint-install} eslintのパッケージ追加と設定
 create-react-appを使用して作成したスタートアッププロジェクトには、eslintは導入済みですので設定し直し、必要な関連パッケージをインストールします。
 
 ターミナルに以下のように「eslint --init」と初期化コマンドを入力します。
@@ -276,7 +277,7 @@ create-react-appを使用して作成したスタートアッププロジェク�
 
 最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
 //terminal[][eslintへの答え]{
-  ✔ How would you like to use ESLint? · syntax
+  ✔ How would you like to use ESLint? · problems
   ✔ What type of modules does your project use? · esm
   ✔ Which framework does your project use? · react
   ✔ Does your project use TypeScript? · No / Yes　　　　@<balloon>{Yesを選択}
@@ -305,7 +306,11 @@ create-react-appを使用して作成したスタートアッププロジェク�
           "browser": true,
           "es2021": true
       },
-      "extends": "plugin:react/recommended",
+      "extends": [
+        "eslint:recommended"
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+      ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
           "ecmaFeatures": {
@@ -323,10 +328,10 @@ create-react-appを使用して作成したスタートアッププロジェク�
   };
 //}
 
-設定ファイル「.eslint.js」で、どのようなルールが適用されるのかを確認します。
+設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
 適用されるルールが、「current_rules.txt」に書き出されます。
 //terminal[][eslint設定で適用されるルール]{
-　$ npx eslint --print-config .eslint.js > current_rules.txt
+　$ npx eslint --print-config .eslintrc.js > current_rules.txt
 //}
 
 
@@ -339,20 +344,23 @@ eslintで使用するルールは一般的なものをベースにしたいの�
 //}
 
 airbnbのルールをインストールしたので、設定ファイルに追加します。
-//list[][.eslint.jsへairbnbルールを適用]{
+//list[][.eslintrc.jsへairbnbルールを適用]{
   "extends": [
+      "eslint:recommended",
       "plugin:react/recommended",
       "airbnb",  　　　@<balloon>{airbnbのルール}
       "airbnb/hooks", @<balloon>{airbnbのReact hooksのルール}
+      "plugin:@typescript-eslint/recommended",
   ],
 //}
 
 再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
 @<br>{}
 @<br>{}
-次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の4行を追加しました。
-//list[][.eslint.jsのextends部分]{
+次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の下3行を追加しました。
+//list[][.eslintrc.jsのextends部分]{
   "extends": [
+      "eslint:recommended",
       "plugin:react/recommended",
       "airbnb",
       "airbnb/hooks",
@@ -364,7 +372,7 @@ airbnbのルールをインストールしたので、設定ファイルに追�
 //}
 
 TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更する。
-//list[][.eslint.jsのparserOptions部分]{
+//list[][.eslintrc.jsのparserOptions部分]{
   "parserOptions": {
     "ecmaFeatures": {
         "jsx": true
@@ -376,8 +384,8 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
   },
 //}
 
-これでルールの適用は完了したが、都合の悪いルールは設定ファイルにてルールの上書をする。
-//list[][.eslint.jsのrulesへ追加]{
+これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
+//list[][.eslintrc.jsのrulesへ追加]{
   "rules": {
       "import/extensions": [
           "error",
@@ -404,6 +412,8 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
   }
 //}
 
+===={sec-03prettier} Prettierのインストールと設定
+
 ここからは、Prettierのインストールと設定する。
 //terminal[][Prettierのインストール]{
   $ npm install -D prettier eslint-config-prettier
@@ -425,8 +435,8 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
   }
 //}
 
-Pretterのチェックを「.eslint.js」へ追加します。
-//list[][.eslint.js]{
+Pretterのチェックを「.eslintrc.js」へ追加します。
+//list[][.eslintrc.js]{
   "extends": [
       "plugin:react/recommended",
       "airbnb",
@@ -457,17 +467,19 @@ eslintとprettierが衝突すると検出・修正ループに入りますので
 
 無事に衝突なしとなりました。
 
-package.jsonにチェック用のスクリプトコマンドを追加します。
+package.jsonにスクリプトコマンドを追加します。
 //list[][package.json]{
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",　@<balloon>{eslint用コマンドを追加}
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",　           @<balloon>{lint:チェック}
+    "fix": "npm run format && npm run lint:fix",             @<balloon>{fix:整形してチェックして自動修復}
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'", @<balloon>{format:整形}
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",   @<balloon>{lint:fix チェックして修復}
     "eject": "react-scripts eject"
   },
 //}
-
 
 Eslint、Prettierの設定が完了しましたので、srcフォルダにある「App.tsx」を開いてみると、
 ルールから外れるものは指摘されています。
@@ -483,7 +495,10 @@ VSCodeにPrettier拡張機能を追加してあれば、
 私は、修正を自分のタイミングで行いたいのでVSCode側の設定は行っていません。
 
 もし、VSCode側の設定をする場合には、VSCodeで@<br>{}
-[File]->[Preferences]->[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加してください。
+[File]->[Preferences]->[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加するか、
+このプロジェクト用には、プロジェクトフォルダ直下に「.vscode」フォルダを作成し、「settings.json」ファイルへ書き込みます。
+
+ユーザー設定ファイルの内容が、この設定で上書きされます。
 
 //list[][VSCodeの設定]{
 "editor.formatOnSave": true,
@@ -514,12 +529,104 @@ VSCode上で、@<br>{}
 
 ものを修正します。
 
-App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no-use-before-define」が表示されます。、
+まずは、.eslintrc.js自体に問題があるようです。
+
+赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no-use-before-define」が表示されます。、
 さらに、「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、修正方法が提示されます。
 
-「Fix all auto-fixable problems」を選択すると、自動修復可能なものを修正してくれます。
+.eslintrc.jsファイルでの指摘は、以下の通り「es6モジュールの書き方へ移行しろ！」と怒られています。
+以下のように、.eslintrc.jsを変更します。
 
-//image[04_eslint_prettier_fix][ポップアップが表示][scale=1.0,pos=H]
+//list[][.eslintrc.js]{
+  const config = {
+      env: {
+          browser: true,
+          es2021: true
+      },
+      extends: [
+          "plugin:react/recommended",
+          "airbnb",
+          "airbnb/hooks",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:@typescript-eslint/recommended-requiring-type-checking",
+          "plugin:import/recommended",
+          "plugin:import/typescript",
+          "prettier",
+      ],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+          ecmaFeatures: {
+              jsx: true
+          },
+          ecmaVersion: 12,
+          sourceType: "module",
+          tsconfigRootDir: __dirname,
+          project: ["./tsconfig.json"],
+      },
+      plugins: [
+          "react",
+          "@typescript-eslint",
+      ],
+      rules: {
+          "import/extensions": [
+          "error",
+          {
+              js: "never",
+              jsx: "never",
+              ts: "never",
+              tsx: "never",
+          },
+          ],
+          "react/jsx-filename-extension": [
+          "error",
+          {
+              extensions: [".jsx", ".tsx"],
+          },
+          ],
+          "react/react-in-jsx-scope": "off",
+          "no-void": [
+          "error",
+          {
+              allowAsStatement: true,
+          },
+          ],
+      }
+  };
+
+  module.exports = config;
+
+//}
+
+このように修正して保存すると、次の指摘がきます。
+//quote{
+  Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
+  The file does not match your project config: .eslintrc.js.
+  The file must be included in at least one of the projects provided.
+//}
+
+これは、ファイルが「どこからもimportされていない」場合に表示されるエラーです。
+「.eslintrc.js」は、ESLintの設定ファイルですので、どこからもインポートされていません。
+
+解消法は、「npx elsint --init」でファイルを作成した際にjson形式、または、yaml(yml)形式を選択するか
+または、.eslintrc.jsファイル自体をチェックの対象から除外します。
+
+今回は、JavaScript形式で作成したのでチェック除外のための、「.eslintignore」ファイルをプロジェクトフォルダ直下に作成し、
+lint.jsやconfig.jsのパターンが含まれるファイル、パッケージがインストールされるnode_modulesフォルダなどを除外するように指定します。
+
+//list[][.eslintignore]{
+  build/
+  public/
+  **/node_modules/
+  *.config.js
+  .*lintrc.js
+//}
+
+これで、.eslintrc.jsについては怒られなくなりました。
+
+次に、App.tsxファイルを修正します。
+
+
+//image[032_app_tsx_error][App.tsxの修正][scale=1.0,pos=H]
 
 
 //note[]{
@@ -529,7 +636,9 @@ App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、�
 
 では、指摘されている点を修正していきます。
 
+「react/function-component-definition」は、関数コンポーネントに一貫した関数タイプを適用しなさいと怒られています。
 
+関数をアロー関数に直し、関数型の宣言も追加します。
 
 //list[][App.tsx]{
   // React17からは、JSXでReactのインポートが不要になりましたので、以下の行を削除します。
@@ -538,29 +647,70 @@ App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、�
 
 
 //list[][App.tsx]{
-  import React, { ReactElement } from "react";
-  import logo from "./logo.svg";
-  import "./App.css";
+  import { VFC } from 'react';
+  import logo from './logo.svg';
+  import './App.css';
 
-  const App = (): ReactElement => {
-    return (
-      <div className="App">
+  const App: VFC = () => (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+
+  export default App;
 //}
 
-このように、戻り値の型を指定することで指摘を修正できました。
+
+最後に「reportWebVitals.ts」を修正します。
+//image[033_reportWebVitals_error][reportWebVitals.tsの修正][scale=1.0]
+
+これは、Quick Fixを選択すると、「Add void operator to ignore」と出ますので、それを選択します。
+//list[][reportWebVitals.ts]{
+  import { ReportHandler } from 'web-vitals';
+
+  const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+    if (onPerfEntry && onPerfEntry instanceof Function) {
+      void import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(onPerfEntry);
+        getFID(onPerfEntry);
+        getFCP(onPerfEntry);
+        getLCP(onPerfEntry);
+        getTTFB(onPerfEntry);
+      });
+    }
+  };
+
+  export default reportWebVitals;
+
+//}
+
+これで現時点での指摘はすべて修正できました。
 
 //image[06_eslint_prettier_fixdoneAll][すべての問題の修正完了][scale=1.0,pos=H]
 
 =={sec-chap02review} 第2章のまとめ
 Reactを使用したアプリケーションは、スタートアップ用のアプリケーションがコマンド一発でインストールできます。
 
-より良いコーディングをするためにも、Eslint、Prettierを導入しましょう。
+より良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
 <!-- textlint-disable -->
 //terminal[][GitHub]{
-  $ > git clone -b 01_eslint_prettier https://github.com/tmkkz/yaruo.git
+  $ > git clone -b 01_eslint_prettier https://github.com/yaruo-react-redux/yaruo-blog.git
 //}
 <!-- textlint-enable -->
 //}

@@ -289,6 +289,13 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
   \par\nobreak
 }
 
+\subsubsection*{eslintのパッケージ追加と設定}
+\keeplastskip{
+  \label{sec:2-4-1-1}
+  \label{sec-03eslint-install}
+  \par\nobreak
+}
+
 create{-}react{-}appを使用して作成したスタートアッププロジェクトには、eslintは導入済みですので設定し直し、必要な関連パッケージをインストールします。
 
 ターミナルに以下のように「eslint {-}{-}init」と初期化コマンドを入力します。
@@ -307,7 +314,7 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
 最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslintへの答え}\seqsplit{  ✔ How would you like to use ESLint? · syntax
+\begin{starterterminal}[]{eslintへの答え}\seqsplit{  ✔ How would you like to use ESLint? · problems
   ✔ What type of modules does your project use? · esm
   ✔ Which framework does your project use? · react
   ✔ Does your project use TypeScript? · No / Yes　　　　{\reviewballoon{Yesを選択}}
@@ -334,7 +341,11 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
           "browser": true,
           "es2021": true
       \},
-      "extends": "plugin:react/recommended",
+      "extends": [
+        "eslint:recommended"
+        "plugin:react/recommended",
+        "plugin:@typescript{-}eslint/recommended",
+      ],
       "parser": "@typescript{-}eslint/parser",
       "parserOptions": \{
           "ecmaFeatures": \{
@@ -351,11 +362,11 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
       \}
   \};}\end{starterprogram}
 
-設定ファイル「.eslint.js」で、どのようなルールが適用されるのかを確認します。
+設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
 適用されるルールが、「current\textunderscore{}rules.txt」に書き出されます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslint設定で適用されるルール}\seqsplit{　\textdollar{} npx eslint {-}{-}print{-}config .eslint.js \textgreater{} current\textunderscore{}rules.txt}\end{starterterminal}
+\begin{starterterminal}[]{eslint設定で適用されるルール}\seqsplit{　\textdollar{} npx eslint {-}{-}print{-}config .eslintrc.js \textgreater{} current\textunderscore{}rules.txt}\end{starterterminal}
 
 eslintで使用するルールは一般的なものをベースにしたいので、あのairbnbのルールをインストールします。
 
@@ -368,19 +379,22 @@ eslintで使用するルールは一般的なものをベースにしたいの�
 airbnbのルールをインストールしたので、設定ファイルに追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslint.jsへairbnbルールを適用}\seqsplit{  "extends": [
+\begin{starterprogram}[]{.eslintrc.jsへairbnbルールを適用}\seqsplit{  "extends": [
+      "eslint:recommended",
       "plugin:react/recommended",
       "airbnb",  　　　{\reviewballoon{airbnbのルール}}
       "airbnb/hooks", {\reviewballoon{airbnbのReact hooksのルール}}
+      "plugin:@typescript{-}eslint/recommended",
   ],}\end{starterprogram}
 
 再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
 \\[0pt]
 \\[0pt]
-次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の4行を追加しました。
+次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の下3行を追加しました。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslint.jsのextends部分}\seqsplit{  "extends": [
+\begin{starterprogram}[]{.eslintrc.jsのextends部分}\seqsplit{  "extends": [
+      "eslint:recommended",
       "plugin:react/recommended",
       "airbnb",
       "airbnb/hooks",
@@ -393,7 +407,7 @@ airbnbのルールをインストールしたので、設定ファイルに追�
 TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更する。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslint.jsのparserOptions部分}\seqsplit{  "parserOptions": \{
+\begin{starterprogram}[]{.eslintrc.jsのparserOptions部分}\seqsplit{  "parserOptions": \{
     "ecmaFeatures": \{
         "jsx": true
     \},
@@ -403,10 +417,10 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
     "project": ["./tsconfig.json"],
   \},}\end{starterprogram}
 
-これでルールの適用は完了したが、都合の悪いルールは設定ファイルにてルールの上書をする。
+これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslint.jsのrulesへ追加}\seqsplit{  "rules": \{
+\begin{starterprogram}[]{.eslintrc.jsのrulesへ追加}\seqsplit{  "rules": \{
       "import/extensions": [
           "error",
           \{
@@ -431,6 +445,13 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
         ],
   \}}\end{starterprogram}
 
+\subsubsection*{Prettierのインストールと設定}
+\keeplastskip{
+  \label{sec:2-4-1-2}
+  \label{sec-03prettier}
+  \par\nobreak
+}
+
 ここからは、Prettierのインストールと設定する。
 
 \def\startercodeblockfontsize{}
@@ -452,10 +473,10 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
     "prettier": "\textasciicircum{}2.4.1"
   \}}\end{starterprogram}
 
-Pretterのチェックを「.eslint.js」へ追加します。
+Pretterのチェックを「.eslintrc.js」へ追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslint.js}\seqsplit{  "extends": [
+\begin{starterprogram}[]{.eslintrc.js}\seqsplit{  "extends": [
       "plugin:react/recommended",
       "airbnb",
       "airbnb/hooks",
@@ -484,14 +505,17 @@ eslintとprettierが衝突すると検出・修正ループに入りますので
 
 無事に衝突なしとなりました。
 
-package.jsonにチェック用のスクリプトコマンドを追加します。
+package.jsonにスクリプトコマンドを追加します。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.json}\seqsplit{  "scripts": \{
     "start": "react{-}scripts start",
     "build": "react{-}scripts build",
     "test": "react{-}scripts test",
-    "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'",　{\reviewballoon{eslint用コマンドを追加}}
+    "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'",　           {\reviewballoon{lint:チェック}}
+    "fix": "npm run format \&\& npm run lint:fix",             {\reviewballoon{fix:整形してチェックして自動修復}}
+    "format": "prettier {-}{-}write 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{format:整形}}
+    "lint:fix": "eslint {-}{-}fix 'src/**/*.\{js,jsx,ts,tsx\}'",   {\reviewballoon{lint:fix チェックして修復}}
     "eject": "react{-}scripts eject"
   \},}\end{starterprogram}
 
@@ -519,7 +543,10 @@ VSCodeにPrettier拡張機能を追加してあれば、
 私は、修正を自分のタイミングで行いたいのでVSCode側の設定は行っていません。
 
 もし、VSCode側の設定をする場合には、VSCodeで\\[0pt]
-[File]{-}\textgreater{}[Preferences]{-}\textgreater{}[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加してください。
+[File]{-}\textgreater{}[Preferences]{-}\textgreater{}[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加するか、
+このプロジェクト用には、プロジェクトフォルダ直下に「.vscode」フォルダを作成し、「settings.json」ファイルへ書き込みます。
+
+ユーザー設定ファイルの内容が、この設定で上書きされます。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{VSCodeの設定}\seqsplit{"editor.formatOnSave": true,
@@ -550,15 +577,107 @@ VSCode上で、\\[0pt]
 
 ものを修正します。
 
-App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no{-}use{-}before{-}define」が表示されます。、
+まずは、.eslintrc.js自体に問題があるようです。
+
+赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no{-}use{-}before{-}define」が表示されます。、
 さらに、「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、修正方法が提示されます。
 
-「Fix all auto{-}fixable problems」を選択すると、自動修復可能なものを修正してくれます。
+.eslintrc.jsファイルでの指摘は、以下の通り「es6モジュールの書き方へ移行しろ！」と怒られています。
+以下のように、.eslintrc.jsを変更します。
 
-\begin{reviewimage}[H]%%04_eslint_prettier_fix
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/04_eslint_prettier_fix.png}%
-\reviewimagecaption{ポップアップが表示}
-\label{image:02-create-react-app:04_eslint_prettier_fix}
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{.eslintrc.js}\seqsplit{  const config = \{
+      env: \{
+          browser: true,
+          es2021: true
+      \},
+      extends: [
+          "plugin:react/recommended",
+          "airbnb",
+          "airbnb/hooks",
+          "plugin:@typescript{-}eslint/recommended",
+          "plugin:@typescript{-}eslint/recommended{-}requiring{-}type{-}checking",
+          "plugin:import/recommended",
+          "plugin:import/typescript",
+          "prettier",
+      ],
+      parser: "@typescript{-}eslint/parser",
+      parserOptions: \{
+          ecmaFeatures: \{
+              jsx: true
+          \},
+          ecmaVersion: 12,
+          sourceType: "module",
+          tsconfigRootDir: \textunderscore{}\textunderscore{}dirname,
+          project: ["./tsconfig.json"],
+      \},
+      plugins: [
+          "react",
+          "@typescript{-}eslint",
+      ],
+      rules: \{
+          "import/extensions": [
+          "error",
+          \{
+              js: "never",
+              jsx: "never",
+              ts: "never",
+              tsx: "never",
+          \},
+          ],
+          "react/jsx{-}filename{-}extension": [
+          "error",
+          \{
+              extensions: [".jsx", ".tsx"],
+          \},
+          ],
+          "react/react{-}in{-}jsx{-}scope": "off",
+          "no{-}void": [
+          "error",
+          \{
+              allowAsStatement: true,
+          \},
+          ],
+      \}
+  \};
+
+  module.exports = config;
+}\end{starterprogram}
+
+このように修正して保存すると、次の指摘がきます。
+
+\begin{starterquote}
+
+Parsing error: "parserOptions.project" has been set for @typescript{-}eslint/parser.
+The file does not match your project config: .eslintrc.js.
+The file must be included in at least one of the projects provided.
+
+\end{starterquote}
+
+これは、ファイルが「どこからもimportされていない」場合に表示されるエラーです。
+「.eslintrc.js」は、ESLintの設定ファイルですので、どこからもインポートされていません。
+
+解消法は、「npx elsint {-}{-}init」でファイルを作成した際にjson形式、または、yaml(yml)形式を選択するか
+または、.eslintrc.jsファイル自体をチェックの対象から除外します。
+
+今回は、JavaScript形式で作成したのでチェック除外のための、「.eslintignore」ファイルをプロジェクトフォルダ直下に作成し、
+lint.jsやconfig.jsのパターンが含まれるファイル、パッケージがインストールされるnode\textunderscore{}modulesフォルダなどを除外するように指定します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{.eslintignore}\seqsplit{  build/
+  public/
+  **/node\textunderscore{}modules/
+  *.config.js
+  .*lintrc.js}\end{starterprogram}
+
+これで、.eslintrc.jsについては怒られなくなりました。
+
+次に、App.tsxファイルを修正します。
+
+\begin{reviewimage}[H]%%032_app_tsx_error
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/032_app_tsx_error.png}%
+\reviewimagecaption{App.tsxの修正}
+\label{image:02-create-react-app:032_app_tsx_error}
 \end{reviewimage}
 \begin{starternote}[]{}
 
@@ -569,19 +688,68 @@ App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、�
 
 では、指摘されている点を修正していきます。
 
+「react/function{-}component{-}definition」は、関数コンポーネントに一貫した関数タイプを適用しなさいと怒られています。
+
+関数をアロー関数に直し、関数型の宣言も追加します。
+
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{App.tsx}\seqsplit{  // React17からは、JSXでReactのインポートが不要になりましたので、以下の行を削除します。
   import React from 'react';}\end{starterprogram}
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[]{App.tsx}\seqsplit{  import React, \{ ReactElement \} from "react";
-  import logo from "./logo.svg";
-  import "./App.css";
+\begin{starterprogram}[]{App.tsx}\seqsplit{  import \{ VFC \} from 'react';
+  import logo from './logo.svg';
+  import './App.css';
 
-  const App = (): ReactElement =\textgreater{} \{
-    return (
-      \textless{}div className="App"\textgreater{}}\end{starterprogram}
+  const App: VFC = () =\textgreater{} (
+    \textless{}div className="App"\textgreater{}
+      \textless{}header className="App{-}header"\textgreater{}
+        \textless{}img src=\{logo\} className="App{-}logo" alt="logo" /\textgreater{}
+        \textless{}p\textgreater{}
+          Edit \textless{}code\textgreater{}src/App.tsx\textless{}/code\textgreater{} and save to reload.
+        \textless{}/p\textgreater{}
+        \textless{}a
+          className="App{-}link"
+          href="https://reactjs.org"
+          target="\textunderscore{}blank"
+          rel="noopener noreferrer"
+        \textgreater{}
+          Learn React
+        \textless{}/a\textgreater{}
+      \textless{}/header\textgreater{}
+    \textless{}/div\textgreater{}
+  );
 
-このように、戻り値の型を指定することで指摘を修正できました。
+  export default App;}\end{starterprogram}
+
+最後に「reportWebVitals.ts」を修正します。
+
+\begin{reviewimage}%%033_reportWebVitals_error
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/033_reportWebVitals_error.png}%
+\reviewimagecaption{reportWebVitals.tsの修正}
+\label{image:02-create-react-app:033_reportWebVitals_error}
+\end{reviewimage}
+
+これは、Quick Fixを選択すると、「Add void operator to ignore」と出ますので、それを選択します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{reportWebVitals.ts}\seqsplit{  import \{ ReportHandler \} from 'web{-}vitals';
+
+  const reportWebVitals = (onPerfEntry?: ReportHandler) =\textgreater{} \{
+    if (onPerfEntry \&\& onPerfEntry instanceof Function) \{
+      void import('web{-}vitals').then((\{ getCLS, getFID, getFCP, getLCP, getTTFB \}) =\textgreater{} \{
+        getCLS(onPerfEntry);
+        getFID(onPerfEntry);
+        getFCP(onPerfEntry);
+        getLCP(onPerfEntry);
+        getTTFB(onPerfEntry);
+      \});
+    \}
+  \};
+
+  export default reportWebVitals;
+}\end{starterprogram}
+
+これで現時点での指摘はすべて修正できました。
 
 \begin{reviewimage}[H]%%06_eslint_prettier_fixdoneAll
 \includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/06_eslint_prettier_fixdoneAll.png}%
@@ -598,7 +766,7 @@ App.tsxの赤波線の上にマウスポンタを置くとeslintのコード、�
 
 Reactを使用したアプリケーションは、スタートアップ用のアプリケーションがコマンド一発でインストールできます。
 
-より良いコーディングをするためにも、Eslint、Prettierを導入しましょう。
+より良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
 
 \begin{starternote}[]{}
 
