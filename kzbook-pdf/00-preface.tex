@@ -2,47 +2,74 @@
 \label{chap:00-preface}
 
 このたびは、「やる夫で学ぶ{-}Redux{-} Redux Toolkitは簡単だお･･･」を、手にしていただき誠にありがとうございます。
-\\[0pt]
-\\[0pt]
+
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+
 私は15年近くVisual Studio上でC\#を使ってUIのあるプログラムを書いていました。
 昨今は、同一コードでマルチプラットフォーム上で動作するアプリケーションに向かっています。
-\\[0pt]
+
+\vspace*{\baselineskip}
+
 今では、Microsoft .NETがマルチプラットフォームで動作するようになり、UIなども充実し始めています。
-\\[0pt]
+
+\vspace*{\baselineskip}
+
 あるとき、あるプロジェクトでは、「Windows、Mac上にて同一UIで動作」が要求されました。
 そのために選択したのが、ブラウザ上で動作するWebアプリケーションです。
-\\[0pt]
+
+\vspace*{\baselineskip}
+
 さらに、Webアプリケーションではローカルファイルにアクセスできないため、Electronを使用することで、
 Webアプリケーションをマルチプラットフォームで動作するアプリケーションにしました。
+
+\vspace*{\baselineskip}
 
 当時は、WebアプリケーションのフレームワークとしてAngularとReactが候補に挙がりましたが、
 Reactの方が学習コストが低いと言われていたため、Reactを学びました。
 
+\vspace*{\baselineskip}
+
 本書は、私がReactやReduxを使い始めたときに「こんな本があれば良かったのに･･･」を目指して書きました。
 React,Reduxの初学者から中級の方のお役に立てれば幸いです。
 
-そして、私が一番欲しかった「常に最新の情報」を掲載していきたいと思っています。
+\vspace*{\baselineskip}
 
 React、Reduxの解説書やチュートリアルは、書籍・インターネット上にたくさんあります。
 しかし、つぎつぎと新機能が追加され本家以外の情報は、あっという間に古くなってしまいます。
 この書籍は、掲載情報を最新にするために電子書籍のみとし、古くなった情報は随時更新していきたいと思っています。
 
+\vspace*{\baselineskip}
+
 お気付き点がございましたら、Guthub上へお寄せください。
 
+\vspace*{\baselineskip}
+
 本書は、フロントエンド開発で使用されている\\[0pt]
-* react
-* redux(redux{-}toolkit)
+
+\begin{starteritemize}
+\item react
+\item redux(redux{-}toolkit)
+\end{starteritemize}
 
 を習得するために、開発環境の作成(つまりゼロ)から始め、チュートリアルの定番のToDoリストを作成します。
 
+\vspace*{\baselineskip}
+
 すでに開発環境を整えている方は、第1章を飛ばしてもかまいません。
+
+\vspace*{\baselineskip}
 
 また、作成するToDoアプリケーションはGutHubに公開していますが、こちらも最新の情報に更新していくつもりです。
 GutHubでは、章毎に別ブランチにしてありますので、写経がメンドウな方は章に対応したブランチを使ってください。
 
+\vspace*{\baselineskip}
+
 git、GitHubの使い方については、本書では取り扱いません。
 
-本書は、チュートリアルによくあるToDoリストを\\[0pt]
+\vspace*{\baselineskip}
+
+本書は、チュートリアルによくあるToDoリストを日記アプリケーションとし\\[0pt]
 
 \begin{starterenumerate}
 \item Reduxなしで作成
@@ -53,14 +80,16 @@ git、GitHubの使い方については、本書では取り扱いません。
 と、書き換えていくことでReduxを用いた「状態管理(アプリケーション全体でのデータ)」を
 理解してもらえるようになっています。
 
-　create{-}react{-}appを使用して、ゼロからの手順を解説しています。写経がメンドウな人は、
-GitHubにあるコードを使ってください。
+\vspace*{\baselineskip}
 
 必要なものは、すべて無料でそろえることができる以下のものです。これらが何なのか、そして、インストール方法は
 第１章にて解説しています。
+
 　* Node.js
 　* yarn（npmを使われる方は不要）
 　* Microsoft Visual Studio code
 　* Google Chrome
+
+\vspace*{\baselineskip}
 
 それでは、始めていきましょう。

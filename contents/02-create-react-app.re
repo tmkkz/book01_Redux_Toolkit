@@ -1,12 +1,37 @@
 = スタートプロジェクトの作成
 
 //abstract{
-  本章では、reactアプリケーションのひな型がコマンドひとつで作成できる「create-react-app」を使用して、
-スタート用のアプリケーションを作成し、ブラウザで表示するまでを行います。
+Reactアプリケーションを作成するための最初のステップとして、トップページが表示されるスタートアッププロジェクトを作成します。
+//blankline
+スタートアッププロジェクトを作成する方法として、@<br>{}
 
-　また、作成するプロジェクトは、TypesScriptを使用します。コード記法の指摘・修正を行えるよう「eslint」、「prettier」の設定も行います。
+//blankline
+  1. create-react-app@<br>{}
+  2. ゼロから構築@<br>{}
+//blankline
+の2つの方法を解説します。
+
+//blankline
+「create-react-app」は、コマンド一発でReactアプリケーション開発が数分で始められます。
+
+//blankline
+ただし、Facebook(Meta社)を中心に開発されている便利なものなのですが、メンドウな設定などが隠されているため
+バージョンの合わないライブラリを入力すると整合性が崩れ手に負えなくなることもあります。
+
+//blankline
+たとえば、現行執筆時点(2021年12月12日)で、メジャーバージョンが上がっているwebpackやEslintを上書きしてしまうと
+たくさんのエラーに悩まされることになります。
+
+//blankline
+「ゼロから構築」を選択すると、最新のライブラリが使用できますが、webpack、ESLintなどの設定ファイルは自分で書かなくてはなりません。
+使用するライブラリの設定自体は難しくないので、ここで勉強しておけば必ず役に立つはずです。
+
+
+どちらの方法もGitHubにテンプレートとしてアップロードしてありますので、ご自由にお使いください。
 
 //}
+
+
 =={sec-01command} create-react-appコマンド
 Reactアプリケーションをゼロから作成するためには、@<br>{}
 
@@ -19,11 +44,11 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 など、reactライブラリのインストール以外にも、Babelやwebpackをインストールして設定ファイルを作成しなくてはなりません。
 
 //blankline
-また、使用するライブラリによっては、Babelのプラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業がたいへんです。
+また、使用するライブラリによっては、プラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業がたいへんです。
 
 //blankline
 しかし、「そんなメンドウなことは、やってられない。」と誰しもが思ったか、
-すぐにでもコードを書き始めることのできるスタート用アプリケーションが、react開発元のFacebookから提供されています。
+すぐにでもコードを書き始めることのできるスタート用アプリケーションが、react開発元のFacebook(Meta)から提供されています。
 
 //blankline
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
@@ -33,7 +58,7 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 ターミナルを起動し、プロジェクトフォルダを作成するフォルダへ移動します。
 
 //terminal[][create-react-appでスタート用アプリケーション作成]{
-  $ > npx create react-app プロジェクト名 --template typescript
+> npx create react-app プロジェクト名 --template typescript
 //}
 
 エンターキーを押すと、作業が始まり「プロジェクト名」のフォルダが作成され、
@@ -69,7 +94,7 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
 //}
 
 //quote{
-ターミナルには、Facebookが関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
+ターミナルには、Facebook(Meta)が関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
 
  : yarn start
     開発用サーバの開始。
@@ -79,8 +104,6 @@ Reactアプリケーションをゼロから作成するためには、@<br>{}
     テストランナーの開始。
  : yarn eject
     ツール(create-react-app)を取り除き、依存関係、設定ファイル、スクリプトをappディレクトリにコピーする。
-
-と、あります。
 
 //blankline
 yarnは、pnp(プラグ＆プレイ-依存関係(node_modulesフォルダ以下にインストールされるパッケージ)を仮想化してロードする機能)を
@@ -95,19 +118,19 @@ PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノ
   ここまでの作業は、GitHubにあります。
 #@#<!-- textlint-disable -->
 //terminal[][GitHubから]{
-$ > git clone -b 01_create-react-app https://github.com/yaruo-react-redux/yaruo-diary.git
+> git clone -b 01_create-react-app https://github.com/yaruo-react-redux/yaruo-diary.git
 //}
 #@#<!-- textlit-enable -->
 //}
 
-=={sec-02yarnstart} アプリケーションを実行
+==={sec-02yarnstart} アプリケーションを実行
 アプリケーションが作成できましたので、実行してみます。
 
 ターミナルに表示されているように、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 //terminal[][]{
 $ cd プロジェクト名
-$ npm start
+$ npm run start
 //}
 
 すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトでは、port:3000でアプリケーションへアクセスできます。
@@ -130,7 +153,7 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 
 このページが表示されれば成功です。
 
-=={sec-03cra-desc} create-react-appで作成された中身
+==={sec-03cra-desc} create-react-appで作成された中身
 
 create-react-appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
@@ -168,7 +191,7 @@ create-react-appコマンドを使用すると、package.jsonも以下のよう�
 
 //list[][package.json]{
   {
-    "name": "yaruo-blog",
+    "name": "作成時に入力したプロジェクト名",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -212,7 +235,8 @@ create-react-appコマンドを使用すると、package.jsonも以下のよう�
   }
 //}
 
-package.json内にある「scripts」にあるものがコマンドになります。react-scriptsは、npmスクリプトを連続、または、並列に実行してくれるものです。
+package.json内にある「scripts」にあるものがコマンドになります。react-scriptsは、npmスクリプトを連続、
+または、並列に実行してくれるものです。
 
 //blankline
 package.jsonの「dependencies」には、実行に必要でインストール済みのnpmパッケージが記載されています。
@@ -220,6 +244,793 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 //blankline
 また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
+
+//blankline
+以下のように、「create-react-app」で使用されている「Eslint」、「webpack」のバージョンです。
+
+原稿執筆時点(2012年12月12日)では、@<br>{}
+ * Eslint 8.4.1
+ * webpack 5.65.0
+ * TypeScript 4.5.3
+
+ が最新版です。
+
+ 最新版を使うのが必ずしも良いとは限りませんが、メジャーバージョンが違うと気になります。
+
+
+=={sec-04-start}　ゼロから構築してみる
+
+本章では、最新のライブラリを使用してゼロからReact/TypeScriptの環境を構築します。
+
+ステップ毎にGitHub上でブランチを作成してありますので、どこからでも始めていただけます。
+
+==={sec-04-node_init} ステップ1 npm init y
+
+新しくプロジェクト用のフォルダを作成し移動します。
+
+コンソールで「npm init -y」コマンドを実行します。オプションの「-y」なしで実行すると、対話形式で「package.json」を作成できます。
+
+//terminal[npm init -y][nodeプロジェクトの開始]{
+  ❯ npm init -y
+  Wrote to /Users/yaruo/Documents/yaruo_react_sample/yaruo-start-template/package.json:
+
+  {
+    "name": "yaruo-start-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yaruo-react-redux/yaruo-start-template.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/yaruo-react-redux/yaruo-start-template/issues"
+    },
+    "homepage": "https://github.com/yaruo-react-redux/yaruo-start-template#readme"
+  }
+//}
+
+作成された「package.json」が表示されます。
+
+//note[]{
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+#@#<!-- textlint-disable -->
+//terminal[][GitHub]{
+> git clone -b 01_start-node-project https://github.com/yaruo-react-redux/yaruo-start-template.git
+//}
+#@#<!-- textlint-enable -->
+//}
+
+
+==={sec-04-webpack} webpackのインストールと設定
+webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある画像が示しているように、@<br>{}
+ * JavaScriptファイル
+ * CSS(SASS,SCSS)ファイル
+ * 画像ファイル
+
+ などをすべてJavaScriptファイルとして扱い、インストールしているライブラリファイルなどもすべて含めて
+ 1つのファイルとして出力するバンドラー(まとめる)です。
+
+しかし、すべてを1つのファルとするよりも、htmlファイル、cssファイル、画像ファイルをブラウザが並列ダウンロードすると効率がよく表示速度も速くなりため
+上図のように、複数ファイルに出力します。
+
+それでは、webpackをインストールし、バンドラーの動きを確認しながら設定ファイルを作成していきます。
+
+ターミナルに以下のコマンドを入力します。「-D」のオプションは、
+開発時のみ必要で製品版には含まないライブラリをインストールするときに使います。
+
+「package.json」の「devDependencies」に追記されます。
+
+ * webpack  本体
+ * webpack-cli コマンドライン用
+ * webpack-dev-server 開発用Webサーバ
+
+をインストールします。
+
+//terminal[webpckのインストール][]{
+  ❯ npm install -D webpack webpack-cli webpack-dev-server
+  npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+
+  added 328 packages, and audited 329 packages in 24s
+
+  42 packages are looking for funding
+    run `npm fund` for details
+
+  found 0 vulnerabilities
+//}
+
+「package.json」は、以下のようになります。「ーD」オプションを付けたため、「devDependencies」以下に
+追記されています。
+
+//list[package.json][]{
+  {
+    "name": "yaruo-start-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yaruo-react-redux/yaruo-start-template.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/yaruo-react-redux/yaruo-start-template/issues"
+    },
+    "homepage": "https://github.com/yaruo-react-redux/yaruo-start-template#readme",
+    "devDependencies": {
+      "webpack": "^5.65.0",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.6.0"
+    }
+  }
+//}
+
+
+==={04-webpack-check} webpackの動作確認
+
+インストールしたwebpackの動作を確認してみます。
+
+//blankline
+確認方法は、便利な関数をまとめてある「lodash」ライブラリをインストールし、トップページを作成し動作確認します。
+
+手順は、@<br>{}
+//blankline
+@<strong>{1. src、distフォルダを作成}@<br>{}
+ソースコードを置くフォルダ「src」とｗebpackのデフォルトの出力先フォルダ「dist」を作成します。
+@<strong>{2. ファイルを作成}@<br>{}
+「lodash」ライブラリをインストールし、srcフォルダに、下記の「index.js」ファイルを作成します。
+//terminal[lodashのインストール][]{
+ > npm install lodash
+//}
+//list[src/index.js][]{
+  import _ from 'lodash';
+
+  function component() {
+    const element = document.createElement('div');
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['webpack', '動いてるお〜'], ' ');
+    return element;
+  }
+
+  document.body.appendChild(component());
+//}
+
+@<strong>{3. トップページを作成}
+webpackのデフォルトの出力先「dist」フォルダを作成し、「index.html」ファイルを作成します。
+//blankline
+//list[dist/index.html][]{
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Getting Started</title>
+    </head>
+    <body>
+      <script src="main.js"></script>
+    </body>
+  </html>
+//}
+
+//blankline
+
+@<strong>{4. 動作を確認}
+webpackの動作を確認するために、ターミナルで以下のコマンドを実行します。
+
+npx webpack serve --open --static-directory dist --mode=development
+
+//note[コマンド解説]{
+  npx --> /node_modules/.binフォルダにあるファイルを実行@<br>{}
+  webpack --> 今回動かすモジュール@<br>{}
+  serve --> devServer(開発用サーバ)も起動@<br>{}
+  --open --> デフォルトのブラウザで開く@<br>{}
+  --static-directory dist --> devServerのDocumentRootを指定@<br>{}
+  --mode=development --> 出力モード@<br>{}
+
+「--static-directory dist」を入力しているのは、devServerのデフォルトDocumentRootは「public」のためです。
+//}
+
+
+
+//terminal[webpackをコマンドで起動][]{
+  ❯ npx webpack serve --open --static-directory dist --mode=development
+  <i> [webpack-dev-server] Project is running at:
+  <i> [webpack-dev-server] Loopback: http://localhost:8080/
+  <i> [webpack-dev-server] On Your Network (IPv4): http://192.168.20.101:8080/
+  <i> [webpack-dev-server] On Your Network (IPv6): http://[fe80::1]:8080/
+  <i> [webpack-dev-server] Content not from webpack is served from 'dist' directory
+  <i> [webpack-dev-middleware] wait until bundle finished: /
+  asset main.js 836 KiB [emitted] (name: main)
+  runtime modules 27.2 KiB 13 modules
+  modules by path ./node_modules/ 730 KiB
+    modules by path ./node_modules/webpack-dev-server/client/ 52.8 KiB 12 modules
+    modules by path ./node_modules/webpack/hot/*.js 4.3 KiB 4 modules
+    modules by path ./node_modules/html-entities/lib/*.js 81.3 KiB 4 modules
+    modules by path ./node_modules/url/ 37.4 KiB 3 modules
+    modules by path ./node_modules/querystring/*.js 4.51 KiB
+      ./node_modules/querystring/index.js 127 bytes [built] [code generated]
+      ./node_modules/querystring/decode.js 2.34 KiB [built] [code generated]
+      ./node_modules/querystring/encode.js 2.04 KiB [built] [code generated]
+    ./node_modules/lodash/lodash.js 531 KiB [built] [code generated]
+    ./node_modules/ansi-html-community/index.js 4.16 KiB [built] [code generated]
+    ./node_modules/events/events.js 14.5 KiB [built] [code generated]
+  ./src/index.js 269 bytes [built] [code generated]
+  webpack 5.65.0 compiled successfully in 882 ms
+//}
+
+「--open」オプションでデフォルトのブラウザが起動し、index.htmlが表示されます。
+//image[webpack_test01][ブラウザで表示][scale=1.0]
+
+devToolsで「main.js」を確認すると、node_modulesフォルダ以下にインストールされたJavaScriptが
+1つのファイルにまとめられているのが確認できます。
+//image[webpack_test02][devToolsでmain.js内を確認][scale=1.0]
+
+npx webpack build
+
+上記コマンドを実行すると、distフォルダ以下にmain.jsファイルが出力されます。
+
+//image[webpack_test03][webpackでビルドしてみた][scale=1.0]
+
+//note[]{
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+#@#<!-- textlint-disable -->
+//terminal[][GitHub]{
+> git clone -b 02_webpack-install https://github.com/yaruo-react-redux/yaruo-start-template.git
+//}
+#@#<!-- textlint-enable -->
+//}
+
+==={04-webpack-config} webpackの設定ファイル
+自分でwebpack、devServerを動作させてみると、webpackが何をやっているかを理解しやすくなります。
+
+本章では、webpackの設定ファイル「webpack-config.js」を作成します。
+
+//blankline
+手順は、@<br>{}
+
+ 1. 「npx webpack-cli init」をターミナルで実行し、ひな型を作成。
+ 2. 必要なpluginのインストールと設定ファイルへの追加
+ 3. 不要な設定を削除し、開発時用、製品作成時用でファイルを分ける
+
+ と、なります。
+
+ では、まずは、ターミナルにて上記コマンドを実行すると、
+ //blankline
+ このコマンドを実行するには、「@webpack-cli/generatorsパッケージが必要ですが、インストールしますか？」と
+ 聞かれますので、エンターキーを押します。
+
+ //blankline
+ @webpack-cli/generatorsと依存関係をもつパッケージがインストールされると、設定ファイルを作成するための質問が始まります。
+ 私が選んだ答えと括弧内は表示される選択肢です。
+//blankline
+ * どのタイプのJSを使いますか？　--> TypeScript(none, ES6)
+ * devServerを使いますか？ --> Yes
+ * バンドル用のHTMLファイルを作成しますか？ --> Yes
+ * PWAサポートが必要ですか？ --> No
+ * CSSは、どのタイプを使いますか？ --> SASS(none, CSS only, LESS, Stylus)
+ * SASSと一緒にCSSスタイルも使いますか？　--> Yes
+ * PostCSS(Node.js製のCSSを作るためのフレームワーク)を使いますか？ --> No
+ * ファイル毎にCSSを別にしますか？ --> Yes
+ * 設定ファイルをフォーマットするのにPrettierをインストールしますか？　--> Yes
+ * パッケージマネージャーを選択してください。 --> npm
+ * package.jsonがすでにありますが上書きしても良いですか？ --> No
+ * README.mdがすでにありますが上書きしても良いですか？ --> No
+
+
+//terminal[webpack-config.jsの作成][]{
+   ❯ npx webpack-cli init
+  [webpack-cli] For using this command you need to install: '@webpack-cli/generators' package.
+  [webpack-cli] Would you like to install '@webpack-cli/generators' package? (That will run 'npm install -D @webpack-cli/generators') (Y/n)
+  npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+  npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+
+  added 370 packages, and audited 699 packages in 22s
+
+  58 packages are looking for funding
+    run `npm fund` for details
+
+  9 vulnerabilities (4 moderate, 5 high)
+
+  To address all issues (including breaking changes), run:
+    npm audit fix --force
+
+  Run `npm audit` for details.
+  ? Which of the following JS solutions do you want to use? Typescript
+  ? Do you want to use webpack-dev-server? Yes
+  ? Do you want to simplify the creation of HTML files for your bundle? Yes
+  ? Do you want to add PWA support? No
+  ? Which of the following CSS solutions do you want to use? SASS
+  ? Will you be using CSS styles along with SASS in your project? Yes
+  ? Will you be using PostCSS in your project? No
+  ? Do you want to extract CSS for every file? Yes
+  ? Do you like to install prettier to format generated configuration? Yes
+  ? Pick a package manager: npm
+  [webpack-cli] ℹ INFO  Initialising project...
+   conflict package.json
+  ? Overwrite package.json? do not overwrite
+       skip package.json
+     create src/index.ts
+   conflict README.md
+  ? Overwrite README.md? do not overwrite
+       skip README.md
+     create index.html
+     create webpack.config.js
+     create tsconfig.json
+
+  added 65 packages, and audited 764 packages in 9s
+
+  73 packages are looking for funding
+    run `npm fund` for details
+
+  9 vulnerabilities (4 moderate, 5 high)
+
+  To address all issues (including breaking changes), run:
+    npm audit fix --force
+
+  Run `npm audit` for details.
+//}
+
+質問完了後に必要なパッケージがインストールされ、「webpack.config.js」が作成されます。
+また、TypeScript用に「tsconfig.json」も作成されますが、後で作成しますので削除します。
+
+作成された「webpack.config.js」を以下のように編集します。
+#@#<!-- textlint-disable -->
+ * entry: "./src/index.ts"を"./src/index.js"へ
+ * output: path: path.resolve(__dirname, "public")へ
+ * distフォルダを削除し、publicフォルダを作成
+#@#<!-- textlint-enable -->
+//list[webpack.config.js][]{
+  // Generated using webpack-cli https://github.com/webpack/webpack-cli
+
+  const path = require("path");
+  const HtmlWebpackPlugin = require("html-webpack-plugin");
+  const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+  const isProduction = process.env.NODE_ENV == "production";
+
+  const stylesHandler = MiniCssExtractPlugin.loader;
+
+  const config = {
+    entry: "./src/index.js", @<balloon>{TypeScript導入までは、拡張子jsで}　
+    output: {
+      path: path.resolve(__dirname, "public"), @<balloon>{出力フォルダをpublicへ}
+    },
+    devServer: {
+      open: true,
+      host: "localhost",
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "index.html",
+      }),
+
+      new MiniCssExtractPlugin(),
+
+      // Add your plugins here
+      // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.(ts|tsx)$/i,
+          loader: "ts-loader",
+          exclude: ["/node_modules/"],
+        },
+        {
+          test: /\.css$/i,
+          use: [stylesHandler, "css-loader"],
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [stylesHandler, "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+          type: "asset",
+        },
+
+        // Add your rules for custom modules here
+        // Learn more about loaders from https://webpack.js.org/loaders/
+      ],
+    },
+    resolve: {
+      extensions: [".tsx", ".ts", ".js"],
+    },
+  };
+
+  module.exports = () => {
+    if (isProduction) {
+      config.mode = "production";
+    } else {
+      config.mode = "development";
+    }
+    return config;
+  };
+
+//}
+
+@<strong>{プラグインのインストール}
+
+//blankline
+追加で、以下のプラグイン、ローダも追加します。
+
+ * uglify-js 製品版出力時にconsole関数を除去
+ * terser-webpack-plugin 上記をwebpackで使用する場合必要
+ * css-minimizer-webpack-plugin CSSをminimize
+ * webpack-merge 複数のwebpack-configファイルをマージする
+
+ ターミナルで以下のコマンドを実行します。
+ //terminal[追加プラグイン、ローダのインストール][]{
+  npm install -D uglify-js terser-webpack-plugin css-minimizer-webpack-plugin webpack-merge
+ //}
+
+ 追加のプラグイン、ローダの設定を追加したwebpack.config.jsです。devServerでページを表示する際に、
+ デフォルトのブラウザではなくdevToolsの強力な「Google Chrome」を使うようにしました。
+
+//blankline
+ただし、OS毎にChromeのアプリケーション名が違うためOSを取得し対応した「Chrome名」に変換しています。
+「create-react-app」だと、結構複雑なことをやっています。
+
+興味のある方は、「create-react-app」を使ってプロジェクト作成し、react-scriptsを追うとお勉強になります。
+
+//list[webpack.config.js][]{
+  // Generated using webpack-cli https://github.com/webpack/webpack-cli
+  const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+  const TerserPlugin = require('terser-webpack-plugin');
+  const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+  const os = require('os');
+
+  const isProduction = process.env.NODE_ENV == 'production';
+
+  const stylesHandler = MiniCssExtractPlugin.loader;
+
+  let devBrowser = 'Google Chrome';
+  switch (os.platform()) {
+    case 'win32':
+      devBrowser = 'chrome';
+      break;
+    case 'linux':
+      devBrowser = 'google-chrome';
+    default:
+      break;
+  }
+
+  const config = {
+    entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'index.html',
+      }),
+
+      new MiniCssExtractPlugin(),
+
+      // Add your plugins here
+      // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+      new CssMinimizerPlugin(),
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.(ts|tsx)$/i,
+          loader: 'ts-loader',
+          exclude: ['/node_modules/'],
+        },
+        {
+          test: /\.css$/i,
+          use: [stylesHandler, 'css-loader'],
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [stylesHandler, 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+          type: 'asset',
+        },
+
+        // Add your rules for custom modules here
+        // Learn more about loaders from https://webpack.js.org/loaders/
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          minify: TerserPlugin.uglifyJsMinify,
+          terserOptions: {
+            compress: {
+              drop_console: true,
+            },
+          },
+        }),
+        new CssMinimizerPlugin(),
+      ],
+    },
+    devtool: 'eval-source-map',
+    devServer: {
+      open: {
+        app: {
+          name: devBrowser,
+        },
+      },
+      host: 'localhost',
+      port: 3000,
+      static: './public',
+    },
+  };
+
+  module.exports = () => {
+    if (isProduction) {
+      config.mode = 'production';
+    } else {
+      config.mode = 'development';
+    }
+    return config;
+  };
+
+//}
+
+動作確認のために「index.js」を書き換えます。いつの間にかプロジェクトフォルダ直下に「index.html」も
+作成されています。
+
+「index.js」に、動作確認用に追加するスタイル指定用の「sytle.css」、「style.scss」も追加します。
+
+適当な画像ファイルを用意し、「src/assets/images」フォルダを作成し追加します。
+
+「package.json」に、スクリプトを追加します。
+
+//list[package.json][]{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
+    "start": "webpack serve"
+  },
+//}
+
+まずは、ファイルを出力しないでブラウザで表示します。
+
+//terminal[ブラウザで表示][]{
+ > npm run start
+//}
+
+「div」要素の背景、文字色も「style.css」、「style.scss」から作成された「main.css」から反映されています。
+また、「index.html」には、作成された「main.js」、「main.css」を読み込む部分はありませんが、
+webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されています。
+
+//image[webpack_test04][desc][scale=1.0]
+
+
+次にプロダクション用にビルドしてみます。
+
+//terminal[ビルド][]{
+　> npm run build
+//}
+
+下図のように、@<br>{}
+ * index.html
+ * main.js
+ * main.css
+ * images/画像ファイル
+
+が出力されていますので、ファイル開き内容を確認してください。
+
+//image[webpack_test05][][scale=1.0]
+
+//note[]{
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+#@#<!-- textlint-disable -->
+//terminal[][GitHub]{
+> git clone -b 03_setup-webpack-config-file https://github.com/yaruo-react-redux/yaruo-start-template.git
+//}
+#@#<!-- textlint-enable -->
+//}
+
+
+
+====={sec-04-webpack-config-all} webpack設定ファイルを分割する
+問題なく動作した「webpack.config.js」ですが、今後の運用を考え「開発用」、「プロダクション用」、「共通分」に切り分けます。
+devServer関連はプロダクションには関係ありませんし、minimizer関連は開発時には邪魔です。
+
+@<href>{https://webpack.js.org/guides/production/, 本家でも推奨}されています。
+
+「webpack.config.js」を以下のよう分割し、共用部分は「webpack-merge」を使用して統合します。
+
+ * 共用 webpack.common.js
+ * 開発用 webpack.dev.js
+ * プロダクション用 webpack.prod.js
+
+ 開発用はdevServer関係、プロダクション用はminimizer関係、それ以外は共用として分けていきます。
+
+まずは、統合に必要な「webpack-merge」をインストールします。
+
+//terminal[webpack-mergeのインストール][]{
+ > npm install -D webpack-merge
+//}
+
+
+「webpack.dev.js」を作成し、「webpack.config.js」全体を貼り付けdevServer、debtoolを
+残し、「module」はCSS関係のみで「style-loader」を使うように変更します。
+
+
+また、「mode:'development'」を追加します。
+
+//list[webpack.dev.js][]{
+  const { merge } = require('webpack-merge');
+  const common = require('./webpack.common');
+  const os = require('os');
+
+  let devBrowser = 'Google Chrome';
+  switch (os.platform()) {
+    case 'win32':
+      devBrowser = 'chrome';
+      break;
+    case 'linux':
+      devBrowser = 'google-chrome';
+      break;
+    default:
+      break;
+  }
+
+  module.exports = merge(common, {
+    mode: 'development',
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
+    devtool: 'eval-source-map',
+    devServer: {
+      open: {
+        app: {
+          name: devBrowser,
+        },
+      },
+      host: 'localhost',
+      port: 3000,
+      static: './public',
+    },
+  });
+
+//}
+
+プロダクション用も、「webpack.config.js」全体を貼り付け、CssMinimizer関連を中心に「module」はCSSの抽出のままで
+不要な部分を削除します。
+
+こちらは、「mode:'production'」を追加します。
+
+//list[webpack.prod.js][]{
+  const { merge } = require('webpack-merge');
+  const common = require('./webpack.common');
+  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+  const TerserPlugin = require('terser-webpack-plugin');
+  const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+  module.exports = merge(common, {
+    mode: 'production',
+    plugins: [new MiniCssExtractPlugin(), new CssMinimizerPlugin()],
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          minify: TerserPlugin.uglifyJsMinify,
+          terserOptions: {
+            compress: {
+              drop_console: true,
+            },
+          },
+        }),
+        new CssMinimizerPlugin(),
+      ],
+    },
+  });
+//}
+
+共通部分も、「webpack.config.js」全体を貼り付け、上記ファイルにあるものを削除します。
+
+//list[webpack.common.js][]{
+  const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+  module.exports = {
+    entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'index.html',
+      }),
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.(ts|tsx)$/i,
+          loader: 'ts-loader',
+          exclude: ['/node_modules/'],
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+          type: 'asset',
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
+  };
+
+//}
+
+
+webpackの設定ファイル名がデフォルトから変更になったので、「package.json」のスクリプト部分を変更します。
+
+//list[package.json][]{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "start": "webpack serve --config webpack.dev.js"
+  },
+//}
+
+ターミナル上で、「npm run start」、「npm run build」で動作確認を行います。
+
+//note[]{
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+#@#<!-- textlint-disable -->
+//terminal[][GitHub]{
+> git clone -b 04_webpack-config-split https://github.com/yaruo-react-redux/yaruo-start-template.git
+//}
+#@#<!-- textlint-enable -->
+//}
+
 
 =={sec-03lint} eslint、prettierとは？
 

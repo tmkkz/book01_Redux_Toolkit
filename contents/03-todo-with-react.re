@@ -1,12 +1,7 @@
-= Todoリストの作成(Reactのみ)
+= 日記アプリケーションの作成(Reactのみ)
 
 //abstract{
-  この章では、第2章で作成したスタートアップ用のアプリケーションを魔改造し、Redux:@<href>{https://redux.js.org/tutorials/essentials/part-1-overview-concepts}の
-  チュートリアルにあるTodoリストを作成します。
-
-
-
-  していきます。
+  本章では、第2章で作成したスタートアップ用のアプリケーションを魔改造し、日記アプリケーションを作成します。
 //}
 
 =={sec-031React} Reactとは？
