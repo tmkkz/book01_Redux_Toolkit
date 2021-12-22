@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  17 DEC 2021 14:55
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  21 DEC 2021 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,17 +662,7 @@ File: l3backend-dvipdfmx.def 2021-03-18 L3 backend support: dvipdfmx
 \g__pdf_backend_link_int=\count316
 ) (./book.aux
 
-LaTeX Warning: Label `webpack.config.js' multiply defined.
-
-
-LaTeX Warning: Label `package.json' multiply defined.
-
-
-LaTeX Warning: Label `package.json' multiply defined.
-
-
-LaTeX Warning: Label `image:02-create-react-app:032_app_tsx_error' multiply def
-ined.
+LaTeX Warning: Label `image:02-create-react-app:babel06' multiply defined.
 
 )
 \openout1 = `book.aux'.
@@ -886,7 +876,7 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 28.
+(Font)              using `JY2/hgt/bx/n' instead on input line 30.
 
 [3
 
@@ -941,105 +931,93 @@ LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
 (Font)              scaled to size 9.24683pt on input line 42.
 File: ./images/01-createDevEnv/y01.png Graphic file (type bmp)
 <./images/01-createDevEnv/y01.png>
-LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 52.
-LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
-(Font)              scaled to size 5.5481pt on input line 52.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 52
+LaTeX Info: Redefining \- on input line 55.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 55
 .
 (/usr/local/texlive/2021/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 52.
-[2]
-LaTeX Info: Redefining \- on input line 58.
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 58.
-LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 7
-2.
+(Font)              scaled to size 9.0pt on input line 55.
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 5
+8.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 72.
+(Font)              scaled to size 9.0pt on input line 58.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 72.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-2.
+(textcomp)             Default family used instead on input line 58.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+8.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-72.
+58.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 72.
-LaTeX Info: Redefining \- on input line 77.
-File: ./images/01-createDevEnv/01_00browser_helloWorld.png Graphic file (type b
-mp)
-<./images/01-createDevEnv/01_00browser_helloWorld.png>
-[3
-
-]
-LaTeX Font Info:    Font shape `JT2/hmc/bx/n' will be
-(Font)              scaled to size 8.32214pt on input line 96.
-LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
-(Font)              scaled to size 8.32214pt on input line 96.
-LaTeX Font Info:    Font shape `JT2/hmc/bx/n' will be
-(Font)              scaled to size 11.09619pt on input line 96.
-LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
-(Font)              scaled to size 11.09619pt on input line 96.
-[4
-
-]
+(textcomp)             Default family used instead on input line 58.
+[2]
+LaTeX Info: Redefining \- on input line 63.
+[3]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 105.
+(Font)              using `JY2/hgt/bx/n' instead on input line 72.
 
 File: ./images/01-createDevEnv/y01_getNodejs.png Graphic file (type bmp)
 <./images/01-createDevEnv/y01_getNodejs.png>
 File: ./images/01-createDevEnv/yr01_aboutNodejs.png Graphic file (type bmp)
 <./images/01-createDevEnv/yr01_aboutNodejs.png>
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 121.
+(Font)              scaled to size 10.0pt on input line 88.
 File: ./images/01-createDevEnv/01_01nodejsTop.png Graphic file (type bmp)
 <./images/01-createDevEnv/01_01nodejsTop.png>
-[5
+[4
 
 ]
+LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 96.
+LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
+(Font)              scaled to size 5.5481pt on input line 96.
 File: ./images/01-createDevEnv/01_02nodejsRoadmap.png Graphic file (type bmp)
 <./images/01-createDevEnv/01_02nodejsRoadmap.png>
-[6] [7]
+[5] [6]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 158.
+(Font)              using `JY2/hgt/bx/n' instead on input line 125.
 
 File: ./images/01-createDevEnv/y01_whichNodeVer.png Graphic file (type bmp)
 <./images/01-createDevEnv/y01_whichNodeVer.png>
-[8
+[7
 
 ]
+File: ./images/01-createDevEnv/01_nodeVersionChange.png Graphic file (type bmp)
+
+<./images/01-createDevEnv/01_nodeVersionChange.png>
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.0pt on input line 168.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 191.
+(Font)              using `JY2/hgt/bx/n' instead on input line 170.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 208.
+(Font)              using `JY2/hgt/bx/n' instead on input line 187.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 209.
+(Font)              using `JY2/hgt/bx/n' instead on input line 188.
 
-LaTeX Info: Redefining \- on input line 213.
-LaTeX Info: Redefining \- on input line 218.
+[8]
+LaTeX Info: Redefining \- on input line 192.
+LaTeX Info: Redefining \- on input line 197.
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--219
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 [] [][] [][]\T1/zi4/m/n/9 e[][]x[][]p[][]o[][]r[][]t[][] [][]N[][]V[][]M[][]_[]
 [][][]D[][]I[][]R[][]=[][]"[][]$[][][][]([][][[][] [][]-[][]z[][] [][]"[][]$[][
 ][][]{[][]X[][]D[][]G[][]_[][][][]C[][]O[][]N[][]F[][]I[][]G[][]_[][][][]H[][]O
@@ -1050,22 +1028,21 @@ t[][]f[][] [][]%[][]s[][] [][]"[][]$[][][][]{[][]H[][]O[][]M[][]E[][]}[][]/[][]
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 222.
+(Font)              using `JY2/hgt/bx/n' instead on input line 201.
 
-[9]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 228.
+(Font)              using `JY2/hgt/bx/n' instead on input line 207.
 
-LaTeX Info: Redefining \- on input line 239.
+LaTeX Info: Redefining \- on input line 218.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--253
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]e[][]x[][]e[][]c[][] [][]4[][
 ].[][]8[][].[][]3[][] [][]n[][]o[][]d[][]e[][] [][]a[][]p[][]p[][].[][]j[][]s[]
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][]R[][]u[][]n[][] [
@@ -1076,7 +1053,7 @@ t[][]h[][]e[][] [][]P[][]A[][]T[][]H[][] [][]p[][]o[][]i[][]n[][]t[][]i[][]n[][
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--253
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]a[][]l[][]i[][]a[][]s[][] [][
 ]d[][]e[][]f[][]a[][]u[][]l[][]t[][] [][]n[][]o[][]d[][]e[][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][]A[][]l[][]w[][]a[
@@ -1087,18 +1064,18 @@ b[][]l[][]e[][] [][]n[][]o[][]d[]
 
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 253.
+(textcomp)             Default family used instead on input line 232.
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--253
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 [][][] [][] [][]\T1/zi4/m/n/9 t[][]o[][] [][]r[][]e[][]m[][]o[][]v[][]e[][],[][
 ] [][]d[][]e[][]l[][]e[][]t[][]e[][],[][] [][]o[][]r[][] [][]u[][]n[][]i[][]n[]
 []s[][]t[][]a[][]l[][]l[][] [][]n[][]v[][]m[][] [][]-[][] [][]j[][]u[][]s[][]t[
@@ -1108,9 +1085,10 @@ n/9 `[][] [][]\T1/zi4/m/n/9 f[][]o[][]l[][]d[][]e[][]r[][] [][]([][]u[][]s[][]u
 [][]a[][]l[][]l[][]y[]
  []
 
-LaTeX Info: Redefining \- on input line 258.
+[9]
+LaTeX Info: Redefining \- on input line 237.
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]i[][]n[][]s[][]t[][]a[][]l[][
 ]l[][] [][]<[][][][]v[][]e[][]r[][]s[][]i[][]o[][]n[][]>[][][][] [][][[][]a[][]
 r[][]c[][]h[][]][][] [][]:[][] [][]T[][]h[][]e[][] [][]v[][]e[][]r[][]s[][]i[][
@@ -1120,7 +1098,7 @@ r[][]c[][]h[][]][][] [][]:[][] [][]T[][]h[][]e[][] [][]v[][]e[][]r[][]s[][]i[][
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [
 ][] [][] [][]\T1/zi4/m/n/9 O[][]p[][]t[][]i[][]o[][]n[][]a[][]l[][]l[][]y[][] [
@@ -1130,7 +1108,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--276
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [
 ][] [][] [][]\T1/zi4/m/n/9 S[][]e[][]t[][] [][][[][]a[][]r[][]c[][]h[][]][][] [
@@ -1140,7 +1118,7 @@ i[][]t[][] [][]v[][]e[][]r[][]s[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [
 ][] [][] [][]\T1/zi4/m/n/9 A[][]d[][]d[][] [][]-[][]-[][]i[][]n[][]s[][]e[][]c[
@@ -1150,7 +1128,7 @@ t[][]o[][] [][]b[][]y[][]p[][]a[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]l[][]i[][]s[][]t[][] [][][[][
 ]a[][]v[][]a[][]i[][]l[][]a[][]b[][]l[][]e[][]][][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][]:[][] [][]L[][]i[][]s[][]t[][] [][]t[][]h[][]e[][] [][]N[][]o[
@@ -1160,7 +1138,7 @@ l[][]a[][]b[][]l[][]e[][]"[][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]u[][]s[][]e[][] [][][[][]v[][
 ]e[][]r[][]s[][]i[][]o[][]n[][]][][] [][][[][]a[][]r[][]c[][]h[][]][][] [][] []
 [] [][] [][] [][]:[][] [][]S[][]w[][]i[][]t[][]c[][]h[][] [][]t[][]o[][] [][]u[
@@ -1170,7 +1148,7 @@ n[][]a[][]l[][]l[][]y[][] [][]s[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [
 ][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]u[][]s[][]e[][] [][]<[][][][]a[]
@@ -1180,7 +1158,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--276
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]r[][]o[][]o[][]t[][] [][][[][
 ]p[][]a[][]t[][]h[][]][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][]:[][] [][]S[][]e[][]t[][] [][]t[][]h[][]e[][] [][]d[][]i[][]r[
@@ -1190,7 +1168,7 @@ i[][]f[][]f[][]e[][]r[][]e[][]n[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [
 ][] [][] [][]\T1/zi4/m/n/9 I[][]f[][] [][]<[][][][]p[][]a[][]t[][]h[][]>[][][][
@@ -1200,7 +1178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--276
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]v[][]m[][] [][]v[][]e[][]r[][]s[][]i[][]o[][
 ]n[][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] [][] []
 [] [][] [][] [][]:[][] [][]D[][]i[][]s[][]p[][]l[][]a[][]y[][]s[][] [][]t[][]h[
@@ -1209,16 +1187,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--276
 m[][] [][]f[][]o[][]r[][] [][]W[]
  []
 
-[10]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 279.
+(Font)              using `JY2/hgt/bx/n' instead on input line 258.
 
+LaTeX Info: Redefining \- on input line 263.
+
+Overfull \vbox (1.55608pt too high) detected at line 276
+ []
+
+[10] [11]
 LaTeX Info: Redefining \- on input line 284.
-[11]
-LaTeX Info: Redefining \- on input line 305.
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
+Underfull \hbox (badness 10000) in paragraph at lines 309--309
 [][][]\T1/zi4/m/n/9 T[][]h[][]i[][]s[][] [][]i[][]s[][] [][]a[][] [][]p[][]a[][
 ]r[][]t[][]i[][]a[][]l[][] [][]l[][]i[][]s[][]t[][].[][] [][]F[][]o[][]r[][] []
 []a[][] [][]c[][]o[][]m[][]p[][]l[][]e[][]t[][]e[][] [][]l[][]i[][]s[][]t[][],[
@@ -1229,11 +1210,11 @@ o[][]a[][]d[][]/[][]r[][]e[][]l[]
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 333.
+(Font)              using `JY2/hgt/bx/n' instead on input line 312.
 
-LaTeX Info: Redefining \- on input line 338.
+LaTeX Info: Redefining \- on input line 317.
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
 [][][]\T1/zi4/m/n/9 #[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][
 ]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[]
 []#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[][]#[
@@ -1245,45 +1226,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 344--344
 [12
 
 ]
-LaTeX Info: Redefining \- on input line 346.
+LaTeX Info: Redefining \- on input line 325.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 358.
+(Font)              using `JY2/hgt/bx/n' instead on input line 337.
 
-LaTeX Info: Redefining \- on input line 362.
-LaTeX Info: Redefining \- on input line 381.
+LaTeX Info: Redefining \- on input line 341.
+LaTeX Info: Redefining \- on input line 360.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 388.
+(Font)              using `JY2/hgt/bx/n' instead on input line 367.
 
 [13]
-LaTeX Info: Redefining \- on input line 393.
+LaTeX Info: Redefining \- on input line 372.
 [14]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 404.
+(Font)              using `JY2/hgt/bx/n' instead on input line 383.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 429.
+(Font)              using `JY2/hgt/bx/n' instead on input line 408.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 443.
+(Font)              using `JY2/hgt/bx/n' instead on input line 422.
 
-LaTeX Info: Redefining \- on input line 452.
+LaTeX Info: Redefining \- on input line 431.
 [15
 
 ]
-LaTeX Info: Redefining \- on input line 459.
+LaTeX Info: Redefining \- on input line 438.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 463.
+(Font)              using `JY2/hgt/bx/n' instead on input line 442.
 
-LaTeX Info: Redefining \- on input line 472.
+LaTeX Info: Redefining \- on input line 451.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 477.
+(Font)              using `JY2/hgt/bx/n' instead on input line 456.
 
 File: ./images/01-createDevEnv/01_03vscodeExtension.png Graphic file (type bmp)
 
@@ -1291,7 +1272,7 @@ File: ./images/01-createDevEnv/01_03vscodeExtension.png Graphic file (type bmp)
 [16]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 497.
+(Font)              using `JY2/hgt/bx/n' instead on input line 476.
 
 File: ./images/01-createDevEnv/01_06vscodeExtension_debuggerForChrome.png Graph
 ic file (type bmp)
@@ -1299,14 +1280,14 @@ ic file (type bmp)
 [17]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 513.
+(Font)              using `JY2/hgt/bx/n' instead on input line 492.
 
 File: ./images/01-createDevEnv/01_07vscodeExtension_eslint.png Graphic file (ty
 pe bmp)
 <./images/01-createDevEnv/01_07vscodeExtension_eslint.png>
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 527.
+(Font)              using `JY2/hgt/bx/n' instead on input line 506.
 
 File: ./images/01-createDevEnv/01_08vscodeExtension_prettier.png Graphic file (
 type bmp)
@@ -1314,16 +1295,20 @@ type bmp)
 [18]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 541.
+(Font)              using `JY2/hgt/bx/n' instead on input line 520.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 552.
+(Font)              using `JY2/hgt/bx/n' instead on input line 531.
 
 File: ./images/01-createDevEnv/01_09googleChrome.png Graphic file (type bmp)
 <./images/01-createDevEnv/01_09googleChrome.png>
 
-Underfull \hbox (badness 2980) in paragraph at lines 573--574
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 545.
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 561--562
 []\T1/cmr/m/n/10 Chrome Web store:[][]$\T1/zi4/m/n/10 https : / / chrome . goog
 le . com / webstore / category / extensions ?
  []
@@ -1332,10 +1317,10 @@ File: ./images/01-createDevEnv/01_13chromeWebstore.png Graphic file (type bmp)
 <./images/01-createDevEnv/01_13chromeWebstore.png>
 [19
 
-]
+] [20]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 581.
+(Font)              using `JY2/hgt/bx/n' instead on input line 572.
 
 File: ./images/01-createDevEnv/01_10chromeExtReactDevTools.png Graphic file (ty
 pe bmp)
@@ -1343,18 +1328,22 @@ pe bmp)
 File: ./images/01-createDevEnv/01_12chromeExtReactDevTools01.png Graphic file (
 type bmp)
 <./images/01-createDevEnv/01_12chromeExtReactDevTools01.png>
-[20] [21]
+[21
+
+] [22]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 602.
+(Font)              using `JY2/hgt/bx/n' instead on input line 595.
 
 File: ./images/01-createDevEnv/01_11chromeExtReduxDevTools.png Graphic file (ty
 pe bmp)
 <./images/01-createDevEnv/01_11chromeExtReduxDevTools.png>
-[22] [23]
+[23
+
+]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 618.
+(Font)              using `JY2/hgt/bx/n' instead on input line 610.
 
 ) (./02-create-react-app.tex [24
 
@@ -1365,73 +1354,75 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 34.
+(Font)              using `JY2/hgt/bx/n' instead on input line 33.
 
 [25
 
 ]
-LaTeX Info: Redefining \- on input line 73.
-LaTeX Info: Redefining \- on input line 79.
+LaTeX Info: Redefining \- on input line 70.
+LaTeX Info: Redefining \- on input line 76.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[] [][] [][]\T1/zi4/m/n/9 S[][]u[][]c[][]c[][]e[][]s[][]s[][]![][] [][]C[][]r[]
+[]e[][]a[][]t[][]e[][]d[][] [][]y[][]a[][]r[][]u[][]o[][]-[][]c[][]r[][]a[][]-[
+][]t[][]e[][]m[][]p[][]l[][]a[][]t[][]e[][] [][]a[][]t[][] [][]/[][]U[][]s[][]e
+[][]r[][]s[][]/[][]k[][]a[][]z[][]u[][]y[][]a[][]i[][]n[][]a[][]b[][]a[][]/[][]
+D[][]o[][]c[][]u[][]m[][]e[][]n[][]t[][]s[][]/[][]D[][]e[][]v[][]s[][]_[][][][]
+k[][]z[][]/[][]P[][]r[][]o[][]j[]
+ []
+
 [26]
+LaTeX Font Info:    Font shape `JT2/hmc/bx/n' will be
+(Font)              scaled to size 8.32214pt on input line 104.
+LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
+(Font)              scaled to size 8.32214pt on input line 104.
+LaTeX Font Info:    Font shape `JT2/hmc/bx/n' will be
+(Font)              scaled to size 11.09619pt on input line 104.
+LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
+(Font)              scaled to size 11.09619pt on input line 104.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 106.
+(Font)              using `JY2/hgt/bx/n' instead on input line 104.
 
+LaTeX Info: Redefining \- on input line 109.
 
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 108.
-
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 110.
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
+]-[][]b[][] [][]0[][]1[][]_[][][][]c[][]r[][]e[][]a[][]t[][]e[][]-[][]r[][]e[][
+]a[][]c[][]t[][]-[][]a[][]p[][]p[][]-[][]e[][]x[][]e[][]c[][]u[][]t[][]e[][]d[]
+[] [][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[][]h[][]u[][]b[][].[
+][]c[][]o[][]m[][]/[][]y[][]a[][]r[][]u[][]o[][]-[]
+ []
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 112.
 
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 126.
-
-LaTeX Info: Redefining \- on input line 131.
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-[]\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
-]-[][]b[][] [][]0[][]1[][]_[][][][]c[][]r[][]e[][]a[][]t[][]e[][]-[][]r[][]e[][
-]a[][]c[][]t[][]-[][]a[][]p[][]p[][] [][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[]
-[]g[][]i[][]t[][]h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][]y[][]a[][]r[][]u[][]o[
-][]-[][]r[][]e[][]a[][]c[][]t[][]-[][]r[][]e[][]d[]
- []
-
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 134.
-
+LaTeX Info: Redefining \- on input line 124.
 [27]
-LaTeX Info: Redefining \- on input line 146.
-LaTeX Info: Redefining \- on input line 152.
+LaTeX Info: Redefining \- on input line 130.
 File: ./images/02-create-react-app/02_cra_start.png Graphic file (type bmp)
 <./images/02-create-react-app/02_cra_start.png>
 [28]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 172.
+(Font)              using `JY2/hgt/bx/n' instead on input line 150.
 
-LaTeX Info: Redefining \- on input line 182.
+LaTeX Info: Redefining \- on input line 160.
 [29]
-LaTeX Info: Redefining \- on input line 214.
+LaTeX Info: Redefining \- on input line 192.
 [30] [31]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 283.
+(Font)              using `JY2/hgt/bx/n' instead on input line 248.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 294.
+(Font)              using `JY2/hgt/bx/n' instead on input line 259.
 
-LaTeX Info: Redefining \- on input line 306.
+LaTeX Info: Redefining \- on input line 271.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
 [][][] [][] [][]\T1/zi4/m/n/9 W[][]r[][]o[][]t[][]e[][] [][]t[][]o[][] [][]/[][
 ]U[][]s[][]e[][]r[][]s[][]/[][]y[][]a[][]r[][]u[][]o[][]/[][]D[][]o[][]c[][]u[]
 []m[][]e[][]n[][]t[][]s[][]/[][]y[][]a[][]r[][]u[][]o[][]_[][][][]r[][]e[][]a[]
@@ -1443,9 +1434,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--328
 [32
 
 ]
-LaTeX Info: Redefining \- on input line 337.
+LaTeX Info: Redefining \- on input line 302.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 []\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
 ]-[][]b[][] [][]0[][]1[][]_[][][][]s[][]t[][]a[][]r[][]t[][]-[][]n[][]o[][]d[][
 ]e[][]-[][]p[][]r[][]o[][]j[][]e[][]c[][]t[][] [][]h[][]t[][]t[][]p[][]s[][]:[]
@@ -1455,11 +1446,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--337
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 340.
+(Font)              using `JY2/hgt/bx/n' instead on input line 305.
 
-LaTeX Info: Redefining \- on input line 374.
+File: ./images/02-create-react-app/02_webpack_site.png Graphic file (type bmp)
+<./images/02-create-react-app/02_webpack_site.png>
+[33]
+LaTeX Info: Redefining \- on input line 354.
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--382
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]p[][]m[][] [][]W[][]A[][]R[][]N[][] [][]d[][
 ]e[][]p[][]r[][]e[][]c[][]a[][]t[][]e[][]d[][] [][]q[][]u[][]e[][]r[][]y[][]s[]
 []t[][]r[][]i[][]n[][]g[][]@[][]0[][].[][]2[][].[][]0[][]:[][] [][]T[][]h[][]e[
@@ -1470,14 +1464,13 @@ L[][]e[][]g[][]a[][]c[][]y[][].[]
 
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 382.
+(textcomp)             Default family used instead on input line 362.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 382.
-[33]
-LaTeX Info: Redefining \- on input line 388.
+(textcomp)             Default family used instead on input line 362.
+LaTeX Info: Redefining \- on input line 368.
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
 [][][] [][] [][] [][] [][]\T1/zi4/m/n/9 "[][]h[][]o[][]m[][]e[][]p[][]a[][]g[][
 ]e[][]"[][]:[][] [][]"[][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[]
 []h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][]y[][]a[][]r[][]u[][]o[][]-[][]r[][]e[
@@ -1486,22 +1479,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 412--412
 r[][]e[][]a[][]d[][]m[][]e[][]"[]
  []
 
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 414.
-
 [34]
-LaTeX Info: Redefining \- on input line 437.
-LaTeX Info: Redefining \- on input line 439.
-LaTeX Info: Redefining \- on input line 455.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 472.
+(Font)              using `JY2/hgt/bx/n' instead on input line 394.
 
+LaTeX Info: Redefining \- on input line 419.
 [35]
-LaTeX Info: Redefining \- on input line 485.
+LaTeX Info: Redefining \- on input line 421.
+LaTeX Info: Redefining \- on input line 436.
+LaTeX Info: Redefining \- on input line 452.
+[36]
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--507
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 456.
+
+LaTeX Info: Redefining \- on input line 469.
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
 [][][] [][] [][]\T1/zi4/m/n/9 <[][][][]i[][]>[][][][] [][][[][]w[][]e[][]b[][]p
 [][]a[][]c[][]k[][]-[][]d[][]e[][]v[][]-[][]s[][]e[][]r[][]v[][]e[][]r[][]][][]
  [][]C[][]o[][]n[][]t[][]e[][]n[][]t[][] [][]n[][]o[][]t[][] [][]f[][]r[][]o[][
@@ -1511,25 +1506,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--507
 []c[][]t[][]o[][]r[]
  []
 
+[37
+
+]
 File: ./images/02-create-react-app/webpack_test01.png Graphic file (type bmp)
 <./images/02-create-react-app/webpack_test01.png>
+[38
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+]
 File: ./images/02-create-react-app/webpack_test02.png Graphic file (type bmp)
 <./images/02-create-react-app/webpack_test02.png>
+[39
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+]
+LaTeX Info: Redefining \- on input line 521.
 File: ./images/02-create-react-app/webpack_test03.png Graphic file (type bmp)
 <./images/02-create-react-app/webpack_test03.png>
+[40
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+]
+LaTeX Info: Redefining \- on input line 538.
 
-[36]
-LaTeX Info: Redefining \- on input line 540.
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--540
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
 []\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
 ]-[][]b[][] [][]0[][]2[][]_[][][][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]i[][
 ]n[][]s[][]t[][]a[][]l[][]l[][] [][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[][]g[]
@@ -1537,14 +1535,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--540
 ][]r[][]e[][]a[][]c[][]t[][]-[][]r[][]e[][]d[][]u[]
  []
 
+[41
+
+]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 543.
+(Font)              using `JY2/hgt/bx/n' instead on input line 544.
 
-[37]
-LaTeX Info: Redefining \- on input line 593.
+LaTeX Info: Redefining \- on input line 570.
+[42
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--642
+]
+LaTeX Info: Redefining \- on input line 598.
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
 [][][] [][] [][]\T1/zi4/m/n/9 [[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]c[][
 ]l[][]i[][]][][] [][]F[][]o[][]r[][] [][]u[][]s[][]i[][]n[][]g[][] [][]t[][]h[]
 []i[][]s[][] [][]c[][]o[][]m[][]m[][]a[][]n[][]d[][] [][]y[][]o[][]u[][] [][]n[
@@ -1554,7 +1558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--642
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--642
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
 [][][] [][] [][]\T1/zi4/m/n/9 [[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]c[][
 ]l[][]i[][]][][] [][]W[][]o[][]u[][]l[][]d[][] [][]y[][]o[][]u[][] [][]l[][]i[]
 []k[][]e[][] [][]t[][]o[][] [][]i[][]n[][]s[][]t[][]a[][]l[][]l[][] [][]\TS1/zi
@@ -1565,7 +1569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--642
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--642
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]p[][]m[][] [][]W[][]A[][]R[][]N[][] [][]d[][
 ]e[][]p[][]r[][]e[][]c[][]a[][]t[][]e[][]d[][] [][]u[][]r[][]i[][]x[][]@[][]0[]
 [].[][]1[][].[][]0[][]:[][] [][]P[][]l[][]e[][]a[][]s[][]e[][] [][]s[][]e[][]e[
@@ -1575,7 +1579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--642
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--642
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
 [][][] [][] [][]\T1/zi4/m/n/9 n[][]p[][]m[][] [][]W[][]A[][]R[][]N[][] [][]d[][
 ]e[][]p[][]r[][]e[][]c[][]a[][]t[][]e[][]d[][] [][]r[][]e[][]s[][]o[][]l[][]v[]
 []e[][]-[][]u[][]r[][]l[][]@[][]0[][].[][]2[][].[][]1[][]:[][] [][]h[][]t[][]t[
@@ -1586,94 +1590,103 @@ u[][]r[][]l[][]#[][]d[][]e[][]p[]
 
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 642.
+(textcomp)             Default family used instead on input line 647.
 
-Underfull \vbox (badness 7168) detected at line 642
- []
-
-[38]
-LaTeX Info: Redefining \- on input line 653.
-
-Underfull \hbox (badness 10000) in paragraph at lines 719--719
-[][][] [][] [][] [][] [][] [][] [][]\T1/zi4/m/n/9 /[][]/[][] [][]L[][]e[][]a[][
-]r[][]n[][] [][]m[][]o[][]r[][]e[][] [][]a[][]b[][]o[][]u[][]t[][] [][]p[][]l[]
-[]u[][]g[][]i[][]n[][]s[][] [][]f[][]r[][]o[][]m[][] [][]h[][]t[][]t[][]p[][]s[
-][]:[][]/[][]/[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][].[][]j[][]s[][].[][]o[][]r
-[][]g[][]/[][]c[][]o[][]n[][]f[][]i[][]g[][]u[][]r[][]a[][]t[][]i[][]o[][]n[][]
-/[][]p[][]l[][]u[][]g[][]i[][]n[]
- []
-
-[39]
-Underfull \vbox (badness 10000) detected at line 719
- []
-
-
-Underfull \vbox (badness 10000) detected at line 719
- []
-
-[40] [41]
-LaTeX Info: Redefining \- on input line 750.
-
-Underfull \hbox (badness 10000) in paragraph at lines 853--853
-[][][] [][] [][] [][] [][] [][] [][]\T1/zi4/m/n/9 /[][]/[][] [][]L[][]e[][]a[][
-]r[][]n[][] [][]m[][]o[][]r[][]e[][] [][]a[][]b[][]o[][]u[][]t[][] [][]p[][]l[]
-[]u[][]g[][]i[][]n[][]s[][] [][]f[][]r[][]o[][]m[][] [][]h[][]t[][]t[][]p[][]s[
-][]:[][]/[][]/[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][].[][]j[][]s[][].[][]o[][]r
-[][]g[][]/[][]c[][]o[][]n[][]f[][]i[][]g[][]u[][]r[][]a[][]t[][]i[][]o[][]n[][]
-/[][]p[][]l[][]u[][]g[][]i[][]n[]
- []
-
-
-Underfull \vbox (badness 10000) detected at line 853
- []
-
-[42]
-Underfull \vbox (badness 10000) detected at line 853
- []
-
-
-Underfull \vbox (badness 10000) detected at line 853
+Underfull \vbox (badness 10000) detected at line 647
  []
 
 [43]
-LaTeX Info: Redefining \- on input line 865.
+LaTeX Info: Redefining \- on input line 663.
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--729
+[][][] [][] [][] [][] [][] [][] [][]\T1/zi4/m/n/9 /[][]/[][] [][]L[][]e[][]a[][
+]r[][]n[][] [][]m[][]o[][]r[][]e[][] [][]a[][]b[][]o[][]u[][]t[][] [][]p[][]l[]
+[]u[][]g[][]i[][]n[][]s[][] [][]f[][]r[][]o[][]m[][] [][]h[][]t[][]t[][]p[][]s[
+][]:[][]/[][]/[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][].[][]j[][]s[][].[][]o[][]r
+[][]g[][]/[][]c[][]o[][]n[][]f[][]i[][]g[][]u[][]r[][]a[][]t[][]i[][]o[][]n[][]
+/[][]p[][]l[][]u[][]g[][]i[][]n[]
+ []
+
+
+Overfull \vbox (1.11482pt too high) detected at line 729
+ []
+
+[44] [45]
+LaTeX Info: Redefining \- on input line 744.
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--744
+[] [][]\T1/zi4/m/n/9 >[][][][] [][]n[][]p[][]m[][] [][]i[][]n[][]s[][]t[][]a[][
+]l[][]l[][] [][]-[][]D[][] [][]u[][]g[][]l[][]i[][]f[][]y[][]-[][]j[][]s[][] []
+[]t[][]e[][]r[][]s[][]e[][]r[][]-[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]p[
+][]l[][]u[][]g[][]i[][]n[][] [][]c[][]s[][]s[][]-[][]m[][]i[][]n[][]i[][]m[][]i
+[][]z[][]e[][]r[][]-[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]p[][]l[][]u[][]
+g[][]i[][]n[][] [][]w[][]e[][]b[]
+ []
+
+LaTeX Info: Redefining \- on input line 759.
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+[][][] [][] [][] [][] [][] [][] [][]\T1/zi4/m/n/9 /[][]/[][] [][]L[][]e[][]a[][
+]r[][]n[][] [][]m[][]o[][]r[][]e[][] [][]a[][]b[][]o[][]u[][]t[][] [][]p[][]l[]
+[]u[][]g[][]i[][]n[][]s[][] [][]f[][]r[][]o[][]m[][] [][]h[][]t[][]t[][]p[][]s[
+][]:[][]/[][]/[][]w[][]e[][]b[][]p[][]a[][]c[][]k[][].[][]j[][]s[][].[][]o[][]r
+[][]g[][]/[][]c[][]o[][]n[][]f[][]i[][]g[][]u[][]r[][]a[][]t[][]i[][]o[][]n[][]
+/[][]p[][]l[][]u[][]g[][]i[][]n[]
+ []
+
+[46]
+Underfull \vbox (badness 10000) detected at line 862
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 862
+ []
+
+[47]
+LaTeX Info: Redefining \- on input line 872.
+[48]
 LaTeX Info: Redefining \- on input line 876.
+LaTeX Info: Redefining \- on input line 890.
+LaTeX Info: Redefining \- on input line 901.
 File: ./images/02-create-react-app/webpack_test04.png Graphic file (type bmp)
 <./images/02-create-react-app/webpack_test04.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \- on input line 891.
+[49] [50]
+LaTeX Info: Redefining \- on input line 921.
 File: ./images/02-create-react-app/webpack_test05.png Graphic file (type bmp)
 <./images/02-create-react-app/webpack_test05.png>
-[44]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \- on input line 910.
+[51
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--910
+] [52]
+LaTeX Info: Redefining \- on input line 946.
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 []\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
 ]-[][]b[][] [][]0[][]3[][]_[][][][]s[][]e[][]t[][]u[][]p[][]-[][]w[][]e[][]b[][
 ]p[][]a[][]c[][]k[][]-[][]c[][]o[][]n[][]f[][]i[][]g[][]-[][]f[][]i[][]l[][]e[]
@@ -1683,20 +1696,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 910--910
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 913.
+(Font)              using `JY2/hgt/bx/n' instead on input line 949.
 
-LaTeX Info: Redefining \- on input line 932.
-LaTeX Info: Redefining \- on input line 940.
-[45]
-LaTeX Info: Redefining \- on input line 990.
-[46]
-LaTeX Info: Redefining \- on input line 1033.
-[47]
-LaTeX Info: Redefining \- on input line 1070.
-[48]
-LaTeX Info: Redefining \- on input line 1085.
+LaTeX Info: Redefining \- on input line 983.
+[53
 
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+]
+LaTeX Info: Redefining \- on input line 1035.
+[54]
+LaTeX Info: Redefining \- on input line 1078.
+[55]
+LaTeX Info: Redefining \- on input line 1115.
+LaTeX Info: Redefining \- on input line 1130.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
 []\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
 ]-[][]b[][] [][]0[][]4[][]_[][][][]w[][]e[][]b[][]p[][]a[][]c[][]k[][]-[][]c[][
 ]o[][]n[][]f[][]i[][]g[][]-[][]s[][]p[][]l[][]i[][]t[][] [][]h[][]t[][]t[][]p[]
@@ -1704,27 +1717,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
 ][]a[][]r[][]u[][]o[][]-[][]r[][]e[][]a[][]c[][]t[]
  []
 
-[49] [50] [51] [52] [53]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1088.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1133.
 
-[54
+[56]
+File: ./images/02-create-react-app/babel01.png Graphic file (type bmp)
+<./images/02-create-react-app/babel01.png>
+File: ./images/02-create-react-app/babel02.png Graphic file (type bmp)
+<./images/02-create-react-app/babel02.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./images/02-create-react-app/babel03.png Graphic file (type bmp)
+<./images/02-create-react-app/babel03.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[57] [58] [59]
+LaTeX Info: Redefining \- on input line 1180.
+LaTeX Info: Redefining \- on input line 1185.
+[60
+
+]
+LaTeX Info: Redefining \- on input line 1232.
+LaTeX Info: Redefining \- on input line 1237.
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 1243.
+
+LaTeX Info: Redefining \- on input line 1253.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 1277.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 1277.
+[61]
+File: ./images/02-create-react-app/babel06.png Graphic file (type bmp)
+<./images/02-create-react-app/babel06.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[62] [63]
+File: ./images/02-create-react-app/babel06.png Graphic file (type bmp)
+<./images/02-create-react-app/babel06.png>
+LaTeX Info: Redefining \- on input line 1302.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1302
+[]\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
+]-[][]b[][] [][]0[][]5[][]_[][][][]b[][]a[][]b[][]e[][]l[][]-[][]i[][]n[][]s[][
+]t[][]a[][]l[][]l[][] [][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[]
+[]h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][]y[][]a[][]r[][]u[][]o[][]-[][]r[][]e[
+][]a[][]c[][]t[][]-[][]r[][]e[][]d[][]u[][]x[][]/[]
+ []
+
+[64
+
+] [65]
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 1305.
+
+[66
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1144.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1361.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1151.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1368.
 
-LaTeX Info: Redefining \- on input line 1163.
-LaTeX Info: Redefining \- on input line 1168.
-LaTeX Info: Redefining \- on input line 1176.
+LaTeX Info: Redefining \- on input line 1380.
+LaTeX Info: Redefining \- on input line 1385.
+LaTeX Info: Redefining \- on input line 1393.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1403
 [][][] [][] [][]\T1/zi4/m/n/9 e[][]s[][]l[][]i[][]n[][]t[][]-[][]p[][]l[][]u[][
 ]g[][]i[][]n[][]-[][]r[][]e[][]a[][]c[][]t[][]@[][]l[][]a[][]t[][]e[][]s[][]t[]
 [] [][]@[][]t[][]y[][]p[][]e[][]s[][]c[][]r[][]i[][]p[][]t[][]-[][]e[][]s[][]l[
@@ -1733,45 +1803,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 1186--1186
 c[][]r[][]i[][]p[][]t[][]-[][]e[]
  []
 
-LaTeX Info: Redefining \- on input line 1188.
-[55]
-LaTeX Info: Redefining \- on input line 1198.
-[56]
-LaTeX Info: Redefining \- on input line 1235.
-LaTeX Info: Redefining \- on input line 1240.
-LaTeX Info: Redefining \- on input line 1248.
-LaTeX Info: Redefining \- on input line 1262.
-[57]
-LaTeX Info: Redefining \- on input line 1276.
-LaTeX Info: Redefining \- on input line 1295.
-LaTeX Info: Redefining \- on input line 1310.
-[58]
-LaTeX Info: Redefining \- on input line 1323.
-LaTeX Info: Redefining \- on input line 1331.
-LaTeX Info: Redefining \- on input line 1342.
-[59]
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1368.
-
-LaTeX Info: Redefining \- on input line 1378.
-LaTeX Info: Redefining \- on input line 1383.
-LaTeX Info: Redefining \- on input line 1399.
-[60]
+LaTeX Info: Redefining \- on input line 1405.
+[67]
 LaTeX Info: Redefining \- on input line 1415.
-LaTeX Info: Redefining \- on input line 1423.
-LaTeX Info: Redefining \- on input line 1431.
-File: ./images/02-create-react-app/032_app_tsx_error.png Graphic file (type bmp
-)
-<./images/02-create-react-app/032_app_tsx_error.png>
-[61] [62]
+[68]
+LaTeX Info: Redefining \- on input line 1452.
+LaTeX Info: Redefining \- on input line 1457.
+LaTeX Info: Redefining \- on input line 1465.
+LaTeX Info: Redefining \- on input line 1479.
+[69]
+LaTeX Info: Redefining \- on input line 1493.
+LaTeX Info: Redefining \- on input line 1512.
+LaTeX Info: Redefining \- on input line 1527.
+[70]
+LaTeX Info: Redefining \- on input line 1540.
+LaTeX Info: Redefining \- on input line 1548.
+LaTeX Info: Redefining \- on input line 1559.
+[71]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1451.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1585.
 
-LaTeX Info: Redefining \- on input line 1478.
+LaTeX Info: Redefining \- on input line 1595.
+LaTeX Info: Redefining \- on input line 1600.
+LaTeX Info: Redefining \- on input line 1616.
+[72]
+LaTeX Info: Redefining \- on input line 1632.
+LaTeX Info: Redefining \- on input line 1640.
+LaTeX Info: Redefining \- on input line 1648.
+[73]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1495--1495
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 1662.
+
+LaTeX Info: Redefining \- on input line 1689.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1706
 [][][]\T1/zi4/m/n/9 "[][]p[][]r[][]e[][]t[][]t[][]i[][]e[][]r[][].[][]d[][]i[][
 ]s[][]a[][]b[][]l[][]e[][]L[][]a[][]n[][]g[][]u[][]a[][]g[][]e[][]s[][]"[][]:[]
 [] [][][[][]"[][]J[][]a[][]v[][]a[][]S[][]c[][]r[][]i[][]p[][]t[][]"[][],[][] [
@@ -1780,48 +1847,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1495--1495
 ,[][] [][]"[][]t[][]y[][]p[][]e[]
  []
 
-[63
+[74
 
 ]
-File: ./images/02-create-react-app/031_eslint_error.png Graphic file (type bmp)
+LaTeX Info: Redefining \- on input line 1730.
 
-<./images/02-create-react-app/031_eslint_error.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \- on input line 1525.
-
-Underfull \vbox (badness 10000) detected at line 1583
+Underfull \vbox (badness 10000) detected at line 1788
  []
 
-[64]
-Underfull \vbox (badness 10000) detected at line 1583
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1583
- []
-
-[65]
-LaTeX Info: Redefining \- on input line 1609.
-[66]
-File: ./images/02-create-react-app/032_app_tsx_error.png Graphic file (type bmp
-)
-<./images/02-create-react-app/032_app_tsx_error.png>
-[67]
-LaTeX Info: Redefining \- on input line 1638.
-LaTeX Info: Redefining \- on input line 1641.
-File: ./images/02-create-react-app/06_eslint_prettier_fixdoneAll.png Graphic fi
-le (type bmp)
-<./images/02-create-react-app/06_eslint_prettier_fixdoneAll.png>
-[68] [69]
+[75] [76]
+LaTeX Info: Redefining \- on input line 1814.
+LaTeX Info: Redefining \- on input line 1838.
+LaTeX Info: Redefining \- on input line 1841.
+[77] [78]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1674.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1868.
 
-LaTeX Info: Redefining \- on input line 1692.
+LaTeX Info: Redefining \- on input line 1886.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1692
+Underfull \hbox (badness 10000) in paragraph at lines 1886--1886
 [] [][] [][]\T1/zi4/m/n/9 $[][][][] [][]>[][][][] [][]g[][]i[][]t[][] [][]c[][]
 l[][]o[][]n[][]e[][] [][]-[][]b[][] [][]0[][]2[][]_[][][][]e[][]s[][]l[][]i[][]
 n[][]t[][]_[][][][]p[][]r[][]e[][]t[][]t[][]i[][]e[][]r[][] [][]h[][]t[][]t[][]
@@ -1829,7 +1874,7 @@ p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[][]h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][
 ]y[][]a[][]r[][]u[][]o[][]-[][]r[][]e[][]a[][]c[][]t[][]-[]
  []
 
-) (./03-todo-with-react.tex [70
+) (./03-todo-with-react.tex [79
 
 ]
 
@@ -1840,28 +1885,28 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 7.
 
-[71
+[80
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 14.
 
-[72
+[81
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 21.
 
-[73
+[82
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 28.
 
-) [74
+) [83
 
 ]
 
@@ -1874,7 +1919,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[75
+[84
 
 ]
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
@@ -1883,7 +1928,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[76]
+[85]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -1894,152 +1939,174 @@ Package minitoc Info: I0009
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 0398ED9B614C038C3C3633080AAAA2AC;5771.
+(rerunfilecheck)             Checksum: 31DC88D90703775C2675CC2275281F52;6247.
  )
-(\end occurred when \ifx on line 1692 was incomplete)
-(\end occurred when \iffalse on line 1692 was incomplete)
-(\end occurred when \ifx on line 1641 was incomplete)
-(\end occurred when \iffalse on line 1641 was incomplete)
-(\end occurred when \ifx on line 1638 was incomplete)
-(\end occurred when \iffalse on line 1638 was incomplete)
-(\end occurred when \ifx on line 1609 was incomplete)
-(\end occurred when \iffalse on line 1609 was incomplete)
-(\end occurred when \ifx on line 1525 was incomplete)
-(\end occurred when \iffalse on line 1525 was incomplete)
-(\end occurred when \ifx on line 1478 was incomplete)
-(\end occurred when \iffalse on line 1478 was incomplete)
-(\end occurred when \ifx on line 1431 was incomplete)
-(\end occurred when \iffalse on line 1431 was incomplete)
-(\end occurred when \ifx on line 1423 was incomplete)
-(\end occurred when \iffalse on line 1423 was incomplete)
+(\end occurred when \ifx on line 1886 was incomplete)
+(\end occurred when \iffalse on line 1886 was incomplete)
+(\end occurred when \ifx on line 1841 was incomplete)
+(\end occurred when \iffalse on line 1841 was incomplete)
+(\end occurred when \ifx on line 1838 was incomplete)
+(\end occurred when \iffalse on line 1838 was incomplete)
+(\end occurred when \ifx on line 1814 was incomplete)
+(\end occurred when \iffalse on line 1814 was incomplete)
+(\end occurred when \ifx on line 1730 was incomplete)
+(\end occurred when \iffalse on line 1730 was incomplete)
+(\end occurred when \ifx on line 1689 was incomplete)
+(\end occurred when \iffalse on line 1689 was incomplete)
+(\end occurred when \ifx on line 1648 was incomplete)
+(\end occurred when \iffalse on line 1648 was incomplete)
+(\end occurred when \ifx on line 1640 was incomplete)
+(\end occurred when \iffalse on line 1640 was incomplete)
+(\end occurred when \ifx on line 1632 was incomplete)
+(\end occurred when \iffalse on line 1632 was incomplete)
+(\end occurred when \ifx on line 1616 was incomplete)
+(\end occurred when \iffalse on line 1616 was incomplete)
+(\end occurred when \ifx on line 1600 was incomplete)
+(\end occurred when \iffalse on line 1600 was incomplete)
+(\end occurred when \ifx on line 1595 was incomplete)
+(\end occurred when \iffalse on line 1595 was incomplete)
+(\end occurred when \ifx on line 1559 was incomplete)
+(\end occurred when \iffalse on line 1559 was incomplete)
+(\end occurred when \ifx on line 1548 was incomplete)
+(\end occurred when \iffalse on line 1548 was incomplete)
+(\end occurred when \ifx on line 1540 was incomplete)
+(\end occurred when \iffalse on line 1540 was incomplete)
+(\end occurred when \ifx on line 1527 was incomplete)
+(\end occurred when \iffalse on line 1527 was incomplete)
+(\end occurred when \ifx on line 1512 was incomplete)
+(\end occurred when \iffalse on line 1512 was incomplete)
+(\end occurred when \ifx on line 1493 was incomplete)
+(\end occurred when \iffalse on line 1493 was incomplete)
+(\end occurred when \ifx on line 1479 was incomplete)
+(\end occurred when \iffalse on line 1479 was incomplete)
+(\end occurred when \ifx on line 1465 was incomplete)
+(\end occurred when \iffalse on line 1465 was incomplete)
+(\end occurred when \ifx on line 1457 was incomplete)
+(\end occurred when \iffalse on line 1457 was incomplete)
+(\end occurred when \ifx on line 1452 was incomplete)
+(\end occurred when \iffalse on line 1452 was incomplete)
 (\end occurred when \ifx on line 1415 was incomplete)
 (\end occurred when \iffalse on line 1415 was incomplete)
-(\end occurred when \ifx on line 1399 was incomplete)
-(\end occurred when \iffalse on line 1399 was incomplete)
-(\end occurred when \ifx on line 1383 was incomplete)
-(\end occurred when \iffalse on line 1383 was incomplete)
-(\end occurred when \ifx on line 1378 was incomplete)
-(\end occurred when \iffalse on line 1378 was incomplete)
-(\end occurred when \ifx on line 1342 was incomplete)
-(\end occurred when \iffalse on line 1342 was incomplete)
-(\end occurred when \ifx on line 1331 was incomplete)
-(\end occurred when \iffalse on line 1331 was incomplete)
-(\end occurred when \ifx on line 1323 was incomplete)
-(\end occurred when \iffalse on line 1323 was incomplete)
-(\end occurred when \ifx on line 1310 was incomplete)
-(\end occurred when \iffalse on line 1310 was incomplete)
-(\end occurred when \ifx on line 1295 was incomplete)
-(\end occurred when \iffalse on line 1295 was incomplete)
-(\end occurred when \ifx on line 1276 was incomplete)
-(\end occurred when \iffalse on line 1276 was incomplete)
-(\end occurred when \ifx on line 1262 was incomplete)
-(\end occurred when \iffalse on line 1262 was incomplete)
-(\end occurred when \ifx on line 1248 was incomplete)
-(\end occurred when \iffalse on line 1248 was incomplete)
-(\end occurred when \ifx on line 1240 was incomplete)
-(\end occurred when \iffalse on line 1240 was incomplete)
-(\end occurred when \ifx on line 1235 was incomplete)
-(\end occurred when \iffalse on line 1235 was incomplete)
-(\end occurred when \ifx on line 1198 was incomplete)
-(\end occurred when \iffalse on line 1198 was incomplete)
-(\end occurred when \ifx on line 1188 was incomplete)
-(\end occurred when \iffalse on line 1188 was incomplete)
-(\end occurred when \ifx on line 1176 was incomplete)
-(\end occurred when \iffalse on line 1176 was incomplete)
-(\end occurred when \ifx on line 1168 was incomplete)
-(\end occurred when \iffalse on line 1168 was incomplete)
-(\end occurred when \ifx on line 1163 was incomplete)
-(\end occurred when \iffalse on line 1163 was incomplete)
-(\end occurred when \ifx on line 1085 was incomplete)
-(\end occurred when \iffalse on line 1085 was incomplete)
-(\end occurred when \ifx on line 1070 was incomplete)
-(\end occurred when \iffalse on line 1070 was incomplete)
-(\end occurred when \ifx on line 1033 was incomplete)
-(\end occurred when \iffalse on line 1033 was incomplete)
-(\end occurred when \ifx on line 990 was incomplete)
-(\end occurred when \iffalse on line 990 was incomplete)
-(\end occurred when \ifx on line 940 was incomplete)
-(\end occurred when \iffalse on line 940 was incomplete)
-(\end occurred when \ifx on line 932 was incomplete)
-(\end occurred when \iffalse on line 932 was incomplete)
-(\end occurred when \ifx on line 910 was incomplete)
-(\end occurred when \iffalse on line 910 was incomplete)
-(\end occurred when \ifx on line 891 was incomplete)
-(\end occurred when \iffalse on line 891 was incomplete)
+(\end occurred when \ifx on line 1405 was incomplete)
+(\end occurred when \iffalse on line 1405 was incomplete)
+(\end occurred when \ifx on line 1393 was incomplete)
+(\end occurred when \iffalse on line 1393 was incomplete)
+(\end occurred when \ifx on line 1385 was incomplete)
+(\end occurred when \iffalse on line 1385 was incomplete)
+(\end occurred when \ifx on line 1380 was incomplete)
+(\end occurred when \iffalse on line 1380 was incomplete)
+(\end occurred when \ifx on line 1302 was incomplete)
+(\end occurred when \iffalse on line 1302 was incomplete)
+(\end occurred when \ifx on line 1253 was incomplete)
+(\end occurred when \iffalse on line 1253 was incomplete)
+(\end occurred when \ifx on line 1237 was incomplete)
+(\end occurred when \iffalse on line 1237 was incomplete)
+(\end occurred when \ifx on line 1232 was incomplete)
+(\end occurred when \iffalse on line 1232 was incomplete)
+(\end occurred when \ifx on line 1185 was incomplete)
+(\end occurred when \iffalse on line 1185 was incomplete)
+(\end occurred when \ifx on line 1180 was incomplete)
+(\end occurred when \iffalse on line 1180 was incomplete)
+(\end occurred when \ifx on line 1130 was incomplete)
+(\end occurred when \iffalse on line 1130 was incomplete)
+(\end occurred when \ifx on line 1115 was incomplete)
+(\end occurred when \iffalse on line 1115 was incomplete)
+(\end occurred when \ifx on line 1078 was incomplete)
+(\end occurred when \iffalse on line 1078 was incomplete)
+(\end occurred when \ifx on line 1035 was incomplete)
+(\end occurred when \iffalse on line 1035 was incomplete)
+(\end occurred when \ifx on line 983 was incomplete)
+(\end occurred when \iffalse on line 983 was incomplete)
+(\end occurred when \ifx on line 946 was incomplete)
+(\end occurred when \iffalse on line 946 was incomplete)
+(\end occurred when \ifx on line 921 was incomplete)
+(\end occurred when \iffalse on line 921 was incomplete)
+(\end occurred when \ifx on line 901 was incomplete)
+(\end occurred when \iffalse on line 901 was incomplete)
+(\end occurred when \ifx on line 890 was incomplete)
+(\end occurred when \iffalse on line 890 was incomplete)
 (\end occurred when \ifx on line 876 was incomplete)
 (\end occurred when \iffalse on line 876 was incomplete)
-(\end occurred when \ifx on line 865 was incomplete)
-(\end occurred when \iffalse on line 865 was incomplete)
-(\end occurred when \ifx on line 750 was incomplete)
-(\end occurred when \iffalse on line 750 was incomplete)
-(\end occurred when \ifx on line 653 was incomplete)
-(\end occurred when \iffalse on line 653 was incomplete)
-(\end occurred when \ifx on line 593 was incomplete)
-(\end occurred when \iffalse on line 593 was incomplete)
-(\end occurred when \ifx on line 540 was incomplete)
-(\end occurred when \iffalse on line 540 was incomplete)
-(\end occurred when \ifx on line 485 was incomplete)
-(\end occurred when \iffalse on line 485 was incomplete)
-(\end occurred when \ifx on line 455 was incomplete)
-(\end occurred when \iffalse on line 455 was incomplete)
-(\end occurred when \ifx on line 439 was incomplete)
-(\end occurred when \iffalse on line 439 was incomplete)
-(\end occurred when \ifx on line 437 was incomplete)
-(\end occurred when \iffalse on line 437 was incomplete)
-(\end occurred when \ifx on line 388 was incomplete)
-(\end occurred when \iffalse on line 388 was incomplete)
-(\end occurred when \ifx on line 374 was incomplete)
-(\end occurred when \iffalse on line 374 was incomplete)
-(\end occurred when \ifx on line 337 was incomplete)
-(\end occurred when \iffalse on line 337 was incomplete)
-(\end occurred when \ifx on line 306 was incomplete)
-(\end occurred when \iffalse on line 306 was incomplete)
-(\end occurred when \ifx on line 214 was incomplete)
-(\end occurred when \iffalse on line 214 was incomplete)
-(\end occurred when \ifx on line 182 was incomplete)
-(\end occurred when \iffalse on line 182 was incomplete)
-(\end occurred when \ifx on line 152 was incomplete)
-(\end occurred when \iffalse on line 152 was incomplete)
-(\end occurred when \ifx on line 146 was incomplete)
-(\end occurred when \iffalse on line 146 was incomplete)
-(\end occurred when \ifx on line 131 was incomplete)
-(\end occurred when \iffalse on line 131 was incomplete)
-(\end occurred when \ifx on line 79 was incomplete)
-(\end occurred when \iffalse on line 79 was incomplete)
-(\end occurred when \ifx on line 73 was incomplete)
-(\end occurred when \iffalse on line 73 was incomplete)
-(\end occurred when \ifx on line 472 was incomplete)
-(\end occurred when \iffalse on line 472 was incomplete)
-(\end occurred when \ifx on line 459 was incomplete)
-(\end occurred when \iffalse on line 459 was incomplete)
+(\end occurred when \ifx on line 872 was incomplete)
+(\end occurred when \iffalse on line 872 was incomplete)
+(\end occurred when \ifx on line 759 was incomplete)
+(\end occurred when \iffalse on line 759 was incomplete)
+(\end occurred when \ifx on line 744 was incomplete)
+(\end occurred when \iffalse on line 744 was incomplete)
+(\end occurred when \ifx on line 663 was incomplete)
+(\end occurred when \iffalse on line 663 was incomplete)
+(\end occurred when \ifx on line 598 was incomplete)
+(\end occurred when \iffalse on line 598 was incomplete)
+(\end occurred when \ifx on line 570 was incomplete)
+(\end occurred when \iffalse on line 570 was incomplete)
+(\end occurred when \ifx on line 538 was incomplete)
+(\end occurred when \iffalse on line 538 was incomplete)
+(\end occurred when \ifx on line 521 was incomplete)
+(\end occurred when \iffalse on line 521 was incomplete)
+(\end occurred when \ifx on line 469 was incomplete)
+(\end occurred when \iffalse on line 469 was incomplete)
 (\end occurred when \ifx on line 452 was incomplete)
 (\end occurred when \iffalse on line 452 was incomplete)
-(\end occurred when \ifx on line 393 was incomplete)
-(\end occurred when \iffalse on line 393 was incomplete)
-(\end occurred when \ifx on line 381 was incomplete)
-(\end occurred when \iffalse on line 381 was incomplete)
-(\end occurred when \ifx on line 362 was incomplete)
-(\end occurred when \iffalse on line 362 was incomplete)
-(\end occurred when \ifx on line 346 was incomplete)
-(\end occurred when \iffalse on line 346 was incomplete)
-(\end occurred when \ifx on line 338 was incomplete)
-(\end occurred when \iffalse on line 338 was incomplete)
-(\end occurred when \ifx on line 305 was incomplete)
-(\end occurred when \iffalse on line 305 was incomplete)
+(\end occurred when \ifx on line 436 was incomplete)
+(\end occurred when \iffalse on line 436 was incomplete)
+(\end occurred when \ifx on line 421 was incomplete)
+(\end occurred when \iffalse on line 421 was incomplete)
+(\end occurred when \ifx on line 419 was incomplete)
+(\end occurred when \iffalse on line 419 was incomplete)
+(\end occurred when \ifx on line 368 was incomplete)
+(\end occurred when \iffalse on line 368 was incomplete)
+(\end occurred when \ifx on line 354 was incomplete)
+(\end occurred when \iffalse on line 354 was incomplete)
+(\end occurred when \ifx on line 302 was incomplete)
+(\end occurred when \iffalse on line 302 was incomplete)
+(\end occurred when \ifx on line 271 was incomplete)
+(\end occurred when \iffalse on line 271 was incomplete)
+(\end occurred when \ifx on line 192 was incomplete)
+(\end occurred when \iffalse on line 192 was incomplete)
+(\end occurred when \ifx on line 160 was incomplete)
+(\end occurred when \iffalse on line 160 was incomplete)
+(\end occurred when \ifx on line 130 was incomplete)
+(\end occurred when \iffalse on line 130 was incomplete)
+(\end occurred when \ifx on line 124 was incomplete)
+(\end occurred when \iffalse on line 124 was incomplete)
+(\end occurred when \ifx on line 109 was incomplete)
+(\end occurred when \iffalse on line 109 was incomplete)
+(\end occurred when \ifx on line 76 was incomplete)
+(\end occurred when \iffalse on line 76 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \iffalse on line 70 was incomplete)
+(\end occurred when \ifx on line 451 was incomplete)
+(\end occurred when \iffalse on line 451 was incomplete)
+(\end occurred when \ifx on line 438 was incomplete)
+(\end occurred when \iffalse on line 438 was incomplete)
+(\end occurred when \ifx on line 431 was incomplete)
+(\end occurred when \iffalse on line 431 was incomplete)
+(\end occurred when \ifx on line 372 was incomplete)
+(\end occurred when \iffalse on line 372 was incomplete)
+(\end occurred when \ifx on line 360 was incomplete)
+(\end occurred when \iffalse on line 360 was incomplete)
+(\end occurred when \ifx on line 341 was incomplete)
+(\end occurred when \iffalse on line 341 was incomplete)
+(\end occurred when \ifx on line 325 was incomplete)
+(\end occurred when \iffalse on line 325 was incomplete)
+(\end occurred when \ifx on line 317 was incomplete)
+(\end occurred when \iffalse on line 317 was incomplete)
 (\end occurred when \ifx on line 284 was incomplete)
 (\end occurred when \iffalse on line 284 was incomplete)
-(\end occurred when \ifx on line 258 was incomplete)
-(\end occurred when \iffalse on line 258 was incomplete)
-(\end occurred when \ifx on line 239 was incomplete)
-(\end occurred when \iffalse on line 239 was incomplete)
+(\end occurred when \ifx on line 263 was incomplete)
+(\end occurred when \iffalse on line 263 was incomplete)
+(\end occurred when \ifx on line 237 was incomplete)
+(\end occurred when \iffalse on line 237 was incomplete)
 (\end occurred when \ifx on line 218 was incomplete)
 (\end occurred when \iffalse on line 218 was incomplete)
-(\end occurred when \ifx on line 213 was incomplete)
-(\end occurred when \iffalse on line 213 was incomplete)
-(\end occurred when \ifx on line 77 was incomplete)
-(\end occurred when \iffalse on line 77 was incomplete)
-(\end occurred when \ifx on line 58 was incomplete)
-(\end occurred when \iffalse on line 58 was incomplete)
+(\end occurred when \ifx on line 197 was incomplete)
+(\end occurred when \iffalse on line 197 was incomplete)
+(\end occurred when \ifx on line 192 was incomplete)
+(\end occurred when \iffalse on line 192 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \iffalse on line 63 was incomplete)
+(\end occurred when \ifx on line 55 was incomplete)
+(\end occurred when \iffalse on line 55 was incomplete)
 (\end occurred when \iffalse on line 156 was incomplete)
 (\end occurred when \ifx on line 53 was incomplete)
 (\end occurred when \iffalse on line 112 was incomplete)
@@ -2048,12 +2115,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (\end occurred when \ifx on line 46 was incomplete)
 (\end occurred when \ifx on line 277 was incomplete) 
 Here is how much of TeX's memory you used:
- 18923 strings out of 479460
- 284048 string characters out of 5870465
- 973148 words of memory out of 5000000
- 35996 multiletter control sequences out of 15000+600000
- 486171 words of font info for 169 fonts, out of 8000000 for 9000
+ 18913 strings out of 479460
+ 283887 string characters out of 5870465
+ 939150 words of memory out of 5000000
+ 35988 multiletter control sequences out of 15000+600000
+ 484322 words of font info for 162 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 84i,14n,90p,422b,1055s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,90p,422b,1059s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.dvi (83 pages, 215556 bytes).
+Output written on book.dvi (92 pages, 230532 bytes).

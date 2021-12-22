@@ -69,7 +69,8 @@
         "はじめに",
         "python",
         "module",
-        "path"
+        "path",
+        "babel"
       ]
     }
   }

@@ -2,8 +2,8 @@
 \contentsline {chapter}{\numberline {第1章}ゼロから始める(開発環境構築)}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}　Node.js}{2}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Node.jsについて}{2}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Node.jsのインストールの前に}{8}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}nvm}{9}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.2}Node.jsのインストールの前に}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}nvm}{8}{subsection.1.1.3}%
 \contentsline {section}{\numberline {1.2}Microsoft Visual Studio Code + 拡張機能}{15}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}VSCodeのインストール}{15}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}VSCodeの拡張機能}{16}{subsection.1.2.2}%
@@ -13,20 +13,22 @@
 \contentsline {subsection}{\numberline {1.3.1}Google Chromeのインストール}{19}{subsection.1.3.1}%
 \contentsline {section}{\numberline {1.4}第1章のまとめ}{24}{section.1.4}%
 \contentsline {chapter}{\numberline {第2章}スタートプロジェクトの作成}{25}{chapter.2}%
-\contentsline {section}{\numberline {2.1}create{-}react{-}appコマンド}{25}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}アプリケーションを実行}{28}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.1}create{-}react{-}appコマンド}{26}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}アプリケーションを実行}{27}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}create{-}react{-}appで作成された中身}{29}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}　ゼロから構築してみる}{32}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}ステップ1 npm init y}{32}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}ステップ1 Node.jsプロジェクト作成}{32}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}webpackのインストールと設定}{33}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}webpackの動作確認}{34}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}webpackの設定ファイル}{37}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}eslint、prettierとは？}{54}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}eslint、prettierのインストール}{55}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}eslint、prettierの指摘を修正}{63}{section.2.4}%
-\contentsline {section}{\numberline {2.5}第2章のまとめ}{70}{section.2.5}%
-\contentsline {chapter}{\numberline {第3章}日記アプリケーションの作成(Reactのみ)}{71}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Reactとは？}{71}{section.3.1}%
-\contentsline {section}{\numberline {3.2}表示するデータの型を決める}{72}{section.3.2}%
-\contentsline {section}{\numberline {3.3}データ表示画面}{73}{section.3.3}%
-\contentsline {section}{\numberline {3.4}React hooksを使用して、データの追加・編集・削除}{74}{section.3.4}%
+\contentsline {subsection}{\numberline {2.2.3}webpackの動作確認}{35}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}webpackの設定ファイル}{42}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}webpack設定ファイルを分割する}{53}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Babel.jsのインストールと設定}{57}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}eslint、prettierとは？}{66}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}eslint、prettierのインストール}{67}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}eslint、prettierの指摘を修正}{74}{section.2.4}%
+\contentsline {section}{\numberline {2.5}第2章のまとめ}{79}{section.2.5}%
+\contentsline {chapter}{\numberline {第3章}日記アプリケーションの作成(Reactのみ)}{80}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Reactとは？}{80}{section.3.1}%
+\contentsline {section}{\numberline {3.2}表示するデータの型を決める}{81}{section.3.2}%
+\contentsline {section}{\numberline {3.3}データ表示画面}{82}{section.3.3}%
+\contentsline {section}{\numberline {3.4}React hooksを使用して、データの追加・編集・削除}{83}{section.3.4}%

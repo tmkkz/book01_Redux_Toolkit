@@ -29,48 +29,24 @@
 //image[y01][pythonを実行][scale=1.0]
 
 同じように、@<B>{Node.js}をインストールすると、「node.exe」を使いJavaScriptファイルを実行できます。
-例として、Node.jsのドキュメント(Guides)@<href>{https://nodejs.org/en/docs/guides/getting-started-guide/,「How do I start with Node.js after I installed it?」}にある以下のスクリプトを実行してみましょう。
+たとえば、以下のように「test01.js」ファイルを作成します。
 
-//clearpage
+//list[test01.js]{
+  const name='やる夫';
+  const message='こまけぇこたぁいいんだよ';
 
-//list[?]{
-  const http = require('http');
-
-  const hostname = '127.0.0.1';
-  const port = 3000;
-
-  const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
-    });
-
-    server.listen(port, hostname, () => {
-      console.log(`Server running at http://${hostname}:${port}/`);
-    });
-
+  console.log(`${name}が、こんなこと言ってます。${message}`);
 //}
 
-このスクリプトを「app.js」のファイル名で保存し、実行します。
+このスクリプトをターミナル上で実行します。「node」コマンドに実行したいJavaScriptファイルを引数として渡します。
 
 //terminal[?][app.jsを実行]{
-  > node app.jp
-  Server running at http://127.0.0.1:3000/
-
+  ❯ node test01.js
+  やる夫が、こんなこと言ってます。こまけぇこたぁいいんだよ
 //}
 
-ブラウザを開き、http://127.0.0.1:3000へアクセスすると、ブラウザに実行結果が表示されます。
+このように、今まではJavaScriptの実行環境はブラウザでしたが、NodeがあればJacaScriptをPC、サーバで実行できます。
 
-//image[01_00browser_helloWorld][app.jsの実行][scale=1.0]
-//clearpage
-
-通常のHTMLに埋め込まれたJavaScriptをブラウザから実行すると、
-OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)ことなどは制限されますが、
-Node.jsで実行するとOSの機能も使用できます。
-
-//note[]{
-詳しくは、本家の「@<href>{https://nodejs.org/ja/about/, Node.jsとは}」を参照してください。
-//}
 #@# Denoがあることを伝える
 //clearpage
 
@@ -81,8 +57,8 @@ Node.jsで実行するとOSの機能も使用できます。
 
 //image[01_01nodejsTop][Node.jsトップページ][scale=1.0,pos=H]
 
-ここでダウンロード可能なのは、「14.17.0 LTS(Long Term Support)推奨版」と「16.3.0最新版」@<fn>{fn-101}の2つがあります。
-//footnote[fn-101][2021/06/10現在]
+ここでダウンロード可能なのは、「16.13.1 LTS(Long Term Support)推奨版」と「17.3.0最新版」@<fn>{fn-101}の2つがあります。
+//footnote[fn-101][2022/12/17現在]
 
 LTS版、最新版は以下のロードマップにより更新されます。
 
@@ -90,7 +66,9 @@ LTS版、最新版は以下のロードマップにより更新されます。
 //clearpage
 
 Node.jsのReleases:@<href>{https://nodejs.org/ja/about/releases/}にあるように、
-Node.jsは、各年の4月、10月にリリースされ、@<br>{}
+#@#<!-- textlint-disable -->
+Node.jsは、各年の4月、10月にリリースされ、
+#@#<!-- textlint-ensable -->
 
  * Current
  * Active
@@ -98,7 +76,7 @@ Node.jsは、各年の4月、10月にリリースされ、@<br>{}
 のフェーズを経ますが、メジャーバージョン番号が偶数のものだけが、Active期間を経て長期サポートされます。
 
 //blankline
-上記トップページにあるNode.js 14は、2023/4/30までの長期サポートとなります。
+上記トップページにあるNode.js 16は、2024/4/30までの長期サポートとなります。
 実際のプロジェクトで使用する場合は、よほどの理由がない限りは最新のLTS版を使用します。
 
 
@@ -124,6 +102,12 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 私が使用しているのは、nvm(node version manager):@<href>{https://github.com/nvm-sh/nvm}です。
 いろいろなバージョンのNode.jsを、簡単にインストール・アンインストール・切替ができます。
 
+//blankline
+「nvm」も含めたNode.jsバージョン管理ツールについては、
+こちらの@heppokofrontendさんの良記事が参考になります。
+//image[01_nodeVersionChange][][scale=1.0]
+@<href>{https://qiita.com/heppokofrontend/items/5c4cc738c5239f4afe02, Node.jsのバージョン管理ツールを改めて選定する【2021年】}
+
 
 === nvm
 
@@ -133,7 +117,7 @@ nvm(node version manager)を使えば、複数バージョンのNode.jsを1台�
 GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
 
 //blankline
-Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がHub上で公開されています。
+Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がGitHub上で公開されています。
 コマンドが本家と少し違いますが、複数バージョンのインストール・バージョンの切り替えなど機能は問題ありません。
 
 ===== nvmのインストール
@@ -433,31 +417,38 @@ Google Chrome:@<href>{https://www.google.com/intl/ja/chrome/}
 //image[01_09googleChrome][Google Chrome][scale=1.0,pos=H]
 
 
-===　Google Chromeの拡張機能
+==== Google Chromeの拡張機能
 こちらも、VSCodeと同様に拡張機能を追加することで、さらに便利に使うことができます。
 
 React、Reduxの開発では、以下の拡張機能は必須と言っても良いほどです。
 
-拡張機能のインストールは、Chrome Web storeで検索してください。
+//blankline
+拡張機能のインストールは、下記のChrome Web storeで検索してください。
 
+//blankline
 Chrome Web store:@<href>{https://chrome.google.com/webstore/category/extensions?hl=ja}
 //image[01_13chromeWebstore][Chrome Web store][scale=1.0,pos=H]
+
+//clearpage
+
 
 ==== React Developer Tools
 Reactを使用して作成したページは、最終的にはページ出力用JavaScriptに変換され、ブラウザで表示されるときにはHTMLとして出力されます。
 この拡張機能を使うと、Google ChromeのDevToolsにComponentsタブが作成され、Props、Stateを確認できます。
 
-React Developer Tools
-//image[01_10chromeExtReactDevTools][][scale=1.0,pos=H]
+
+//image[01_10chromeExtReactDevTools][React Developer Tools][scale=1.0,pos=H]
 
 //image[01_12chromeExtReactDevTools01][React DevToolsでAppを表示][scale=1.0,pos=H]
+
+//clearpage
 
 ==== Redux DevTools
 のちほど、Reduxの章であらためて説明しますが、「タイムトラベルデバッグ(実行されたアクションをさかのぼる)」が簡単にできます。
 また、実行されたアクション、変更されたStateが「新」「旧」とあり、どの部分が変更されたのかも確かめるのも簡単です。
 
-Redxu DevTools
-//image[01_11chromeExtReduxDevTools][][scale=1.0,pos=H]
+
+//image[01_11chromeExtReduxDevTools][React DevloperTools拡張機能][scale=1.0,pos=H]
 
 
 =={sec-chap01review} 第1章のまとめ

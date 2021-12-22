@@ -1,33 +1,32 @@
 \chapter{スタートプロジェクトの作成}
 \label{chap:02-create-react-app}
 \begin{starterabstract}
-Reactアプリケーションを作成するための最初のステップとして、トップページが表示されるスタートアッププロジェクトを作成します。
-//blankline
-スタートアッププロジェクトを作成する方法として、\\[0pt]
+Reactアプリケーションを作成するための最初のステップとして、トップページのみを持つスタートアッププロジェクトを作成します。
+　\\[0pt]
 
-//blankline
+スタートアッププロジェクトを作成する方法として、\\[0pt]
+　\\[0pt]
   1. create{-}react{-}app\\[0pt]
   2. ゼロから構築\\[0pt]
-//blankline
+　\\[0pt]
 の2つの方法を解説します。
 
-//blankline
+　\\[0pt]
 「create{-}react{-}app」は、コマンド一発でReactアプリケーション開発が数分で始められます。
 
-//blankline
+　\\[0pt]
 ただし、Facebook(Meta社)を中心に開発されている便利なものなのですが、メンドウな設定などが隠されているため
-バージョンの合わないライブラリを入力すると整合性が崩れ手に負えなくなることもあります。
+バージョンの合わないライブラリを導入すると整合性が崩れ手に負えなくなることもあります。
 
-//blankline
-たとえば、現行執筆時点(2021年12月12日)で、メジャーバージョンが上がっているwebpackやEslintを上書きしてしまうと
-たくさんのエラーに悩まされることになります。
+　\\[0pt]
+2021年12月14日にリリースされた「create{-}react{-}app V5.0.0」では、webpack、eslintなどは最新のものが使われています。
 
-//blankline
+　\\[0pt]
 「ゼロから構築」を選択すると、最新のライブラリが使用できますが、webpack、ESLintなどの設定ファイルは自分で書かなくてはなりません。
 使用するライブラリの設定自体は難しくないので、ここで勉強しておけば必ず役に立つはずです。
 
-
-どちらの方法もGitHubにテンプレートとしてアップロードしてありますので、ご自由にお使いください。
+　\\[0pt]
+　どちらの方法もGitHubにテンプレートとしてアップロードしてありますので、ご自由にお使いください。
 
 \end{starterabstract}
 
@@ -38,7 +37,7 @@ Reactアプリケーションを作成するための最初のステップとし
   \par\nobreak
 }
 
-Reactアプリケーションをゼロから作成するためには、\\[0pt]
+Reactアプリケーションをゼロから作成するためには、
 
 \begin{starteritemize}
 \item 「nodeプロジェクト」に必要なpackage.jsonを作成
@@ -46,8 +45,6 @@ Reactアプリケーションをゼロから作成するためには、\\[0pt]
 \item 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(Babel使用)
 \item 出力するファイルをまとめる(バンドルする {-} webpack使用)
 \end{starteritemize}
-
-\vspace*{\baselineskip}
 
 など、reactライブラリのインストール以外にも、Babelやwebpackをインストールして設定ファイルを作成しなくてはなりません。
 
@@ -67,7 +64,7 @@ Reactアプリケーションをゼロから作成するためには、\\[0pt]
 \vspace*{\baselineskip}
 
 では、実際に手を動かしましょう。
-ターミナルを起動し、プロジェクトフォルダを作成するフォルダへ移動します。
+ターミナルを起動し、プロジェクトを作成するフォルダへ移動します。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{create{-}react{-}appでスタート用アプリケーション作成}\seqsplit{\textgreater{} npx create react{-}app プロジェクト名 {-}{-}template typescript}\end{starterterminal}
@@ -76,51 +73,32 @@ Reactアプリケーションをゼロから作成するためには、\\[0pt]
 以下のように表示されればスグにでも開発に取りかかれます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{}\seqsplit{  Success! Created yourproject at yourproject\textunderscore{}path
+\begin{starterterminal}[]{create{-}react{-}app完了時}\seqsplit{  Success! Created yaruo{-}cra{-}template at /Users/kazuyainaba/Documents/Devs\textunderscore{}kz/Project\textunderscore{}技術書展202012/yaruo\textunderscore{}react\textunderscore{}sample/yaruo{-}cra{-}template
   Inside that directory, you can run several commands:
 
-    yarn start
+    npm start
       Starts the development server.
 
-    yarn build
+    npm run build
       Bundles the app into static files for production.
 
-    yarn test
+    npm test
       Starts the test runner.
 
-    yarn eject
+    npm run eject
       Removes this tool and copies build dependencies, configuration files
       and scripts into the app directory. If you do this, you can’t go back!
 
   We suggest that you begin by typing:
 
-    cd yourproject
-    yarn start
+    cd yaruo{-}cra{-}template
+    npm start
 
   Happy hacking!}\end{starterterminal}
 \begin{starterquote}
 
-ターミナルには、Facebook(Meta)が関わっているノード・パッケージマネージャーの「yarn」を使ったコマンドが表示されています。
-
-\begin{description}
-\item[yarn start] \mbox{} \\
-開発用サーバの開始。
-\item[yarn build] \mbox{} \\
-製品用に静的はファイルにアプリケーションをまとめる。
-\item[yarn test] \mbox{} \\
-テストランナーの開始。
-\item[yarn eject] \mbox{} \\
-ツール(create{-}react{-}app)を取り除き、依存関係、設定ファイル、スクリプトをappディレクトリにコピーする。
-\end{description}
-
-\vspace*{\baselineskip}
-
-yarnは、pnp(プラグ＆プレイ{-}依存関係(node\textunderscore{}modulesフォルダ以下にインストールされるパッケージ)を仮想化してロードする機能)を
-導入したv2で大きく変わっています。今ではv3もリリースされています。
-
-\vspace*{\baselineskip}
-
-PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノード・パッケージマネージャー)を使っています。
+「create{-}react{-}app」は、2021年12月14日にV5.0.0がリリースされました。
+このリリースでは、メジャーバージョンアップされていた「webpack5」、「eslint8」が採用されています。
 
 \end{starterquote}
 \begin{starternote}[]{github}
@@ -128,7 +106,7 @@ PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノ
 ここまでの作業は、GitHubにあります。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{GitHubから}\seqsplit{\textgreater{} git clone {-}b 01\textunderscore{}create{-}react{-}app https://github.com/yaruo{-}react{-}redux/yaruo{-}diary.git}\end{starterterminal}
+\begin{starterterminal}[]{GitHubから}\seqsplit{\textgreater{} git clone {-}b 01\textunderscore{}create{-}react{-}app{-}executed https://github.com/yaruo{-}react{-}redux/yaruo{-}cra{-}template.git}\end{starterterminal}
 \end{starternote}
 
 \subsection{アプリケーションを実行}
@@ -140,16 +118,16 @@ PnPなしでもyarn v3を使うこともできるようですが、私はnpm(ノ
 
 アプリケーションが作成できましたので、実行してみます。
 
-ターミナルに表示されているように、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
+ターミナルの表示に従い、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{}\seqsplit{\textdollar{} cd プロジェクト名
-\textdollar{} npm run start}\end{starterterminal}
+\begin{starterterminal}[]{プロジェクトの実行}\seqsplit{ \textgreater{} cd プロジェクト名
+ \textgreater{} npm run start {\reviewballoon{もしくは、yarn start}}}\end{starterterminal}
 
 すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトでは、port:3000でアプリケーションへアクセスできます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{}\seqsplit{Compiled successfully!
+\begin{starterterminal}[]{npm run start時}\seqsplit{Compiled successfully!
 
 You can now view yourproject in the browser.
 
@@ -179,9 +157,10 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 create{-}react{-}appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{package.json}\seqsplit{  .
+\begin{starterterminal}[]{create{-}react{-}appで作成されたファイル・フォルダ}\seqsplit{  .
   ├── node\textunderscore{}modules
   ├── README.md
+  ├── package{-}lock.json
   ├── package.json
   ├── public
   │   ├── favicon.ico
@@ -200,8 +179,7 @@ create{-}react{-}appで作成された中身は、以下となります(使用�
   │   ├── react{-}app{-}env.d.ts
   │   ├── reportWebVitals.ts
   │   └── setupTests.ts
-  ├── tsconfig.json
-  └── yarn.lock}\end{starterterminal}
+  └── tsconfig.json}\end{starterterminal}
 
 package.jsonファイルは、Node.jsを使用するプロジェクトの設計図にあたるものです。
 
@@ -216,18 +194,18 @@ create{-}react{-}appコマンドを使用すると、package.jsonも以下のよ
     "version": "0.1.0",
     "private": true,
     "dependencies": \{
-      "@testing{-}library/jest{-}dom": "\textasciicircum{}5.11.4",
-      "@testing{-}library/react": "\textasciicircum{}11.1.0",
-      "@testing{-}library/user{-}event": "\textasciicircum{}12.1.10",
-      "@types/jest": "\textasciicircum{}26.0.15",
-      "@types/node": "\textasciicircum{}12.0.0",
-      "@types/react": "\textasciicircum{}17.0.0",
-      "@types/react{-}dom": "\textasciicircum{}17.0.0",
+      "@testing{-}library/jest{-}dom": "\textasciicircum{}5.16.1",
+      "@testing{-}library/react": "\textasciicircum{}12.1.2",
+      "@testing{-}library/user{-}event": "\textasciicircum{}13.5.0",
+      "@types/jest": "\textasciicircum{}27.0.3",
+      "@types/node": "\textasciicircum{}16.11.14",
+      "@types/react": "\textasciicircum{}17.0.37",
+      "@types/react{-}dom": "\textasciicircum{}17.0.11",
       "react": "\textasciicircum{}17.0.2",
       "react{-}dom": "\textasciicircum{}17.0.2",
-      "react{-}scripts": "4.0.3",
-      "typescript": "\textasciicircum{}4.1.2",
-      "web{-}vitals": "\textasciicircum{}1.0.1"
+      "react{-}scripts": "5.0.0",
+      "typescript": "\textasciicircum{}4.5.4",
+      "web{-}vitals": "\textasciicircum{}2.1.2"
     \},
     "scripts": \{
       "start": "react{-}scripts start",
@@ -267,19 +245,6 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
 
-\vspace*{\baselineskip}
-
-以下のように、「create{-}react{-}app」で使用されている「Eslint」、「webpack」のバージョンです。
-
-原稿執筆時点(2012年12月12日)では、\\[0pt]
-* Eslint 8.4.1
-* webpack 5.65.0
-* TypeScript 4.5.3
-
-が最新版です。
-
-最新版を使うのが必ずしも良いとは限りませんが、メジャーバージョンが違うと気になります。
-
 \section{　ゼロから構築してみる}
 \keeplastskip{
   \label{sec:2-2}
@@ -291,7 +256,7 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 ステップ毎にGitHub上でブランチを作成してありますので、どこからでも始めていただけます。
 
-\subsection{ステップ1 npm init y}
+\subsection{ステップ1 Node.jsプロジェクト作成}
 \keeplastskip{
   \label{sec:2-2-1}
   \label{sec-04-node_init}
@@ -303,7 +268,7 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 コンソールで「npm init {-}y」コマンドを実行します。オプションの「{-}y」なしで実行すると、対話形式で「package.json」を作成できます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[npm init -y]{リスト2.1: nodeプロジェクトの開始}\seqsplit{  ❯ npm init {-}y
+\begin{starterterminal}[]{nodeプロジェクトの開始}\seqsplit{  ❯ npm init {-}y
   Wrote to /Users/yaruo/Documents/yaruo\textunderscore{}react\textunderscore{}sample/yaruo{-}start{-}template/package.json:
 
   \{
@@ -343,24 +308,41 @@ package.jsonの「dependencies」には、実行に必要でインストール�
   \label{sec-04-webpack}
   \par\nobreak
 }
+\begin{reviewimage}%%02_webpack_site
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/02_webpack_site.png}%
+\reviewimagecaption{desc}
+\label{image:02-create-react-app:02_webpack_site}
+\end{reviewimage}
 
-webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップにある画像が示しているように、\\[0pt]
-* JavaScriptファイル
-* CSS(SASS,SCSS)ファイル
-* 画像ファイル
+webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップにある上図が示しているように、
+
+\begin{starteritemize}
+\item JavaScriptファイル
+\item CSS(SASS,SCSS)ファイル
+\item 画像ファイル
+\end{starteritemize}
 
 などをすべてJavaScriptファイルとして扱い、インストールしているライブラリファイルなどもすべて含めて
 1つのファイルとして出力するバンドラー(まとめる)です。
 
-しかし、すべてを1つのファルとするよりも、htmlファイル、cssファイル、画像ファイルをブラウザが並列ダウンロードすると効率がよく表示速度も速くなりため
-上図のように、複数ファイルに出力します。
+\vspace*{\baselineskip}
+
+しかし、すべてを1つのファルとするよりも「htmlファイル」、「cssファイル」、画像ファイルを別ファイルとして出力し、
+ブラウザがファイルを並列にダウンロードできると効率がよくなり、表示速度も速くなります。
+そのため、上図のように、複数ファイルに出力します。
+
+\vspace*{\baselineskip}
 
 それでは、webpackをインストールし、バンドラーの動きを確認しながら設定ファイルを作成していきます。
 
-ターミナルに以下のコマンドを入力します。「{-}D」のオプションは、
+\vspace*{\baselineskip}
+
+ターミナルに以下のコマンドを入力します。「{-}D(または、{-}{-}save{-}dev)」のオプションは、
 開発時のみ必要で製品版には含まないライブラリをインストールするときに使います。
 
-「package.json」の「devDependencies」に追記されます。
+\vspace*{\baselineskip}
+
+インストールすると、「package.json」の「devDependencies」に追記されます。
 
 \begin{starteritemize}
 \item webpack  本体
@@ -368,10 +350,8 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 \item webpack{-}dev{-}server 開発用Webサーバ
 \end{starteritemize}
 
-をインストールします。
-
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[webpckのインストール]{リスト2.2: }\seqsplit{  ❯ npm install {-}D webpack webpack{-}cli webpack{-}dev{-}server
+\begin{starterterminal}[]{webpckのインストール}\seqsplit{  ❯ npm install {-}D webpack webpack{-}cli webpack{-}dev{-}server
   npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
 
   added 328 packages, and audited 329 packages in 24s
@@ -385,7 +365,7 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 追記されています。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[package.json]{リスト2.18: }\seqsplit{  \{
+\begin{starterprogram}[]{package.json}\seqsplit{  \{
     "name": "yaruo{-}start{-}template",
     "version": "1.0.0",
     "description": "",
@@ -424,19 +404,21 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 
 確認方法は、便利な関数をまとめてある「lodash」ライブラリをインストールし、トップページを作成し動作確認します。
 
+\vspace*{\baselineskip}
+
 手順は、\\[0pt]
+{\reviewstrong{1. src、distフォルダを作成}}\\[0pt]
+ソースコードを置くフォルダ「src」とｗebpackのデフォルトの出力先フォルダ「dist」を作成します。
 
 \vspace*{\baselineskip}
 
-{\reviewstrong{1. src、distフォルダを作成}}\\[0pt]
-ソースコードを置くフォルダ「src」とｗebpackのデフォルトの出力先フォルダ「dist」を作成します。
 {\reviewstrong{2. ファイルを作成}}\\[0pt]
 「lodash」ライブラリをインストールし、srcフォルダに、下記の「index.js」ファイルを作成します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[lodashのインストール]{リスト2.4: }\seqsplit{ \textgreater{} npm install lodash}\end{starterterminal}
+\begin{starterterminal}[]{lodashのインストール}\seqsplit{ \textgreater{} npm install lodash}\end{starterterminal}
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[src/index.js]{リスト2.5: }\seqsplit{  import \textunderscore{} from 'lodash';
+\begin{starterprogram}[]{src/index.js}\seqsplit{  import \textunderscore{} from 'lodash';
 
   function component() \{
     const element = document.createElement('div');
@@ -447,12 +429,11 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 
   document.body.appendChild(component());}\end{starterprogram}
 
-{\reviewstrong{3. トップページを作成}}
+{\reviewstrong{3. トップページを作成}}\\[0pt]
 webpackのデフォルトの出力先「dist」フォルダを作成し、「index.html」ファイルを作成します。
 
-\vspace*{\baselineskip}
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[dist/index.html]{リスト2.6: }\seqsplit{  \textless{}!DOCTYPE html\textgreater{}
+\begin{starterprogram}[]{dist/index.html}\seqsplit{  \textless{}!DOCTYPE html\textgreater{}
   \textless{}html\textgreater{}
     \textless{}head\textgreater{}
       \textless{}meta charset="utf{-}8" /\textgreater{}
@@ -464,25 +445,28 @@ webpackのデフォルトの出力先「dist」フォルダを作成し、「ind
   \textless{}/html\textgreater{}}\end{starterprogram}
 \vspace*{\baselineskip}
 
-{\reviewstrong{4. 動作を確認}}
+{\reviewstrong{4. 動作を確認}}\\[0pt]
 webpackの動作を確認するために、ターミナルで以下のコマンドを実行します。
 
-npx webpack serve {-}{-}open {-}{-}static{-}directory dist {-}{-}mode=development
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{webpack実行後、ブラウザで表示}\seqsplit{ \textgreater{} npx webpack serve {-}{-}open {-}{-}static{-}directory dist {-}{-}mode=development}\end{starterterminal}
+
+\clearpage
 
 \begin{starternote}[]{コマンド解説}
 
 npx {-}{-}\textgreater{} /node\textunderscore{}modules/.binフォルダにあるファイルを実行\\[0pt]
-webpack {-}{-}\textgreater{} 今回動かすモジュール\\[0pt]
-serve {-}{-}\textgreater{} devServer(開発用サーバ)も起動\\[0pt]
-{-}{-}open {-}{-}\textgreater{} デフォルトのブラウザで開く\\[0pt]
-{-}{-}static{-}directory dist {-}{-}\textgreater{} devServerのDocumentRootを指定\\[0pt]
-{-}{-}mode=development {-}{-}\textgreater{} 出力モード\\[0pt]
+　webpack {-}{-}\textgreater{} 今回動かすモジュール\\[0pt]
+　serve {-}{-}\textgreater{} devServer(開発用サーバ)も起動\\[0pt]
+　{-}{-}open {-}{-}\textgreater{} デフォルトのブラウザで開く\\[0pt]
+　{-}{-}static{-}directory dist {-}{-}\textgreater{} devServerのDocumentRootを指定\\[0pt]
+　{-}{-}mode=development {-}{-}\textgreater{} 出力モード\\[0pt]
 
 「{-}{-}static{-}directory dist」を入力しているのは、devServerのデフォルトDocumentRootは「public」のためです。
 
 \end{starternote}
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[webpackをコマンドで起動]{リスト2.7: }\seqsplit{  ❯ npx webpack serve {-}{-}open {-}{-}static{-}directory dist {-}{-}mode=development
+\begin{starterterminal}[]{webpackをコマンドで起動}\seqsplit{  ❯ npx webpack serve {-}{-}open {-}{-}static{-}directory dist {-}{-}mode=development
   \textless{}i\textgreater{} [webpack{-}dev{-}server] Project is running at:
   \textless{}i\textgreater{} [webpack{-}dev{-}server] Loopback: http://localhost:8080/
   \textless{}i\textgreater{} [webpack{-}dev{-}server] On Your Network (IPv4): http://192.168.20.101:8080/
@@ -506,32 +490,46 @@ serve {-}{-}\textgreater{} devServer(開発用サーバ)も起動\\[0pt]
   ./src/index.js 269 bytes [built] [code generated]
   webpack 5.65.0 compiled successfully in 882 ms}\end{starterterminal}
 
+\clearpage
+
+
 「{-}{-}open」オプションでデフォルトのブラウザが起動し、index.htmlが表示されます。
 
 \begin{reviewimage}%%webpack_test01
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/webpack_test01.png}%
+\starterimageframe{%
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/webpack_test01.png}%
+}%
 \reviewimagecaption{ブラウザで表示}
 \label{image:02-create-react-app:webpack_test01}
 \end{reviewimage}
+
+\clearpage
+
 
 devToolsで「main.js」を確認すると、node\textunderscore{}modulesフォルダ以下にインストールされたJavaScriptが
 1つのファイルにまとめられているのが確認できます。
 
 \begin{reviewimage}%%webpack_test02
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/webpack_test02.png}%
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/webpack_test02.png}%
 \reviewimagecaption{devToolsでmain.js内を確認}
 \label{image:02-create-react-app:webpack_test02}
 \end{reviewimage}
 
-npx webpack build
+\clearpage
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{ビルドの実行}\seqsplit{ \textgreater{} npx webpack build}\end{starterterminal}
 
 上記コマンドを実行すると、distフォルダ以下にmain.jsファイルが出力されます。
 
 \begin{reviewimage}%%webpack_test03
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/webpack_test03.png}%
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/webpack_test03.png}%
 \reviewimagecaption{webpackでビルドしてみた}
 \label{image:02-create-react-app:webpack_test03}
 \end{reviewimage}
+
+\clearpage
+
 \begin{starternote}[]{}
 
 ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -539,6 +537,9 @@ npx webpack build
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 02\textunderscore{}webpack{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
 \end{starternote}
+
+\clearpage
+
 
 \subsection{webpackの設定ファイル}
 \keeplastskip{
@@ -553,7 +554,7 @@ npx webpack build
 
 \vspace*{\baselineskip}
 
-手順は、\\[0pt]
+手順は、
 
 \begin{starterenumerate}
 \item 「npx webpack{-}cli init」をターミナルで実行し、ひな型を作成。
@@ -563,12 +564,16 @@ npx webpack build
 
 と、なります。
 
-では、まずは、ターミナルにて上記コマンドを実行すると、
-//blankline
+ターミナルにてコマンドを実行すると、\\[0pt]
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{npx webpack{-}cli initの実行}\seqsplit{ \textgreater{} npx webpack{-}cli init}\end{starterterminal}
+
 このコマンドを実行するには、「@webpack{-}cli/generatorsパッケージが必要ですが、インストールしますか？」と
 聞かれますので、エンターキーを押します。
 
-//blankline
+\vspace*{\baselineskip}
+
 @webpack{-}cli/generatorsと依存関係をもつパッケージがインストールされると、設定ファイルを作成するための質問が始まります。
 私が選んだ答えと括弧内は表示される選択肢です。
 
@@ -590,7 +595,7 @@ npx webpack build
 \end{starteritemize}
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[webpack-config.jsの作成]{リスト2.8: }\seqsplit{   ❯ npx webpack{-}cli init
+\begin{starterterminal}[]{webpack{-}config.jsの作成}\seqsplit{  \textgreater{} npx webpack{-}cli init
   [webpack{-}cli] For using this command you need to install: '@webpack{-}cli/generators' package.
   [webpack{-}cli] Would you like to install '@webpack{-}cli/generators' package? (That will run 'npm install {-}D @webpack{-}cli/generators') (Y/n)
   npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix\#deprecated
@@ -644,13 +649,18 @@ npx webpack build
 質問完了後に必要なパッケージがインストールされ、「webpack.config.js」が作成されます。
 また、TypeScript用に「tsconfig.json」も作成されますが、後で作成しますので削除します。
 
+\vspace*{\baselineskip}
+
 作成された「webpack.config.js」を以下のように編集します。
-* entry: "./src/index.ts"を"./src/index.js"へ
-* output: path: path.resolve(\textunderscore{}\textunderscore{}dirname, "public")へ
-* distフォルダを削除し、publicフォルダを作成
+
+\begin{starteritemize}
+\item entry: "./src/index.ts"を"./src/index.js"へ
+\item output: path: path.resolve(\textunderscore{}\textunderscore{}dirname, "public")へ
+\item distフォルダを削除し、publicフォルダを作成
+\end{starteritemize}
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[webpack.config.js]{リスト2.10: }\seqsplit{  // Generated using webpack{-}cli https://github.com/webpack/webpack{-}cli
+\begin{starterprogram}[]{webpack.config.js}\seqsplit{  // Generated using webpack{-}cli https://github.com/webpack/webpack{-}cli
 
   const path = require("path");
   const HtmlWebpackPlugin = require("html{-}webpack{-}plugin");
@@ -718,36 +728,35 @@ npx webpack build
   \};
 }\end{starterprogram}
 
-{\reviewstrong{プラグインのインストール}}
-
-\vspace*{\baselineskip}
-
+{\reviewstrong{プラグインのインストール}}\\[0pt]
 追加で、以下のプラグイン、ローダも追加します。
 
 \begin{starteritemize}
-\item uglify{-}js 製品版出力時にconsole関数を除去
+\item uglify{-}js プロダクション出力時にconsole関数を除去
 \item terser{-}webpack{-}plugin 上記をwebpackで使用する場合必要
 \item css{-}minimizer{-}webpack{-}plugin CSSをminimize
 \item webpack{-}merge 複数のwebpack{-}configファイルをマージする
 \end{starteritemize}
 
 ターミナルで以下のコマンドを実行します。
-//terminal[追加プラグイン、ローダのインストール][]\{
-npm install {-}D uglify{-}js terser{-}webpack{-}plugin css{-}minimizer{-}webpack{-}plugin webpack{-}merge
-//\}
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{追加プラグイン、ローダのインストール}\seqsplit{ \textgreater{} npm install {-}D uglify{-}js terser{-}webpack{-}plugin css{-}minimizer{-}webpack{-}plugin webpack{-}merge}\end{starterterminal}
 
 追加のプラグイン、ローダの設定を追加したwebpack.config.jsです。devServerでページを表示する際に、
 デフォルトのブラウザではなくdevToolsの強力な「Google Chrome」を使うようにしました。
 
 \vspace*{\baselineskip}
 
-ただし、OS毎にChromeのアプリケーション名が違うためOSを取得し対応した「Chrome名」に変換しています。
-「create{-}react{-}app」だと、結構複雑なことをやっています。
+OS毎にChromeのアプリケーション名が違うためOSを取得し対応した「Chrome名」に変換するためのswitch文を追加しています。
+「create{-}react{-}app」だと、結構複雑なことをやってGoogle Chromeを起動しています。
+
+\vspace*{\baselineskip}
 
 興味のある方は、「create{-}react{-}app」を使ってプロジェクト作成し、react{-}scriptsを追うとお勉強になります。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[webpack.config.js]{リスト2.10: }\seqsplit{  // Generated using webpack{-}cli https://github.com/webpack/webpack{-}cli
+\begin{starterprogram}[]{webpack.config.js}\seqsplit{  // Generated using webpack{-}cli https://github.com/webpack/webpack{-}cli
   const path = require('path');
   const HtmlWebpackPlugin = require('html{-}webpack{-}plugin');
   const MiniCssExtractPlugin = require('mini{-}css{-}extract{-}plugin');
@@ -855,14 +864,30 @@ npm install {-}D uglify{-}js terser{-}webpack{-}plugin css{-}minimizer{-}webpack
 動作確認のために「index.js」を書き換えます。いつの間にかプロジェクトフォルダ直下に「index.html」も
 作成されています。
 
+\vspace*{\baselineskip}
+
 「index.js」に、動作確認用に追加するスタイル指定用の「sytle.css」、「style.scss」も追加します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{style.css}\seqsplit{  div \{
+    background{-}color: aqua;
+  \}}\end{starterprogram}
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{style.scss}\seqsplit{  \textdollar{}primary{-}color: \#f00;
+
+  div \{
+    color: \textdollar{}primary{-}color;
+  \}}\end{starterprogram}
+\vspace*{\baselineskip}
 
 適当な画像ファイルを用意し、「src/assets/images」フォルダを作成し追加します。
 
-「package.json」に、スクリプトを追加します。
+\vspace*{\baselineskip}
+
+コマンドを「package.json」に、スクリプトとして追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[package.json]{リスト2.18: }\seqsplit{  "scripts": \{
+\begin{starterprogram}[]{package.jsonのスクリプト部分}\seqsplit{  "scripts": \{
     "test": "echo \reviewbackslash{}"Error: no test specified\reviewbackslash{}" \&\& exit 1",
     "build": "webpack {-}{-}mode=production",
     "build:dev": "webpack {-}{-}mode=development",
@@ -873,28 +898,36 @@ npm install {-}D uglify{-}js terser{-}webpack{-}plugin css{-}minimizer{-}webpack
 まずは、ファイルを出力しないでブラウザで表示します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[ブラウザで表示]{リスト2.12: }\seqsplit{ \textgreater{} npm run start}\end{starterterminal}
+\begin{starterterminal}[]{ブラウザで表示}\seqsplit{ \textgreater{} npm run start}\end{starterterminal}
 
 「div」要素の背景、文字色も「style.css」、「style.scss」から作成された「main.css」から反映されています。
 また、「index.html」には、作成された「main.js」、「main.css」を読み込む部分はありませんが、
 webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されています。
 
 \begin{reviewimage}%%webpack_test04
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/webpack_test04.png}%
+\starterimageframe{%
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/webpack_test04.png}%
+}%
 \reviewimagecaption{desc}
 \label{image:02-create-react-app:webpack_test04}
 \end{reviewimage}
 
+\clearpage
+
+
 次にプロダクション用にビルドしてみます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[ビルド]{リスト2.13: }\seqsplit{　\textgreater{} npm run build}\end{starterterminal}
+\begin{starterterminal}[]{ビルド}\seqsplit{　\textgreater{} npm run build}\end{starterterminal}
 
 下図のように、\\[0pt]
-* index.html
-* main.js
-* main.css
-* images/画像ファイル
+
+\begin{starteritemize}
+\item index.html
+\item main.js
+\item main.css
+\item images/画像ファイル
+\end{starteritemize}
 
 が出力されていますので、ファイル開き内容を確認してください。
 
@@ -902,6 +935,9 @@ webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されてい�
 \includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/webpack_test05.png}%
 \label{image:02-create-react-app:webpack_test05}
 \end{reviewimage}
+
+\clearpage
+
 \begin{starternote}[]{}
 
 ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -910,11 +946,19 @@ webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されてい�
 \begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 03\textunderscore{}setup{-}webpack{-}config{-}file https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
 \end{starternote}
 
-\paragraph*{webpack設定ファイルを分割する}
+\subsection{webpack設定ファイルを分割する}
+\keeplastskip{
+  \label{sec:2-2-5}
+  \label{sec-04-webpack-config-all}
+  \par\nobreak
+}
+
 問題なく動作した「webpack.config.js」ですが、今後の運用を考え「開発用」、「プロダクション用」、「共通分」に切り分けます。
 devServer関連はプロダクションには関係ありませんし、minimizer関連は開発時には邪魔です。
 
 本家でも推奨\footnote{\url{https://webpack.js.org/guides/production/}}されています。
+
+\vspace*{\baselineskip}
 
 「webpack.config.js」を以下のよう分割し、共用部分は「webpack{-}merge」を使用して統合します。
 
@@ -926,18 +970,17 @@ devServer関連はプロダクションには関係ありませんし、minimize
 
 開発用はdevServer関係、プロダクション用はminimizer関係、それ以外は共用として分けていきます。
 
-まずは、統合に必要な「webpack{-}merge」をインストールします。
-
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[webpack-mergeのインストール]{リスト2.14: }\seqsplit{ \textgreater{} npm install {-}D webpack{-}merge}\end{starterterminal}
+\vspace*{\baselineskip}
 
 「webpack.dev.js」を作成し、「webpack.config.js」全体を貼り付けdevServer、debtoolを
 残し、「module」はCSS関係のみで「style{-}loader」を使うように変更します。
 
+\vspace*{\baselineskip}
+
 また、「mode:'development'」を追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[webpack.dev.js]{リスト2.15: }\seqsplit{  const \{ merge \} = require('webpack{-}merge');
+\begin{starterprogram}[]{webpack.dev.js}\seqsplit{  const \{ merge \} = require('webpack{-}merge');
   const common = require('./webpack.common');
   const os = require('os');
 
@@ -984,10 +1027,12 @@ devServer関連はプロダクションには関係ありませんし、minimize
 プロダクション用も、「webpack.config.js」全体を貼り付け、CssMinimizer関連を中心に「module」はCSSの抽出のままで
 不要な部分を削除します。
 
+\vspace*{\baselineskip}
+
 こちらは、「mode:'production'」を追加します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[webpack.prod.js]{リスト2.16: }\seqsplit{  const \{ merge \} = require('webpack{-}merge');
+\begin{starterprogram}[]{webpack.prod.js}\seqsplit{  const \{ merge \} = require('webpack{-}merge');
   const common = require('./webpack.common');
   const MiniCssExtractPlugin = require('mini{-}css{-}extract{-}plugin');
   const TerserPlugin = require('terser{-}webpack{-}plugin');
@@ -1030,7 +1075,7 @@ devServer関連はプロダクションには関係ありませんし、minimize
 共通部分も、「webpack.config.js」全体を貼り付け、上記ファイルにあるものを削除します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[webpack.common.js]{リスト2.17: }\seqsplit{  const path = require('path');
+\begin{starterprogram}[]{webpack.common.js}\seqsplit{  const path = require('path');
   const HtmlWebpackPlugin = require('html{-}webpack{-}plugin');
 
   module.exports = \{
@@ -1067,7 +1112,7 @@ devServer関連はプロダクションには関係ありませんし、minimize
 webpackの設定ファイル名がデフォルトから変更になったので、「package.json」のスクリプト部分を変更します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[package.json]{リスト2.18: }\seqsplit{  "scripts": \{
+\begin{starterprogram}[]{package.jsonのスクリプト部分}\seqsplit{  "scripts": \{
     "test": "echo \reviewbackslash{}"Error: no test specified\reviewbackslash{}" \&\& exit 1",
     "build": "webpack {-}{-}config webpack.prod.js",
     "build:dev": "webpack {-}{-}config webpack.dev.js",
@@ -1083,6 +1128,178 @@ webpackの設定ファイル名がデフォルトから変更になったので�
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 04\textunderscore{}webpack{-}config{-}split https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
+\end{starternote}
+
+\subsection{Babel.jsのインストールと設定}
+\keeplastskip{
+  \label{sec:2-2-6}
+  \label{sec04-babeljs}
+  \par\nobreak
+}
+
+Babel.jsとは、Babel.jsのトップページの例にあるように、
+モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれるトランスコンパイラ(変換器)です。
+
+\begin{reviewimage}%%babel01
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel01.png}%
+\reviewimagecaption{Babel.js本家ページ}
+\label{image:02-create-react-app:babel01}
+\end{reviewimage}
+
+それでは、プロジェクトに「Babel.js」を導入していきます。
+
+\vspace*{\baselineskip}
+
+Babel.jsのトップページの上部にあるメニューの「Setup」をクリックします。すると、手順に従うように番号のついた案内ページが表示されます。
+
+\begin{reviewimage}%%babel02
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel02.png}%
+\reviewimagecaption{使用するツールを選択}
+\label{image:02-create-react-app:babel02}
+\end{reviewimage}
+
+このプロジェクトでは、「webpack」を使用しますので、「webpack」ボタンをクリックします。
+
+\vspace*{\baselineskip}
+
+手順2〜4が憑依されましたので、順に実行していきます。
+
+\begin{reviewimage}%%babel03
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel03.png}%
+\reviewimagecaption{パッケージのpa}
+\label{image:02-create-react-app:babel03}
+\end{reviewimage}
+
+\clearpage
+
+
+最初に指示されているパッケージをインストールします。「{-}{-}save{-}dev」は省略すると「{-}D」と書きます。
+右端にあるコピーアイコンをクリックしてターミナルに貼り付けても良いです。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{Babel.jsパッケージインストール}\seqsplit{ \textgreater{} npm install {-}{-}save{-}dev babel{-}loader @babel/core}\end{starterterminal}
+
+次に、3のコードを「webpack.common.js」へコピーします。コピー後の「webpack.common.js」です。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{webpack.common.js,Babelローダの導入}\seqsplit{  const path = require('path');
+  const HtmlWebpackPlugin = require('html{-}webpack{-}plugin');
+
+  module.exports = \{
+    entry: './src/index.js',
+    output: \{
+      path: path.resolve(\textunderscore{}\textunderscore{}dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    \},
+    plugins: [
+      new HtmlWebpackPlugin(\{
+        template: 'index.html',
+      \}),
+    ],
+    module: \{
+      rules: [
+        \{
+          test: /\reviewbackslash{}.(ts\textbar{}tsx)\textdollar{}/i,
+          loader: 'ts{-}loader',
+          exclude: ['/node\textunderscore{}modules/'],
+        \},
+        \{
+          test: /\reviewbackslash{}.m?js\textdollar{}/,
+          exclude: /node\textunderscore{}modules/,
+          use: \{
+            loader: 'babel{-}loader',
+            options: \{
+              presets: ['@babel/preset{-}env'],
+            \},
+          \},
+        \},
+        \{
+          test: /\reviewbackslash{}.(eot\textbar{}svg\textbar{}ttf\textbar{}woff\textbar{}woff2\textbar{}png\textbar{}jpg\textbar{}gif)\textdollar{}/i,
+          type: 'asset',
+        \},
+      ],
+    \},
+    resolve: \{
+      extensions: ['.tsx', '.ts', '.js'],
+    \},
+  \};
+}\end{starterprogram}
+
+次に、手順4に進みます。最初に「@babel/preset{-}env」パッケージをインストールします。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{@babel/preset{-}envのインストール}\seqsplit{ \textgreater{} npm install {-}{-}save{-}dev @babel/preset{-}env}\end{starterterminal}
+
+インストールが完了しましたら、プロジェクトフォルダ直下に「babel.config.json」ファイルを作成し、手順4の内容を貼り付けます。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{babel.config.json}\seqsplit{  \{
+    "presets": ["@babel/preset{-}env"]
+  \}}\end{starterprogram}
+
+以上で、Babel.jsの導入は完了です。
+
+\subsubsection*{動作を確認してみる。}
+\keeplastskip{
+  \label{sec:2-2-6-1}
+  \par\nobreak
+}
+
+「src/index.js」に以下のコードを追加します。
+ES6で新しく使えるようになったテンプレートリテラルを使用したコードです。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{src/index.js}\seqsplit{  import \textunderscore{} from 'lodash';
+  import './style.css';
+  import './style.scss';
+
+  import Yaruo from './assets/images/yaruo.png';
+
+  function component() \{
+    const element = document.createElement('div');
+
+    // Lodash, now imported by this script
+    const myName = 'やる夫';
+    const words = 'こまけぇこたぁいいんだよ〜';
+    const message = `\textless{}br /\textgreater{}\textdollar{}\{myName\}の口グセなのか？\textless{}br /\textgreater{}\textdollar{}\{words\}`;
+    element.innerHTML = \textunderscore{}.join(['webpack', '動いてるお〜'], ' ') + message;
+
+    return element;
+  \}
+
+  document.body.appendChild(component());
+
+  const image = new Image();
+  image.src = Yaruo;
+
+  document.body.appendChild(image);
+}\end{starterprogram}
+
+Babel.js導入前の実行結果です。
+
+\begin{reviewimage}%%babel06
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel06.png}%
+\reviewimagecaption{Babel.js導入前ですので、そのまま}
+\label{image:02-create-react-app:babel06}
+\end{reviewimage}
+
+\clearpage
+
+
+Babel.js導入後の実行結果です。
+
+\begin{reviewimage}%%babel06
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel06.png}%
+\reviewimagecaption{concatに変換されています。}
+\label{image:02-create-react-app:babel06}
+\end{reviewimage}
+\begin{starternote}[]{}
+
+ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 05\textunderscore{}babel{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
 \end{starternote}
 
 \section{eslint、prettierとは？}
@@ -1442,12 +1659,6 @@ package.jsonにスクリプトコマンドを追加します。
 Eslint、Prettierの設定が完了しましたので、srcフォルダにある「App.tsx」を開いてみると、
 ルールから外れるものは指摘されています。
 
-\begin{reviewimage}[H]%%032_app_tsx_error
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/032_app_tsx_error.png}%
-\reviewimagecaption{Eslint、Prettierに怒られてます}
-\label{image:02-create-react-app:032_app_tsx_error}
-\end{reviewimage}
-
 \section{eslint、prettierの指摘を修正}
 \keeplastskip{
   \label{sec:2-4}
@@ -1511,12 +1722,6 @@ VSCode上で、\\[0pt]
 
 赤波線の上にマウスポンタを置くとeslintのコード、この場合は「no{-}use{-}before{-}define」が表示されます。、
 さらに、「コマンドキー(Windowsでは、ctrl)　+ ピリオド」を押すと、修正方法が提示されます。
-
-\begin{reviewimage}%%031_eslint_error
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/031_eslint_error.png}%
-\reviewimagecaption{.eslintrc.jsの指摘}
-\label{image:02-create-react-app:031_eslint_error}
-\end{reviewimage}
 
 .eslintrc.jsファイルでの指摘は、「es6モジュールの書き方へ移行しろ！」とのことです。
 以下のように、.eslintrc.jsを変更します。
@@ -1616,11 +1821,6 @@ lint.jsやconfig.jsのパターンが含まれるファイル、パッケージ�
 
 次に、App.tsxファイルを修正します。
 
-\begin{reviewimage}[H]%%032_app_tsx_error
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/032_app_tsx_error.png}%
-\reviewimagecaption{App.tsxの修正}
-\label{image:02-create-react-app:032_app_tsx_error}
-\end{reviewimage}
 \begin{starternote}[]{}
 
 筆者がVSCodeを日本語化していないのは、エラーメッセージでググる場合を考えてのことです。
@@ -1664,12 +1864,6 @@ lint.jsやconfig.jsのパターンが含まれるファイル、パッケージ�
   export default App;}\end{starterprogram}
 
 これで現時点での指摘はすべて修正できました。
-
-\begin{reviewimage}[H]%%06_eslint_prettier_fixdoneAll
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/06_eslint_prettier_fixdoneAll.png}%
-\reviewimagecaption{すべての問題の修正完了}
-\label{image:02-create-react-app:06_eslint_prettier_fixdoneAll}
-\end{reviewimage}
 
 \section{第2章のまとめ}
 \keeplastskip{

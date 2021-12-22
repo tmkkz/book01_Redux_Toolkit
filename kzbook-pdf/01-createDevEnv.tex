@@ -49,55 +49,22 @@
 \end{reviewimage}
 
 同じように、{\reviewstrong{Node.js}}をインストールすると、「node.exe」を使いJavaScriptファイルを実行できます。
-例として、Node.jsのドキュメント(Guides)「How do I start with Node.js after I installed it?」\footnote{\url{https://nodejs.org/en/docs/guides/getting-started-guide/}}にある以下のスクリプトを実行してみましょう。
-
-
-\clearpage
+たとえば、以下のように「test01.js」ファイルを作成します。
 
 \def\startercodeblockfontsize{}
-\begin{starterprogram}[_291809529]{リスト1.1: }\seqsplit{  const http = require('http');
+\begin{starterprogram}[test01.js]{リスト1.1: }\seqsplit{  const name='やる夫';
+  const message='こまけぇこたぁいいんだよ';
 
-  const hostname = '127.0.0.1';
-  const port = 3000;
+  console.log(`\textdollar{}\{name\}が、こんなこと言ってます。\textdollar{}\{message\}`);}\end{starterprogram}
 
-  const server = http.createServer((req, res) =\textgreater{} \{
-    res.statusCode = 200;
-    res.setHeader('Content{-}Type', 'text/plain');
-    res.end('Hello World');
-    \});
-
-    server.listen(port, hostname, () =\textgreater{} \{
-      console.log(`Server running at http://\textdollar{}\{hostname\}:\textdollar{}\{port\}/`);
-    \});
-}\end{starterprogram}
-
-このスクリプトを「app.js」のファイル名で保存し、実行します。
+このスクリプトをターミナル上で実行します。「node」コマンドに実行したいJavaScriptファイルを引数として渡します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_105919107]{リスト1.2: app.jsを実行}\seqsplit{  \textgreater{} node app.jp
-  Server running at http://127.0.0.1:3000/
-}\end{starterterminal}
+\begin{starterterminal}[_247128171]{リスト1.2: app.jsを実行}\seqsplit{  ❯ node test01.js
+  やる夫が、こんなこと言ってます。こまけぇこたぁいいんだよ}\end{starterterminal}
 
-ブラウザを開き、http://127.0.0.1:3000へアクセスすると、ブラウザに実行結果が表示されます。
+このように、今まではJavaScriptの実行環境はブラウザでしたが、NodeがあればJacaScriptをPC、サーバで実行できます。
 
-\begin{reviewimage}%%01_00browser_helloWorld
-\includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_00browser_helloWorld.png}%
-\reviewimagecaption{app.jsの実行}
-\label{image:01-createDevEnv:01_00browser_helloWorld}
-\end{reviewimage}
-
-\clearpage
-
-
-通常のHTMLに埋め込まれたJavaScriptをブラウザから実行すると、
-OS上の機能を使用する(たとえば、ファイルの書込み・読み込み)ことなどは制限されますが、
-Node.jsで実行するとOSの機能も使用できます。
-
-\begin{starternote}[]{}
-
-詳しくは、本家の「Node.jsとは\footnote{\url{https://nodejs.org/ja/about/}}」を参照してください。
-
-\end{starternote}
 
 \clearpage
 
@@ -126,7 +93,7 @@ Node.jsで実行するとOSの機能も使用できます。
 \label{image:01-createDevEnv:01_01nodejsTop}
 \end{reviewimage}
 
-ここでダウンロード可能なのは、「14.17.0 LTS(Long Term Support)推奨版」と「16.3.0最新版」\footnote{2021/06/10現在}の2つがあります。
+ここでダウンロード可能なのは、「16.13.1 LTS(Long Term Support)推奨版」と「17.3.0最新版」\footnote{2022/12/17現在}の2つがあります。
 
 LTS版、最新版は以下のロードマップにより更新されます。
 
@@ -140,7 +107,7 @@ LTS版、最新版は以下のロードマップにより更新されます。
 
 
 Node.jsのReleases:\url{https://nodejs.org/ja/about/releases/}にあるように、
-Node.jsは、各年の4月、10月にリリースされ、\\[0pt]
+Node.jsは、各年の4月、10月にリリースされ、
 
 \begin{starteritemize}
 \item Current
@@ -152,7 +119,7 @@ Node.jsは、各年の4月、10月にリリースされ、\\[0pt]
 
 \vspace*{\baselineskip}
 
-上記トップページにあるNode.js 14は、2023/4/30までの長期サポートとなります。
+上記トップページにあるNode.js 16は、2024/4/30までの長期サポートとなります。
 実際のプロジェクトで使用する場合は、よほどの理由がない限りは最新のLTS版を使用します。
 
 \subsection{Node.jsのインストールの前に}
@@ -188,6 +155,18 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 私が使用しているのは、nvm(node version manager):\url{https://github.com/nvm-sh/nvm}です。
 いろいろなバージョンのNode.jsを、簡単にインストール・アンインストール・切替ができます。
 
+\vspace*{\baselineskip}
+
+「nvm」も含めたNode.jsバージョン管理ツールについては、
+こちらの@heppokofrontendさんの良記事が参考になります。
+
+\begin{reviewimage}%%01_nodeVersionChange
+\includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_nodeVersionChange.png}%
+\label{image:01-createDevEnv:01_nodeVersionChange}
+\end{reviewimage}
+
+Node.jsのバージョン管理ツールを改めて選定する【2021年】\footnote{\url{https://qiita.com/heppokofrontend/items/5c4cc738c5239f4afe02}}
+
 \subsection{nvm}
 \keeplastskip{
   \label{sec:1-1-3}
@@ -202,7 +181,7 @@ GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、
 
 \vspace*{\baselineskip}
 
-Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がHub上で公開されています。
+Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGitHub上で公開されています。
 コマンドが本家と少し違いますが、複数バージョンのインストール・バージョンの切り替えなど機能は問題ありません。
 
 \paragraph*{nvmのインストール}
@@ -210,7 +189,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がHub
 お使いのTerminalから以下のコマンドを実行してください。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_622851268]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
+\begin{starterterminal}[_798129965]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
 
 インストール完了後には、.zshrcへ以下を追加してください。
 
@@ -563,12 +542,21 @@ Google Chrome:\url{https://www.google.com/intl/ja/chrome/}
 \label{image:01-createDevEnv:01_09googleChrome}
 \end{reviewimage}
 
-===　Google Chromeの拡張機能
+\subsubsection*{Google Chromeの拡張機能}
+\keeplastskip{
+  \label{sec:1-3-1-1}
+  \par\nobreak
+}
+
 こちらも、VSCodeと同様に拡張機能を追加することで、さらに便利に使うことができます。
 
 React、Reduxの開発では、以下の拡張機能は必須と言っても良いほどです。
 
-拡張機能のインストールは、Chrome Web storeで検索してください。
+\vspace*{\baselineskip}
+
+拡張機能のインストールは、下記のChrome Web storeで検索してください。
+
+\vspace*{\baselineskip}
 
 Chrome Web store:\url{https://chrome.google.com/webstore/category/extensions?hl=ja}
 
@@ -578,19 +566,21 @@ Chrome Web store:\url{https://chrome.google.com/webstore/category/extensions?hl=
 \label{image:01-createDevEnv:01_13chromeWebstore}
 \end{reviewimage}
 
+\clearpage
+
+
 \subsubsection*{React Developer Tools}
 \keeplastskip{
-  \label{sec:1-3-1-1}
+  \label{sec:1-3-1-2}
   \par\nobreak
 }
 
 Reactを使用して作成したページは、最終的にはページ出力用JavaScriptに変換され、ブラウザで表示されるときにはHTMLとして出力されます。
 この拡張機能を使うと、Google ChromeのDevToolsにComponentsタブが作成され、Props、Stateを確認できます。
 
-React Developer Tools
-
 \begin{reviewimage}[H]%%01_10chromeExtReactDevTools
 \includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_10chromeExtReactDevTools.png}%
+\reviewimagecaption{React Developer Tools}
 \label{image:01-createDevEnv:01_10chromeExtReactDevTools}
 \end{reviewimage}
 \begin{reviewimage}[H]%%01_12chromeExtReactDevTools01
@@ -599,19 +589,21 @@ React Developer Tools
 \label{image:01-createDevEnv:01_12chromeExtReactDevTools01}
 \end{reviewimage}
 
+\clearpage
+
+
 \subsubsection*{Redux DevTools}
 \keeplastskip{
-  \label{sec:1-3-1-2}
+  \label{sec:1-3-1-3}
   \par\nobreak
 }
 
 のちほど、Reduxの章であらためて説明しますが、「タイムトラベルデバッグ(実行されたアクションをさかのぼる)」が簡単にできます。
 また、実行されたアクション、変更されたStateが「新」「旧」とあり、どの部分が変更されたのかも確かめるのも簡単です。
 
-Redxu DevTools
-
 \begin{reviewimage}[H]%%01_11chromeExtReduxDevTools
 \includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_11chromeExtReduxDevTools.png}%
+\reviewimagecaption{React DevloperTools拡張機能}
 \label{image:01-createDevEnv:01_11chromeExtReduxDevTools}
 \end{reviewimage}
 
