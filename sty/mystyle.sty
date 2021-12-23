@@ -6,3 +6,18 @@
 %%%   starterが自動生成する「starter.sty」とは別ファイルにしている）
 %%%
 \renewcommand{\starter@subsection@symbol}{$\heartsuit$|}% ハート
+%%%
+%% 「//warning」のデザインを変更する
+\renewenvironment{starterwarning}[1]{%
+  \addvspace{1.0\baselineskip}% 1行分空ける
+  \begin{oframed}% % 枠線で囲む
+  \ifempty{#1}\else% % 引数（タイトル）があれば
+    \noindent% % 字下げせずに
+    {\headfont\large% % 太字のゴシック体で大きめに表示
+      《注意》#1}% % 先頭に 《警告》 をつける
+      \par\smallskip% % 縦方向に少しスペースを空ける
+  \fi%
+}{%
+  \end{oframed}% % 枠線による囲みの終わり
+  \addvspace{1.0\baselineskip}% 1行分空ける
+}

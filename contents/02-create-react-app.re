@@ -1060,19 +1060,20 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 このプロジェクトでは、「webpack」を使用しますので、「webpack」ボタンをクリックします。
 
 //blankline
-手順2〜4が憑依されましたので、順に実行していきます。
+手順2〜4が表示されましたので、順に実行していきます。
 
 //image[babel03][パッケージのpa][scale=1.0]
 
 //clearpage
-最初に指示されているパッケージをインストールします。「--save-dev」は省略すると「-D」と書きます。
+最初に指示されているパッケージをインストールします。今までnpmでインストール時に「-D」としていたのは、
+「--save-dev」の略です。
 右端にあるコピーアイコンをクリックしてターミナルに貼り付けても良いです。
 
 //terminal[][Babel.jsパッケージインストール]{
  > npm install --save-dev babel-loader @babel/core
 //}
 
-次に、3のコードを「webpack.common.js」へコピーします。コピー後の「webpack.common.js」です。
+次に、手順3のコードを「webpack.common.js」へコピーします。コピー後の「webpack.common.js」です。
 
 //list[][webpack.common.js,Babelローダの導入]{
   const path = require('path');
@@ -1138,7 +1139,7 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 
 ==== 動作を確認してみる。
 
-「src/index.js」に以下のコードを追加します。
+「src/index.js」に少しコードを追加します。
 ES6で新しく使えるようになったテンプレートリテラルを使用したコードです。
 
 //list[][src/index.js]{
@@ -1169,12 +1170,13 @@ ES6で新しく使えるようになったテンプレートリテラルを使�
 
 //}
 
+//clearpage
 Babel.js導入前の実行結果です。
-//image[babel06][Babel.js導入前ですので、そのまま][scale=1.0]
+//image[babel06][Babel.js導入前ですので、そのまま][scale=0.9]
 
 //clearpage
 Babel.js導入後の実行結果です。
-//image[babel06][concatに変換されています。][scale=1.0]
+//image[babel06][concatに変換されています。][scale=0.9]
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -1184,6 +1186,573 @@ Babel.js導入後の実行結果です。
 //}
 #@#<!-- textlint-enable -->
 //}
+
+==={sec04-react} Reactのインストール
+//warning[index.tsを削除してね。]{
+ここで気が付いたのですが、「src/index.ts」は、現時点で不要なので削除してください。
+//}
+
+そろそろ完成に近付いてきました。Reactをインストールします。
+
+//blankline
+Reactは、拡張子「.jsx」を使ったHTMLにJavaScriptを埋め込むコンポーネントがメインです。
+通常のJavaScriptとは記法が違うため「Babel.js」に理解してもらえるように「@babel/preset-react」を
+インストールします。
+
+//image[babel08][@babel/preset-react][scale=0.9]
+
+//clearpage
+ターミナルに以下のコマンドでインストールします。
+
+//terminal[][@babel/preset-reactのインストール]{
+ > npm install -D @babel/preset-react
+//}
+
+インストールが完了しましたら、「babel.config.json」へプリセットを追加します。
+
+//list[][babel.config.json]{
+  {
+    "presets": [["@babel/preset-env"], ["@babel/preset-react"]]
+  }
+//}
+
+//blankline
+#@#<!-- textlint-disable -->
+Reactを使うためにインストールするパッケージは、
+#@#<!-- textlint-enable -->
+
+ * react(react本体)
+ * react-dom(DOMへのエントリポイント、Reactの描画を提供)
+
+の2つです。
+
+//terminal[][Reactのインストール]{
+ > npm install react react-dom
+//}
+
+以上で、Reactのインストールは完了しましたので動作確認を行います。
+
+//blankline
+#@#<!-- textlint-disable -->
+手順は、
+#@#<!-- textlint-enable -->
+
+ 1. src/index.htmlに描画する場所を指定する。
+ 2. src/index.jsで上記「index.html」へReactDOMで描画する。
+ 3. Appコンポーネントをsrc/components/App.jsxファイルへ作成する。
+ 4. 「webpack.common.js」へReactコンポーネント「jsx」を扱うよう変更する。
+
+となります。
+
+「src/index.html」は、Reactの描画する部分を指定します。
+
+//list[][src/index.html]{
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>React Appだお〜</title>
+    </head>
+    <body>
+      <div id="root"></div>
+    </body>
+  </html>
+
+//}
+
+「src/index.js」にてReactDOMを使用して「public/index.html」へ描画する。
+
+//list[][src/index.js]{
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import App from './App';
+
+  ReactDOM.render(
+    <div>
+      <App />
+    </div>,
+    document.getElementById('root')
+  );
+//}
+
+「src/components/App.jsx」にAppコンポーネントを作成します。Reactコンポーネントは、
+HTML内にJavaScriptを埋め込む記法となります。
+
+//list[][src/components/App.jsx]{
+  import React from 'react';
+  import _ from 'lodash';
+  import Yaruo from '../assets/images/yaruo.png';
+
+  const App = () => {
+    const myName = 'やる夫';
+    const words = 'こまけぇこたぁいいんだよ〜';
+    return (
+      <div>
+        {_.join(['webpack', '動いてるお〜'], ' ')}
+        <br />
+        {myName}口グセなのか？
+        <br />
+        {words}
+        <div>
+          <img src={Yaruo} />
+        </div>
+      </div>
+    );
+  };
+
+  export default App;
+//}
+
+「webpack.common.js」を以下のように変更します。
+
+ * Reactコンポーネントの拡張子「.jsx」を扱うように変更する。
+ * テンプレートを「src/index.html」に変更する。
+
+//list[][webpack.common.js]{
+  const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+  module.exports = {
+    entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'src/index.html',
+      }),
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.(ts|tsx)$/i,
+          loader: 'ts-loader',
+          exclude: ['/node_modules/'],
+        },
+        {
+          test: /\.(js|jsx)/i,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+          type: 'asset',
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    },
+  };
+
+//}
+
+動作確認を行います。
+
+//terminal[][reactの動作確認]{
+ > npm run start
+//}
+
+//image[babel09][reactの動作確認][scale=1.0]
+
+//note[]{
+  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+#@#<!-- textlint-disable -->
+//terminal[][GitHub]{
+> git clone -b 06_react-install https://github.com/yaruo-react-redux/yaruo-start-template.git
+//}
+#@#<!-- textlint-enable -->
+//}
+
+
+==={sec04-typescript} TypeScriptのインストール
+ここまで作成したReactプロジェクトにTypeScriptを導入します。
+本家Reactでは、@<href>{https://ja.reactjs.org/docs/static-type-checking.html#typescript, TypeScriptの導入}に関して
+以下のような手順を示しています。
+
+//image[typescript01][TypeScriptの導入][scale=0.8]
+
+では手順に従って、TypeScriptを導入していきます。
+
+//blankline
+最初は、TypeScriptパッケージのインストールです。
+
+//terminal[][TypeScriptパッケージのインストール]{
+ > npm install -D typescript
+//}
+
+次に、TypeScriptのコンパイラ設定ファイル「tsconfig.json」を作成します。
+
+//terminal[][tsconfig.jsonの作成]{
+ > npx tsc --init
+
+Created a new tsconfig.json with:
+                                                                                                                  TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig.json
+//}
+
+コマンドを実行すると、「tsconfig.json」ファイルが作成されます。
+コメントアウトされているものは、デフォルト値です。
+
+//blankline
+TypeScriptコンパイラのオプションは、
+@<href>{https://www.typescriptlang.org/docs/handbook/tsconfig-json.html, こちら}
+で確認できます。
+
+//list[][作成されたtsconfig.json]{
+  {
+    "compilerOptions": {
+      /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+      /* Projects */
+      // "incremental": true,                              /* Enable incremental compilation */
+      // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+      // "tsBuildInfoFile": "./",                          /* Specify the folder for .tsbuildinfo incremental compilation files. */
+      // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects */
+      // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
+      // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+
+      /* Language and Environment */
+      "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+      // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+      // "jsx": "preserve",                                /* Specify what JSX code is generated. */
+      // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
+      // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
+      // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h' */
+      // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
+      // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.` */
+      // "reactNamespace": "",                             /* Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit. */
+      // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
+      // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
+
+      /* Modules */
+      "module": "commonjs",                                /* Specify what module code is generated. */
+      // "rootDir": "./",                                  /* Specify the root folder within your source files. */
+      // "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+      // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+      // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+      // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+      // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
+      // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+      // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
+      // "resolveJsonModule": true,                        /* Enable importing .json files */
+      // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
+
+      /* JavaScript Support */
+      // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+      // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
+      // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`. */
+
+      /* Emit */
+      // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+      // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+      // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+      // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+      // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
+      // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
+      // "removeComments": true,                           /* Disable emitting comments. */
+      // "noEmit": true,                                   /* Disable emitting files from a compilation. */
+      // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
+      // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types */
+      // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
+      // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
+      // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
+      // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
+      // "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
+      // "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
+      // "newLine": "crlf",                                /* Set the newline character for emitting files. */
+      // "stripInternal": true,                            /* Disable emitting declarations that have `@internal` in their JSDoc comments. */
+      // "noEmitHelpers": true,                            /* Disable generating custom helper functions like `__extends` in compiled output. */
+      // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+      // "preserveConstEnums": true,                       /* Disable erasing `const enum` declarations in generated code. */
+      // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
+      // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
+
+      /* Interop Constraints */
+      // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+      // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
+      "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+      // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+      "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+      /* Type Checking */
+      "strict": true,                                      /* Enable all strict type-checking options. */
+      // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+      // "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
+      // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+      // "strictBindCallApply": true,                      /* Check that the arguments for `bind`, `call`, and `apply` methods match the original function. */
+      // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
+      // "noImplicitThis": true,                           /* Enable error reporting when `this` is given the type `any`. */
+      // "useUnknownInCatchVariables": true,               /* Type catch clause variables as 'unknown' instead of 'any'. */
+      // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+      // "noUnusedLocals": true,                           /* Enable error reporting when a local variables aren't read. */
+      // "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read */
+      // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
+      // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
+      // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
+      // "noUncheckedIndexedAccess": true,                 /* Include 'undefined' in index signature results */
+      // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
+      // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type */
+      // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
+      // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+
+      /* Completeness */
+      // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+      "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    }
+  }
+
+//}
+
+TypeScript開発元のMicrosoftは、Reactへ導入した
+@<href>{https://github.com/Microsoft/TypeScript-React-Starter/blob/master/tsconfig.json, 「tsconfig.json」のお勧め}
+を以下のようにしています。
+
+//list[][Microsoftお勧めReact下のtsconfig.json]{
+  {
+    "compilerOptions": {
+      "outDir": "build/dist",
+      "module": "commonjs",
+      "target": "es5",
+      "lib": ["es6", "dom"],
+      "sourceMap": true,
+      "allowJs": true,
+      "jsx": "react",
+      "moduleResolution": "node",
+      "rootDir": "src",
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true
+    },
+    "exclude": [
+      "node_modules",
+      "build",
+      "scripts",
+      "acceptance-tests",
+      "webpack",
+      "jest",
+      "src/setupTests.ts"
+    ],
+    "types": [
+      "typePatches"
+    ]
+  }
+//}
+
+Microsoftお勧めの設定に修正したものが、こちらです。
+
+//list[][修正後のtsconfig.json]{
+  {
+    "compilerOptions": {
+      /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+      /* Projects */
+      // "incremental": true,                              /* Enable incremental compilation */
+      // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+      // "tsBuildInfoFile": "./",                          /* Specify the folder for .tsbuildinfo incremental compilation files. */
+      // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects */
+      // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
+      // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+
+      /* Language and Environment */
+      "target": "es5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+      "lib": [
+        "es6",
+        "dom"
+      ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+      "jsx": "react" /* Specify what JSX code is generated. */,
+      // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
+      // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
+      // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h' */
+      // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
+      // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.` */
+      // "reactNamespace": "",                             /* Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit. */
+      // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
+      // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
+
+      /* Modules */
+      "module": "commonjs" /* Specify what module code is generated. */,
+      "rootDir": "src" /* Specify the root folder within your source files. */,
+      // "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+      // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+      // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+      // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+      // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
+      // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+      // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
+      // "resolveJsonModule": true,                        /* Enable importing .json files */
+      // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
+
+      /* JavaScript Support */
+      // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+      // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
+      // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`. */
+
+      /* Emit */
+      // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+      // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+      // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+      // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+      // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
+      "outDir": "public" /* Specify an output folder for all emitted files. */,
+      // "removeComments": true,                           /* Disable emitting comments. */
+      // "noEmit": true,                                   /* Disable emitting files from a compilation. */
+      // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
+      // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types */
+      // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
+      // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
+      // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
+      // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
+      // "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
+      // "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
+      // "newLine": "crlf",                                /* Set the newline character for emitting files. */
+      // "stripInternal": true,                            /* Disable emitting declarations that have `@internal` in their JSDoc comments. */
+      // "noEmitHelpers": true,                            /* Disable generating custom helper functions like `__extends` in compiled output. */
+      // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+      // "preserveConstEnums": true,                       /* Disable erasing `const enum` declarations in generated code. */
+      // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
+      // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
+
+      /* Interop Constraints */
+      // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+      // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
+      "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+      // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+      "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+      /* Type Checking */
+      "strict": true /* Enable all strict type-checking options. */,
+      // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+      // "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
+      // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+      // "strictBindCallApply": true,                      /* Check that the arguments for `bind`, `call`, and `apply` methods match the original function. */
+      // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
+      // "noImplicitThis": true,                           /* Enable error reporting when `this` is given the type `any`. */
+      // "useUnknownInCatchVariables": true,               /* Type catch clause variables as 'unknown' instead of 'any'. */
+      // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+      // "noUnusedLocals": true,                           /* Enable error reporting when a local variables aren't read. */
+      // "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read */
+      // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
+      // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
+      // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
+      // "noUncheckedIndexedAccess": true,                 /* Include 'undefined' in index signature results */
+      // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
+      // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type */
+      // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
+      // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+
+      /* Completeness */
+      // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+      "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    },
+    "exclude": ["node_modules", "public", "webpack"]
+  }
+
+//}
+
+#@#<!-- textlint-disable -->
+TypeScriptは、ファイル拡張子が
+#@#<!-- textlint-enable -->
+
+ * .js ---> .ts
+ * .jsx --> .tsx
+
+ となるため、「webpack.common.js」の「entry」のファイル名の拡張子を.tsに変えます。
+
+//list[][webpack.common.jsの一部]{
+  const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+  module.exports = {
+    entry: './src/index.tsx',
+    output: {
+      path: path.resolve(__dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    },
+//}
+
+プロジェクト内のファイル名も変更します。
+
+ * 「src/index.js」---> 「src/index.tsx」
+ * 「src/components/App.jsx」 --> 「src/components/App.tsx」
+
+
+次に、使用するライブラリの型定義をインストールします。
+ライブラリによっては自身が型定義を持っている場合もありますし、
+有志で作成された型定義ファイルは、npmリポジトリの「@types/」に
+ある場合もあります。
+
+使用するReact、Node.jsの型定義ファイルは、「@types/」以下にありますので
+インストールします。
+
+//terminal[][React、Node.jsの型定義のインストール]{
+ > npm install -D @types/node @types/react @types/react-dom
+//}
+
+#@#<!-- textlint-disable -->
+型定義のインストールが完了しても、「App.tsx」で
+#@#<!-- textlint-enable -->
+
+ * lodashの型定義がない
+ * yaruo.pngの型定義がない
+
+ と、エラーが表示されています。
+
+//image[typescript02][App.tsxでエラー表示][scale=1.0]
+
+「lodash」の型定義はインストールすればエラーが消えますが、今後「lodash」は使わないので
+ アンインストールし、該当コードも削除します。
+
+//terminal[][lodashのアンインストール]{
+ > npm uninstall lodash
+//}
+
+「png」については、プロジェクト用の型定義ファイルを作成します。
+
+//blankline
+「src/types/index.d.ts」を作成し、以下のように記入します。
+
+//list[][src/types/index.d.ts]{
+declare module '*.png'
+//}
+
+作成したファイルを「tsconfig.json」に型定義ファイルの位置を追加します。
+
+//list[][tsconfig.json]{
+  "compilerOptions": {
+    "typeRoots": [
+      "types"
+    ]
+  }
+//}
+
+動作確認を行います。
+
+//terminal[][動作確認]{
+ > npm run start
+//}
+
+lodash部分のコードが削除されたトップページを表示します。
+
+//image[typescript03][desc][scale=1.0]
+
 
 =={sec-03lint} eslint、prettierとは？
 

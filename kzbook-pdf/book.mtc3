@@ -8,7 +8,8 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}webpackの設定ファイル}{\reset@font\mtcSSfont 42}{subsection.2.2.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.5}webpack設定ファイルを分割する}{\reset@font\mtcSSfont 53}{subsection.2.2.5}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.6}Babel.jsのインストールと設定}{\reset@font\mtcSSfont 57}{subsection.2.2.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}eslint、prettierとは？}{\reset@font\mtcSfont 66}{section.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}eslint、prettierのインストール}{\reset@font\mtcSSfont 67}{subsection.2.3.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}eslint、prettierの指摘を修正}{\reset@font\mtcSfont 74}{section.2.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}第2章のまとめ}{\reset@font\mtcSfont 79}{section.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.7}Reactのインストール}{\reset@font\mtcSSfont 65}{subsection.2.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}eslint、prettierとは？}{\reset@font\mtcSfont 72}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}eslint、prettierのインストール}{\reset@font\mtcSSfont 73}{subsection.2.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}eslint、prettierの指摘を修正}{\reset@font\mtcSfont 80}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}第2章のまとめ}{\reset@font\mtcSfont 85}{section.2.5}}
