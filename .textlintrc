@@ -70,7 +70,8 @@
         "python",
         "module",
         "path",
-        "babel"
+        "babel",
+        "typescript"
       ]
     }
   }

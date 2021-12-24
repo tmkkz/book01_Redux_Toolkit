@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  23 DEC 2021 18:41
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  23 DEC 2021 21:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1941,24 +1941,25 @@ LaTeX Info: Redefining \- on input line 1953.
 [84]
 LaTeX Info: Redefining \- on input line 1966.
 LaTeX Info: Redefining \- on input line 1974.
-LaTeX Info: Redefining \- on input line 1985.
+LaTeX Info: Redefining \- on input line 1987.
+LaTeX Info: Redefining \- on input line 1994.
 [85]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 2011.
+(Font)              using `JY2/hgt/bx/n' instead on input line 2026.
 
-LaTeX Info: Redefining \- on input line 2021.
-LaTeX Info: Redefining \- on input line 2026.
-LaTeX Info: Redefining \- on input line 2034.
-LaTeX Info: Redefining \- on input line 2050.
+LaTeX Info: Redefining \- on input line 2036.
+LaTeX Info: Redefining \- on input line 2041.
+LaTeX Info: Redefining \- on input line 2049.
 [86]
-LaTeX Info: Redefining \- on input line 2058.
-LaTeX Info: Redefining \- on input line 2066.
+LaTeX Info: Redefining \- on input line 2065.
+LaTeX Info: Redefining \- on input line 2073.
+LaTeX Info: Redefining \- on input line 2081.
 [87]
-LaTeX Info: Redefining \- on input line 2107.
-LaTeX Info: Redefining \- on input line 2116.
+LaTeX Info: Redefining \- on input line 2122.
+LaTeX Info: Redefining \- on input line 2131.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2116--2116
+Underfull \hbox (badness 10000) in paragraph at lines 2131--2131
 []\T1/zi4/m/n/9 >[][][][] [][]g[][]i[][]t[][] [][]c[][]l[][]o[][]n[][]e[][] [][
 ]-[][]b[][] [][]0[][]7[][]_[][][][]t[][]y[][]p[][]e[][]s[][]c[][]r[][]i[][]p[][
 ]t[][]-[][]i[][]n[][]s[][]t[][]a[][]l[][]l[][] [][]h[][]t[][]t[][]p[][]s[][]:[]
@@ -1968,16 +1969,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 2116--2116
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 2119.
+(Font)              using `JY2/hgt/bx/n' instead on input line 2134.
 
-[88]
+File: ./images/02-create-react-app/cra-eslint01.png Graphic file (type bmp)
+<./images/02-create-react-app/cra-eslint01.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[88] [89]
+LaTeX Info: Redefining \- on input line 2170.
+LaTeX Info: Redefining \- on input line 2175.
+[90
+
+]
+LaTeX Info: Redefining \- on input line 2232.
+LaTeX Info: Redefining \- on input line 2237.
+LaTeX Info: Redefining \- on input line 2239.
+[91]
+LaTeX Info: Redefining \- on input line 2247.
+LaTeX Info: Redefining \- on input line 2256.
+[92]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 2126.
+(Font)              using `JY2/hgt/bx/n' instead on input line 2269.
 
-LaTeX Info: Redefining \- on input line 2153.
+LaTeX Info: Redefining \- on input line 2296.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2170--2170
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2313
 [][][]\T1/zi4/m/n/9 "[][]p[][]r[][]e[][]t[][]t[][]i[][]e[][]r[][].[][]d[][]i[][
 ]s[][]a[][]b[][]l[][]e[][]L[][]a[][]n[][]g[][]u[][]a[][]g[][]e[][]s[][]"[][]:[]
 [] [][][[][]"[][]J[][]a[][]v[][]a[][]S[][]c[][]r[][]i[][]p[][]t[][]"[][],[][] [
@@ -1986,34 +2004,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 2170--2170
 ,[][] [][]"[][]t[][]y[][]p[][]e[]
  []
 
-[89
+[93
 
 ]
-LaTeX Info: Redefining \- on input line 2194.
+File: ./images/02-create-react-app/cra-fix_app_tsx.png Graphic file (type bmp)
+<./images/02-create-react-app/cra-fix_app_tsx.png>
+[94]
+LaTeX Info: Redefining \- on input line 2350.
+LaTeX Info: Redefining \- on input line 2378.
+[95]
+LaTeX Info: Redefining \- on input line 2400.
+LaTeX Info: Redefining \- on input line 2409.
 
-Underfull \vbox (badness 10000) detected at line 2252
+Underfull \hbox (badness 10000) in paragraph at lines 2409--2409
+[] [][] [][]\T1/zi4/m/n/9 $[][][][] [][]>[][][][] [][]g[][]i[][]t[][] [][]c[][]
+l[][]o[][]n[][]e[][] [][]h[][]t[][]t[][]p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[][
+]h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][]y[][]a[][]r[][]u[][]o[][]-[][]r[][]e[]
+[]a[][]c[][]t[][]-[][]r[][]e[][]d[][]u[][]x[][]/[][]y[][]a[][]r[][]u[][]o[][]-[
+][]c[][]r[][]a[][]-[][]t[][]e[][]m[][]p[][]l[][]a[]
  []
 
-[90] [91]
-LaTeX Info: Redefining \- on input line 2278.
-LaTeX Info: Redefining \- on input line 2302.
-LaTeX Info: Redefining \- on input line 2305.
-[92] [93]
+[96]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 2332.
+(Font)              using `JY2/hgt/bx/n' instead on input line 2412.
 
-LaTeX Info: Redefining \- on input line 2350.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2350--2350
-[] [][] [][]\T1/zi4/m/n/9 $[][][][] [][]>[][][][] [][]g[][]i[][]t[][] [][]c[][]
-l[][]o[][]n[][]e[][] [][]-[][]b[][] [][]0[][]2[][]_[][][][]e[][]s[][]l[][]i[][]
-n[][]t[][]_[][][][]p[][]r[][]e[][]t[][]t[][]i[][]e[][]r[][] [][]h[][]t[][]t[][]
-p[][]s[][]:[][]/[][]/[][]g[][]i[][]t[][]h[][]u[][]b[][].[][]c[][]o[][]m[][]/[][
-]y[][]a[][]r[][]u[][]o[][]-[][]r[][]e[][]a[][]c[][]t[][]-[]
- []
-
-) (./03-todo-with-react.tex [94
+) (./03-todo-with-react.tex [97
 
 ]
 
@@ -2024,28 +2040,28 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 7.
 
-[95
+[98
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 14.
 
-[96
+[99
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 21.
 
-[97
+[100
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 28.
 
-) [98
+) [101
 
 ]
 
@@ -2058,7 +2074,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[99
+[102
 
 ]
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
@@ -2067,7 +2083,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[100]
+[103]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -2080,36 +2096,50 @@ LaTeX Warning: There were multiply-defined labels.
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: FD247DF39DC4609D982A531D69D805C9;6994.
  )
+(\end occurred when \ifx on line 2409 was incomplete)
+(\end occurred when \iffalse on line 2409 was incomplete)
+(\end occurred when \ifx on line 2400 was incomplete)
+(\end occurred when \iffalse on line 2400 was incomplete)
+(\end occurred when \ifx on line 2378 was incomplete)
+(\end occurred when \iffalse on line 2378 was incomplete)
 (\end occurred when \ifx on line 2350 was incomplete)
 (\end occurred when \iffalse on line 2350 was incomplete)
-(\end occurred when \ifx on line 2305 was incomplete)
-(\end occurred when \iffalse on line 2305 was incomplete)
-(\end occurred when \ifx on line 2302 was incomplete)
-(\end occurred when \iffalse on line 2302 was incomplete)
-(\end occurred when \ifx on line 2278 was incomplete)
-(\end occurred when \iffalse on line 2278 was incomplete)
-(\end occurred when \ifx on line 2194 was incomplete)
-(\end occurred when \iffalse on line 2194 was incomplete)
-(\end occurred when \ifx on line 2153 was incomplete)
-(\end occurred when \iffalse on line 2153 was incomplete)
-(\end occurred when \ifx on line 2116 was incomplete)
-(\end occurred when \iffalse on line 2116 was incomplete)
-(\end occurred when \ifx on line 2107 was incomplete)
-(\end occurred when \iffalse on line 2107 was incomplete)
-(\end occurred when \ifx on line 2066 was incomplete)
-(\end occurred when \iffalse on line 2066 was incomplete)
-(\end occurred when \ifx on line 2058 was incomplete)
-(\end occurred when \iffalse on line 2058 was incomplete)
-(\end occurred when \ifx on line 2050 was incomplete)
-(\end occurred when \iffalse on line 2050 was incomplete)
-(\end occurred when \ifx on line 2034 was incomplete)
-(\end occurred when \iffalse on line 2034 was incomplete)
-(\end occurred when \ifx on line 2026 was incomplete)
-(\end occurred when \iffalse on line 2026 was incomplete)
-(\end occurred when \ifx on line 2021 was incomplete)
-(\end occurred when \iffalse on line 2021 was incomplete)
-(\end occurred when \ifx on line 1985 was incomplete)
-(\end occurred when \iffalse on line 1985 was incomplete)
+(\end occurred when \ifx on line 2296 was incomplete)
+(\end occurred when \iffalse on line 2296 was incomplete)
+(\end occurred when \ifx on line 2256 was incomplete)
+(\end occurred when \iffalse on line 2256 was incomplete)
+(\end occurred when \ifx on line 2247 was incomplete)
+(\end occurred when \iffalse on line 2247 was incomplete)
+(\end occurred when \ifx on line 2239 was incomplete)
+(\end occurred when \iffalse on line 2239 was incomplete)
+(\end occurred when \ifx on line 2237 was incomplete)
+(\end occurred when \iffalse on line 2237 was incomplete)
+(\end occurred when \ifx on line 2232 was incomplete)
+(\end occurred when \iffalse on line 2232 was incomplete)
+(\end occurred when \ifx on line 2175 was incomplete)
+(\end occurred when \iffalse on line 2175 was incomplete)
+(\end occurred when \ifx on line 2170 was incomplete)
+(\end occurred when \iffalse on line 2170 was incomplete)
+(\end occurred when \ifx on line 2131 was incomplete)
+(\end occurred when \iffalse on line 2131 was incomplete)
+(\end occurred when \ifx on line 2122 was incomplete)
+(\end occurred when \iffalse on line 2122 was incomplete)
+(\end occurred when \ifx on line 2081 was incomplete)
+(\end occurred when \iffalse on line 2081 was incomplete)
+(\end occurred when \ifx on line 2073 was incomplete)
+(\end occurred when \iffalse on line 2073 was incomplete)
+(\end occurred when \ifx on line 2065 was incomplete)
+(\end occurred when \iffalse on line 2065 was incomplete)
+(\end occurred when \ifx on line 2049 was incomplete)
+(\end occurred when \iffalse on line 2049 was incomplete)
+(\end occurred when \ifx on line 2041 was incomplete)
+(\end occurred when \iffalse on line 2041 was incomplete)
+(\end occurred when \ifx on line 2036 was incomplete)
+(\end occurred when \iffalse on line 2036 was incomplete)
+(\end occurred when \ifx on line 1994 was incomplete)
+(\end occurred when \iffalse on line 1994 was incomplete)
+(\end occurred when \ifx on line 1987 was incomplete)
+(\end occurred when \iffalse on line 1987 was incomplete)
 (\end occurred when \ifx on line 1974 was incomplete)
 (\end occurred when \iffalse on line 1974 was incomplete)
 (\end occurred when \ifx on line 1966 was incomplete)
@@ -2294,12 +2324,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (\end occurred when \ifx on line 46 was incomplete)
 (\end occurred when \ifx on line 277 was incomplete) 
 Here is how much of TeX's memory you used:
- 18949 strings out of 479460
- 285148 string characters out of 5870465
- 938919 words of memory out of 5000000
- 36018 multiletter control sequences out of 15000+600000
+ 18959 strings out of 479460
+ 285571 string characters out of 5870465
+ 939112 words of memory out of 5000000
+ 36026 multiletter control sequences out of 15000+600000
  484322 words of font info for 162 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 84i,14n,90p,440b,1059s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,90p,440b,1055s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.dvi (107 pages, 269972 bytes).
+Output written on book.dvi (110 pages, 276744 bytes).
