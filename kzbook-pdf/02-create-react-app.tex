@@ -1348,7 +1348,7 @@ Reactは、拡張子「.jsx」を使ったHTMLにJavaScriptを埋め込むコン
   \}}\end{starterprogram}
 \vspace*{\baselineskip}
 
-Reactを使うためにインストールするパッケージは、\\[0pt]
+Reactを使うためにインストールするパッケージは、
 
 \begin{starteritemize}
 \item react(react本体)
@@ -1364,7 +1364,7 @@ Reactを使うためにインストールするパッケージは、\\[0pt]
 
 \vspace*{\baselineskip}
 
-手順は、\\[0pt]
+手順は、
 
 \begin{starterenumerate}
 \item src/index.htmlに描画する場所を指定する。
@@ -1492,6 +1492,238 @@ HTML内にJavaScriptを埋め込む記法となります。
 \reviewimagecaption{reactの動作確認}
 \label{image:02-create-react-app:babel09}
 \end{reviewimage}
+\begin{starternote}[]{}
+
+ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 06\textunderscore{}react{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
+\end{starternote}
+
+\subsection{TypeScriptのインストール}
+\keeplastskip{
+  \label{sec:2-2-8}
+  \label{sec04-typescript}
+  \par\nobreak
+}
+
+ここまで作成したReactプロジェクトにTypeScriptを導入します。
+本家Reactでは、TypeScriptの導入\footnote{\url{https://ja.reactjs.org/docs/static-type-checking.html\#typescript}}に関して
+以下のような手順を示しています。
+
+\begin{reviewimage}%%typescript01
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/typescript01.png}%
+\reviewimagecaption{TypeScriptの導入}
+\label{image:02-create-react-app:typescript01}
+\end{reviewimage}
+
+では手順に従って、TypeScriptを導入していきます。
+
+\vspace*{\baselineskip}
+
+最初は、TypeScriptパッケージのインストールです。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{TypeScriptパッケージのインストール}\seqsplit{ \textgreater{} npm install {-}D typescript}\end{starterterminal}
+
+次に、TypeScriptのコンパイラ設定ファイル「tsconfig.json」を作成します。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{tsconfig.jsonの作成}\seqsplit{ \textgreater{} npx tsc {-}{-}init
+
+Created a new tsconfig.json with:
+                                                                                                                  TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig.json}\end{starterterminal}
+
+コマンドを実行すると、「tsconfig.json」ファイルが作成されます。
+コメントアウトされているものは、デフォルト値です。
+
+\begin{reviewimage}%%typescript04
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/typescript04.png}%
+\reviewimagecaption{作成されたtsconfig.json}
+\label{image:02-create-react-app:typescript04}
+\end{reviewimage}
+
+\clearpage
+
+
+TypeScriptコンパイラのオプションは、
+こちら\footnote{\url{https://www.typescriptlang.org/docs/handbook/tsconfig-json.html}}
+で確認できます。
+
+\vspace*{\baselineskip}
+
+TypeScript開発元のMicrosoftは、Reactへ導入した
+「tsconfig.json」のお勧め\footnote{\url{https://github.com/Microsoft/TypeScript-React-Starter/blob/master/tsconfig.json}}
+を以下のようにしています。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{Microsoftお勧めReact下のtsconfig.json}\seqsplit{  \{
+    "compilerOptions": \{
+      "outDir": "build/dist",
+      "module": "commonjs",
+      "target": "es5",
+      "lib": ["es6", "dom"],
+      "sourceMap": true,
+      "allowJs": true,
+      "jsx": "react",
+      "moduleResolution": "node",
+      "rootDir": "src",
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true
+    \},
+    "exclude": [
+      "node\textunderscore{}modules",
+      "build",
+      "scripts",
+      "acceptance{-}tests",
+      "webpack",
+      "jest",
+      "src/setupTests.ts"
+    ],
+    "types": [
+      "typePatches"
+    ]
+  \}}\end{starterprogram}
+
+Microsoftお勧めの設定に修正したものが、こちらです。コメントアウトされているものは削除しています。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{修正後のtsconfig.json}  \{
+    "compilerOptions": \{
+      "target": "es5",
+      "lib": [
+        "es6",
+        "dom"
+      ],
+      "jsx": "react",
+      "module": "commonjs",
+      "rootDir": "src",
+      "outDir": "public",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+    \},
+    "exclude": ["node\textunderscore{}modules", "public", "webpack"]
+  \}
+\end{starterprogram}
+
+TypeScriptは、ファイル拡張子が
+
+\begin{starteritemize}
+\item .js {-}{-}{-}\textgreater{} .ts
+\item .jsx {-}{-}\textgreater{} .tsx
+\end{starteritemize}
+
+となるため、「webpack.common.js」の「entry」のファイル名の拡張子を「.tsx」に変えます。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{webpack.common.jsの一部}\seqsplit{  const path = require('path');
+  const HtmlWebpackPlugin = require('html{-}webpack{-}plugin');
+
+  module.exports = \{
+    entry: './src/index.tsx',
+    output: \{
+      path: path.resolve(\textunderscore{}\textunderscore{}dirname, 'public'),
+      assetModuleFilename: 'images/[name][ext][query]',
+      clean: true,
+    \},}\end{starterprogram}
+
+プロジェクト内のファイル名も変更します。
+
+\begin{starteritemize}
+\item 「src/index.js」{-}{-}{-}\textgreater{} 「src/index.tsx」
+\item 「src/components/App.jsx」 {-}{-}\textgreater{} 「src/components/App.tsx」
+\end{starteritemize}
+
+次に、使用するライブラリの型定義をインストールします。
+ライブラリによっては自身が型定義を持っている場合もありますし、
+有志で作成された型定義ファイルは、npmリポジトリの「@types/」に
+ある場合もあります。
+
+\vspace*{\baselineskip}
+
+使用するReact、Node.jsの型定義ファイルは、「@types/」以下にありますので
+インストールします。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{React、Node.jsの型定義のインストール}\seqsplit{ \textgreater{} npm install {-}D @types/node @types/react @types/react{-}dom}\end{starterterminal}
+
+型定義のインストールが完了しても、「App.tsx」で
+
+\begin{starteritemize}
+\item lodashの型定義がない
+\item yaruo.pngの型定義がない
+\end{starteritemize}
+
+と、エラーが表示されています。
+
+\begin{reviewimage}%%typescript02
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/typescript02.png}%
+\reviewimagecaption{App.tsxでエラー表示}
+\label{image:02-create-react-app:typescript02}
+\end{reviewimage}
+
+\clearpage
+
+
+「lodash」の型定義はインストールすればエラーが消えますが、今後「lodash」は使わないので
+アンインストールし、該当コードも削除します。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{lodashのアンインストール}\seqsplit{ \textgreater{} npm uninstall lodash}\end{starterterminal}
+
+「png」については、プロジェクト用の型定義ファイルを作成します。
+
+\vspace*{\baselineskip}
+
+「src/types/index.d.ts」を作成し、以下のように記入します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{src/types/index.d.ts}\seqsplit{declare module '*.png'}\end{starterprogram}
+
+作成したファイルを「tsconfig.json」に型定義ファイルの位置を追加します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{tsconfig.json}\seqsplit{  "compilerOptions": \{
+    "typeRoots": [
+      "types"
+    ]
+  \}}\end{starterprogram}
+
+動作確認を行います。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{動作確認}\seqsplit{ \textgreater{} npm run start}\end{starterterminal}
+
+lodash部分のコードが削除されたトップページを表示します。
+
+\begin{reviewimage}%%typescript03
+\includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/typescript03.png}%
+\reviewimagecaption{TypeScript導入後動作確認}
+\label{image:02-create-react-app:typescript03}
+\end{reviewimage}
+
+\clearpage
+
+\begin{starternote}[]{}
+
+ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 07\textunderscore{}typescript{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
+\end{starternote}
 
 \section{eslint、prettierとは？}
 \keeplastskip{
@@ -1519,7 +1751,7 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 
 \vspace*{\baselineskip}
 
-チェックしてくれるのは、たとえば、\\[0pt]
+チェックしてくれるのは、たとえば、
 
 \begin{starteritemize}
 \item constで宣言している変数への代入
@@ -1527,9 +1759,7 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 \item 分割代入の使用を推奨
 \end{starteritemize}
 
-\vspace*{\baselineskip}
-
-などがありますが、何をチェックし指摘するのかは、チーム毎、プロジェクト毎に自由に決めることができます。
+などがありますが、何をチェックするのかは、チーム毎、プロジェクト毎に自由に決めることができます。
 
 \vspace*{\baselineskip}
 
@@ -1538,14 +1768,12 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
 
 \vspace*{\baselineskip}
 
-そのために、\\[0pt]
+そのために、
 
 \begin{starteritemize}
 \item コードチェックは、eslint
 \item コード整形は、prettier
 \end{starteritemize}
-
-\vspace*{\baselineskip}
 
 と、得意なものに任せます。
 
@@ -1562,13 +1790,28 @@ JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろ�
   \label{sec-03eslint-install}
   \par\nobreak
 }
+\begin{starternote}[]{create{-}react{-}appで作成したプロジェクト}
 
-create{-}react{-}appを使用して作成したスタートアッププロジェクトには、eslintは導入済みですので設定し直し、必要な関連パッケージをインストールします。
+「create{-}react{-}app」を使用して作成したスタートアッププロジェクトには、eslintは導入済みです。
+
+\vspace*{\baselineskip}
+
+追加のパッケージ、設定については、本章の後半で解説しています。
+
+\end{starternote}
 
 ターミナルに以下のように「eslint {-}{-}init」と初期化コマンドを入力します。
+「eslint」が未インストール状態でしたら、「eslint」をインストールするのか問われます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslintの初期化}\seqsplit{\textdollar{} npx eslint {-}{-}init}\end{starterterminal}
+\begin{starterterminal}[]{eslintの初期化}\seqsplit{\textdollar{} npx eslint {-}{-}init
+Need to install the following packages:
+  eslint
+Ok to proceed? (y) y}\end{starterterminal}
+
+「y」を入力しエンターキーを押すと「eslint」がインストールされ、設定ファイルを作成するための質問が始まります。
+
+\vspace*{\baselineskip}
 
 「?」が行頭にある質問と選択枝が表示されますので、カーソルキーで選択枝を選びエンターキーで次ぎの質問に移ります。
 
@@ -1581,23 +1824,31 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
 最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{eslintへの答え}\seqsplit{  ✔ How would you like to use ESLint? · problems
+\begin{starterterminal}[]{eslintへの答え}\seqsplit{  ✔ How would you like to use ESLint? · style
   ✔ What type of modules does your project use? · esm
   ✔ Which framework does your project use? · react
-  ✔ Does your project use TypeScript? · No / Yes　　　　{\reviewballoon{Yesを選択}}
+  ✔ Does your project use TypeScript? · No / Yes  {\reviewballoon{Yesを選択}}
   ✔ Where does your code run? · browser
+  ✔ How would you like to define a style for your project? · guide
+  ✔ Which style guide do you want to follow? · airbnb
   ✔ What format do you want your config file to be in? · JavaScript
+  Checking peerDependencies of eslint{-}config{-}airbnb@latest
   Local ESLint installation not found.
   The config that you've selected requires the following dependencies:
 
-  eslint{-}plugin{-}react@latest @typescript{-}eslint/eslint{-}plugin@latest @typescript{-}eslint/parser@latest eslint@latest
-  ✔ Would you like to install them now with npm? · No / Yes  {\reviewballoon{Yesを選択}}}\end{starterterminal}
+  eslint{-}plugin{-}react@\textasciicircum{}7.27.1 @typescript{-}eslint/eslint{-}plugin@latest eslint{-}config{-}airbnb@latest eslint@\textasciicircum{}7.32.0 \textbar{}\textbar{} \textasciicircum{}8.2.0 eslint{-}plugin{-}import@\textasciicircum{}2.25.3 eslint{-}plugin{-}jsx{-}a11y@\textasciicircum{}6.5.1 eslint{-}plugin{-}react{-}hooks@\textasciicircum{}4.3.0 @typescript{-}eslint/parser@latest
+  ? Would you like to install them now with npm? › No / Yes {\reviewballoon{Yesを選択}}}\end{starterterminal}
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.jsonにeslint関連のパッケージがインストールされました。}\seqsplit{  "devDependencies": \{
-    "@typescript{-}eslint/eslint{-}plugin": "\textasciicircum{}5.4.0",
-    "@typescript{-}eslint/parser": "\textasciicircum{}5.4.0",
-    "eslint": "\textasciicircum{}8.2.0",
-    "eslint{-}plugin{-}react": "\textasciicircum{}7.27.0"
+    "@typescript{-}eslint/eslint{-}plugin": "\textasciicircum{}5.8.0",
+    "@typescript{-}eslint/parser": "\textasciicircum{}5.8.0",
+    "@webpack{-}cli/generators": "\textasciicircum{}2.4.1",
+    "eslint": "\textasciicircum{}8.5.0",
+    "eslint{-}config{-}airbnb": "\textasciicircum{}19.0.2",
+    "eslint{-}plugin{-}import": "\textasciicircum{}2.25.3",
+    "eslint{-}plugin{-}jsx{-}a11y": "\textasciicircum{}6.5.1",
+    "eslint{-}plugin{-}react": "\textasciicircum{}7.28.0",
+    "eslint{-}plugin{-}react{-}hooks": "\textasciicircum{}4.3.0",
   \}}\end{starterprogram}
 
 また、eslintの設定ファイル「.eslintrc.js」が作成されています。
@@ -1609,16 +1860,15 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
           "es2021": true
       \},
       "extends": [
-        "eslint:recommended"
-        "plugin:react/recommended",
-        "plugin:@typescript{-}eslint/recommended",
+          "plugin:react/recommended",
+          "airbnb"
       ],
       "parser": "@typescript{-}eslint/parser",
       "parserOptions": \{
           "ecmaFeatures": \{
               "jsx": true
           \},
-          "ecmaVersion": 12,
+          "ecmaVersion": 13,
           "sourceType": "module"
       \},
       "plugins": [
@@ -1636,47 +1886,30 @@ create{-}react{-}appを使用して作成したスタートアッププロジェ
 
 書き出されたルールは、ルール名に適用方法\{"off(適用しない)","warn(警告)","error(エラー)"\}が記されています。
 表記は、\{0,1,2\}の数字で表示される場合もあります。
-同じルールがあった場合には、後から読み込まれたものが上書きされます。
+同じルールがあった場合には、後から読み込まれたルールに上書きされます。
 個別に上書きしたいものは「.eslintrc.js」ファイルの「rules」セクションに追加します。
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{eslint設定で適用されるルール}\seqsplit{\textdollar{} npx eslint {-}{-}print{-}config .eslintrc.js \textgreater{} current\textunderscore{}rules.txt}\end{starterterminal}
 
-eslintで使用するルールは一般的なものをベースにしたいので、airbnbのルールをインストールします。
+「eslint {-}{-}init」時にインストールされたルールが適用されるように「extends」に追加します。
 
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[]{airbnbのルーツのインストール}\seqsplit{ \textdollar{}  npx install{-}peerdeps {-}{-}dev eslint{-}config{-}airbnb
-    install{-}peerdeps v3.0.3
-    It seems as if you are using Yarn.
-    Would you like to use Yarn for the installation? (y/n) n{\reviewballoon{yarnを使っているのか聞かれるので、noである「n」を入力}}}\end{starterterminal}
+\vspace*{\baselineskip}
 
-airbnbのルールをインストールしたので、設定ファイルに追加します。
-
-\def\startercodeblockfontsize{}
-\begin{starterprogram}[]{.eslintrc.jsへairbnbルールを適用}\seqsplit{  "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "airbnb",  　　　{\reviewballoon{airbnbのルール}}
-      "airbnb/hooks", {\reviewballoon{airbnbのReact hooksのルール}}
-      "plugin:@typescript{-}eslint/recommended",
-  ],}\end{starterprogram}
-
-再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
-\\[0pt]
-\\[0pt]
 次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の下3行を追加しました。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.eslintrc.jsのextends部分}\seqsplit{  "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "airbnb",
-      "airbnb/hooks",
-      "plugin:@typescript{-}eslint/recommended",
-      "plugin:@typescript{-}eslint/recommended{-}requiring{-}type{-}checking",
-      "plugin:import/recommended",
-      "plugin:import/typescript",
+  'plugin:react/recommended',
+  'airbnb',
+  'airbnb/hooks',
+  'plugin:@typescript{-}eslint/recommended',
+  'plugin:@typescript{-}eslint/recommended{-}requiring{-}type{-}checking',
+  'plugin:import/recommended',
+  'plugin:import/typescript',
   ],}\end{starterprogram}
+
+再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
 
 TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更する。
 
@@ -1693,7 +1926,9 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
 
 これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
 
-「import/extensions」は、インポート宣言でnode\textunderscore{}modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
+\vspace*{\baselineskip}
+
+ルール「import/extensions」は、インポート宣言でnode\textunderscore{}modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
 で、相対パスからのimportは、拡張子が必要と言うルールです。
 
 現在はすべてがエラー、node\textunderscore{}modules下のパッケージ内の指定された拡張子は除外となっていますが、
@@ -1789,30 +2024,22 @@ React17からは、「import React from 'react'」を書かなくてもよくな
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.json}\seqsplit{  "devDependencies": \{
-    "@typescript{-}eslint/eslint{-}plugin": "\textasciicircum{}5.4.0",
-    "@typescript{-}eslint/parser": "\textasciicircum{}5.4.0",
-    "eslint": "\textasciicircum{}8.2.0",
-    "eslint{-}config{-}airbnb": "\textasciicircum{}19.0.0",
     "eslint{-}config{-}prettier": "\textasciicircum{}8.3.0",
-    "eslint{-}plugin{-}import": "\textasciicircum{}2.25.3",
-    "eslint{-}plugin{-}jsx{-}a11y": "\textasciicircum{}6.5.1",
-    "eslint{-}plugin{-}react": "\textasciicircum{}7.27.0",
-    "eslint{-}plugin{-}react{-}hooks": "\textasciicircum{}4.3.0",
-    "prettier": "\textasciicircum{}2.4.1"
+    "prettier": "\textasciicircum{}2.5.1"
   \}}\end{starterprogram}
 
 Pretterのチェックを「.eslintrc.js」へ追加します。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.eslintrc.js}\seqsplit{  "extends": [
-      "plugin:react/recommended",
-      "airbnb",
-      "airbnb/hooks",
-      "plugin:@typescript{-}eslint/recommended",
-      "plugin:@typescript{-}eslint/recommended{-}requiring{-}type{-}checking",
-      "plugin:import/recommended",
-      "plugin:import/typescript",
-      "prettier",　　　{\reviewballoon{prettierを追加}}
+  'plugin:react/recommended',
+  'airbnb',
+  'airbnb/hooks',
+  'plugin:@typescript{-}eslint/recommended',
+  'plugin:@typescript{-}eslint/recommended{-}requiring{-}type{-}checking',
+  'plugin:import/recommended',
+  'plugin:import/typescript',
+  'prettier' 　{\reviewballoon{prettierを追加}}
   ],}\end{starterprogram}
 
 pritterの設定ファイル「.prettierrc」を追加します。設定可能なオプションは、
@@ -1837,18 +2064,64 @@ package.jsonにスクリプトコマンドを追加します。
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.json}\seqsplit{"scripts": \{
-  "start": "react{-}scripts start",
-  "build": "react{-}scripts build",
-  "test": "react{-}scripts test",
-  "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{lint:チェック}}
-  "fix": "npm run format \&\& npm run lint:fix", {\reviewballoon{fix:整形してチェックして自動修復}}
-  "format": "prettier {-}{-}write 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{format:整形}}
-  "lint:fix": "eslint {-}{-}fix 'src/**/*.\{js,jsx,ts,tsx\}'",  {\reviewballoon{lint:fixチェック後修復}}
-  "eject": "react{-}scripts eject"
+  "scripts": \{
+    "test": "echo \reviewbackslash{}"Error: no test specified\reviewbackslash{}" \&\& exit 1",
+    "build": "webpack {-}{-}config webpack.prod.js",
+    "build:dev": "webpack {-}{-}config webpack.dev.js",
+    "build:prod": "webpack {-}{-}config webpack.prod.js",
+    "start": "webpack serve {-}{-}config webpack.dev.js",
+    "lint": "eslint 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{lint:チェック}}
+    "fix": "npm run format \&\& npm run lint:fix", {\reviewballoon{fix:整形してチェックして自動修復}}
+    "format": "prettier {-}{-}write 'src/**/*.\{js,jsx,ts,tsx\}'", {\reviewballoon{format:整形}}
+    "lint:fix": "eslint {-}{-}fix 'src/**/*.\{js,jsx,ts,tsx\}'",  {\reviewballoon{lint:fixチェック後修復}}
+  \},
 \},}\end{starterprogram}
 
 Eslint、Prettierの設定が完了しましたので、srcフォルダにある「App.tsx」を開いてみると、
 ルールから外れるものは指摘されています。
+
+\vspace*{\baselineskip}
+
+以上で環境構築は完了なのですが、「.eslintrc.js」にてエラーが表示されています。
+
+\begin{starterquote}
+
+Parsing error: "parserOptions.project" has been set for @typescript{-}eslint/parser.
+The file does not match your project config: .eslintrc.js.
+The file must be included in at least one of the projects provided.
+
+\end{starterquote}
+
+このエラーは、「parserOptions.project」で「tsconfig.json」を指定していますが、
+「tsconfig.json」では、「module」で「commonjs」を指定しています。
+
+\vspace*{\baselineskip}
+
+そのため、「eslintrc.js」ファイルが、どこからもimportされていないので警告が出ています。
+
+\vspace*{\baselineskip}
+
+解決策として、「eslint」の対象外とするために「.eslintignore」を作成し、「eslintrc.js」を指定します。
+
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{.eslintignore}\seqsplit{.eslintrc.js}\end{starterprogram}
+
+これでエラーが解消されます。
+
+\begin{starternote}[]{}
+
+ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+
+\def\startercodeblockfontsize{}
+\begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 07\textunderscore{}typescript{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
+\end{starternote}
+
+\subsection{create{-}react{-}app作成のプロジェクトへ「eslint,prettier」を設定}
+\keeplastskip{
+  \label{sec:2-3-2}
+  \label{sec04-cra-with-eslint}
+  \par\nobreak
+}
 
 \section{eslint、prettierの指摘を修正}
 \keeplastskip{
