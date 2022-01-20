@@ -22,11 +22,12 @@
       "no-mix-dearu-desumasu": {
         "preferInHeader": "",
         "preferInBody": "ですます",
-        "preferInList": "である",
+        "preferInList": "ですます",
         "strict": true
       },
       "ja-no-mixed-period": {
-        "periodMark": "。"
+        "periodMark": "。",
+        "allowPeriodMarks": ["、"]
       },
       "no-double-negative-ja": true,
       "no-dropping-the-ra": "true",
@@ -71,7 +72,10 @@
         "module",
         "path",
         "babel",
-        "typescript"
+        "typescript",
+        "基づ",
+        "コピペ",
+        "あるある"
       ]
     }
   }

@@ -161,6 +161,16 @@
   'Comment in List':
     'prefix': 'cil'
     'body': '@<balloon>{${1:text in program list}}'
+  'Comment line':
+    'prifix': 'com'
+    'body': '#@#'
+  'Comment block':
+    'prefix': 'cob'
+    'body': """
+      #@+++
+        ${1:block comment}
+      #@----
+    """
   'New Page':
     'prefix': 'newpage'
     'body': '//clearpage'

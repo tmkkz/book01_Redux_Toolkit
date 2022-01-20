@@ -69,7 +69,7 @@ Reactアプリケーションをゼロから作成するためには、
 
 
 //terminal[][create-react-app完了時]{
-  Success! Created yaruo-cra-template at /Users/kazuyainaba/Documents/Devs_kz/Project_技術書展202012/yaruo_react_sample/yaruo-cra-template
+  Success! Created yaruo-cra-template at /Users/yaruo/yaruo-cra-template
   Inside that directory, you can run several commands:
 
     npm start
@@ -1176,7 +1176,7 @@ Babel.js導入前の実行結果です。
 
 //clearpage
 Babel.js導入後の実行結果です。
-//image[babel06][concatに変換されています。][scale=0.9]
+//image[babel07][concatに変換されています。][scale=0.9]
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。

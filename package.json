@@ -6,6 +6,9 @@
   "author": "tmkkz",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "lint": "textlint 'contents/**/*.re'"
+  },
   "devDependencies": {
     "textlint": "^11.9.0",
     "textlint-filter-rule-allowlist": "^2.0.1",
