@@ -447,7 +447,16 @@ Reduxを導入したので、孫から直接データを削除します。
 
 //}
 
-===={sec04-05-2} Redux導入でコード修正したファイル
+===={sec04-05-3} devToolsでの表示
+Google chromeのdevToolsを使えば、ディスパッチされたActionの内容を確認できますし、
+変更されたStateの内容も変更前・変更後と確認できます。
+
+//image[devTools02][実行されたActionのtype][scale=0.8,pos=H]
+
+//image[devTools03][実行されたActionの内容][scale=0.8,pos=H]
+
+
+===={sec04-05-4} Redux導入でコード修正したファイル
 
 Reduxの導入で修正したコードは、
 
@@ -458,7 +467,7 @@ Reduxの導入で修正したコードは、
 
  です。
 
-変更後のコードは、Appコンポーネントは上記です。他のコンポーネントは、こちらになります。
+変更後のコードは、Appコンポーネントは上記です。ほかのコンポーネントは、こちらになります。
 
 //list[][DiaryBoardコンポーネント]{
   import React, { useState } from 'react';
