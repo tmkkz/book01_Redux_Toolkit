@@ -2,11 +2,14 @@
 \label{chap:03-todo-with-react}
 \begin{reviewimage}[H]%%diary01
 \starterimageframe{%
-\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/diary01.png}%
+\includegraphics[width=0.4\maxwidth]{./images/03-todo-with-react/diary01.png}%
 }%
 \reviewimagecaption{完成サンプルアプリケーション}
 \label{image:03-todo-with-react:diary01}
 \end{reviewimage}
+
+\clearpage
+
 \begin{starterabstract}
   本章では、第2章で作成したスタートアップ用のアプリケーションを魔改造し、日記アプリケーションを作成します。\\[0pt]
 
@@ -15,6 +18,10 @@
 
 サンプルアプリケーションで使用している書籍データ(表紙画像)は、
 版元ドットコム\footnote{\url{https://www.hanmoto.com/about_bookdata}}の規約に基づいています。
+
+
+\clearpage
+
 
 \section{Reactとは？}
 \keeplastskip{
@@ -30,7 +37,7 @@
 本家「reactjs.org」のドキュメントは日本語(ja.reactjs.org)\footnote{\url{https://ja.reactjs.org}}
 でも読むことができます。
 
-でも、ここで言われている特徴の\\[0pt]
+でも、ここで言われている特徴、
 
 \begin{starteritemize}
 \item 宣言的なView
@@ -42,25 +49,25 @@
 
 \vspace*{\baselineskip}
 
-以前からjQueryなどで、ガチのJavaScriptプログラミングされていた方以外はご存じないでしょうが、
-フロントエンド用フレームワークなしですと、いろいろとたいへんでした。
+フロントエンド用フレームワークが当たり前の我々は知らないのですが
+jQueryなどでガチのJavaScriptプログラミングされていた方は、たいへんな思いをしていたのではないでしょうか？
 
 \vspace*{\baselineskip}
 
-たとえば、テキストボックスの入力を検証をする場合\\[0pt]
+たとえば、テキストボックスの入力を検証をする場合には、
 
 \begin{starterenumerate}
-\item テキストボックスをdom内から取得 getElementById
-\item その要素に検証用関数の呼び出しを行うイベントの追加 addEventListener
+\item テキストボックスをdom内から取得(getElementById)
+\item その要素に検証用関数の呼び出しを行うイベントの追加(addEventListener)
 \item 検証しエラーがある場合には、エラー表示用の要素をdom内から取得
-\item エラー表示用要素へ表示 innerHTML
+\item エラー表示用要素へ表示(innerHTML)
 \end{starterenumerate}
 
 が必要です。
 
 \vspace*{\baselineskip}
 
-コードにすると、\\[0pt]
+コードにすると、
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{テキストボックス表示部分}\seqsplit{  \textless{}div\textgreater{}
@@ -87,7 +94,7 @@
     \}
   \textless{}/script\textgreater{}}\end{starterprogram}
 
-このように、テキストボックス1つでも、表示部分とコード部分が分かれていてます。
+このように、テキストボックス1つでも、けっこうなコード量になり、おまけに表示部分とコード部分が分かれていてます。
 
 \vspace*{\baselineskip}
 
@@ -100,7 +107,7 @@
 
 \vspace*{\baselineskip}
 
-それが「React」を使うと\\[0pt]
+それが「React」を使うと、
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{Reactの場合}\seqsplit{  import React, \{ useState \} from 'react';
@@ -167,7 +174,7 @@ const App = () =\textgreater{} (
 
 \vspace*{\baselineskip}
 
-保持するデータは、\\[0pt]
+保持するデータは、
 
 \begin{description}
 \item[diaryId(文字列)] \mbox{} \\
@@ -182,8 +189,8 @@ const App = () =\textgreater{} (
 画像のalt属性
 \item[mainContent(文字列)] \mbox{} \\
 本文
-\item[追記(文字列の配列)] \mbox{} \\
-段落を配列の要素とする。
+\item[readmore(文字列の配列)] \mbox{} \\
+追記。段落を配列の要素とする。
 \end{description}
 
 とします。
@@ -239,7 +246,7 @@ const App = () =\textgreater{} (
     \},
   ];}\end{starterprogram}
 
-\section{Material Design ５の導入}
+\section{Material Design５の導入}
 \keeplastskip{
   \label{sec:3-3}
   \label{sec-033}
@@ -582,7 +589,7 @@ MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがありま
 
 MUIのメニューから「Components \textgreater{} Card」をクリックすると、たくさんのサンプルがあります。
 少し下へスクロールすると、こちらが見つかりました。
-「\textless{}\textgreater{}」アイコンをクリックすると、JS/TS別にソースコードが憑依されます。
+「\textless{}\textgreater{}」アイコンをクリックすると、JS/TS別にソースコードが表示されます。
 
 \begin{reviewimage}%%mui009-card-ComplexInteraction
 \includegraphics[width=1.0\maxwidth]{./images/03-todo-with-react/mui009-card-ComplexInteraction.png}%
@@ -912,13 +919,12 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
     );
   \};
 
-  export default DiaryCardHeader;
- //\}
+  export default DiaryCardHeader;}\end{starterprogram}
 
- 「DiaryCardコンポーネント」は、このようになります。
+「DiaryCardコンポーネント」は、このようになります。
 
- //list[][DiaryCardコンポーネントのCardHeaderがあった部分]\{
-   return (
+\def\startercodeblockfontsize{}
+\begin{starterprogram}[]{DiaryCardコンポーネントのCardHeaderがあった部分}\seqsplit{   return (
     \textless{}Card sx=\{\{ maxWidth: 345 \}\}\textgreater{}
       \textless{}DiaryCardHeader diaryId=\{diaryId\} title=\{title\} postDate=\{postDate\} /\textgreater{}
       \textless{}CardMedia
@@ -935,7 +941,7 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 
 この時点で動作確認を行います。無事に表示されていれば良いです。
 
-\subsubsection*{DiaryBoardコンポーネントにメニューを組み込む}
+\subsubsection*{DiaryCarHeaderコンポーネントにメニューを組み込む}
 \keeplastskip{
   \label{sec:3-3-6-1}
   \label{sec-0336-1}
@@ -943,7 +949,7 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 }
 
 MUIのサイトからメニュー部分のコードを拝借して「DiaryCardHeaderコンポーネント」に追加しましょう。
-やりたいことは「編集、削除」ですので、メニュー項目(MenuItem)は２つで良いです。
+やりたいことは「編集、削除」ですので、メニュー項目(MenuItem)は２つでかまいません。
 
 
 \clearpage
@@ -1100,7 +1106,7 @@ handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に�
 ただし、削除がクリックされたときには「本当に削除しますか？」と確認のダイアログを出すようにします。
 ダイアログは、MUIサイトの「Dialog」から「Transitions」を拝借します。
 
-\begin{reviewimage}%%mui013-card-deleteDialog
+\begin{reviewimage}[H]%%mui013-card-deleteDialog
 \includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/mui013-card-deleteDialog.png}%
 \reviewimagecaption{MUIサイトのTransitionsダイアログ}
 \label{image:03-todo-with-react:mui013-card-deleteDialog}
@@ -1123,14 +1129,16 @@ Menuの「削除」をクリック　{-}\textgreater{} 確認ダイアログ表�
 
 ここまでの変更が完了しましたら動作確認します。
 
-編集メニューをクリックしたときにアラートはでましたか？\\[0pt]
-削除メニューをクリックしたときに確認ダイアログが表示しましたか？\\[0pt]
-確認ダイアログの削除をクリックしたときにアラートはでましたか？
+\begin{starteritemize}
+\item 編集メニューをクリックしたときにアラートはでましたか？
+\item 削除メニューをクリックしたときに確認ダイアログが表示しましたか？
+\item 確認ダイアログの削除をクリックしたときにアラートはでましたか？
+\end{starteritemize}
 
 
 \clearpage
 
-\begin{reviewimage}%%mui014-card-deleteDialog-done
+\begin{reviewimage}[H]%%mui014-card-deleteDialog-done
 \includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/mui014-card-deleteDialog-done.png}%
 \reviewimagecaption{削除確認ダイアログの表示}
 \label{image:03-todo-with-react:mui014-card-deleteDialog-done}
@@ -1152,7 +1160,7 @@ Menuの「削除」をクリック　{-}\textgreater{} 確認ダイアログ表�
 
 を実装します。
 
-\paragraph*{アバターの代わりに投稿付きの表示}\vspace*{\baselineskip}
+\paragraph*{アバターの代わりに投稿月画像を表示}\vspace*{\baselineskip}
 
 1月〜12月までのSVG画像は、GitHubサイトにあります。「src/assets/images/month{-}icons」フォルダを作成してコピペしてください。
 
@@ -1780,10 +1788,10 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 
 \vspace*{\baselineskip}
 
-これが「Reactあるある」のひとつの「Propsバケツリレー」です。
+これが「Reactあるある」のひとつ「Propsバケツリレー」です。
 
-\begin{reviewimage}%%AppComponents
-\includegraphics[width=1.0\maxwidth]{./images/03-todo-with-react/AppComponents.png}%
+\begin{reviewimage}[H]%%AppComponents
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/AppComponents.png}%
 \reviewimagecaption{コンポーネントの構成図}
 \label{image:03-todo-with-react:AppComponents}
 \end{reviewimage}
@@ -1794,7 +1802,7 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 \vspace*{\baselineskip}
 
 表示は、親コンポーネントからバケツリレーで伝え、
-孫コンポーネントで受けたユーザーからの要求は逆のルートをたどって親まで伝えなければなりません。
+孫コンポーネントで受けたユーザーからの要求は逆のルートをたどって親まで伝えることになります。
 孫で発生した要求を親に伝える方法として一般的なのが、関数をPropsとしてデータと伴に子・孫へ渡す方法です。
 
 \vspace*{\baselineskip}
@@ -2278,7 +2286,7 @@ const DiaryCard = (props: DiaryCardProps) =\textgreater{} \{
 \subsection{保存・キャンセル関数をPropsにデータと渡す}
 \keeplastskip{
   \label{sec:3-4-2}
-  \label{sec-034-1}
+  \label{sec-034-2}
   \par\nobreak
 }
 
@@ -2867,7 +2875,7 @@ TypeScript用の型情報もインストールします。
   export default DiaryBoard;
 }\end{starterprogram}
 
-以上でサンプルアプリケーションは完成です。
+以上でサンプルアプリケーションは完成です。見栄えを少し修正したものをGitHubへアップロードしてあります。
 
 \begin{starternote}[]{}
 

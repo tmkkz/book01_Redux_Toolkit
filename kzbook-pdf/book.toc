@@ -33,7 +33,7 @@
 \contentsline {chapter}{\numberline {第3章}日記アプリケーションの作成(Reactのみ)}{98}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Reactとは？}{100}{section.3.1}%
 \contentsline {section}{\numberline {3.2}表示するデータの型}{103}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Material Design ５の導入}{105}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Material Design５の導入}{105}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}MUIのインストール}{106}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}データ表示画面を作る}{107}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}MUI5のサイトからテンプレートを拝借}{107}{subsection.3.3.3}%
@@ -45,3 +45,10 @@
 \contentsline {subsection}{\numberline {3.4.1}削除・編集関数をPropsにデータと渡す}{151}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}保存・キャンセル関数をPropsにデータと渡す}{160}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}第３章のまとめ}{173}{section.3.5}%
+\contentsline {chapter}{\numberline {第4章}日記アプリケーションの作成(Redux使用)}{174}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Reduxとは？}{174}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Redux導入のメリット}{175}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Reduxの動作イメージ}{176}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Reduxの導入}{178}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Reduxのアプリケーションへの導入}{179}{section.4.4}%
+\contentsline {section}{\numberline {4.5}コンポーネントの修正}{186}{section.4.5}%

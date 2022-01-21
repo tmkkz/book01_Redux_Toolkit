@@ -5,7 +5,7 @@ CHAPS:
   - 01-createDevEnv.re
   - 02-create-react-app.re
   - 03-todo-with-react.re
-
+  - 04-todo-with-redux.re
 APPENDIX:
 
 
