@@ -1000,3 +1000,15 @@ DiaryCardHeaderコンポーネントは、編集メニューがクリックさ�
 //}
 #@#<!-- textlint-enable -->
 //}
+
+=={sec-chap04review} 第4章のまとめ
+#@#<!-- textlint-disable -->
+Reduxを状態管理に使う
+#@#<!-- textlint-enable -->
+
+ * Reduxの動作イメージ
+ * Reduxの導入
+ * Action Typeの定義 〜 Storeの作成まで
+ * コンポーネントでの使用
+
+ を解説しました。

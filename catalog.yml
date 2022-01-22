@@ -6,6 +6,8 @@ CHAPS:
   - 02-create-react-app.re
   - 03-todo-with-react.re
   - 04-todo-with-redux.re
+  - 05-todo-with-redux-toolkit.re
+  - 06-thanks.re
 APPENDIX:
 
 

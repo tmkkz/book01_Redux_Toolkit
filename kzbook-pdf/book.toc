@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {1.4}第1章のまとめ}{24}{section.1.4}%
 \contentsline {chapter}{\numberline {第2章}スタートプロジェクトの作成}{25}{chapter.2}%
 \contentsline {section}{\numberline {2.1}create{-}react{-}appコマンド}{26}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}アプリケーションを実行}{27}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}アプリケーションを実行}{28}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}create{-}react{-}appで作成された中身}{29}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}　ゼロから構築してみる}{32}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}ステップ1 Node.jsプロジェクト作成}{32}{subsection.2.2.1}%
@@ -29,26 +29,35 @@
 \contentsline {subsection}{\numberline {2.3.1}eslint、prettierのインストール}{80}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}create{-}react{-}app作成のプロジェクトへ「eslint,prettier」を設定}{88}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}eslint、prettierの指摘を修正}{93}{section.2.4}%
-\contentsline {section}{\numberline {2.5}第2章のまとめ}{97}{section.2.5}%
-\contentsline {chapter}{\numberline {第3章}日記アプリケーションの作成(Reactのみ)}{98}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Reactとは？}{100}{section.3.1}%
-\contentsline {section}{\numberline {3.2}表示するデータの型}{103}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Material Design５の導入}{105}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}MUIのインストール}{106}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}データ表示画面を作る}{107}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}MUI5のサイトからテンプレートを拝借}{107}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}カード一覧画面の表示}{116}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}リファクタリング１(サンプルデータ全表示)}{119}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}リファクタリング2(カードヘッダを別コンポーネントへ)}{122}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}入力フォームコンポーネントの作成}{137}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}データの追加・編集・削除}{149}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}削除・編集関数をPropsにデータと渡す}{151}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}保存・キャンセル関数をPropsにデータと渡す}{160}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}第３章のまとめ}{173}{section.3.5}%
-\contentsline {chapter}{\numberline {第4章}日記アプリケーションの作成(Redux使用)}{174}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Reduxとは？}{174}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Redux導入のメリット}{175}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Reduxの動作イメージ}{176}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Reduxの導入}{178}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Reduxのアプリケーションへの導入}{179}{section.4.4}%
-\contentsline {section}{\numberline {4.5}コンポーネントの修正}{186}{section.4.5}%
+\contentsline {section}{\numberline {2.5}第2章のまとめ}{98}{section.2.5}%
+\contentsline {chapter}{\numberline {第3章}日記アプリケーションの作成(Reactのみ)}{99}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Reactとは？}{101}{section.3.1}%
+\contentsline {section}{\numberline {3.2}表示するデータの型}{104}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Material Design５の導入}{106}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}MUIのインストール}{107}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}データ表示画面を作る}{108}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}MUI5のサイトからテンプレートを拝借}{108}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}カード一覧画面の表示}{117}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}リファクタリング１(サンプルデータ全表示)}{120}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}リファクタリング2(カードヘッダを別コンポーネントへ)}{123}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}入力フォームコンポーネントの作成}{138}{subsection.3.3.7}%
+\contentsline {section}{\numberline {3.4}データの追加・編集・削除}{150}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}削除・編集関数をPropsにデータと渡す}{152}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}保存・キャンセル関数をPropsにデータと渡す}{161}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}第３章のまとめ}{174}{section.3.5}%
+\contentsline {chapter}{\numberline {第4章}日記アプリケーションの作成(Redux使用)}{175}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Reduxとは？}{175}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Redux導入のメリット}{176}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Reduxの動作イメージ}{177}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Reduxの導入}{179}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Reduxのアプリケーションへの導入}{180}{section.4.4}%
+\contentsline {section}{\numberline {4.5}コンポーネントの修正}{187}{section.4.5}%
+\contentsline {section}{\numberline {4.6}第4章のまとめ}{202}{section.4.6}%
+\contentsline {chapter}{\numberline {第5章}日記アプリケーションの作成(Redux{-}toolkit使用)}{203}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Redux{-}toolkitの導入}{203}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sliceの作成}{204}{section.5.2}%
+\contentsline {section}{\numberline {5.3}トップコンポーネントに登録}{207}{section.5.3}%
+\contentsline {section}{\numberline {5.4}コンポーネントから使用する}{208}{section.5.4}%
+\contentsline {section}{\numberline {5.5}devToolsで確認}{209}{section.5.5}%
+\contentsline {section}{\numberline {5.6}第５章のまとめ}{211}{section.5.6}%
+\contentsline {chapter}{\numberline {第6章}おわりに}{212}{chapter.6}%

@@ -30,7 +30,6 @@ Reactアプリケーションを作成するための最初のステップとし
 
 //}
 
-
 =={sec-01command} create-react-appコマンド
 #@#<!-- textlint-disable -->
 Reactアプリケーションをゼロから作成するためには、
@@ -52,6 +51,8 @@ Reactアプリケーションをゼロから作成するためには、
 
 //blankline
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
+
+//image[oneCommand][][scale=0.5,pos=H]
 
 //blankline
 では、実際に手を動かしましょう。
@@ -134,6 +135,8 @@ To create a production build, use yarn build.
 
 Google Chromeが起動し、http://localhost:3000へアクセスし以下のページが表示されます。
 
+//image[ok][][scale=0.5,pos=H]
+
 //image[02_cra_start][create-react-appの画面][scale=1.0,pos=H]
 
 このページが表示されれば成功です。
@@ -141,6 +144,8 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 ==={sec-03cra-desc} create-react-appで作成された中身
 
 create-react-appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
+
+//image[noMatter][][scale=0.5,pos=H]
 
 //terminal[][create-react-appで作成されたファイル・フォルダ]{
   .
@@ -220,8 +225,7 @@ create-react-appコマンドを使用すると、package.jsonも以下のよう�
   }
 //}
 
-package.json内にある「scripts」にあるものがコマンドになります。react-scriptsは、npmスクリプトを連続、
-または、並列に実行してくれるものです。
+package.json内にある「scripts」にあるものがコマンドになります。
 
 //blankline
 package.jsonの「dependencies」には、実行に必要でインストール済みのnpmパッケージが記載されています。
@@ -234,7 +238,11 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 本章では、最新のライブラリを使用してゼロからReact/TypeScriptの環境を構築します。
 
+//blankline
 ステップ毎にGitHub上でブランチを作成してありますので、どこからでも始めていただけます。
+
+//image[fromScratch][][scale=0.4,pos=H]
+
 
 ==={sec-04-node_init} ステップ1 Node.jsプロジェクト作成
 
@@ -454,6 +462,7 @@ npx --> /node_modules/.binフォルダにあるファイルを実行@<br>{}
 「--open」オプションでデフォルトのブラウザが起動し、index.htmlが表示されます。
 //image[webpack_test01][ブラウザで表示][scale=0.8,border=on]
 
+//image[ok2][][scale=0.4,pos=H]
 //clearpage
 devToolsで「main.js」を確認すると、node_modulesフォルダ以下にインストールされたJavaScriptが
 1つのファイルにまとめられているのが確認できます。
@@ -478,6 +487,8 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 //}
 #@#<!-- textlint-enable -->
 //}
+
+//image[git][][scale=0.7,pos=H]
 
 //clearpage
 ==={04-webpack-config} webpackの設定ファイル
@@ -2089,6 +2100,7 @@ Prettierはインストールされていないためインストールします
 =={sec-04fix} eslint、prettierの指摘を修正
 ESlint、Prettierは指摘するだけではなく、修正案の提示・修正(できるものだけですが...)までしてくれます。
 
+//image[shutup][][scale=0.6]
 //blankline
 VSCodeにPrettier拡張機能を追加してあれば、
 以下のように、VSCode側で設定すると、ファイルを保存する度に自動で修正をいれることもできます。
@@ -2216,6 +2228,8 @@ VSCode上で、@<br>{}
 //}
 #@#<!-- textlint-enable -->
 //}
+
+//image[ok3][][scale=0.5]
 
 =={sec-chap02review} 第2章のまとめ
 #@#<!-- textlint-disable -->

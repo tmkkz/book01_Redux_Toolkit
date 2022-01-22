@@ -61,6 +61,10 @@ Reactアプリケーションをゼロから作成するためには、
 
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
 
+\begin{reviewimage}[H]%%oneCommand
+\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/oneCommand.png}%
+\label{image:02-create-react-app:oneCommand}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 では、実際に手を動かしましょう。
@@ -139,6 +143,10 @@ To create a production build, use yarn build.}\end{starterterminal}
 
 Google Chromeが起動し、http://localhost:3000へアクセスし以下のページが表示されます。
 
+\begin{reviewimage}[H]%%ok
+\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/ok.png}%
+\label{image:02-create-react-app:ok}
+\end{reviewimage}
 \begin{reviewimage}[H]%%02_cra_start
 \includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/02_cra_start.png}%
 \reviewimagecaption{create{-}react{-}appの画面}
@@ -156,6 +164,10 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 
 create{-}react{-}appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
+\begin{reviewimage}[H]%%noMatter
+\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/noMatter.png}%
+\label{image:02-create-react-app:noMatter}
+\end{reviewimage}
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{create{-}react{-}appで作成されたファイル・フォルダ}\seqsplit{  .
   ├── node\textunderscore{}modules
@@ -233,8 +245,7 @@ create{-}react{-}appコマンドを使用すると、package.jsonも以下のよ
     \}
   \}}\end{starterprogram}
 
-package.json内にある「scripts」にあるものがコマンドになります。react{-}scriptsは、npmスクリプトを連続、
-または、並列に実行してくれるものです。
+package.json内にある「scripts」にあるものがコマンドになります。
 
 \vspace*{\baselineskip}
 
@@ -254,7 +265,14 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 本章では、最新のライブラリを使用してゼロからReact/TypeScriptの環境を構築します。
 
+\vspace*{\baselineskip}
+
 ステップ毎にGitHub上でブランチを作成してありますので、どこからでも始めていただけます。
+
+\begin{reviewimage}[H]%%fromScratch
+\includegraphics[width=0.4\maxwidth]{./images/02-create-react-app/fromScratch.png}%
+\label{image:02-create-react-app:fromScratch}
+\end{reviewimage}
 
 \subsection{ステップ1 Node.jsプロジェクト作成}
 \keeplastskip{
@@ -502,6 +520,10 @@ npx {-}{-}\textgreater{} /node\textunderscore{}modules/.binフォルダにある
 \reviewimagecaption{ブラウザで表示}
 \label{image:02-create-react-app:webpack_test01}
 \end{reviewimage}
+\begin{reviewimage}[H]%%ok2
+\includegraphics[width=0.4\maxwidth]{./images/02-create-react-app/ok2.png}%
+\label{image:02-create-react-app:ok2}
+\end{reviewimage}
 
 \clearpage
 
@@ -537,6 +559,10 @@ devToolsで「main.js」を確認すると、node\textunderscore{}modulesフォ�
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 02\textunderscore{}webpack{-}install https://github.com/yaruo{-}react{-}redux/yaruo{-}start{-}template.git}\end{starterterminal}
 \end{starternote}
+\begin{reviewimage}[H]%%git
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/git.png}%
+\label{image:02-create-react-app:git}
+\end{reviewimage}
 
 \clearpage
 
@@ -2275,6 +2301,10 @@ Prettierはインストールされていないためインストールします
 
 ESlint、Prettierは指摘するだけではなく、修正案の提示・修正(できるものだけですが...)までしてくれます。
 
+\begin{reviewimage}%%shutup
+\includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/shutup.png}%
+\label{image:02-create-react-app:shutup}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 VSCodeにPrettier拡張機能を追加してあれば、
@@ -2408,6 +2438,10 @@ VSCode上で、\\[0pt]
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{  \textdollar{} \textgreater{} git clone https://github.com/yaruo{-}react{-}redux/yaruo{-}cra{-}template.git}\end{starterterminal}
 \end{starternote}
+\begin{reviewimage}%%ok3
+\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/ok3.png}%
+\label{image:02-create-react-app:ok3}
+\end{reviewimage}
 
 \section{第2章のまとめ}
 \keeplastskip{

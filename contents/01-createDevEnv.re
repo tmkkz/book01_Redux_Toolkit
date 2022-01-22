@@ -47,7 +47,8 @@
 
 このように、今まではJavaScriptの実行環境はブラウザでしたが、NodeがあればJacaScriptをPC、サーバで実行できます。
 
-#@# Denoがあることを伝える
+//image[denojs][][scale=0.6,pos=H]
+
 //clearpage
 
 ==== Node.jsについて
@@ -61,6 +62,8 @@
 //footnote[fn-101][2022/12/17現在]
 
 LTS版、最新版は以下のロードマップにより更新されます。
+
+//image[newRelease][][scale=1.0,pos=H]
 
 //image[01_02nodejsRoadmap][Node.jsロードマップ][scale=1.0,pos=H]
 //clearpage
@@ -111,7 +114,10 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 
 === nvm
 
-nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、バージョンを切り替えることが簡単にできます。
+nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、
+バージョンを切り替えることが簡単にできます。
+
+//image[switchNodejs][][scale=0.6,pos=H]
 
 //blankline
 GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
@@ -333,6 +339,8 @@ v12.18.3
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
+//image[hanamaru][][scale=0.8]
+
 =={sec-vscode} Microsoft Visual Studio Code + 拡張機能
 Microsoft社が無料で提供している「テキストエディタ」です。Electron:@<href>{https://www.electronjs.org/}をベースにしたオープンソースで開発されています。
 
@@ -349,34 +357,31 @@ JavaScript以外の言語(C#、pythonなど)でも使えます。
 デバッグなども行えるため、Web開発では、事実上の標準と言っても良いでしょう。有料では、Jetbrains社:@<href>{https://www.jetbrains.com/}の
 Webstormがありますが、今回は、無償のVSCodeを使用します。
 
+//image[freeSoftware][][scale=0.5,pos=H]
 === VSCodeのインストール
 
 VSCodeのインストールは@<br>{}
 本家サイト
 @<href>{https://code.visualstudio.com/}
 
+//blankline
 から、ダウンロード後インストールしてください。
 
+//blankline
 または、以下の方法でもインストールできます。
 
 ==== Windows
-パッケージマネージャー「Chocolatey」をお使いの方は、@<br>{}
-//terminal[][Chocolatey]{
-  choco install vscode
-//}
-にて、インストールできます。
-
-パッケージマネージャー「winget」をお使いの方は、@<br>{}
+パッケージマネージャー「winget」をお使いの方は、
 //terminal[][winget]{
   winget install -e --id Microsoft.VisualStudioCode
 //}
 にて、インストールできます。
 
 ==== macOS
-パッケージマネージャーに「brew」をお使いの方は、@<br>{}
+パッケージマネージャーに「brew」をお使いの方は、
 //terminal[][Homebrew]{
-  $ > brew update
-  $ > brew cask install visual-studio-code
+  > brew update
+  > brew cask install visual-studio-code
 //}
 にて、インストールできます。
 
@@ -384,6 +389,8 @@ VSCodeのインストールは@<br>{}
 VSCodeは、プラグイン形式で拡張機能を追加できます。
 
 React、Reduxを使用したプロジェクトでは、以下をインストールすると便利です。
+
+//image[extensions][][scale=0.5]
 
 VSCodeを起動し、左ツールバーの拡張機能アイコンをクリックします。
 //image[01_03vscodeExtension][VSCodeの拡張機能][scale=1.0,pos=H]
@@ -461,3 +468,5 @@ React、Reduxの開発環境は、できましたでしょうか？
  * Google Chrome + 拡張機能
 
 のインストールを完了してください。
+
+//image[chap01-done][][scale=0.6]

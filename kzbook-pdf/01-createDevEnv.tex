@@ -60,11 +60,15 @@
 このスクリプトをターミナル上で実行します。「node」コマンドに実行したいJavaScriptファイルを引数として渡します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_152393477]{リスト1.2: app.jsを実行}\seqsplit{  ❯ node test01.js
+\begin{starterterminal}[_306269323]{リスト1.2: app.jsを実行}\seqsplit{  ❯ node test01.js
   やる夫が、こんなこと言ってます。こまけぇこたぁいいんだよ}\end{starterterminal}
 
 このように、今まではJavaScriptの実行環境はブラウザでしたが、NodeがあればJacaScriptをPC、サーバで実行できます。
 
+\begin{reviewimage}[H]%%denojs
+\includegraphics[width=0.6\maxwidth]{./images/01-createDevEnv/denojs.png}%
+\label{image:01-createDevEnv:denojs}
+\end{reviewimage}
 
 \clearpage
 
@@ -97,6 +101,10 @@
 
 LTS版、最新版は以下のロードマップにより更新されます。
 
+\begin{reviewimage}[H]%%newRelease
+\includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/newRelease.png}%
+\label{image:01-createDevEnv:newRelease}
+\end{reviewimage}
 \begin{reviewimage}[H]%%01_02nodejsRoadmap
 \includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_02nodejsRoadmap.png}%
 \reviewimagecaption{Node.jsロードマップ}
@@ -173,8 +181,13 @@ Node.jsのバージョン管理ツールを改めて選定する【2021年】\fo
   \par\nobreak
 }
 
-nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、バージョンを切り替えることが簡単にできます。
+nvm(node version manager)を使えば、複数バージョンのNode.jsを1台のPCにインストールし、
+バージョンを切り替えることが簡単にできます。
 
+\begin{reviewimage}[H]%%switchNodejs
+\includegraphics[width=0.6\maxwidth]{./images/01-createDevEnv/switchNodejs.png}%
+\label{image:01-createDevEnv:switchNodejs}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
@@ -189,7 +202,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGit
 お使いのTerminalから以下のコマンドを実行してください。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_120372761]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
+\begin{starterterminal}[_405664872]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
 
 インストール完了後には、.zshrcへ以下を追加してください。
 
@@ -380,6 +393,11 @@ v12.18.3}\end{starterterminal}
 
 以上で、複数のバージョンのNode.jsを切り替えて使える環境が構築できました。
 
+\begin{reviewimage}%%hanamaru
+\includegraphics[width=0.8\maxwidth]{./images/01-createDevEnv/hanamaru.png}%
+\label{image:01-createDevEnv:hanamaru}
+\end{reviewimage}
+
 \section{Microsoft Visual Studio Code + 拡張機能}
 \keeplastskip{
   \label{sec:1-2}
@@ -405,6 +423,11 @@ JavaScript以外の言語(C\#、pythonなど)でも使えます。
 デバッグなども行えるため、Web開発では、事実上の標準と言っても良いでしょう。有料では、Jetbrains社:\url{https://www.jetbrains.com/}の
 Webstormがありますが、今回は、無償のVSCodeを使用します。
 
+\begin{reviewimage}[H]%%freeSoftware
+\includegraphics[width=0.5\maxwidth]{./images/01-createDevEnv/freeSoftware.png}%
+\label{image:01-createDevEnv:freeSoftware}
+\end{reviewimage}
+
 \subsection{VSCodeのインストール}
 \keeplastskip{
   \label{sec:1-2-1}
@@ -415,7 +438,11 @@ VSCodeのインストールは\\[0pt]
 本家サイト
 \url{https://code.visualstudio.com/}
 
+\vspace*{\baselineskip}
+
 から、ダウンロード後インストールしてください。
+
+\vspace*{\baselineskip}
 
 または、以下の方法でもインストールできます。
 
@@ -425,14 +452,7 @@ VSCodeのインストールは\\[0pt]
   \par\nobreak
 }
 
-パッケージマネージャー「Chocolatey」をお使いの方は、\\[0pt]
-
-\def\startercodeblockfontsize{}
-\begin{starterterminal}[]{Chocolatey}\seqsplit{  choco install vscode}\end{starterterminal}
-
-にて、インストールできます。
-
-パッケージマネージャー「winget」をお使いの方は、\\[0pt]
+パッケージマネージャー「winget」をお使いの方は、
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{winget}\seqsplit{  winget install {-}e {-}{-}id Microsoft.VisualStudioCode}\end{starterterminal}
@@ -445,11 +465,11 @@ VSCodeのインストールは\\[0pt]
   \par\nobreak
 }
 
-パッケージマネージャーに「brew」をお使いの方は、\\[0pt]
+パッケージマネージャーに「brew」をお使いの方は、
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[]{Homebrew}\seqsplit{  \textdollar{} \textgreater{} brew update
-  \textdollar{} \textgreater{} brew cask install visual{-}studio{-}code}\end{starterterminal}
+\begin{starterterminal}[]{Homebrew}\seqsplit{  \textgreater{} brew update
+  \textgreater{} brew cask install visual{-}studio{-}code}\end{starterterminal}
 
 にて、インストールできます。
 
@@ -462,6 +482,11 @@ VSCodeのインストールは\\[0pt]
 VSCodeは、プラグイン形式で拡張機能を追加できます。
 
 React、Reduxを使用したプロジェクトでは、以下をインストールすると便利です。
+
+\begin{reviewimage}%%extensions
+\includegraphics[width=0.5\maxwidth]{./images/01-createDevEnv/extensions.png}%
+\label{image:01-createDevEnv:extensions}
+\end{reviewimage}
 
 VSCodeを起動し、左ツールバーの拡張機能アイコンをクリックします。
 
@@ -624,3 +649,8 @@ React、Reduxの開発環境は、できましたでしょうか？
 \end{starteritemize}
 
 のインストールを完了してください。
+
+\begin{reviewimage}%%chap01-done
+\includegraphics[width=0.6\maxwidth]{./images/01-createDevEnv/chap01-done.png}%
+\label{image:01-createDevEnv:chap01-done}
+\end{reviewimage}
