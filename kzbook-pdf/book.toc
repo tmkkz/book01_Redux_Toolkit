@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.2.3}webpackの動作確認}{37}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}webpackの設定ファイル}{44}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}webpack設定ファイルを分割する}{55}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Babel.jsのインストールと設定}{59}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.6}Babel.jsのインストールと設定}{60}{subsection.2.2.6}%
 \contentsline {subsection}{\numberline {2.2.7}Reactのインストール}{68}{subsection.2.2.7}%
 \contentsline {subsection}{\numberline {2.2.8}TypeScriptのインストール}{74}{subsection.2.2.8}%
 \contentsline {section}{\numberline {2.3}eslint、prettierとは？}{82}{section.2.3}%

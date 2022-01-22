@@ -58,8 +58,8 @@
 
 //image[01_01nodejsTop][Node.jsトップページ][scale=1.0,pos=H]
 
-ここでダウンロード可能なのは、「16.13.1 LTS(Long Term Support)推奨版」と「17.3.0最新版」@<fn>{fn-101}の2つがあります。
-//footnote[fn-101][2022/12/17現在]
+ここでダウンロード可能なのは、「16.13.2 LTS(Long Term Support)推奨版」と「17.4.0最新版」@<fn>{fn-101}の2つがあります。
+//footnote[fn-101][2022/1/17現在]
 
 LTS版、最新版は以下のロードマップにより更新されます。
 
@@ -200,8 +200,7 @@ Usage:
 //}
 
 //paragraphend
-===== インストール可能なNode.jsを表示@<br>{}
-
+===== インストール可能なNode.jsを表示
 まずは、インストール可能なNode.jsのバージョンを表示してみます。
 macOSの場合には、古いバージョンから最新バージョンまでが表示されます。
 
@@ -221,6 +220,8 @@ v14.15.2   (Latest LTS: Fermium)
  v15.3.0
  v15.4.0
 //}
+
+//image[waiting][][scale=0.5,pos=H]
 
 //clearpage
 一方、Windowsの場合には、表形式で表示されます。新しいバージョンが上に表示されます。
@@ -319,7 +320,7 @@ PS C:\Users\inabakazuya> nvm ls
   * 8.16.1 (Currently using 64-bit executable)
 //}
 
-
+//clearpage
 ===== 使用するNode.jsのバージョン切り替え
 
 先ほどの「インストールされているNode.jsのバージョン表示」で、現在使われているNode.jsのバージョンも表示されています。
@@ -393,7 +394,7 @@ React、Reduxを使用したプロジェクトでは、以下をインストー�
 //image[extensions][][scale=0.5]
 
 VSCodeを起動し、左ツールバーの拡張機能アイコンをクリックします。
-//image[01_03vscodeExtension][VSCodeの拡張機能][scale=1.0,pos=H]
+//image[01_03vscodeExtension][VSCodeの拡張機能][scale=0.9,pos=H]
 
 ここの検索窓に拡張機能の名前、キーワードを入力して検索します。
 

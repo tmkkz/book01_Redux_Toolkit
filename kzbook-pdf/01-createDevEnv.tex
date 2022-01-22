@@ -60,7 +60,7 @@
 このスクリプトをターミナル上で実行します。「node」コマンドに実行したいJavaScriptファイルを引数として渡します。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_938432367]{リスト1.2: app.jsを実行}\seqsplit{  ❯ node test01.js
+\begin{starterterminal}[_866755657]{リスト1.2: app.jsを実行}\seqsplit{  ❯ node test01.js
   やる夫が、こんなこと言ってます。こまけぇこたぁいいんだよ}\end{starterterminal}
 
 このように、今まではJavaScriptの実行環境はブラウザでしたが、NodeがあればJacaScriptをPC、サーバで実行できます。
@@ -97,7 +97,7 @@
 \label{image:01-createDevEnv:01_01nodejsTop}
 \end{reviewimage}
 
-ここでダウンロード可能なのは、「16.13.1 LTS(Long Term Support)推奨版」と「17.3.0最新版」\footnote{2022/12/17現在}の2つがあります。
+ここでダウンロード可能なのは、「16.13.2 LTS(Long Term Support)推奨版」と「17.4.0最新版」\footnote{2022/1/17現在}の2つがあります。
 
 LTS版、最新版は以下のロードマップにより更新されます。
 
@@ -202,7 +202,7 @@ Windows版:\url{https://github.com/coreybutler/nvm-windows}は、別な方がGit
 お使いのTerminalから以下のコマンドを実行してください。
 
 \def\startercodeblockfontsize{}
-\begin{starterterminal}[_268969176]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
+\begin{starterterminal}[_941000028]{リスト1.3: nvmのインストール}\seqsplit{  \textgreater{}curl {-}o{-} https://raw.githubusercontent.com/nvm{-}sh/nvm/v0.39.0/install.sh \textbar{} bash}\end{starterterminal}
 
 インストール完了後には、.zshrcへ以下を追加してください。
 
@@ -268,7 +268,7 @@ Usage:
   nvm version                  : Displays the current running version of nvm for Windows. Aliased as v.}\end{starterterminal}
 \ParagraphEnd
 
-\paragraph*{インストール可能なNode.jsを表示\\[0pt]}
+\paragraph*{インストール可能なNode.jsを表示}
 まずは、インストール可能なNode.jsのバージョンを表示してみます。
 macOSの場合には、古いバージョンから最新バージョンまでが表示されます。
 
@@ -287,6 +287,10 @@ v14.15.2   (Latest LTS: Fermium)
  v15.2.1
  v15.3.0
  v15.4.0}\end{starterterminal}
+\begin{reviewimage}[H]%%waiting
+\includegraphics[width=0.5\maxwidth]{./images/01-createDevEnv/waiting.png}%
+\label{image:01-createDevEnv:waiting}
+\end{reviewimage}
 
 \clearpage
 
@@ -376,6 +380,9 @@ nvm use 14.15.2}\end{starterterminal}
     14.15.1
     12.13.1
   * 8.16.1 (Currently using 64{-}bit executable)}\end{starterterminal}
+
+\clearpage
+
 
 \paragraph*{使用するNode.jsのバージョン切り替え}
 先ほどの「インストールされているNode.jsのバージョン表示」で、現在使われているNode.jsのバージョンも表示されています。
@@ -491,7 +498,7 @@ React、Reduxを使用したプロジェクトでは、以下をインストー�
 VSCodeを起動し、左ツールバーの拡張機能アイコンをクリックします。
 
 \begin{reviewimage}[H]%%01_03vscodeExtension
-\includegraphics[width=1.0\maxwidth]{./images/01-createDevEnv/01_03vscodeExtension.png}%
+\includegraphics[width=0.9\maxwidth]{./images/01-createDevEnv/01_03vscodeExtension.png}%
 \reviewimagecaption{VSCodeの拡張機能}
 \label{image:01-createDevEnv:01_03vscodeExtension}
 \end{reviewimage}

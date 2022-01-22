@@ -2,7 +2,13 @@
 
 このたびは、「やる夫で学ぶ-Redux- Redux Toolkitは簡単だお･･･」を、手にしていただき誠にありがとうございます。
 
-//image[greetings][][scale=1.0]
+//blankline
+最初に、この本を書くきっかけになった、「2chのやる夫スレ」に投稿された皆様と
+「AAスレ作成アプリAAストーリーボード」を開発されたtkg様に感謝します。
+
+//image[r401][][scale=0.5,pos=H]
+
+//image[greetings][][scale=0.8]
 //blankline
 //blankline
 私は15年近くVisual Studio上でC#を使ってUIのあるプログラムを書いていました。

@@ -54,6 +54,7 @@ Reactアプリケーションをゼロから作成するためには、
 
 //image[oneCommand][][scale=0.7,pos=H]
 
+//clearpage
 では、実際に手を動かしましょう。
 ターミナルを起動し、プロジェクトを作成するフォルダへ移動します。
 
@@ -417,7 +418,7 @@ webpackのデフォルトの出力先「dist」フォルダを作成し、「ind
   </html>
 //}
 
-//blankline
+//clearpage
 
 @<strong>{4. 動作を確認}@<br>{}
 webpackの動作を確認するために、ターミナルで以下のコマンドを実行します。
@@ -1064,6 +1065,7 @@ webpackの設定ファイル名がデフォルトから変更になったので�
 #@#<!-- textlint-enable -->
 //}
 
+//clearpage
 ==={sec04-babeljs} Babel.jsのインストールと設定
 Babel.jsとは、Babel.jsのトップページの例にあるように、
 モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれる
@@ -1163,6 +1165,7 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 
 //image[pray2][][scale=0.8,pos=H]
 
+//clearpage
 「src/index.js」に少しコードを追加します。
 ES6で新しく使えるようになったテンプレートリテラルを使用したコードです。
 
@@ -1748,6 +1751,7 @@ Ok to proceed? (y) y
 $ npx eslint --print-config .eslintrc.js > current_rules.txt
 //}
 
+//clearpage
 「eslint --init」時にインストールされたルールが適用されるように「extends」に追加します。
 
 //blankline
