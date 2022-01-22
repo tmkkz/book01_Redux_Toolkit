@@ -52,9 +52,8 @@ Reactアプリケーションをゼロから作成するためには、
 //blankline
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
 
-//image[oneCommand][][scale=0.5,pos=H]
+//image[oneCommand][][scale=0.7,pos=H]
 
-//blankline
 では、実際に手を動かしましょう。
 ターミナルを起動し、プロジェクトを作成するフォルダへ移動します。
 
@@ -65,8 +64,7 @@ Reactアプリケーションをゼロから作成するためには、
 エンターキーを押すと、作業が始まり「プロジェクト名」のフォルダが作成され、
 以下のように表示されればスグにでも開発に取りかかれます。
 
-#@# create-react-app やる夫 注釈
-
+//image[cra-options][][scale=0.7,pos=H]
 
 
 //terminal[][create-react-app完了時]{
@@ -111,7 +109,6 @@ Reactアプリケーションをゼロから作成するためには、
 
 ==={sec-02yarnstart} アプリケーションを実行
 アプリケーションが作成できましたので、実行してみます。
-
 ターミナルの表示に従い、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 //terminal[][プロジェクトの実行]{
@@ -137,15 +134,17 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 
 //image[ok][][scale=0.5,pos=H]
 
-//image[02_cra_start][create-react-appの画面][scale=1.0,pos=H]
+//image[02_cra_start][create-react-appの画面][scale=0.9,pos=H]
 
 このページが表示されれば成功です。
+
+//clearpage
 
 ==={sec-03cra-desc} create-react-appで作成された中身
 
 create-react-appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
-//image[noMatter][][scale=0.5,pos=H]
+//image[noMatter][][scale=0.7,pos=H]
 
 //terminal[][create-react-appで作成されたファイル・フォルダ]{
   .
@@ -179,6 +178,7 @@ package.jsonファイルは、Node.jsを使用するプロジェクトの設計�
 Node.jsを使うプロジェクトを開始する場合には、プロジェクトフォルダで「npm init」を行うと対話形式で「package.json」を作成しますが、
 create-react-appコマンドを使用すると、package.jsonも以下のように作成されます。
 
+//clearpage
 //list[][package.json]{
   {
     "name": "作成時に入力したプロジェクト名",
@@ -233,6 +233,8 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 //blankline
 また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
+
+//image[buildFile][][scale=1.0,pos=H]
 
 =={sec-04-start}　ゼロから構築してみる
 
@@ -301,6 +303,8 @@ webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある�
  などをすべてJavaScriptファイルとして扱い、インストールしているライブラリファイルなどもすべて含めて
  1つのファイルとして出力するバンドラー(まとめる)です。
 
+//image[bandle][][scale=0.7,pos=H]
+
 //blankline
 しかし、すべてを1つのファルとするよりも「htmlファイル」、「cssファイル」、画像ファイルを別ファイルとして出力し、
 ブラウザがファイルを並列にダウンロードできると効率がよくなり、表示速度も速くなります。
@@ -368,6 +372,8 @@ webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある�
 
 インストールしたwebpackの動作を確認してみます。
 
+//image[pray][][scale=0.6,pos=H]
+
 //blankline
 確認方法は、便利な関数をまとめてある「lodash」ライブラリをインストールし、トップページを作成し動作確認します。
 
@@ -420,7 +426,6 @@ webpackの動作を確認するために、ターミナルで以下のコマン�
  > npx webpack serve --open --static-directory dist --mode=development
 //}
 
-//clearpage
 //note[コマンド解説]{
 npx --> /node_modules/.binフォルダにあるファイルを実行@<br>{}
   　webpack --> 今回動かすモジュール@<br>{}
@@ -462,8 +467,10 @@ npx --> /node_modules/.binフォルダにあるファイルを実行@<br>{}
 「--open」オプションでデフォルトのブラウザが起動し、index.htmlが表示されます。
 //image[webpack_test01][ブラウザで表示][scale=0.8,border=on]
 
-//image[ok2][][scale=0.4,pos=H]
+//image[ok2][][scale=0.6,pos=H]
 //clearpage
+
+
 devToolsで「main.js」を確認すると、node_modulesフォルダ以下にインストールされたJavaScriptが
 1つのファイルにまとめられているのが確認できます。
 //image[webpack_test02][devToolsでmain.js内を確認][scale=0.8]
@@ -496,10 +503,9 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 
 本章では、webpackの設定ファイル「webpack-config.js」を作成します。
 
-//blankline
-#@#<!-- textlint-disable -->
+//image[generateSettings][][scale=0.7,pos=H]
+
 手順は、
-#@#<!-- textlint-enable -->
 
  1. 「npx webpack-cli init」をターミナルで実行し、ひな型を作成。
  2. 必要なpluginのインストールと設定ファイルへの追加
@@ -669,6 +675,8 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 //}
 
 @<strong>{プラグインのインストール}@<br>{}
+
+//image[plugins][][scale=0.7,pos=H]
 追加で、以下のプラグイン、ローダも追加します。
 
  * uglify-js プロダクション出力時にconsole関数を除去
@@ -844,9 +852,8 @@ OS毎にChromeのアプリケーション名が違うためOSを取得し対応�
 また、「index.html」には、作成された「main.js」、「main.css」を読み込む部分はありませんが、
 webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されています。
 
-//image[webpack_test04][desc][scale=0.7,border=on]
+//image[webpack_test04][desc][scale=0.6,border=on,pos=H]
 
-//clearpage
 次にプロダクション用にビルドしてみます。
 
 //terminal[][ビルド]{
@@ -883,8 +890,10 @@ devServer関連はプロダクションには関係ありませんし、minimize
 
 @<href>{https://webpack.js.org/guides/production/, 本家でも推奨}されています。
 
+//image[divid][][scale=0.7,pos=H]
+
 //blankline
-「webpack.config.js」を以下のよう分割し、共用部分は「webpack-merge」を使用して統合します。
+「webpack.config.js」を以下のよう分割し、共用部分は「webpack-merge」を使用して統合します。@<br>{}
 
  * 共用 webpack.common.js
  * 開発用 webpack.dev.js
@@ -1057,23 +1066,25 @@ webpackの設定ファイル名がデフォルトから変更になったので�
 
 ==={sec04-babeljs} Babel.jsのインストールと設定
 Babel.jsとは、Babel.jsのトップページの例にあるように、
-モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれるトランスコンパイラ(変換器)です。
+モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれる
+トランスコンパイラ(変換器)です。
 
-//image[babel01][Babel.js本家ページ][scale=1.0]
+//image[babel01][Babel.js本家ページ][scale=0.9,pos=H]
 
 それでは、プロジェクトに「Babel.js」を導入していきます。
 
-//blankline
+//image[transpaile][][scale=0.8,pos=H]
+
 Babel.jsのトップページの上部にあるメニューの「Setup」をクリックします。すると、手順に従うように番号のついた案内ページが表示されます。
 
-//image[babel02][使用するツールを選択][scale=1.0]
+//image[babel02][使用するツールを選択][scale=0.9,pos=H]
 
 このプロジェクトでは、「webpack」を使用しますので、「webpack」ボタンをクリックします。
 
 //blankline
 手順2〜4が表示されましたので、順に実行していきます。
 
-//image[babel03][パッケージのpa][scale=1.0]
+//image[babel03][babelのインストール手順][scale=0.9,pos=H]
 
 //clearpage
 最初に指示されているパッケージをインストールします。今までnpmでインストール時に「-D」としていたのは、
@@ -1150,6 +1161,8 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 
 ==== 動作を確認してみる。
 
+//image[pray2][][scale=0.8,pos=H]
+
 「src/index.js」に少しコードを追加します。
 ES6で新しく使えるようになったテンプレートリテラルを使用したコードです。
 
@@ -1210,6 +1223,8 @@ Reactは、拡張子「.jsx」を使ったHTMLにJavaScriptを埋め込むコン
 通常のJavaScriptとは記法が違うため「Babel.js」に理解してもらえるように「@babel/preset-react」を
 インストールします。
 
+//image[react-kita][][scale=0.8,pos=H]
+
 //image[babel08][@babel/preset-react][scale=0.9]
 
 //clearpage
@@ -1243,10 +1258,9 @@ Reactを使うためにインストールするパッケージは、
 
 以上で、Reactのインストールは完了しましたので動作確認を行います。
 
-//blankline
-#@#<!-- textlint-disable -->
+//image[pray3][][scale=0.7,pos=H]
+
 手順は、
-#@#<!-- textlint-enable -->
 
  1. src/index.htmlに描画する場所を指定する。
  2. src/index.jsで上記「index.html」へReactDOMで描画する。
@@ -1371,7 +1385,7 @@ HTML内にJavaScriptを埋め込む記法となります。
  > npm run start
 //}
 
-//image[babel09][reactの動作確認][scale=1.0]
+//image[babel09][reactの動作確認][scale=0.7]
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -1400,6 +1414,8 @@ HTML内にJavaScriptを埋め込む記法となります。
 //}
 
 次に、TypeScriptのコンパイラ設定ファイル「tsconfig.json」を作成します。
+
+//image[tsconfig][][scale=0.7,pos=H]
 
 //terminal[][tsconfig.jsonの作成]{
  > npx tsc --init
@@ -1488,9 +1504,7 @@ Microsoftお勧めの設定に修正したものが、こちらです。コメ�
 
 //}
 
-#@#<!-- textlint-disable -->
-TypeScriptは、ファイル拡張子が
-#@#<!-- textlint-enable -->
+TypeScriptは、ファイル拡張子が、
 
  * .js ---> .ts
  * .jsx --> .tsx
@@ -1529,16 +1543,15 @@ TypeScriptは、ファイル拡張子が
  > npm install -D @types/node @types/react @types/react-dom
 //}
 
-#@#<!-- textlint-disable -->
-型定義のインストールが完了しても、「App.tsx」で
-#@#<!-- textlint-enable -->
+
+型定義のインストールが完了しても、「App.tsx」で、
 
  * lodashの型定義がない
  * yaruo.pngの型定義がない
 
  と、エラーが表示されています。
 
-//image[typescript02][App.tsxでエラー表示][scale=0.7]
+//image[typescript02][App.tsxでエラー表示][scale=0.7,pos=H]
 
 //clearpage
 「lodash」の型定義はインストールすればエラーが消えますが、今後「lodash」は使わないので
@@ -1575,9 +1588,8 @@ declare module '*.png'
 
 lodash部分のコードが削除されたトップページを表示します。
 
-//image[typescript03][TypeScript導入後動作確認][scale=0.6]
+//image[typescript03][TypeScript導入後動作確認][scale=0.6,pos=H]
 
-//clearpage
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
@@ -1597,6 +1609,8 @@ lodash部分のコードが削除されたトップページを表示します�
 
 //blankline
 JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろん、Java、HTML、Pythonなどにもlinterがあります。
+
+//image[linter][][scale=0.7,pos=H]
 
 //blankline
 「eslint」は、設定ファイルで指定されたルールと違うコードの書き方をしている部分を指摘してくれます。
@@ -1722,6 +1736,8 @@ Ok to proceed? (y) y
 設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
 適用されるルールが、「current_rules.txt」に書き出されます。
 
+//image[rules][][scale=0.7,pos=H]
+
 //blankline
 書き出されたルールは、ルール名に適用方法{"off(適用しない)","warn(警告)","error(エラー)"}が記されています。
 表記は、{0,1,2}の数字で表示される場合もあります。
@@ -1765,7 +1781,8 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
 
 これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
 
-//blankline
+//image[rules2][][scale=0.7,pos=H]
+
 ルール「import/extensions」は、インポート宣言でnode_modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
 で、相対パスからのimportは、拡張子が必要と言うルールです。
 
@@ -1879,6 +1896,9 @@ React17からは、「import React from 'react'」を書かなくてもよくな
 //}
 
 Pretterのチェックを「.eslintrc.js」へ追加します。
+
+//image[prettier][][scale=0.7,pos=H]
+
 //list[][.eslintrc.js]{
   "extends": [
   'plugin:react/recommended',
@@ -1967,12 +1987,9 @@ The file must be included in at least one of the projects provided.
 ==={sec04-cra-with-eslint} create-react-app作成のプロジェクトへ「eslint,prettier」を設定
 「create-react-app」で作成したプロジェクトには、下図のようにeslintが組み込まれています。
 
-//image[cra-eslint01][create-react-appのeslint][scale=0.8]
+//image[cra-eslint01][create-react-appのeslint][scale=0.8,pos=H]
 
-//clearpage
-#@#<!-- textlint-disable -->
-「npx eslint --init」でインストールした
-#@#<!-- textlint-enable -->
+「npx eslint --init」でインストールした、
 
  * eslint-plugin-react@^7.27.1
  * @typescript-eslint/eslint-plugin@latest
@@ -1985,6 +2002,7 @@ The file must be included in at least one of the projects provided.
 
 のうち、airbnb以外はインストールされています。
 
+//blankline
 そのため、「eslint-config-airbnb」だけをインストールします。
 
 //terminal[][create-react-app作成プロジェクトへeslint-config-airbnbのインストール]{
@@ -2220,6 +2238,8 @@ VSCode上で、@<br>{}
 
 これで、トップページが表示されます。
 
+//image[ok3][][scale=0.5]
+
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
@@ -2228,8 +2248,6 @@ VSCode上で、@<br>{}
 //}
 #@#<!-- textlint-enable -->
 //}
-
-//image[ok3][][scale=0.5]
 
 =={sec-chap02review} 第2章のまとめ
 #@#<!-- textlint-disable -->

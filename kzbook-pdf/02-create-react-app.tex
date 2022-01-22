@@ -62,10 +62,9 @@ Reactアプリケーションをゼロから作成するためには、
 さらに、そのスタート用アプリケーションは、コマンド一発でインストールできます。
 
 \begin{reviewimage}[H]%%oneCommand
-\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/oneCommand.png}%
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/oneCommand.png}%
 \label{image:02-create-react-app:oneCommand}
 \end{reviewimage}
-\vspace*{\baselineskip}
 
 では、実際に手を動かしましょう。
 ターミナルを起動し、プロジェクトを作成するフォルダへ移動します。
@@ -76,6 +75,10 @@ Reactアプリケーションをゼロから作成するためには、
 エンターキーを押すと、作業が始まり「プロジェクト名」のフォルダが作成され、
 以下のように表示されればスグにでも開発に取りかかれます。
 
+\begin{reviewimage}[H]%%cra-options
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/cra-options.png}%
+\label{image:02-create-react-app:cra-options}
+\end{reviewimage}
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{create{-}react{-}app完了時}\seqsplit{  Success! Created yaruo{-}cra{-}template at /Users/yaruo/yaruo{-}cra{-}template
   Inside that directory, you can run several commands:
@@ -121,7 +124,6 @@ Reactアプリケーションをゼロから作成するためには、
 }
 
 アプリケーションが作成できましたので、実行してみます。
-
 ターミナルの表示に従い、プロジェクトフォルダへ移動し、スタート用のコマンドを入力します。
 
 \def\startercodeblockfontsize{}
@@ -148,12 +150,16 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 \label{image:02-create-react-app:ok}
 \end{reviewimage}
 \begin{reviewimage}[H]%%02_cra_start
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/02_cra_start.png}%
+\includegraphics[width=0.9\maxwidth]{./images/02-create-react-app/02_cra_start.png}%
 \reviewimagecaption{create{-}react{-}appの画面}
 \label{image:02-create-react-app:02_cra_start}
 \end{reviewimage}
 
 このページが表示されれば成功です。
+
+
+\clearpage
+
 
 \subsection{create{-}react{-}appで作成された中身}
 \keeplastskip{
@@ -165,7 +171,7 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 create{-}react{-}appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
 \begin{reviewimage}[H]%%noMatter
-\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/noMatter.png}%
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/noMatter.png}%
 \label{image:02-create-react-app:noMatter}
 \end{reviewimage}
 \def\startercodeblockfontsize{}
@@ -199,6 +205,9 @@ package.jsonファイルは、Node.jsを使用するプロジェクトの設計�
 
 Node.jsを使うプロジェクトを開始する場合には、プロジェクトフォルダで「npm init」を行うと対話形式で「package.json」を作成しますが、
 create{-}react{-}appコマンドを使用すると、package.jsonも以下のように作成されます。
+
+
+\clearpage
 
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{package.json}\seqsplit{  \{
@@ -255,6 +264,11 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 \vspace*{\baselineskip}
 
 また、開発時のみ必要なパッケージ(buildしたときには組み込まれない)は、「devDependencies」に追加されます。
+
+\begin{reviewimage}[H]%%buildFile
+\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/buildFile.png}%
+\label{image:02-create-react-app:buildFile}
+\end{reviewimage}
 
 \section{　ゼロから構築してみる}
 \keeplastskip{
@@ -343,6 +357,10 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 などをすべてJavaScriptファイルとして扱い、インストールしているライブラリファイルなどもすべて含めて
 1つのファイルとして出力するバンドラー(まとめる)です。
 
+\begin{reviewimage}[H]%%bandle
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/bandle.png}%
+\label{image:02-create-react-app:bandle}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 しかし、すべてを1つのファルとするよりも「htmlファイル」、「cssファイル」、画像ファイルを別ファイルとして出力し、
@@ -418,6 +436,10 @@ webpackとは、(本家\footnote{\url{https://webpack.js.org/}})のトップに�
 
 インストールしたwebpackの動作を確認してみます。
 
+\begin{reviewimage}[H]%%pray
+\includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/pray.png}%
+\label{image:02-create-react-app:pray}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 確認方法は、便利な関数をまとめてある「lodash」ライブラリをインストールし、トップページを作成し動作確認します。
@@ -468,9 +490,6 @@ webpackの動作を確認するために、ターミナルで以下のコマン�
 
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{webpack実行後、ブラウザで表示}\seqsplit{ \textgreater{} npx webpack serve {-}{-}open {-}{-}static{-}directory dist {-}{-}mode=development}\end{starterterminal}
-
-\clearpage
-
 \begin{starternote}[]{コマンド解説}
 
 npx {-}{-}\textgreater{} /node\textunderscore{}modules/.binフォルダにあるファイルを実行\\[0pt]
@@ -521,7 +540,7 @@ npx {-}{-}\textgreater{} /node\textunderscore{}modules/.binフォルダにある
 \label{image:02-create-react-app:webpack_test01}
 \end{reviewimage}
 \begin{reviewimage}[H]%%ok2
-\includegraphics[width=0.4\maxwidth]{./images/02-create-react-app/ok2.png}%
+\includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/ok2.png}%
 \label{image:02-create-react-app:ok2}
 \end{reviewimage}
 
@@ -578,7 +597,10 @@ devToolsで「main.js」を確認すると、node\textunderscore{}modulesフォ�
 
 本章では、webpackの設定ファイル「webpack{-}config.js」を作成します。
 
-\vspace*{\baselineskip}
+\begin{reviewimage}[H]%%generateSettings
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/generateSettings.png}%
+\label{image:02-create-react-app:generateSettings}
+\end{reviewimage}
 
 手順は、
 
@@ -755,6 +777,12 @@ devToolsで「main.js」を確認すると、node\textunderscore{}modulesフォ�
 }\end{starterprogram}
 
 {\reviewstrong{プラグインのインストール}}\\[0pt]
+
+\begin{reviewimage}[H]%%plugins
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/plugins.png}%
+\label{image:02-create-react-app:plugins}
+\end{reviewimage}
+
 追加で、以下のプラグイン、ローダも追加します。
 
 \begin{starteritemize}
@@ -930,16 +958,13 @@ OS毎にChromeのアプリケーション名が違うためOSを取得し対応�
 また、「index.html」には、作成された「main.js」、「main.css」を読み込む部分はありませんが、
 webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されています。
 
-\begin{reviewimage}%%webpack_test04
+\begin{reviewimage}[H]%%webpack_test04
 \starterimageframe{%
-\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/webpack_test04.png}%
+\includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/webpack_test04.png}%
 }%
 \reviewimagecaption{desc}
 \label{image:02-create-react-app:webpack_test04}
 \end{reviewimage}
-
-\clearpage
-
 
 次にプロダクション用にビルドしてみます。
 
@@ -984,9 +1009,13 @@ devServer関連はプロダクションには関係ありませんし、minimize
 
 本家でも推奨\footnote{\url{https://webpack.js.org/guides/production/}}されています。
 
+\begin{reviewimage}[H]%%divid
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/divid.png}%
+\label{image:02-create-react-app:divid}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
-「webpack.config.js」を以下のよう分割し、共用部分は「webpack{-}merge」を使用して統合します。
+「webpack.config.js」を以下のよう分割し、共用部分は「webpack{-}merge」を使用して統合します。\\[0pt]
 
 \begin{starteritemize}
 \item 共用 webpack.common.js
@@ -1164,22 +1193,26 @@ webpackの設定ファイル名がデフォルトから変更になったので�
 }
 
 Babel.jsとは、Babel.jsのトップページの例にあるように、
-モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれるトランスコンパイラ(変換器)です。
+モダンJS(ES2015移行のJavaScript)を未対応の古いブラウザでも解釈できるようなJavaScriptに変換してくれる
+トランスコンパイラ(変換器)です。
 
-\begin{reviewimage}%%babel01
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel01.png}%
+\begin{reviewimage}[H]%%babel01
+\includegraphics[width=0.9\maxwidth]{./images/02-create-react-app/babel01.png}%
 \reviewimagecaption{Babel.js本家ページ}
 \label{image:02-create-react-app:babel01}
 \end{reviewimage}
 
 それでは、プロジェクトに「Babel.js」を導入していきます。
 
-\vspace*{\baselineskip}
+\begin{reviewimage}[H]%%transpaile
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/transpaile.png}%
+\label{image:02-create-react-app:transpaile}
+\end{reviewimage}
 
 Babel.jsのトップページの上部にあるメニューの「Setup」をクリックします。すると、手順に従うように番号のついた案内ページが表示されます。
 
-\begin{reviewimage}%%babel02
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel02.png}%
+\begin{reviewimage}[H]%%babel02
+\includegraphics[width=0.9\maxwidth]{./images/02-create-react-app/babel02.png}%
 \reviewimagecaption{使用するツールを選択}
 \label{image:02-create-react-app:babel02}
 \end{reviewimage}
@@ -1190,9 +1223,9 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 
 手順2〜4が表示されましたので、順に実行していきます。
 
-\begin{reviewimage}%%babel03
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel03.png}%
-\reviewimagecaption{パッケージのpa}
+\begin{reviewimage}[H]%%babel03
+\includegraphics[width=0.9\maxwidth]{./images/02-create-react-app/babel03.png}%
+\reviewimagecaption{babelのインストール手順}
 \label{image:02-create-react-app:babel03}
 \end{reviewimage}
 
@@ -1272,6 +1305,10 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
   \label{sec:2-2-6-1}
   \par\nobreak
 }
+\begin{reviewimage}[H]%%pray2
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/pray2.png}%
+\label{image:02-create-react-app:pray2}
+\end{reviewimage}
 
 「src/index.js」に少しコードを追加します。
 ES6で新しく使えるようになったテンプレートリテラルを使用したコードです。
@@ -1352,6 +1389,10 @@ Reactは、拡張子「.jsx」を使ったHTMLにJavaScriptを埋め込むコン
 通常のJavaScriptとは記法が違うため「Babel.js」に理解してもらえるように「@babel/preset{-}react」を
 インストールします。
 
+\begin{reviewimage}[H]%%react-kita
+\includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/react-kita.png}%
+\label{image:02-create-react-app:react-kita}
+\end{reviewimage}
 \begin{reviewimage}%%babel08
 \includegraphics[width=0.9\maxwidth]{./images/02-create-react-app/babel08.png}%
 \reviewimagecaption{@babel/preset{-}react}
@@ -1388,7 +1429,10 @@ Reactを使うためにインストールするパッケージは、
 
 以上で、Reactのインストールは完了しましたので動作確認を行います。
 
-\vspace*{\baselineskip}
+\begin{reviewimage}[H]%%pray3
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/pray3.png}%
+\label{image:02-create-react-app:pray3}
+\end{reviewimage}
 
 手順は、
 
@@ -1514,7 +1558,7 @@ HTML内にJavaScriptを埋め込む記法となります。
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{reactの動作確認}\seqsplit{ \textgreater{} npm run start}\end{starterterminal}
 \begin{reviewimage}%%babel09
-\includegraphics[width=1.0\maxwidth]{./images/02-create-react-app/babel09.png}%
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/babel09.png}%
 \reviewimagecaption{reactの動作確認}
 \label{image:02-create-react-app:babel09}
 \end{reviewimage}
@@ -1554,6 +1598,10 @@ HTML内にJavaScriptを埋め込む記法となります。
 
 次に、TypeScriptのコンパイラ設定ファイル「tsconfig.json」を作成します。
 
+\begin{reviewimage}[H]%%tsconfig
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/tsconfig.png}%
+\label{image:02-create-react-app:tsconfig}
+\end{reviewimage}
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{tsconfig.jsonの作成}\seqsplit{ \textgreater{} npx tsc {-}{-}init
 
@@ -1645,7 +1693,7 @@ Microsoftお勧めの設定に修正したものが、こちらです。コメ�
   \}
 \end{starterprogram}
 
-TypeScriptは、ファイル拡張子が
+TypeScriptは、ファイル拡張子が、
 
 \begin{starteritemize}
 \item .js {-}{-}{-}\textgreater{} .ts
@@ -1686,7 +1734,7 @@ TypeScriptは、ファイル拡張子が
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{React、Node.jsの型定義のインストール}\seqsplit{ \textgreater{} npm install {-}D @types/node @types/react @types/react{-}dom}\end{starterterminal}
 
-型定義のインストールが完了しても、「App.tsx」で
+型定義のインストールが完了しても、「App.tsx」で、
 
 \begin{starteritemize}
 \item lodashの型定義がない
@@ -1695,7 +1743,7 @@ TypeScriptは、ファイル拡張子が
 
 と、エラーが表示されています。
 
-\begin{reviewimage}%%typescript02
+\begin{reviewimage}[H]%%typescript02
 \includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/typescript02.png}%
 \reviewimagecaption{App.tsxでエラー表示}
 \label{image:02-create-react-app:typescript02}
@@ -1735,14 +1783,11 @@ TypeScriptは、ファイル拡張子が
 
 lodash部分のコードが削除されたトップページを表示します。
 
-\begin{reviewimage}%%typescript03
+\begin{reviewimage}[H]%%typescript03
 \includegraphics[width=0.6\maxwidth]{./images/02-create-react-app/typescript03.png}%
 \reviewimagecaption{TypeScript導入後動作確認}
 \label{image:02-create-react-app:typescript03}
 \end{reviewimage}
-
-\clearpage
-
 \begin{starternote}[]{}
 
 ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -1769,6 +1814,10 @@ lodash部分のコードが削除されたトップページを表示します�
 
 JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろん、Java、HTML、Pythonなどにもlinterがあります。
 
+\begin{reviewimage}[H]%%linter
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/linter.png}%
+\label{image:02-create-react-app:linter}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 「eslint」は、設定ファイルで指定されたルールと違うコードの書き方をしている部分を指摘してくれます。
@@ -1908,6 +1957,10 @@ Ok to proceed? (y) y}\end{starterterminal}
 設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
 適用されるルールが、「current\textunderscore{}rules.txt」に書き出されます。
 
+\begin{reviewimage}[H]%%rules
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/rules.png}%
+\label{image:02-create-react-app:rules}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 書き出されたルールは、ルール名に適用方法\{"off(適用しない)","warn(警告)","error(エラー)"\}が記されています。
@@ -1952,7 +2005,10 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
 
 これでルールの適用は完了しましたが、都合の悪いルールには設定ファイルでルールの上書をします。
 
-\vspace*{\baselineskip}
+\begin{reviewimage}[H]%%rules2
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/rules2.png}%
+\label{image:02-create-react-app:rules2}
+\end{reviewimage}
 
 ルール「import/extensions」は、インポート宣言でnode\textunderscore{}modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
 で、相対パスからのimportは、拡張子が必要と言うルールです。
@@ -2071,6 +2127,10 @@ React17からは、「import React from 'react'」を書かなくてもよくな
 
 Pretterのチェックを「.eslintrc.js」へ追加します。
 
+\begin{reviewimage}[H]%%prettier
+\includegraphics[width=0.7\maxwidth]{./images/02-create-react-app/prettier.png}%
+\label{image:02-create-react-app:prettier}
+\end{reviewimage}
 \def\startercodeblockfontsize{}
 \begin{starterprogram}[]{.eslintrc.js}\seqsplit{  "extends": [
   'plugin:react/recommended',
@@ -2166,16 +2226,13 @@ The file must be included in at least one of the projects provided.
 
 「create{-}react{-}app」で作成したプロジェクトには、下図のようにeslintが組み込まれています。
 
-\begin{reviewimage}%%cra-eslint01
+\begin{reviewimage}[H]%%cra-eslint01
 \includegraphics[width=0.8\maxwidth]{./images/02-create-react-app/cra-eslint01.png}%
 \reviewimagecaption{create{-}react{-}appのeslint}
 \label{image:02-create-react-app:cra-eslint01}
 \end{reviewimage}
 
-\clearpage
-
-
-「npx eslint {-}{-}init」でインストールした
+「npx eslint {-}{-}init」でインストールした、
 
 \begin{starteritemize}
 \item eslint{-}plugin{-}react@\textasciicircum{}7.27.1
@@ -2189,6 +2246,8 @@ The file must be included in at least one of the projects provided.
 \end{starteritemize}
 
 のうち、airbnb以外はインストールされています。
+
+\vspace*{\baselineskip}
 
 そのため、「eslint{-}config{-}airbnb」だけをインストールします。
 
@@ -2431,6 +2490,10 @@ VSCode上で、\\[0pt]
 
 これで、トップページが表示されます。
 
+\begin{reviewimage}%%ok3
+\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/ok3.png}%
+\label{image:02-create-react-app:ok3}
+\end{reviewimage}
 \begin{starternote}[]{}
 
 ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -2438,10 +2501,6 @@ VSCode上で、\\[0pt]
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{  \textdollar{} \textgreater{} git clone https://github.com/yaruo{-}react{-}redux/yaruo{-}cra{-}template.git}\end{starterterminal}
 \end{starternote}
-\begin{reviewimage}%%ok3
-\includegraphics[width=0.5\maxwidth]{./images/02-create-react-app/ok3.png}%
-\label{image:02-create-react-app:ok3}
-\end{reviewimage}
 
 \section{第2章のまとめ}
 \keeplastskip{

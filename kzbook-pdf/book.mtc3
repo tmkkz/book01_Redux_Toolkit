@@ -1,17 +1,17 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}create{-}react{-}appコマンド}{\reset@font\mtcSfont 26}{section.2.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}アプリケーションを実行}{\reset@font\mtcSSfont 28}{subsection.2.1.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}create{-}react{-}appで作成された中身}{\reset@font\mtcSSfont 29}{subsection.2.1.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}　ゼロから構築してみる}{\reset@font\mtcSfont 32}{section.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}ステップ1 Node.jsプロジェクト作成}{\reset@font\mtcSSfont 32}{subsection.2.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}webpackのインストールと設定}{\reset@font\mtcSSfont 33}{subsection.2.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}webpackの動作確認}{\reset@font\mtcSSfont 35}{subsection.2.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}webpackの設定ファイル}{\reset@font\mtcSSfont 42}{subsection.2.2.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.5}webpack設定ファイルを分割する}{\reset@font\mtcSSfont 53}{subsection.2.2.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.6}Babel.jsのインストールと設定}{\reset@font\mtcSSfont 57}{subsection.2.2.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.7}Reactのインストール}{\reset@font\mtcSSfont 65}{subsection.2.2.7}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.8}TypeScriptのインストール}{\reset@font\mtcSSfont 71}{subsection.2.2.8}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}eslint、prettierとは？}{\reset@font\mtcSfont 80}{section.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}eslint、prettierのインストール}{\reset@font\mtcSSfont 80}{subsection.2.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}create{-}react{-}app作成のプロジェクトへ「eslint,prettier」を設定}{\reset@font\mtcSSfont 88}{subsection.2.3.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}eslint、prettierの指摘を修正}{\reset@font\mtcSfont 93}{section.2.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}第2章のまとめ}{\reset@font\mtcSfont 98}{section.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}create{-}react{-}appで作成された中身}{\reset@font\mtcSSfont 30}{subsection.2.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}　ゼロから構築してみる}{\reset@font\mtcSfont 33}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}ステップ1 Node.jsプロジェクト作成}{\reset@font\mtcSSfont 33}{subsection.2.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}webpackのインストールと設定}{\reset@font\mtcSSfont 34}{subsection.2.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}webpackの動作確認}{\reset@font\mtcSSfont 37}{subsection.2.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}webpackの設定ファイル}{\reset@font\mtcSSfont 44}{subsection.2.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.5}webpack設定ファイルを分割する}{\reset@font\mtcSSfont 55}{subsection.2.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.6}Babel.jsのインストールと設定}{\reset@font\mtcSSfont 59}{subsection.2.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.7}Reactのインストール}{\reset@font\mtcSSfont 68}{subsection.2.2.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.8}TypeScriptのインストール}{\reset@font\mtcSSfont 74}{subsection.2.2.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}eslint、prettierとは？}{\reset@font\mtcSfont 82}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}eslint、prettierのインストール}{\reset@font\mtcSSfont 83}{subsection.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}create{-}react{-}app作成のプロジェクトへ「eslint,prettier」を設定}{\reset@font\mtcSSfont 92}{subsection.2.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}eslint、prettierの指摘を修正}{\reset@font\mtcSfont 96}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}第2章のまとめ}{\reset@font\mtcSfont 101}{section.2.5}}
