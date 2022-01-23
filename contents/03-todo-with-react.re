@@ -10,6 +10,8 @@
 サンプルアプリケーションで使用している書籍データ(表紙画像)は、
 @<href>{https://www.hanmoto.com/about_bookdata, 版元ドットコム}の規約に基づいています。
 
+//image[y-sample][][scale=0.7,pos=H]
+
 //clearpage
 =={sec-031React} Reactとは？
 
@@ -138,11 +140,15 @@ const App = () => (
 //blankline
 これが、「宣言的なView」、「コンポーネントベース」です。
 
-#@# jsxについてやる夫画像で解説
+//image[jsx01][][scale=0.9,pos=H]
+//image[jsx02][][scale=0.9,pos=H]
 
+//clearpage
 =={sec-032UIDataType} 表示するデータの型
 それでは、サンプルアプリケーションについて説明します。このサンプルアプリケーションは、読書日記としていますが
 通常の日記でもかまいません。
+
+//image[diaryData][][scale=0.6,pos=H]
 
 //blankline
 保持するデータは、
@@ -234,7 +240,9 @@ MUIを使うと、こんな画面もパーツを組み合わせるだけで構�
 
 //image[mui002-codesandbox][クリックでCodeSandboxを開いたところ][scale=0.6]
 
+//image[yaruo-ui][][scale=0.7,pos=H]
 
+//clearpage
 ==={sec-0330Install} MUIのインストール
 MUIのインストールは、MUIトップページから「Get started」ボタンをクリックすると表示されます。
 
@@ -255,6 +263,9 @@ npmを使ったインストールは、material-iconも含め以下となりま�
 #@#<!-- textlint-enable -->
 //}
 
+//image[yaruo-ui01][][scale=0.8,pos=H]
+
+//clearpage
 ==={sec-0330UI} データ表示画面を作る
 データの一覧画面を作成します。
 
@@ -271,34 +282,26 @@ npmを使ったインストールは、material-iconも含め以下となりま�
 
 ==={sec-0331} MUI5のサイトからテンプレートを拝借
 
-MUI5のサイトの左上部のメニューには、
+MUI5のサイトの左上部のをクリックするとメニューが表示されます。
 
- * Getting Started
- ** Templates
- * Components
- ** Buttonなどのコンポーネント
- * Compotent API
- ** ComponentのProps(引数)の詳細
-
- があります。
+//image[mui-siteMenu][MUIサイトメニュー][scale=0.5,pos=H]
 
 そのTemplateを選択すると、以下のようにMUIで作成されたサンプルページ(コンポーネントを組み合わせたもの)が表示されます。
 
-//image[mui004-templates][MUIのTemplateページ][scale=0.5]
+//image[mui004-templates][MUIのTemplateページ][scale=0.7,pos=H]
 
+//clearpage
 今回は、この中から「Album layout」を拝借して改造していきます。
 
-//clearpage
-//image[mui005-albumLayout][アルバムレイアウト][scale=0.5]
+//image[mui005-albumLayout][アルバムレイアウト][scale=0.6,pos=H]
 
+//clearpage
 先ほどのテンプレートページの「Album Layout」内の「SOURCECODE」をクリックします。
-
-//clearpage
-//image[mui006-albumLayoutSource][ソースコードへのリンク][scale=0.4]
+//image[mui006-albumLayoutSource][ソースコードへのリンク][scale=0.4,pos=H]
 
 MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがあります。今回は、Album.tsxを開きます。
 
-//image[mui007-albumLayoutSourceCode][GitHubでのAlbumのソースコード][scale=0.6]
+//image[mui007-albumLayoutSourceCode][GitHubでのAlbumのソースコード][scale=0.6,pos=H]
 
 //clearpage
 このコードを作成した「DiaryBoard.tsx」ファイルへ貼り付け、以下を変更します。
@@ -463,6 +466,8 @@ MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがありま
 
 この画面が表示されれば正常です。カードの画像はランダムですので、違っていてもかまいません。
 
+//image[yaruo-ui02][][scale=0.6,pos=H]
+
 //image[mui008-album-done][Album Layoutの拝借][scale=0.8]
 
 //clearpage
@@ -475,7 +480,7 @@ MUIのメニューから「Components > Card」をクリックすると、たく
 少し下へスクロールすると、こちらが見つかりました。
 「<>」アイコンをクリックすると、JS/TS別にソースコードが表示されます。
 
-//image[mui009-card-ComplexInteraction][MUIカードサンプル][scale=1.0]
+//image[mui009-card-ComplexInteraction][MUIカードサンプル][scale=0.9,pos=H]
 
 「src/components/」フォルダに「DiaryCard.tsx」ファイルを作成しソースコードをコピペします。
 
@@ -487,7 +492,8 @@ MUIのメニューから「Components > Card」をクリックすると、たく
  * 表示するデータをProps(引数)として受け取る
  * 受け取ったオブジェクトを表示するようにtsxに埋め込む
 
-===={sec-00332-1} import * as React呪文
+
+===[column] import * as React呪文
 
 「import」は、ES6仕様のモジュール読み込み方法です。
 
@@ -501,12 +507,15 @@ MUIのメニューから「Components > Card」をクリックすると、たく
 結果としての違いは、webpackでバンドルした場合に作成されるビルドファイルはインポートされたものを含むため、
 使用しないものまでインポートするとファイルサイズが肥大化する恐れがあります。
 
+===[/column]
+
 ===={sec-00332-2} function関数をアロー関数へ
 
 ファンクション関数とアロー関数の違いについては、
 @<href>{https://qiita.com/suin/items/a44825d253d023e31e4d, こちらの記事}が参考になります。
 //image[sec00332-1-01][ファンクション関数とアロー関数の違い][scale=0.5]
 
+//clearpage
 また、Reactでアロー関数を使うことについては、
 @<href>{https://zenn.dev/seya/articles/0317b7a61ee781, こちらの記事}が参考になります。
 
@@ -531,16 +540,16 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 
 ===={sec-00332-5} 受け取ったオブジェクトを埋め込む
-
-//blankline
 受け取ったオブジェクトを変数に展開し、表示位置に埋め込みます。
+
+//image[props][][scale=0.5,pos=H]
 
 ===={sec-00332-6} DiaryCardを表示する
 
 初期値を設定し、Appコンポーネントに「DiaryBoard」の代わりに表示してみます。こちらが表示されれば完成です。
 もちろん、「下向き」をクリックすると詳細部分が表示されます。readmore配列の各要素が段落になっています。
 
-//image[sec00332-6][カードの単体表示][scale=0.6]
+//image[sec00332-6][カードの単体表示][scale=0.5,pos=H]
 
 //note[]{
   ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
@@ -670,9 +679,12 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 変更が完了しましたら、動作確認をします。以下のように表示されると成功です。
 
+//image[pray04][][scale=0.6,pos=H]
+
 //clearpage
 //image[diaryBoad_done][全データ表示][scale=0.7]
 
+//clearpage
 ==={sec-0336} リファクタリング2(カードヘッダを別コンポーネントへ)
 「DiaryCardコンポーネント」のタイトルの右側にある「縦の３点」アイコンをクリックしても、今は何も起こりません。
 このアイコンボタンを利用して、「編集・削除」の機能を持たせます。
@@ -749,15 +761,15 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 
 この時点で動作確認を行います。無事に表示されていれば良いです。
 
+//clearpage
 ===={sec-0336-1} DiaryCarHeaderコンポーネントにメニューを組み込む
 
 MUIのサイトからメニュー部分のコードを拝借して「DiaryCardHeaderコンポーネント」に追加しましょう。
 やりたいことは「編集、削除」ですので、メニュー項目(MenuItem)は２つでかまいません。
 
-//clearpage
 //image[mui011-card-MenuCode][MUIのMenuサンプル][scale=0.7]
 
-
+//clearpage
 拝借するコードは、「CardHeader」と同じ階層に貼り付けますが、その場合「Jsxはひとつの要素」と怒られますので、
 トップ階層に「<></>」を追加します。
 
@@ -882,6 +894,7 @@ handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に�
 //}
 
 ここまでの変更を動作確認します。「縦の３点アイコン」をクリックするとメニューが表示されますか？
+//image[menu][][scale=0.6,pos=H]
 
 //clearpage
 //image[mui012-card-MenuStep1][クリックするとメニューが表示される][scale=0.7]
@@ -913,9 +926,12 @@ Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 ->
  * 削除メニューをクリックしたときに確認ダイアログが表示しましたか？
  * 確認ダイアログの削除をクリックしたときにアラートはでましたか？
 
+//image[check][][scale=0.6,pos=H]
+
 //clearpage
 //image[mui014-card-deleteDialog-done][削除確認ダイアログの表示][scale=0.7,pos=H]
 
+//clearpage
 ===={sec-0336-2} DiaryBoardHeaderの見栄え
 
 もう少し見栄え良くしたいので、DiaryCardHeaderコンポーネントの、
@@ -926,13 +942,13 @@ Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 ->
 を実装します。
 
 ===== アバターの代わりに投稿月画像を表示
-//blankline
 1月〜12月までのSVG画像は、GitHubサイトにあります。「src/assets/images/month-icons」フォルダを作成してコピペしてください。
 
 //blankline
 読書日記データの投稿日は「YYYYMMDD」形式の文字列ですので、この文字列からJavaScriptのDateオブジェクトを返す関数を作成します。
 また、のちほど作成する読書日記の新規追加・編集時のため日付から「YYYYMMDD」の文字列を作成する関数も合わせて作成します。
 
+//blankline
 どの場所からも使えるように「src/utilities/helper.ts」ファイルを作成し、ここに関数を作成します。
 
 //list[][src/utilities/helper.ts]{
@@ -1054,6 +1070,7 @@ DiaryCardHeaderコンポーネントにアバターのソースを切り替え�
         }
 //}
 
+//clearpage
 ===== サブタイトルに投稿日を「YYYY年M月D日」で表示
 「src/utilities/helper.ts」に、「YYYYMMDD」文字列から「YYYY年M月D日」に変換する関数を作成します。
 
@@ -1110,10 +1127,12 @@ DiaryCardHeaderコンポーネントへ「convertToLongDateString」をインポ
 フォームは、DialogとしてDiaryBoadコンポーネントに追加し、DiaryBoardコンポーネントに新規追加ボタンで表示するようにします。
 作成するフォームは別コンポーネントとするために「src/components/DiaryForm.tsx」ファイルを作成します。
 
-//clearpage
+//blankline
 MUIサイトのComponents内のText fieldコンポーネントには、フォームとして使えそうなサンプルがあります。
 
-//image[mui016-muisite-textField][MUIサイトのテキストフィールド][scale=0.6]
+//image[form][][scale=0.6,pos=H]
+
+//image[mui016-muisite-textField][MUIサイトのテキストフィールド][scale=0.6,pos=H]
 
 これらを参考にしてフォームを作成します。また、投稿日の入力用にMUIのDatePickerを使うのですが、
 このコンポーネントはラボ(実験中)に分類されています。そのためMUIのLabと日付を扱うためのライブラリ「date-fns」
@@ -1504,6 +1523,7 @@ DiaryBoardコンポーネントに、新規追加ボタン追加しフォーム�
 
 開いた入力フォームですが、保存・キャンセルとも機能実装していません。そのため一度開いたフォームを閉じることができません。
 
+//image[close][][scale=0.7,pos=H]
 //clearpage
 //image[mui018-DiaryForm-done][入力フォームを開いた状態][scale=0.7]
 
@@ -1516,10 +1536,11 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 祖父母コンポーネントから親コンポーネントを経由して渡します。
 
 //blankline
-これが「Reactあるある」のひとつ「Propsバケツリレー」です。
+これが「Reactあるある」のひとつ「Propsバケツリレー(英語では、Props drilling)」です。
 
 //image[AppComponents][コンポーネントの構成図][scale=0.7,pos=H]
 
+//clearpage
 今回のように孫コンポーネントにあたる「DiaryCardHeaderコンポーネント」の編集・削除の要求があった場合には
 全データを管理する「DiaryBoadコンポーネント」に伝えなければなりません。
 
@@ -1527,6 +1548,8 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 表示は、親コンポーネントからバケツリレーで伝え、
 孫コンポーネントで受けたユーザーからの要求は逆のルートをたどって親まで伝えることになります。
 孫で発生した要求を親に伝える方法として一般的なのが、関数をPropsとしてデータと伴に子・孫へ渡す方法です。
+
+//image[propsDrilling][][scale=0.6,pos=H]
 
 //blankline
 今回のアプリケーションでは、DiaryBoadコンポーネントが、
@@ -2002,6 +2025,8 @@ const DiaryCard = (props: DiaryCardProps) => {
 //blankline
 新規追加は初期化データをtargetDiaryDataへ格納します。編集フォームへtargetDiaryDataを渡して表示します。
 
+//image[propsDrilling01][][scale=0.8,pos=H]
+//clearpage
 ==={sec-034-2} 保存・キャンセル関数をPropsにデータと渡す
 
 同じように、編集フォームのDiaryFormコンポーネントも、DiaryBoadコンポーネントからは孫にあたります。
@@ -2608,3 +2633,5 @@ TypeScript用の型情報もインストールします。
  * Reactのスタートアッププロジェクトがあれば簡単に始めることができる。
  * MUIを使えばサンプルのアレンジで画面が作成できる。
  * コンポーネント間のバケツリレーはたいへん。
+
+//image[understand][][scale=0.7,pos=H]

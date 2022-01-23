@@ -19,6 +19,10 @@
 サンプルアプリケーションで使用している書籍データ(表紙画像)は、
 版元ドットコム\footnote{\url{https://www.hanmoto.com/about_bookdata}}の規約に基づいています。
 
+\begin{reviewimage}[H]%%y-sample
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/y-sample.png}%
+\label{image:03-todo-with-react:y-sample}
+\end{reviewimage}
 
 \clearpage
 
@@ -162,6 +166,18 @@ const App = () =\textgreater{} (
 
 これが、「宣言的なView」、「コンポーネントベース」です。
 
+\begin{reviewimage}[H]%%jsx01
+\includegraphics[width=0.9\maxwidth]{./images/03-todo-with-react/jsx01.png}%
+\label{image:03-todo-with-react:jsx01}
+\end{reviewimage}
+\begin{reviewimage}[H]%%jsx02
+\includegraphics[width=0.9\maxwidth]{./images/03-todo-with-react/jsx02.png}%
+\label{image:03-todo-with-react:jsx02}
+\end{reviewimage}
+
+\clearpage
+
+
 \section{表示するデータの型}
 \keeplastskip{
   \label{sec:3-2}
@@ -172,6 +188,10 @@ const App = () =\textgreater{} (
 それでは、サンプルアプリケーションについて説明します。このサンプルアプリケーションは、読書日記としていますが
 通常の日記でもかまいません。
 
+\begin{reviewimage}[H]%%diaryData
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/diaryData.png}%
+\label{image:03-todo-with-react:diaryData}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 保持するデータは、
@@ -282,6 +302,13 @@ CodeSandbox\footnote{\url{https://codesandbox.io/}}をクリック一発で開�
 \reviewimagecaption{クリックでCodeSandboxを開いたところ}
 \label{image:03-todo-with-react:mui002-codesandbox}
 \end{reviewimage}
+\begin{reviewimage}[H]%%yaruo-ui
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/yaruo-ui.png}%
+\label{image:03-todo-with-react:yaruo-ui}
+\end{reviewimage}
+
+\clearpage
+
 
 \subsection{MUIのインストール}
 \keeplastskip{
@@ -309,6 +336,13 @@ npmを使ったインストールは、material{-}iconも含め以下となり�
 \def\startercodeblockfontsize{}
 \begin{starterterminal}[]{GitHub}\seqsplit{\textgreater{} git clone {-}b 01\textunderscore{}install{-}MUI https://github.com/yaruo{-}react{-}redux/yaruo{-}diary.git}\end{starterterminal}
 \end{starternote}
+\begin{reviewimage}[H]%%yaruo-ui01
+\includegraphics[width=0.8\maxwidth]{./images/03-todo-with-react/yaruo-ui01.png}%
+\label{image:03-todo-with-react:yaruo-ui01}
+\end{reviewimage}
+
+\clearpage
+
 
 \subsection{データ表示画面を作る}
 \keeplastskip{
@@ -340,56 +374,39 @@ npmを使ったインストールは、material{-}iconも含め以下となり�
   \par\nobreak
 }
 
-MUI5のサイトの左上部のメニューには、
+MUI5のサイトの左上部のをクリックするとメニューが表示されます。
 
-\begin{starteritemize}
-\item Getting Started
-
-\begin{starteritemize}
-\item Templates
-\end{starteritemize}
-
-\item Components
-
-\begin{starteritemize}
-\item Buttonなどのコンポーネント
-\end{starteritemize}
-
-\item Compotent API
-
-\begin{starteritemize}
-\item ComponentのProps(引数)の詳細
-\end{starteritemize}
-
-\end{starteritemize}
-
-があります。
+\begin{reviewimage}[H]%%mui-siteMenu
+\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/mui-siteMenu.png}%
+\reviewimagecaption{MUIサイトメニュー}
+\label{image:03-todo-with-react:mui-siteMenu}
+\end{reviewimage}
 
 そのTemplateを選択すると、以下のようにMUIで作成されたサンプルページ(コンポーネントを組み合わせたもの)が表示されます。
 
-\begin{reviewimage}%%mui004-templates
-\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/mui004-templates.png}%
+\begin{reviewimage}[H]%%mui004-templates
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/mui004-templates.png}%
 \reviewimagecaption{MUIのTemplateページ}
 \label{image:03-todo-with-react:mui004-templates}
 \end{reviewimage}
 
-今回は、この中から「Album layout」を拝借して改造していきます。
-
-
 \clearpage
 
-\begin{reviewimage}%%mui005-albumLayout
-\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/mui005-albumLayout.png}%
+
+今回は、この中から「Album layout」を拝借して改造していきます。
+
+\begin{reviewimage}[H]%%mui005-albumLayout
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/mui005-albumLayout.png}%
 \reviewimagecaption{アルバムレイアウト}
 \label{image:03-todo-with-react:mui005-albumLayout}
 \end{reviewimage}
 
-先ほどのテンプレートページの「Album Layout」内の「SOURCECODE」をクリックします。
-
-
 \clearpage
 
-\begin{reviewimage}%%mui006-albumLayoutSource
+
+先ほどのテンプレートページの「Album Layout」内の「SOURCECODE」をクリックします。
+
+\begin{reviewimage}[H]%%mui006-albumLayoutSource
 \includegraphics[width=0.4\maxwidth]{./images/03-todo-with-react/mui006-albumLayoutSource.png}%
 \reviewimagecaption{ソースコードへのリンク}
 \label{image:03-todo-with-react:mui006-albumLayoutSource}
@@ -397,7 +414,7 @@ MUI5のサイトの左上部のメニューには、
 
 MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがあります。今回は、Album.tsxを開きます。
 
-\begin{reviewimage}%%mui007-albumLayoutSourceCode
+\begin{reviewimage}[H]%%mui007-albumLayoutSourceCode
 \includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/mui007-albumLayoutSourceCode.png}%
 \reviewimagecaption{GitHubでのAlbumのソースコード}
 \label{image:03-todo-with-react:mui007-albumLayoutSourceCode}
@@ -567,6 +584,10 @@ MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがありま
 
 この画面が表示されれば正常です。カードの画像はランダムですので、違っていてもかまいません。
 
+\begin{reviewimage}[H]%%yaruo-ui02
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/yaruo-ui02.png}%
+\label{image:03-todo-with-react:yaruo-ui02}
+\end{reviewimage}
 \begin{reviewimage}%%mui008-album-done
 \includegraphics[width=0.8\maxwidth]{./images/03-todo-with-react/mui008-album-done.png}%
 \reviewimagecaption{Album Layoutの拝借}
@@ -591,8 +612,8 @@ MUIのメニューから「Components \textgreater{} Card」をクリックす�
 少し下へスクロールすると、こちらが見つかりました。
 「\textless{}\textgreater{}」アイコンをクリックすると、JS/TS別にソースコードが表示されます。
 
-\begin{reviewimage}%%mui009-card-ComplexInteraction
-\includegraphics[width=1.0\maxwidth]{./images/03-todo-with-react/mui009-card-ComplexInteraction.png}%
+\begin{reviewimage}[H]%%mui009-card-ComplexInteraction
+\includegraphics[width=0.9\maxwidth]{./images/03-todo-with-react/mui009-card-ComplexInteraction.png}%
 \reviewimagecaption{MUIカードサンプル}
 \label{image:03-todo-with-react:mui009-card-ComplexInteraction}
 \end{reviewimage}
@@ -609,12 +630,11 @@ MUIのメニューから「Components \textgreater{} Card」をクリックす�
 \item 受け取ったオブジェクトを表示するようにtsxに埋め込む
 \end{starteritemize}
 
-\subsubsection*{import * as React呪文}
-\keeplastskip{
-  \label{sec:3-3-4-1}
-  \label{sec-00332-1}
-  \par\nobreak
-}
+\begin{reviewcolumn}
+\phantomsection   % for hyperref
+\hypertarget{column:03-todo-with-react:1}{}
+\reviewcolumnhead{}{import * as React呪文}
+\addcontentsline{toc}{subsection}{\numberline{[コラム]}import * as React呪文}
 
 「import」は、ES6仕様のモジュール読み込み方法です。
 
@@ -632,9 +652,12 @@ fromにある「react」が「default」でexportしているものだけをイ�
 結果としての違いは、webpackでバンドルした場合に作成されるビルドファイルはインポートされたものを含むため、
 使用しないものまでインポートするとファイルサイズが肥大化する恐れがあります。
 
+\end{reviewcolumn}
+
+
 \subsubsection*{function関数をアロー関数へ}
 \keeplastskip{
-  \label{sec:3-3-4-2}
+  \label{sec:3-3-4-1}
   \label{sec-00332-2}
   \par\nobreak
 }
@@ -648,6 +671,9 @@ fromにある「react」が「default」でexportしているものだけをイ�
 \label{image:03-todo-with-react:sec00332-1-01}
 \end{reviewimage}
 
+\clearpage
+
+
 また、Reactでアロー関数を使うことについては、
 こちらの記事\footnote{\url{https://zenn.dev/seya/articles/0317b7a61ee781}}が参考になります。
 
@@ -659,7 +685,7 @@ fromにある「react」が「default」でexportしているものだけをイ�
 
 \subsubsection*{関数名の変更}
 \keeplastskip{
-  \label{sec:3-3-4-3}
+  \label{sec:3-3-4-2}
   \label{sec-00332-3}
   \par\nobreak
 }
@@ -669,7 +695,7 @@ exportも忘れずに。
 
 \subsubsection*{表示するデータを受け取る}
 \keeplastskip{
-  \label{sec:3-3-4-4}
+  \label{sec:3-3-4-3}
   \label{sec-00332-4}
   \par\nobreak
 }
@@ -687,17 +713,21 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 \subsubsection*{受け取ったオブジェクトを埋め込む}
 \keeplastskip{
-  \label{sec:3-3-4-5}
+  \label{sec:3-3-4-4}
   \label{sec-00332-5}
   \par\nobreak
 }
-\vspace*{\baselineskip}
 
 受け取ったオブジェクトを変数に展開し、表示位置に埋め込みます。
 
+\begin{reviewimage}[H]%%props
+\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/props.png}%
+\label{image:03-todo-with-react:props}
+\end{reviewimage}
+
 \subsubsection*{DiaryCardを表示する}
 \keeplastskip{
-  \label{sec:3-3-4-6}
+  \label{sec:3-3-4-5}
   \label{sec-00332-6}
   \par\nobreak
 }
@@ -705,8 +735,8 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 初期値を設定し、Appコンポーネントに「DiaryBoard」の代わりに表示してみます。こちらが表示されれば完成です。
 もちろん、「下向き」をクリックすると詳細部分が表示されます。readmore配列の各要素が段落になっています。
 
-\begin{reviewimage}%%sec00332-6
-\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/sec00332-6.png}%
+\begin{reviewimage}[H]%%sec00332-6
+\includegraphics[width=0.5\maxwidth]{./images/03-todo-with-react/sec00332-6.png}%
 \reviewimagecaption{カードの単体表示}
 \label{image:03-todo-with-react:sec00332-6}
 \end{reviewimage}
@@ -845,6 +875,10 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 変更が完了しましたら、動作確認をします。以下のように表示されると成功です。
 
+\begin{reviewimage}[H]%%pray04
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/pray04.png}%
+\label{image:03-todo-with-react:pray04}
+\end{reviewimage}
 
 \clearpage
 
@@ -853,6 +887,9 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 \reviewimagecaption{全データ表示}
 \label{image:03-todo-with-react:diaryBoad_done}
 \end{reviewimage}
+
+\clearpage
+
 
 \subsection{リファクタリング2(カードヘッダを別コンポーネントへ)}
 \keeplastskip{
@@ -941,6 +978,10 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 
 この時点で動作確認を行います。無事に表示されていれば良いです。
 
+
+\clearpage
+
+
 \subsubsection*{DiaryCarHeaderコンポーネントにメニューを組み込む}
 \keeplastskip{
   \label{sec:3-3-6-1}
@@ -951,14 +992,14 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 MUIのサイトからメニュー部分のコードを拝借して「DiaryCardHeaderコンポーネント」に追加しましょう。
 やりたいことは「編集、削除」ですので、メニュー項目(MenuItem)は２つでかまいません。
 
-
-\clearpage
-
 \begin{reviewimage}%%mui011-card-MenuCode
 \includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/mui011-card-MenuCode.png}%
 \reviewimagecaption{MUIのMenuサンプル}
 \label{image:03-todo-with-react:mui011-card-MenuCode}
 \end{reviewimage}
+
+\clearpage
+
 
 拝借するコードは、「CardHeader」と同じ階層に貼り付けますが、その場合「Jsxはひとつの要素」と怒られますので、
 トップ階層に「\textless{}\textgreater{}\textless{}/\textgreater{}」を追加します。
@@ -1089,6 +1130,10 @@ handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に�
 
 ここまでの変更を動作確認します。「縦の３点アイコン」をクリックするとメニューが表示されますか？
 
+\begin{reviewimage}[H]%%menu
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/menu.png}%
+\label{image:03-todo-with-react:menu}
+\end{reviewimage}
 
 \clearpage
 
@@ -1135,6 +1180,10 @@ Menuの「削除」をクリック　{-}\textgreater{} 確認ダイアログ表�
 \item 確認ダイアログの削除をクリックしたときにアラートはでましたか？
 \end{starteritemize}
 
+\begin{reviewimage}[H]%%check
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/check.png}%
+\label{image:03-todo-with-react:check}
+\end{reviewimage}
 
 \clearpage
 
@@ -1143,6 +1192,9 @@ Menuの「削除」をクリック　{-}\textgreater{} 確認ダイアログ表�
 \reviewimagecaption{削除確認ダイアログの表示}
 \label{image:03-todo-with-react:mui014-card-deleteDialog-done}
 \end{reviewimage}
+
+\clearpage
+
 
 \subsubsection*{DiaryBoardHeaderの見栄え}
 \keeplastskip{
@@ -1160,14 +1212,15 @@ Menuの「削除」をクリック　{-}\textgreater{} 確認ダイアログ表�
 
 を実装します。
 
-\paragraph*{アバターの代わりに投稿月画像を表示}\vspace*{\baselineskip}
-
+\paragraph*{アバターの代わりに投稿月画像を表示}
 1月〜12月までのSVG画像は、GitHubサイトにあります。「src/assets/images/month{-}icons」フォルダを作成してコピペしてください。
 
 \vspace*{\baselineskip}
 
 読書日記データの投稿日は「YYYYMMDD」形式の文字列ですので、この文字列からJavaScriptのDateオブジェクトを返す関数を作成します。
 また、のちほど作成する読書日記の新規追加・編集時のため日付から「YYYYMMDD」の文字列を作成する関数も合わせて作成します。
+
+\vspace*{\baselineskip}
 
 どの場所からも使えるように「src/utilities/helper.ts」ファイルを作成し、ここに関数を作成します。
 
@@ -1288,6 +1341,9 @@ DiaryCardHeaderコンポーネントにアバターのソースを切り替え�
           /\textgreater{}
         \}}\end{starterprogram}
 
+\clearpage
+
+
 \paragraph*{サブタイトルに投稿日を「YYYY年M月D日」で表示}
 「src/utilities/helper.ts」に、「YYYYMMDD」文字列から「YYYY年M月D日」に変換する関数を作成します。
 
@@ -1353,13 +1409,15 @@ DiaryCardHeaderコンポーネントへ「convertToLongDateString」をインポ
 フォームは、DialogとしてDiaryBoadコンポーネントに追加し、DiaryBoardコンポーネントに新規追加ボタンで表示するようにします。
 作成するフォームは別コンポーネントとするために「src/components/DiaryForm.tsx」ファイルを作成します。
 
-
-\clearpage
-
+\vspace*{\baselineskip}
 
 MUIサイトのComponents内のText fieldコンポーネントには、フォームとして使えそうなサンプルがあります。
 
-\begin{reviewimage}%%mui016-muisite-textField
+\begin{reviewimage}[H]%%form
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/form.png}%
+\label{image:03-todo-with-react:form}
+\end{reviewimage}
+\begin{reviewimage}[H]%%mui016-muisite-textField
 \includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/mui016-muisite-textField.png}%
 \reviewimagecaption{MUIサイトのテキストフィールド}
 \label{image:03-todo-with-react:mui016-muisite-textField}
@@ -1762,6 +1820,10 @@ DiaryBoardコンポーネントに、新規追加ボタン追加しフォーム�
 
 開いた入力フォームですが、保存・キャンセルとも機能実装していません。そのため一度開いたフォームを閉じることができません。
 
+\begin{reviewimage}[H]%%close
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/close.png}%
+\label{image:03-todo-with-react:close}
+\end{reviewimage}
 
 \clearpage
 
@@ -1788,13 +1850,16 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 
 \vspace*{\baselineskip}
 
-これが「Reactあるある」のひとつ「Propsバケツリレー」です。
+これが「Reactあるある」のひとつ「Propsバケツリレー(英語では、Props drilling)」です。
 
 \begin{reviewimage}[H]%%AppComponents
 \includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/AppComponents.png}%
 \reviewimagecaption{コンポーネントの構成図}
 \label{image:03-todo-with-react:AppComponents}
 \end{reviewimage}
+
+\clearpage
+
 
 今回のように孫コンポーネントにあたる「DiaryCardHeaderコンポーネント」の編集・削除の要求があった場合には
 全データを管理する「DiaryBoadコンポーネント」に伝えなければなりません。
@@ -1805,6 +1870,10 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 孫コンポーネントで受けたユーザーからの要求は逆のルートをたどって親まで伝えることになります。
 孫で発生した要求を親に伝える方法として一般的なのが、関数をPropsとしてデータと伴に子・孫へ渡す方法です。
 
+\begin{reviewimage}[H]%%propsDrilling
+\includegraphics[width=0.6\maxwidth]{./images/03-todo-with-react/propsDrilling.png}%
+\label{image:03-todo-with-react:propsDrilling}
+\end{reviewimage}
 \vspace*{\baselineskip}
 
 今回のアプリケーションでは、DiaryBoadコンポーネントが、
@@ -2282,6 +2351,14 @@ const DiaryCard = (props: DiaryCardProps) =\textgreater{} \{
 \vspace*{\baselineskip}
 
 新規追加は初期化データをtargetDiaryDataへ格納します。編集フォームへtargetDiaryDataを渡して表示します。
+
+\begin{reviewimage}[H]%%propsDrilling01
+\includegraphics[width=0.8\maxwidth]{./images/03-todo-with-react/propsDrilling01.png}%
+\label{image:03-todo-with-react:propsDrilling01}
+\end{reviewimage}
+
+\clearpage
+
 
 \subsection{保存・キャンセル関数をPropsにデータと渡す}
 \keeplastskip{
@@ -2897,3 +2974,8 @@ TypeScript用の型情報もインストールします。
 \item MUIを使えばサンプルのアレンジで画面が作成できる。
 \item コンポーネント間のバケツリレーはたいへん。
 \end{starteritemize}
+
+\begin{reviewimage}[H]%%understand
+\includegraphics[width=0.7\maxwidth]{./images/03-todo-with-react/understand.png}%
+\label{image:03-todo-with-react:understand}
+\end{reviewimage}
