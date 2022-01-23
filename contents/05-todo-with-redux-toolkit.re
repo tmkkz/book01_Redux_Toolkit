@@ -7,6 +7,9 @@
 　
 //}
 
+//image[slice][][scale=0.8,pos=H]
+
+//clearpage
 =={sec05-01} Redux-toolkitの導入
 それでは、さっそくredux-toolkitパッケージをインストールします。
 
@@ -16,15 +19,16 @@
 
 以上でインストールは完了です。
 
-redux-toolkitでは、Sliceを作成します。Sliceにreduceを登録すると自動でActionCreatorを
+//blankline
+redux-toolkitでは、各データ集合毎にSliceを作成します。Sliceにreduceを登録すると自動でActionCreatorを
 作成してくれます。
 
+//blankline
 それでは、Sliceを作成するファイルを「src/redux/redux-tk.ts」追加してください。
 
 =={sec05-02} Sliceの作成
 
 Sliceは、「createSlice関数」を使用して作成します。
-
 「createSlice関数」は、以下のような引数を受け取ります。
 
 //list[][createSlice関数]{
@@ -44,7 +48,8 @@ Sliceは、「createSlice関数」を使用して作成します。
 自動生成されるActionオブジェクトのtype要素は、「createSlice関数」のname/reducerのkey名となります。
 のちほどサンプルアプリケーションの動作をdevToolsで確認しますので、どのようなActionが実行されたのかが分かります。
 
-サンプルアプリケーションのSliceです。
+//blankline
+サンプルアプリケーションのSliceは、このようになります。
 
 reduceでのkey名は、
 
@@ -54,6 +59,7 @@ reduceでのkey名は、
 
  にしています。「delete」は予約語ですので使えません。
 
+//blankline
  Reduxの特徴として、「Stateのコピーを用意し操作する。Stateを直接いじらない。」とありましたが、
  Redux-toolkitではimmerライブラリが自動で変換してくれるため、Stateを直接変更してもかまいません。
 
@@ -95,8 +101,11 @@ reduceでのkey名は、
 ActionCreatorになります。
 
 //blankline
-keyを前章で作成したActionCreator名と同じ名前にしています。同じ名前なので各コンポーネント側では
-ActionCreatorのインポートファイルのパスを変更するだけで、コードの変更はありません。
+keyはSliceでreducerに使用した名前で、valueは前章で作成したActionCreator名と同じ名前にしています。
+
+//blankline
+エクスポートされるのはvalueですので、同じ名前でエクスポートされたActionCreatorですので、
+使用する側の各コンポーネントではActionCreatorのインポートファイルのパスを変更するだけで、コードの変更はありません。
 
 //list[][ActionCreatorのエクスポート]{
   export const {
@@ -122,6 +131,7 @@ ActionCreatorのインポートファイルのパスを変更するだけで、�
 //blankline
 規模が大きくなれば、さらに削減量は増えます。
 
+//image[easy][][scale=0.7,pos=H]
 
 =={sec05-03} トップコンポーネントに登録
 トップコンポーネントに登録するのですが、前章で登録してあるのでStoreのインポートパスを変えるだけです。
@@ -143,6 +153,8 @@ ActionCreatorのインポートファイルのパスを変更するだけで、�
 
 //}
 
+//image[actionCreator2][][scale=0.7,pos=H]
+
 =={sec05-04} コンポーネントから使用する
 ActionCreatorを使用するコンポーネントもインポートパスを変えるだけです。
 
@@ -159,6 +171,8 @@ import { deleteDiaryActionCreator } from '../redux/redux-tk';
 //}
 
 以上でReduxからRedux-toolkitへ切替が完了しました。動作確認を行います。
+
+//image[done][][scale=0.8,pos=H]
 
 =={sec05-05} devToolsで確認
 動作確認で、削除・編集・追加をしました。
@@ -184,3 +198,6 @@ Redux-toolkitを使うとコード量を削減できます。コード量が削�
 //blankline
 また、Reduxではコードが分散しがちでしたが、Redux-toolkitではSliceにまとめることができます。
 見通しの良いコードはさらに不具合の入り込みを減らすことでしょう。
+
+
+//image[ending][][scale=0.8,pos=H]

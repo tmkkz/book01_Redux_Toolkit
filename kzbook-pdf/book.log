@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  22 JAN 2022 17:38
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  22 JAN 2022 18:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3106,46 +3106,59 @@ File: ./images/04-todo-with-redux/redux_summery.png Graphic file (type bmp)
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 1.
 
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 10.
-
-LaTeX Info: Redefining \- on input line 20.
+File: ./images/05-todo-with-redux-toolkit/slice.png Graphic file (type bmp)
+<./images/05-todo-with-redux-toolkit/slice.png>
 [213
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 29.
+(Font)              using `JY2/hgt/bx/n' instead on input line 17.
 
-LaTeX Info: Redefining \- on input line 41.
-LaTeX Info: Redefining \- on input line 72.
+LaTeX Info: Redefining \- on input line 27.
 [214
 
 ]
-LaTeX Info: Redefining \- on input line 113.
-LaTeX Info: Redefining \- on input line 123.
-[215] [216]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 135.
+(Font)              using `JY2/hgt/bx/n' instead on input line 40.
 
-LaTeX Info: Redefining \- on input line 145.
-[217
+LaTeX Info: Redefining \- on input line 51.
+LaTeX Info: Redefining \- on input line 86.
+[215
 
 ]
+LaTeX Info: Redefining \- on input line 131.
+[216]
+LaTeX Info: Redefining \- on input line 141.
+File: ./images/05-todo-with-redux-toolkit/easy.png Graphic file (type bmp)
+<./images/05-todo-with-redux-toolkit/easy.png>
+[217]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 160.
+(Font)              using `JY2/hgt/bx/n' instead on input line 158.
 
-LaTeX Info: Redefining \- on input line 170.
-LaTeX Info: Redefining \- on input line 176.
+LaTeX Info: Redefining \- on input line 168.
+File: ./images/05-todo-with-redux-toolkit/actionCreator2.png Graphic file (type
+ bmp)
+<./images/05-todo-with-redux-toolkit/actionCreator2.png>
 [218
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 180.
+(Font)              using `JY2/hgt/bx/n' instead on input line 187.
+
+LaTeX Info: Redefining \- on input line 197.
+LaTeX Info: Redefining \- on input line 203.
+File: ./images/05-todo-with-redux-toolkit/done.png Graphic file (type bmp)
+<./images/05-todo-with-redux-toolkit/done.png>
+[219
+
+]
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 212.
 
 File: ./images/05-todo-with-redux-toolkit/devTools01.png Graphic file (type bmp
 )
@@ -3153,21 +3166,23 @@ File: ./images/05-todo-with-redux-toolkit/devTools01.png Graphic file (type bmp
 File: ./images/05-todo-with-redux-toolkit/devTools02.png Graphic file (type bmp
 )
 <./images/05-todo-with-redux-toolkit/devTools02.png>
-[219
+[220
 
-] [220]
+] [221]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 215.
+(Font)              using `JY2/hgt/bx/n' instead on input line 247.
 
-) (./06-thanks.tex [221
+File: ./images/05-todo-with-redux-toolkit/ending.png Graphic file (type bmp)
+<./images/05-todo-with-redux-toolkit/ending.png>
+) (./06-thanks.tex [222
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 1.
 
-) [222
+) [223
 
 ]
 
@@ -3180,7 +3195,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[223
+[224
 
 ]
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
@@ -3189,7 +3204,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[224]
+[225]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -3199,22 +3214,22 @@ Package minitoc Info: I0009
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 2392E9CE2FF8693363102E5E68D45FE5;11935.
  )
-(\end occurred when \ifx on line 176 was incomplete)
-(\end occurred when \iffalse on line 176 was incomplete)
-(\end occurred when \ifx on line 170 was incomplete)
-(\end occurred when \iffalse on line 170 was incomplete)
-(\end occurred when \ifx on line 145 was incomplete)
-(\end occurred when \iffalse on line 145 was incomplete)
-(\end occurred when \ifx on line 123 was incomplete)
-(\end occurred when \iffalse on line 123 was incomplete)
-(\end occurred when \ifx on line 113 was incomplete)
-(\end occurred when \iffalse on line 113 was incomplete)
-(\end occurred when \ifx on line 72 was incomplete)
-(\end occurred when \iffalse on line 72 was incomplete)
-(\end occurred when \ifx on line 41 was incomplete)
-(\end occurred when \iffalse on line 41 was incomplete)
-(\end occurred when \ifx on line 20 was incomplete)
-(\end occurred when \iffalse on line 20 was incomplete)
+(\end occurred when \ifx on line 203 was incomplete)
+(\end occurred when \iffalse on line 203 was incomplete)
+(\end occurred when \ifx on line 197 was incomplete)
+(\end occurred when \iffalse on line 197 was incomplete)
+(\end occurred when \ifx on line 168 was incomplete)
+(\end occurred when \iffalse on line 168 was incomplete)
+(\end occurred when \ifx on line 141 was incomplete)
+(\end occurred when \iffalse on line 141 was incomplete)
+(\end occurred when \ifx on line 131 was incomplete)
+(\end occurred when \iffalse on line 131 was incomplete)
+(\end occurred when \ifx on line 86 was incomplete)
+(\end occurred when \iffalse on line 86 was incomplete)
+(\end occurred when \ifx on line 51 was incomplete)
+(\end occurred when \iffalse on line 51 was incomplete)
+(\end occurred when \ifx on line 27 was incomplete)
+(\end occurred when \iffalse on line 27 was incomplete)
 (\end occurred when \ifx on line 1177 was incomplete)
 (\end occurred when \iffalse on line 1177 was incomplete)
 (\end occurred when \ifx on line 944 was incomplete)
@@ -3559,12 +3574,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (\end occurred when \ifx on line 46 was incomplete)
 (\end occurred when \ifx on line 277 was incomplete) 
 Here is how much of TeX's memory you used:
- 19545 strings out of 479460
- 305160 string characters out of 5870465
- 1567479 words of memory out of 5000000
- 36497 multiletter control sequences out of 15000+600000
+ 19570 strings out of 479460
+ 306185 string characters out of 5870465
+ 1567956 words of memory out of 5000000
+ 36517 multiletter control sequences out of 15000+600000
  487258 words of font info for 167 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,14n,90p,440b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.dvi (233 pages, 578284 bytes).
+Output written on book.dvi (234 pages, 579948 bytes).

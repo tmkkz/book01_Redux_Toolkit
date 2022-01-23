@@ -55,10 +55,10 @@
 \contentsline {section}{\numberline {4.5}コンポーネントの修正}{197}{section.4.5}%
 \contentsline {section}{\numberline {4.6}第4章のまとめ}{212}{section.4.6}%
 \contentsline {chapter}{\numberline {第5章}日記アプリケーションの作成(Redux{-}toolkit使用)}{213}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Redux{-}toolkitの導入}{213}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Sliceの作成}{214}{section.5.2}%
-\contentsline {section}{\numberline {5.3}トップコンポーネントに登録}{217}{section.5.3}%
-\contentsline {section}{\numberline {5.4}コンポーネントから使用する}{218}{section.5.4}%
-\contentsline {section}{\numberline {5.5}devToolsで確認}{219}{section.5.5}%
-\contentsline {section}{\numberline {5.6}第５章のまとめ}{221}{section.5.6}%
-\contentsline {chapter}{\numberline {第6章}おわりに}{222}{chapter.6}%
+\contentsline {section}{\numberline {5.1}Redux{-}toolkitの導入}{214}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sliceの作成}{215}{section.5.2}%
+\contentsline {section}{\numberline {5.3}トップコンポーネントに登録}{218}{section.5.3}%
+\contentsline {section}{\numberline {5.4}コンポーネントから使用する}{219}{section.5.4}%
+\contentsline {section}{\numberline {5.5}devToolsで確認}{220}{section.5.5}%
+\contentsline {section}{\numberline {5.6}第５章のまとめ}{222}{section.5.6}%
+\contentsline {chapter}{\numberline {第6章}おわりに}{223}{chapter.6}%
