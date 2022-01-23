@@ -6,6 +6,9 @@
 　まずは、Reduxとは何か？から始め、Reduxで使われる定型の書き方を学びます。
 //}
 
+//image[boilerplate][][scale=0.8,pos=H]
+
+//clearpage
 =={sec04-01} Reduxとは？
 #@# cafeを例にしてAction actioncreator despatch state
 Reduxとは状態管理をするためのライブラリのひとつです。状態管理とは、アプリケーションで使用するデータの状態
@@ -47,6 +50,7 @@ Reduxを導入するメリットは何があるのでしょうか？
 //blankline
 devTools-extentionを導入すると、発行されたActionをさかのぼってデータの変化を確認できます。
 
+//image[reducer][][scale=0.7,pos=H]
 
 =={sec04-02} Reduxの動作イメージ
 Reduxの動作としては、
@@ -87,6 +91,7 @@ Reduxに必要なパッケージは、Redux関連とMiddlewareとデバッグ用
  * @redux-devtools/extension
  * redux-logger
 
+//blankline
 TypeScriptを導入しているので型定義も導入します。
 これらは「devDependencies」にインストールしますので分けて導入します。
 
@@ -95,6 +100,7 @@ TypeScriptを導入しているので型定義も導入します。
 
 となります。
 
+//blankline
 インストールは、個別に、
 //terminal[][reduxのインストール]{
  > npm install redux react-redux @redux-devtools/extension redux-logger
@@ -103,6 +109,10 @@ TypeScriptを導入しているので型定義も導入します。
 //terminal[][型パッケージのインストール]{
  > npm install -D @types/react-redux　@types/redux-logger
 //}
+
+//image[redux_install][][scale=0.7,pos=H]
+
+
 =={sec04-04} Reduxのアプリケーションへの導入
 Reduxのインストールが完了しましたので、サンプルアプリケーションへ導入していきます。
 
@@ -138,6 +148,7 @@ Reduxのインストールが完了しましたので、サンプルアプリケ
 //blankline
 　それでは、「src/redux/redux-og.ts」ファイルを作成します。
 
+//clearpage
 ===={sec04-04-1} Action Typeの定数を作成
 最初に、Action Typeの定数を作成します。
 
@@ -1012,3 +1023,5 @@ Reduxを状態管理に使う
  * コンポーネントでの使用
 
  を解説しました。
+
+//image[redux_summery][][scale=0.8,pos=H]

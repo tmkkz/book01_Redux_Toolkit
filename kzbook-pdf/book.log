@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  22 JAN 2022 16:59
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.6)  22 JAN 2022 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2863,217 +2863,228 @@ File: ./images/03-todo-with-react/understand.png Graphic file (type bmp)
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 1.
 
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 9.
-
-File: ./images/04-todo-with-redux/stateManageLib1.png Graphic file (type bmp)
-<./images/04-todo-with-redux/stateManageLib1.png>
+File: ./images/04-todo-with-redux/boilerplate.png Graphic file (type bmp)
+<./images/04-todo-with-redux/boilerplate.png>
 [184
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 36.
+(Font)              using `JY2/hgt/bx/n' instead on input line 16.
+
+File: ./images/04-todo-with-redux/stateManageLib1.png Graphic file (type bmp)
+<./images/04-todo-with-redux/stateManageLib1.png>
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 43.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 44.
+(Font)              using `JY2/hgt/bx/n' instead on input line 51.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 62.
+(Font)              using `JY2/hgt/bx/n' instead on input line 69.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 71.
+(Font)              using `JY2/hgt/bx/n' instead on input line 78.
 
-[185]
+[185
+
+]
+File: ./images/04-todo-with-redux/reducer.png Graphic file (type bmp)
+<./images/04-todo-with-redux/reducer.png>
+[186]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 84.
+(Font)              using `JY2/hgt/bx/n' instead on input line 96.
 
 File: ./images/04-todo-with-redux/yaruo-redux.png Graphic file (type bmp)
 <./images/04-todo-with-redux/yaruo-redux.png>
-[186
+[187
 
-] [187]
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 126.
-
-LaTeX Info: Redefining \- on input line 160.
-LaTeX Info: Redefining \- on input line 162.
-[188
-
-]
+] [188]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 164.
+(Font)              using `JY2/hgt/bx/n' instead on input line 138.
 
-
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 214.
-
+LaTeX Info: Redefining \- on input line 176.
+LaTeX Info: Redefining \- on input line 178.
+File: ./images/04-todo-with-redux/redux_install.png Graphic file (type bmp)
+<./images/04-todo-with-redux/redux_install.png>
 [189
 
 ]
-LaTeX Info: Redefining \- on input line 235.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 243.
+(Font)              using `JY2/hgt/bx/n' instead on input line 184.
 
-LaTeX Info: Redefining \- on input line 253.
-[190]
+[190
+
+]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 304.
+(Font)              using `JY2/hgt/bx/n' instead on input line 238.
 
-LaTeX Info: Redefining \- on input line 328.
-[191]
-Underfull \vbox (badness 10000) detected at line 389
- []
+LaTeX Info: Redefining \- on input line 259.
 
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 267.
 
-Underfull \vbox (badness 10000) detected at line 389
- []
+LaTeX Info: Redefining \- on input line 277.
+[191
 
+]
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 328.
+
+LaTeX Info: Redefining \- on input line 352.
 [192]
+Underfull \vbox (badness 10000) detected at line 413
+ []
 
-LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 391.
 
-LaTeX Info: Redefining \- on input line 402.
-LaTeX Info: Redefining \- on input line 411.
+Underfull \vbox (badness 10000) detected at line 413
+ []
+
+[193]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 415.
 
-LaTeX Info: Redefining \- on input line 444.
-[193]
+LaTeX Info: Redefining \- on input line 426.
+LaTeX Info: Redefining \- on input line 435.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 458.
+(Font)              using `JY2/hgt/bx/n' instead on input line 439.
 
-LaTeX Info: Redefining \- on input line 473.
+[194]
+LaTeX Info: Redefining \- on input line 468.
+
+LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
+(Font)              using `JY2/hgt/bx/n' instead on input line 482.
+
+LaTeX Info: Redefining \- on input line 497.
 File: ./images/04-todo-with-redux/devTools01.png Graphic file (type bmp)
 <./images/04-todo-with-redux/devTools01.png>
-[194] [195]
+[195] [196]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 500.
+(Font)              using `JY2/hgt/bx/n' instead on input line 524.
 
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 521.
+(Font)              using `JY2/hgt/bx/n' instead on input line 545.
 
-LaTeX Info: Redefining \- on input line 531.
-LaTeX Info: Redefining \- on input line 552.
+LaTeX Info: Redefining \- on input line 555.
+LaTeX Info: Redefining \- on input line 576.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 558.
+(Font)              using `JY2/hgt/bx/n' instead on input line 582.
 
-[196
+[197
 
 ]
-LaTeX Info: Redefining \- on input line 573.
+LaTeX Info: Redefining \- on input line 597.
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 588.
+(Font)              using `JY2/hgt/bx/n' instead on input line 612.
 
 File: ./images/04-todo-with-redux/devTools02.png Graphic file (type bmp)
 <./images/04-todo-with-redux/devTools02.png>
 File: ./images/04-todo-with-redux/devTools03.png Graphic file (type bmp)
 <./images/04-todo-with-redux/devTools03.png>
-[197] [198]
+[198] [199]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 609.
-
-[199]
-LaTeX Info: Redefining \- on input line 630.
-Package textcomp Info: Symbol \textasciigrave not provided by
-(textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 788.
-Package textcomp Info: Symbol \textasciigrave not provided by
-(textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 788.
-
-Underfull \vbox (badness 10000) detected at line 788
- []
+(Font)              using `JY2/hgt/bx/n' instead on input line 633.
 
 [200]
-Underfull \vbox (badness 10000) detected at line 788
- []
+LaTeX Info: Redefining \- on input line 654.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 812.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 812.
 
-
-Underfull \vbox (badness 10000) detected at line 788
+Underfull \vbox (badness 10000) detected at line 812
  []
 
 [201]
-Underfull \vbox (badness 10000) detected at line 788
+Underfull \vbox (badness 10000) detected at line 812
  []
 
 
-Underfull \vbox (badness 10000) detected at line 788
+Underfull \vbox (badness 10000) detected at line 812
  []
 
 [202]
-LaTeX Info: Redefining \- on input line 794.
-Package textcomp Info: Symbol \textasciigrave not provided by
-(textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 914.
-Package textcomp Info: Symbol \textasciigrave not provided by
-(textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 914.
+Underfull \vbox (badness 10000) detected at line 812
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 812
+ []
+
 [203]
-Underfull \vbox (badness 10000) detected at line 914
- []
-
-
-Underfull \vbox (badness 10000) detected at line 914
- []
-
-[204] [205]
-LaTeX Info: Redefining \- on input line 920.
+LaTeX Info: Redefining \- on input line 818.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 1147.
+(textcomp)             Default family used instead on input line 938.
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family zi4 in TS1 encoding.
-(textcomp)             Default family used instead on input line 1147.
-
-Underfull \vbox (badness 10000) detected at line 1147
- []
-
-[206]
-Underfull \vbox (badness 10000) detected at line 1147
+(textcomp)             Default family used instead on input line 938.
+[204]
+Underfull \vbox (badness 10000) detected at line 938
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1147
+Underfull \vbox (badness 10000) detected at line 938
+ []
+
+[205] [206]
+LaTeX Info: Redefining \- on input line 944.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 1171.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family zi4 in TS1 encoding.
+(textcomp)             Default family used instead on input line 1171.
+
+Underfull \vbox (badness 10000) detected at line 1171
  []
 
 [207]
-Underfull \vbox (badness 10000) detected at line 1147
+Underfull \vbox (badness 10000) detected at line 1171
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1147
+Underfull \vbox (badness 10000) detected at line 1171
  []
 
 [208]
-Underfull \vbox (badness 10000) detected at line 1147
+Underfull \vbox (badness 10000) detected at line 1171
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1147
+Underfull \vbox (badness 10000) detected at line 1171
  []
 
 [209]
-LaTeX Info: Redefining \- on input line 1153.
+Underfull \vbox (badness 10000) detected at line 1171
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
+
+Underfull \vbox (badness 10000) detected at line 1171
+ []
+
+[210]
+LaTeX Info: Redefining \- on input line 1177.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1177
 [] [][] [][]\T1/zi4/m/n/9 $[][][][] [][]>[][][][] [][]g[][]i[][]t[][] [][]c[][]
 l[][]o[][]n[][]e[][] [][]-[][]b[][] [][]0[][]7[][]_[][][][]i[][]n[][]s[][]t[][]
 a[][]l[][]l[][]-[][]r[][]e[][]d[][]u[][]x[][] [][]h[][]t[][]t[][]p[][]s[][]:[][
@@ -3081,12 +3092,14 @@ a[][]l[][]l[][]-[][]r[][]e[][]d[][]u[][]x[][] [][]h[][]t[][]t[][]p[][]s[][]:[][
 []u[][]o[][]-[][]r[][]e[][]a[][]c[][]t[][]-[][]r[][]e[]
  []
 
-[210]
+[211]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
-(Font)              using `JY2/hgt/bx/n' instead on input line 1156.
+(Font)              using `JY2/hgt/bx/n' instead on input line 1180.
 
-) (./05-todo-with-redux-toolkit.tex [211
+File: ./images/04-todo-with-redux/redux_summery.png Graphic file (type bmp)
+<./images/04-todo-with-redux/redux_summery.png>
+) (./05-todo-with-redux-toolkit.tex [212
 
 ]
 
@@ -3098,7 +3111,7 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 10.
 
 LaTeX Info: Redefining \- on input line 20.
-[212
+[213
 
 ]
 
@@ -3107,18 +3120,18 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 
 LaTeX Info: Redefining \- on input line 41.
 LaTeX Info: Redefining \- on input line 72.
-[213
+[214
 
 ]
 LaTeX Info: Redefining \- on input line 113.
 LaTeX Info: Redefining \- on input line 123.
-[214] [215]
+[215] [216]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 135.
 
 LaTeX Info: Redefining \- on input line 145.
-[216
+[217
 
 ]
 
@@ -3127,7 +3140,7 @@ LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 
 LaTeX Info: Redefining \- on input line 170.
 LaTeX Info: Redefining \- on input line 176.
-[217
+[218
 
 ]
 
@@ -3140,21 +3153,21 @@ File: ./images/05-todo-with-redux-toolkit/devTools01.png Graphic file (type bmp
 File: ./images/05-todo-with-redux-toolkit/devTools02.png Graphic file (type bmp
 )
 <./images/05-todo-with-redux-toolkit/devTools02.png>
-[218
+[219
 
-] [219]
+] [220]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 215.
 
-) (./06-thanks.tex [220
+) (./06-thanks.tex [221
 
 ]
 
 LaTeX Font Warning: Font shape `JY2/hgt/b/n' undefined
 (Font)              using `JY2/hgt/bx/n' instead on input line 1.
 
-) [221
+) [222
 
 ]
 
@@ -3167,7 +3180,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[222
+[223
 
 ]
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
@@ -3176,7 +3189,7 @@ File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
 File: ./images/cover_b5_back.pdf Graphic file (type pdf)
 <./images/cover_b5_back.pdf>
-[223]
+[224]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -3202,38 +3215,38 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (\end occurred when \iffalse on line 41 was incomplete)
 (\end occurred when \ifx on line 20 was incomplete)
 (\end occurred when \iffalse on line 20 was incomplete)
-(\end occurred when \ifx on line 1153 was incomplete)
-(\end occurred when \iffalse on line 1153 was incomplete)
-(\end occurred when \ifx on line 920 was incomplete)
-(\end occurred when \iffalse on line 920 was incomplete)
-(\end occurred when \ifx on line 794 was incomplete)
-(\end occurred when \iffalse on line 794 was incomplete)
-(\end occurred when \ifx on line 630 was incomplete)
-(\end occurred when \iffalse on line 630 was incomplete)
-(\end occurred when \ifx on line 573 was incomplete)
-(\end occurred when \iffalse on line 573 was incomplete)
-(\end occurred when \ifx on line 552 was incomplete)
-(\end occurred when \iffalse on line 552 was incomplete)
-(\end occurred when \ifx on line 531 was incomplete)
-(\end occurred when \iffalse on line 531 was incomplete)
-(\end occurred when \ifx on line 473 was incomplete)
-(\end occurred when \iffalse on line 473 was incomplete)
-(\end occurred when \ifx on line 444 was incomplete)
-(\end occurred when \iffalse on line 444 was incomplete)
-(\end occurred when \ifx on line 411 was incomplete)
-(\end occurred when \iffalse on line 411 was incomplete)
-(\end occurred when \ifx on line 402 was incomplete)
-(\end occurred when \iffalse on line 402 was incomplete)
-(\end occurred when \ifx on line 328 was incomplete)
-(\end occurred when \iffalse on line 328 was incomplete)
-(\end occurred when \ifx on line 253 was incomplete)
-(\end occurred when \iffalse on line 253 was incomplete)
-(\end occurred when \ifx on line 235 was incomplete)
-(\end occurred when \iffalse on line 235 was incomplete)
-(\end occurred when \ifx on line 162 was incomplete)
-(\end occurred when \iffalse on line 162 was incomplete)
-(\end occurred when \ifx on line 160 was incomplete)
-(\end occurred when \iffalse on line 160 was incomplete)
+(\end occurred when \ifx on line 1177 was incomplete)
+(\end occurred when \iffalse on line 1177 was incomplete)
+(\end occurred when \ifx on line 944 was incomplete)
+(\end occurred when \iffalse on line 944 was incomplete)
+(\end occurred when \ifx on line 818 was incomplete)
+(\end occurred when \iffalse on line 818 was incomplete)
+(\end occurred when \ifx on line 654 was incomplete)
+(\end occurred when \iffalse on line 654 was incomplete)
+(\end occurred when \ifx on line 597 was incomplete)
+(\end occurred when \iffalse on line 597 was incomplete)
+(\end occurred when \ifx on line 576 was incomplete)
+(\end occurred when \iffalse on line 576 was incomplete)
+(\end occurred when \ifx on line 555 was incomplete)
+(\end occurred when \iffalse on line 555 was incomplete)
+(\end occurred when \ifx on line 497 was incomplete)
+(\end occurred when \iffalse on line 497 was incomplete)
+(\end occurred when \ifx on line 468 was incomplete)
+(\end occurred when \iffalse on line 468 was incomplete)
+(\end occurred when \ifx on line 435 was incomplete)
+(\end occurred when \iffalse on line 435 was incomplete)
+(\end occurred when \ifx on line 426 was incomplete)
+(\end occurred when \iffalse on line 426 was incomplete)
+(\end occurred when \ifx on line 352 was incomplete)
+(\end occurred when \iffalse on line 352 was incomplete)
+(\end occurred when \ifx on line 277 was incomplete)
+(\end occurred when \iffalse on line 277 was incomplete)
+(\end occurred when \ifx on line 259 was incomplete)
+(\end occurred when \iffalse on line 259 was incomplete)
+(\end occurred when \ifx on line 178 was incomplete)
+(\end occurred when \iffalse on line 178 was incomplete)
+(\end occurred when \ifx on line 176 was incomplete)
+(\end occurred when \iffalse on line 176 was incomplete)
 (\end occurred when \ifx on line 2962 was incomplete)
 (\end occurred when \iffalse on line 2962 was incomplete)
 (\end occurred when \ifx on line 2770 was incomplete)
@@ -3546,12 +3559,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (\end occurred when \ifx on line 46 was incomplete)
 (\end occurred when \ifx on line 277 was incomplete) 
 Here is how much of TeX's memory you used:
- 19525 strings out of 479460
- 304380 string characters out of 5870465
- 1567112 words of memory out of 5000000
- 36481 multiletter control sequences out of 15000+600000
+ 19545 strings out of 479460
+ 305160 string characters out of 5870465
+ 1567479 words of memory out of 5000000
+ 36497 multiletter control sequences out of 15000+600000
  487258 words of font info for 167 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,14n,90p,440b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.dvi (232 pages, 577196 bytes).
+Output written on book.dvi (233 pages, 578284 bytes).
