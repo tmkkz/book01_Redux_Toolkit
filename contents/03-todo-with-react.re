@@ -15,7 +15,7 @@
 //clearpage
 =={sec-031React} Reactとは？
 
-まずは、「Reactとは、いったい何なのでしょうか？」
+まず、「Reactとはいったい何なのでしょうか？」
 
 //blankline
 本家「reactjs.org」のドキュメントは@<href>{https://ja.reactjs.org, 日本語(ja.reactjs.org)}
@@ -25,20 +25,20 @@
 
  * 宣言的なView
  * コンポーネントベース
- * 一度学習すれば、どこでも使える
+ * 一度学習すればどこでも使える
 
-って、「なに言っているのか、良く分かりません。」
+って、「なに言っているのか良く分かりません。」
 
 //blankline
-フロントエンド用フレームワークが当たり前の我々は知らないのですが
+フロントエンド用フレームワークが当たり前の我々は知らないのですが、
 jQueryなどでガチのJavaScriptプログラミングされていた方は、たいへんな思いをしていたのではないでしょうか？
 
 //blankline
 たとえば、テキストボックスの入力を検証をする場合には、
 
  1. テキストボックスをdom内から取得(getElementById)
- 2. その要素に検証用関数の呼び出しを行うイベントの追加(addEventListener)
- 3. 検証しエラーがある場合には、エラー表示用の要素をdom内から取得
+ 2. その要素に、検証用関数の呼び出しを行うイベントの追加(addEventListener)
+ 3. 検証し、エラーがある場合には、エラー表示用の要素をdom内から取得
  4. エラー表示用要素へ表示(innerHTML)
 
  が必要です。
@@ -74,11 +74,11 @@ jQueryなどでガチのJavaScriptプログラミングされていた方は、�
   </script>
 //}
 
-このように、テキストボックス1つでも、けっこうなコード量になり、おまけに表示部分とコード部分が分かれていてます。
+このように、テキストボックス1つでもけっこうなコード量になり、おまけに表示部分とコード部分が分かれていてます。
 
 //blankline
-もし、入力部分が数個あるフォームだと、入力の表示部分と対応コード部分を探すものたいへんですし
-、デバッグも悪夢のようだと思いませんか？
+もし、入力部分が数個あるフォームだと、入力の表示部分と対応コード部分を探すものたいへんですし、
+デバッグも悪夢のようだと思いませんか？
 
 //blankline
 また、使用する関数がそれぞれ別のファイルに分かれていた場合など、関数とファイル名の対応表まで必要になります。
@@ -135,17 +135,17 @@ const App = () => (
  export default App;
 //}
 
-同じ機能を持つテキストボックスでもReactを使うことで、UIコンポーネントとして定義し再利用・保守が格段に上がりました。
+同じ機能を持つテキストボックスでも、Reactを使うことでUIコンポーネントとして定義し、再利用・保守が格段に上がりました。
 
 //blankline
-これが、「宣言的なView」、「コンポーネントベース」です。
+これが「宣言的なView」、「コンポーネントベース」です。
 
 //image[jsx01][][scale=0.9,pos=H]
 //image[jsx02][][scale=0.9,pos=H]
 
 //clearpage
 =={sec-032UIDataType} 表示するデータの型
-それでは、サンプルアプリケーションについて説明します。このサンプルアプリケーションは、読書日記としていますが
+それでは、サンプルアプリケーションについて説明します。このサンプルアプリケーションは読書日記としていますが、
 通常の日記でもかまいません。
 
 //image[diaryData][][scale=0.6,pos=H]
@@ -158,7 +158,7 @@ const App = () => (
  : title(文字列)
  日記のタイトル
  : postDate(文字列)
- 投稿日をYYYYMMDD形式で持つ
+ 投稿日をYYYYMMDD形式で持つ。
  : imageUrl(文字列)
  アイキャッチ画像のURL
  : imageLabel(文字列)
@@ -171,9 +171,9 @@ const App = () => (
 とします。
 
 //blankline
-最初に表示するデータを初期値として持ちます。
+最初に表示するデータを、初期値として持ちます。
 
-実際の初期値は、こちらです(長い文字列は省略しています。GitHub上で実物を確認してください)。
+実際の初期値はこちらです(長い文字列は省略しています。GitHub上で実物を確認してください)。
 
 //list[][読書日記の初期値]{
   export type Diary = {
@@ -224,7 +224,7 @@ const App = () => (
 
 =={sec-033} Material Design５の導入
 
-ここでは、表示に使用するUIとしてGoogle推奨の「Material Design」に従ってデザインされたReact用UIの
+ここでは、表示に使用するUIとして、Google推奨の「Material Design」に従ってデザインされたReact用UIの
 @<href>{https://mui.com/,「MUI5(Material Design User Interface version5)」}を導入します。
 
 //blankline
@@ -255,7 +255,7 @@ npmを使ったインストールは、material-iconも含め以下となりま�
 //}
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 01_install-MUI https://github.com/yaruo-react-redux/yaruo-diary.git
@@ -271,7 +271,7 @@ npmを使ったインストールは、material-iconも含め以下となりま�
 
 //blankline
 製品版の場合は、１画面に表示するデータ数を決め、それを超えた場合にはページネーションを作成しますが、
-今回のサンプルアプリケーションは、1画面とします。
+今回のサンプルアプリケーションは1画面とします。
 
 //blankline
 １画面のデータ表示を４とかに決め、ページネーションにて前後ページに移動するように魔改造してみてください。
@@ -282,7 +282,7 @@ npmを使ったインストールは、material-iconも含め以下となりま�
 
 ==={sec-0331} MUI5のサイトからテンプレートを拝借
 
-MUI5のサイトの左上部のをクリックするとメニューが表示されます。
+MUI5のサイトの左上部をクリックすると、メニューが表示されます。
 
 //image[mui-siteMenu][MUIサイトメニュー][scale=0.5,pos=H]
 
@@ -299,7 +299,7 @@ MUI5のサイトの左上部のをクリックするとメニューが表示さ�
 先ほどのテンプレートページの「Album Layout」内の「SOURCECODE」をクリックします。
 //image[mui006-albumLayoutSource][ソースコードへのリンク][scale=0.4,pos=H]
 
-MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがあります。今回は、Album.tsxを開きます。
+MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがあります。今回はAlbum.tsxを開きます。
 
 //image[mui007-albumLayoutSourceCode][GitHubでのAlbumのソースコード][scale=0.6,pos=H]
 
@@ -318,7 +318,7 @@ MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがありま
 このタグをトップに置くことで、要素は１つ(ほかは子要素)となります。また、不要なdivタグに変換されません。
 
 //blankline
- 変更の完了したコードがこちらです。なります。
+ 変更の完了したコードがこちらになります。
 
 //list[][src/components/DiaryBoard.tsx]{
   import * as React from 'react';
@@ -419,7 +419,7 @@ MUIのGitHubが開き、JavaScript、TypeScriptのソースコードがありま
 
 //}
 
-次に、Appコンポーネントを変更し、DiaryBoardコンポーネントを表示するように変更します。
+次に、Appコンポーネントを変更し、DiaryBoardコンポーネントを表示するようにします。
 また、先ほど削除した「ThemeProvider」、「CssBaseline」、「createTheme()」も追加します。
 
 追加完了したコードが以下となります。
@@ -482,15 +482,15 @@ MUIのメニューから「Components > Card」をクリックすると、たく
 
 //image[mui009-card-ComplexInteraction][MUIカードサンプル][scale=0.9,pos=H]
 
-「src/components/」フォルダに「DiaryCard.tsx」ファイルを作成しソースコードをコピペします。
+「src/components/」フォルダに「DiaryCard.tsx」ファイルを作成し、ソースコードをコピペします。
 
 以下を変更します。
 
- * 1行目「import * as React」を「import React」へ(理由はのちほど)
- * function関数をアロー関数へ
- * 関数名の変更「DiaryCard」へ
- * 表示するデータをProps(引数)として受け取る
- * 受け取ったオブジェクトを表示するようにtsxに埋め込む
+ * 1行目「import * as React」を「import React」へ(理由はのちほど)。
+ * function関数をアロー関数へ。
+ * 関数名を「DiaryCard」へ。
+ * 表示するデータをProps(引数)として受け取る。
+ * 受け取ったオブジェクトを表示するようにtsxに埋め込む。
 
 
 ===[column] import * as React呪文
@@ -505,7 +505,7 @@ MUIのメニューから「Components > Card」をクリックすると、たく
 
 //blankline
 結果としての違いは、webpackでバンドルした場合に作成されるビルドファイルはインポートされたものを含むため、
-使用しないものまでインポートするとファイルサイズが肥大化する恐れがあります。
+使用しないものまでインポートすると、ファイルサイズが肥大化する恐れがあります。
 
 ===[/column]
 
@@ -534,7 +534,7 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 //blankline
 コンポーネントは、表示するためのデータ(表示する子要素も含む)を「Props(プロパティの意味)」として受け取ります。
-コンポーネント関数からしてみると引数にあたります。
+コンポーネント関数からしてみると、引数にあたります。
 
 受け取るProps(引数)の型を、「src/diaryData.ts」ファイルを作成し定義します。このファイルは、のちほど初期値も追加します。
 
@@ -552,7 +552,7 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 //image[sec00332-6][カードの単体表示][scale=0.5,pos=H]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 02_Component-Cardboard https://github.com/yaruo-react-redux/yaruo-diary.git
@@ -565,16 +565,16 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 用意してあるサンプルデータを初期値として使用し、カード一覧へ表示しましょう。
 
 //blankline
-先ほどデータ型を記入したデータファイル「src/diaryDate.ts」へサンプル用データをコピペします。
+先ほどデータ型を記入したデータファイル「src/diaryDate.ts」へ、サンプル用データをコピペします。
 サンプルアプリケーションのGitHubサイトにありますので使ってください。
 
 次に、「App.tsx」を変更します。
 
  1. initialDataは不要になったので削除。
  2. 作成したサンプルデータをインポート。
- 3. DiaryBoardコンポーネントをpropsを受け付けるよう変更
+ 3. DiaryBoardコンポーネントを、propsを受け付けるよう変更
 
- 変更後の「Appコンポーネント」は、こちらになります。
+ 変更後の「Appコンポーネント」はこちらになります。
 
 //list[][変更後のAppコンポーネント]{
   import React from 'react';
@@ -598,11 +598,11 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 
 「DiaryBoardコンポーネント」を変更します。
 
- 1. propsでDiary型の配列を受け付ける
- 2. DiaryCardコンポーネントを使って各データを表示する
+ 1. propsでDiary型の配列を受け付ける。
+ 2. DiaryCardコンポーネントを使って各データを表示する。
  3. Footerのべた書き文字列をアプリケーション用に変更する。
 
-変更した「DiaryBoardコンポーネント」が、こちらになります。
+変更した「DiaryBoardコンポーネント」がこちらになります。
 
 //list[][変更後のDiaryBoardコンポーネント]{
   import React from 'react';
@@ -682,7 +682,7 @@ TypeScriptでは、受け取るオブジェクトの型を定義します。
 //image[pray04][][scale=0.6,pos=H]
 
 //clearpage
-//image[diaryBoad_done][全データ表示][scale=0.7]
+//image[DiaryBoard_done][全データ表示][scale=0.7]
 
 //clearpage
 ==={sec-0336} リファクタリング2(カードヘッダを別コンポーネントへ)
@@ -697,9 +697,9 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 
 //blankline
 
- 1. 「DiaryCardHeader.tsx」ファイルを作成しコンポーネントのテンプレを書く
- 2. 「DiaryCard.tsx」から、CardHeader部分を「DiaryCardHeader.tsx」切り出し
- 3. 「DiaryCardコンポーネント」に「DiaryCardHeaderコンポーネント」をインポートして使用
+ 1. 「DiaryCardHeader.tsx」ファイルを作成し、コンポーネントのテンプレを書く。
+ 2. 「DiaryCard.tsx」から、CardHeader部分を「DiaryCardHeader.tsx」へ切り出し。
+ 3. 「DiaryCardコンポーネント」に「DiaryCardHeaderコンポーネント」をインポートして使用。
 
  変更が完了したファイルは、このようになります。
 
@@ -764,13 +764,13 @@ MUIサイトのコンポーネント例の「Menu」にあるものを拝借し�
 //clearpage
 ===={sec-0336-1} DiaryCarHeaderコンポーネントにメニューを組み込む
 
-MUIのサイトからメニュー部分のコードを拝借して「DiaryCardHeaderコンポーネント」に追加しましょう。
+MUIのサイトからメニュー部分のコードを拝借して、「DiaryCardHeaderコンポーネント」に追加しましょう。
 やりたいことは「編集、削除」ですので、メニュー項目(MenuItem)は２つでかまいません。
 
 //image[mui011-card-MenuCode][MUIのMenuサンプル][scale=0.7]
 
 //clearpage
-拝借するコードは、「CardHeader」と同じ階層に貼り付けますが、その場合「Jsxはひとつの要素」と怒られますので、
+拝借するコードは「CardHeader」と同じ階層に貼り付けますが、その場合「Jsxはひとつの要素」と怒られますので、
 トップ階層に「<></>」を追加します。
 
 //blankline
@@ -781,16 +781,16 @@ MUIのサイトからメニュー部分のコードを拝借して「DiaryCardHe
  : 削除アイコン
  import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
-を使い、Avatarコンポーネントではなく「ListItemIconコンポーネント」を使います。サンプルメニューの
+を使い、Avatarコンポーネントではなく、「ListItemIconコンポーネント」を使います。サンプルメニューの
 区切り線の下の部分で使われています。
 
 //blankline
 最後は、「AccountMenuコンポーネント」の関数(HTML内に埋め込まれています)も忘れずにコピペしてください。
 
 //blankline
-handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に追加します。
+handleClick関数は、MoreVertIconの親要素IconButtonの「onClick」に追加します。
 
-ここまでの変更が完了すると「DiaryCardHeaderコンポーネント」は、このようになります。
+ここまでの変更が完了すると、「DiaryCardHeaderコンポーネント」はこのようになります。
 
 //list[][変更完了のDiaryCardHeaderコンポーネント]{
   import React from 'react';
@@ -893,17 +893,17 @@ handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に�
   export default DiaryCardHeader;
 //}
 
-ここまでの変更を動作確認します。「縦の３点アイコン」をクリックするとメニューが表示されますか？
+ここまでの変更を動作確認します。「縦の３点アイコン」をクリックすると、メニューが表示されますか？
 //image[menu][][scale=0.6,pos=H]
 
 //clearpage
 //image[mui012-card-MenuStep1][クリックするとメニューが表示される][scale=0.7]
 
 メニューが無事表示されたので、のちほど実際の関数に置き換えるとして、テストとしてアラートを出してみます。
-「編集・削除」のMenuItemコンポーネントに「onClick」を追加し対応する関数を書きます。
+「編集・削除」のMenuItemコンポーネントに「onClick」を追加し、対応する関数を書きます。
 
 //blankline
-ただし、削除がクリックされたときには「本当に削除しますか？」と確認のダイアログを出すようにします。
+ただし、削除がクリックされたときには、「本当に削除しますか？」と確認のダイアログを出すようにします。
 ダイアログは、MUIサイトの「Dialog」から「Transitions」を拝借します。
 
 //image[mui013-card-deleteDialog][MUIサイトのTransitionsダイアログ][scale=0.6,pos=H]
@@ -914,17 +914,17 @@ handleClick関数は、MoreVertIconの親要素のIconButtonの「onClick」に�
 
 //blankline
 コピペすると、メニューの開閉状態の「open」とダイアログ表示状態の「open」が重複しますので、それぞれ
-「openMenu」、「openDialog」に名前を変えます。また閉じる関数「handleClose」も重複しますので名前を変えます。
+「openMenu」、「openDialog」に名前を変えます。また、閉じる関数「handleClose」も重複しますので、名前を変えます。
 
 //blankline
-Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 -> アラート表示になるように関数呼び出します。
+Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 -> アラート表示になるように関数を呼び出します。
 
 //blankline
-ここまでの変更が完了しましたら動作確認します。
+ここまでの変更が完了しましたら、動作確認します。
 
- * 編集メニューをクリックしたときにアラートはでましたか？
+ * 編集メニューをクリックしたときにアラートは出ましたか？
  * 削除メニューをクリックしたときに確認ダイアログが表示しましたか？
- * 確認ダイアログの削除をクリックしたときにアラートはでましたか？
+ * 確認ダイアログの削除をクリックしたときにアラートは出ましたか？
 
 //image[check][][scale=0.6,pos=H]
 
@@ -934,7 +934,7 @@ Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 ->
 //clearpage
 ===={sec-0336-2} DiaryBoardHeaderの見栄え
 
-もう少し見栄え良くしたいので、DiaryCardHeaderコンポーネントの、
+もう少し見栄え良くしたいので、DiaryCardHeaderコンポーネントに、
 
  1. アバターの代わりに投稿月の画像を表示
  2. サブタイトルに投稿日を「YYYY年M月D日」で表示
@@ -946,7 +946,7 @@ Menuの「削除」をクリック　-> 確認ダイアログ表示 -> 削除 ->
 
 //blankline
 読書日記データの投稿日は「YYYYMMDD」形式の文字列ですので、この文字列からJavaScriptのDateオブジェクトを返す関数を作成します。
-また、のちほど作成する読書日記の新規追加・編集時のため日付から「YYYYMMDD」の文字列を作成する関数も合わせて作成します。
+また、のちほど作成する読書日記の新規追加・編集時のため、日付から「YYYYMMDD」の文字列を作成する関数も合わせて作成します。
 
 //blankline
 どの場所からも使えるように「src/utilities/helper.ts」ファイルを作成し、ここに関数を作成します。
@@ -1112,7 +1112,7 @@ DiaryCardHeaderコンポーネントへ「convertToLongDateString」をインポ
 //image[mui015-card-Header-done][desc][scale=0.7]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 04_refactoring_DiaryHeader https://github.com/yaruo-react-redux/yaruo-diary.git
@@ -1124,8 +1124,8 @@ DiaryCardHeaderコンポーネントへ「convertToLongDateString」をインポ
 読書データの新規追加・編集のためのフォームを作成します。
 
 //blankline
-フォームは、DialogとしてDiaryBoadコンポーネントに追加し、DiaryBoardコンポーネントに新規追加ボタンで表示するようにします。
-作成するフォームは別コンポーネントとするために「src/components/DiaryForm.tsx」ファイルを作成します。
+フォームはDialogとしてDiaryBoardコンポーネントに追加し、DiaryBoardコンポーネントに新規追加ボタンで表示するようにします。
+作成するフォームは、別コンポーネントとするために「src/components/DiaryForm.tsx」ファイルを作成します。
 
 //blankline
 MUIサイトのComponents内のText fieldコンポーネントには、フォームとして使えそうなサンプルがあります。
@@ -1135,7 +1135,7 @@ MUIサイトのComponents内のText fieldコンポーネントには、フォー
 //image[mui016-muisite-textField][MUIサイトのテキストフィールド][scale=0.6,pos=H]
 
 これらを参考にしてフォームを作成します。また、投稿日の入力用にMUIのDatePickerを使うのですが、
-このコンポーネントはラボ(実験中)に分類されています。そのためMUIのLabと日付を扱うためのライブラリ「date-fns」
+このコンポーネントはラボ(実験中)に分類されています。そのため、MUIのLabと日付を扱うためのライブラリ「date-fns」
 をインストールします。
 
 //image[mui017-muisite-datePicker][MUIのDatePicker][scale=0.7]
@@ -1158,7 +1158,7 @@ DiaryFormコンポーネントにあるすべてのテキストフィールド�
 //blankline
 テキストフィールドに入力されるデータは、タイトルと本文のみは4文字以上の入力を必須とします。
 
-作成したフォームは、こちらになります。
+作成したフォームはこちらになります。
 
 //list[][DiaryForm]{
   import React, { useState, useRef } from 'react';
@@ -1399,10 +1399,10 @@ DiaryFormコンポーネントにあるすべてのテキストフィールド�
   export default DialogDiaryForm;
 //}
 
-DiaryBoardコンポーネントに、新規追加ボタン追加しフォームが開くよう実装します。
+DiaryBoardコンポーネントに新規追加ボタンを追加し、フォームが開くよう実装します。
 
  1. 空欄の初期化データinitialDiaryを作成
- 2. DiaryFormDialogコンポーネントをインポートし追加
+ 2. DiaryFormDialogコンポーネントをインポートし、追加
  3. 新規追加アイコンをツールバーに追加し、クリックするとDiaryFormDialogが開く
 
 以上の変更を加えた「DiaryBoardコンポーネント」は、こちらになります。
@@ -1515,13 +1515,13 @@ DiaryBoardコンポーネントに、新規追加ボタン追加しフォーム�
 
 //}
 
-変更が完了したら動作確認をします。ツールバーに「＋」のアイコンボタンが表示され、クリックすると入力フォームが開きます。
+変更が完了したら、動作確認をします。ツールバーに「＋」のアイコンボタンが表示され、クリックすると入力フォームが開きます。
 
  * それぞれのテキストフィールドに入力はできますか？
  * タイトルと本文が４文字以下だとエラーがでますか？
- * DatePickerは、動作しますか？
+ * DatePickerは動作しますか？
 
-開いた入力フォームですが、保存・キャンセルとも機能実装していません。そのため一度開いたフォームを閉じることができません。
+開いた入力フォームですが、保存・キャンセルとも機能実装していません。そのため、一度開いたフォームを閉じることができません。
 
 //image[close][][scale=0.7,pos=H]
 //clearpage
@@ -1536,39 +1536,39 @@ Reactコンポーネントは表示するためのデータをPropsを介して�
 祖父母コンポーネントから親コンポーネントを経由して渡します。
 
 //blankline
-これが「Reactあるある」のひとつ「Propsバケツリレー(英語では、Props drilling)」です。
+これが「Reactあるある」のひとつ、「Propsバケツリレー(英語ではProps drilling)」です。
 
 //image[AppComponents][コンポーネントの構成図][scale=0.7,pos=H]
 
 //clearpage
-今回のように孫コンポーネントにあたる「DiaryCardHeaderコンポーネント」の編集・削除の要求があった場合には
-全データを管理する「DiaryBoadコンポーネント」に伝えなければなりません。
+今回のように、孫コンポーネントにあたる「DiaryCardHeaderコンポーネント」の編集・削除の要求があった場合には、
+全データを管理する「DiaryBoardコンポーネント」に伝えなければなりません。
 
 //blankline
-表示は、親コンポーネントからバケツリレーで伝え、
-孫コンポーネントで受けたユーザーからの要求は逆のルートをたどって親まで伝えることになります。
-孫で発生した要求を親に伝える方法として一般的なのが、関数をPropsとしてデータと伴に子・孫へ渡す方法です。
+表示は親コンポーネントからバケツリレーで伝え、
+孫コンポーネントで受けたユーザーからの要求は、逆のルートをたどって親まで伝えることになります。
+孫で発生した要求を親に伝える方法として一般的なのが、関数をPropsとしてデータとともに子・孫へ渡す方法です。
 
 //image[propsDrilling][][scale=0.6,pos=H]
 
 //blankline
-今回のアプリケーションでは、DiaryBoadコンポーネントが、
+今回のアプリケーションでは、DiaryBoardコンポーネントが、
 
  * 削除要求は、diaryIdを知らせてね。
  * 編集要求は、全データ持っているので編集対象のdiaryIdを知らせてね。フォームにセットするから。
  * 入力フォームでの保存要求は、保存するデータをください。diaryIdが既存のものは上書き、ほかは追加。
 
- の関数をそれぞれのコンポーネントにバケツリレーし、孫で関数を実行すれば親に要求が伝わることになります。
+ の関数をそれぞれのコンポーネントにバケツリレーし、孫で関数を実行すれば、親に要求が伝わることになります。
 
 //blankline
 データの変化が起こると、ブラウザが再描画されます。Reactコンポーネントの場合、
-再描画されるためのデータの変化とは、propsとコンポーネント自身で管理しているものです。
+再描画されるためのデータの変化というのは、propsとコンポーネント自身で管理しているもののことです。
 
 //blankline
-DiaryBoadコンポーネントでは、管理するデータをuseStateで状態管理し、ブラウザの描画にもその状態を使う
-必要があります。そのためDiaryBoadコンポーネントにuseStateを追加します。
+DiaryBoardコンポーネントでは、管理するデータをuseStateで状態管理し、ブラウザの描画にもその状態を使う
+必要があります。そのため、DiaryBoardコンポーネントにuseStateを追加します。
 
-//list[][DiaryBoad.tsx]{
+//list[][DiaryBoard.tsx]{
   // 全データ Appコンポーネントから受け取ったデータで初期化する
   const [diaryData, setDiaryData] = useState(diaries);
 
@@ -1622,7 +1622,7 @@ DiaryHeaderコンポーネントでは、受けたPropsから関数を取り出�
 
 //}
 
-完成したDiaryCardHeaderコンポーネントは、こちらです。
+完成したDiaryCardHeaderコンポーネントはこちらです。
 
 //list[][DiaryCardHeader.tsx]{
   /* eslint-disable @typescript-eslint/no-unsafe-assignment */
@@ -1882,7 +1882,7 @@ const DiaryCard = (props: DiaryCardProps) => {
     />
 //}
 
-バケツリレーですので、受け取って渡すだけです。変更後のDiaryCardHeaderコンポーネントは、こうなります。
+バケツリレーですので、受け取って渡すだけです。変更後のDiaryCardHeaderコンポーネントはこうなります。
 
 //list[][DiaryCard.tsx]{
   import React from 'react';
@@ -1997,7 +1997,7 @@ const DiaryCard = (props: DiaryCardProps) => {
 
 //}
 
-最後に親のDiaryBoadコンポーネントに、子・孫に送った関数を定義します。
+最後に、親のDiaryBoardコンポーネントに、子・孫に送った関数を定義します。
 
 //list[][DiaryBoard.tsx]{
   // 編集・削除ボタンクリック
@@ -2015,25 +2015,25 @@ const DiaryCard = (props: DiaryCardProps) => {
   };
 //}
 
-削除はDiaryBoadコンポーネントがuseStateを使って全データを管理していますので、該当のdiaryIdを持つ
+削除は、DiaryBoardコンポーネントがuseStateを使って全データを管理していますので、該当のdiaryIdを持つ
 オブジェクトを削除するだけです。
 
 //blankline
-編集はDiaryBoadコンポーネントに保存対象のデータをuseStateで定義し、全データから該当のdiaryIdを持つ
+編集は、DiaryBoardコンポーネントに保存対象のデータをuseStateで定義し、全データから該当のdiaryIdを持つ
 オブジェクトをtargetDiaryData変数に格納します。
 
 //blankline
-新規追加は初期化データをtargetDiaryDataへ格納します。編集フォームへtargetDiaryDataを渡して表示します。
+新規追加は、初期化データをtargetDiaryDataへ格納します。編集フォームへtargetDiaryDataを渡して表示します。
 
 //image[propsDrilling01][][scale=0.8,pos=H]
 //clearpage
 ==={sec-034-2} 保存・キャンセル関数をPropsにデータと渡す
 
-同じように、編集フォームのDiaryFormコンポーネントも、DiaryBoadコンポーネントからは孫にあたります。
+同じように、編集フォームのDiaryFormコンポーネントも、DiaryBoardコンポーネントからは孫にあたります。
 保存・キャンセルの関数をバケツリレーで渡します。
 
-DiaryFormコンポーネントのPropsに保存・キャンセルの関数を追加します。DiaryBoadコンポーネントからは
-保存・キャンセルのどちらもフォームを閉じるため「closeForm関数」としました。
+DiaryFormコンポーネントのPropsに、保存・キャンセルの関数を追加します。DiaryBoardコンポーネントからは
+保存・キャンセルのどちらもフォームを閉じるため、「closeForm関数」としました。
 
 //blankline
 保存の場合には読書日記データ、キャンセルの場合はnullを渡します。
@@ -2046,10 +2046,10 @@ DiaryFormコンポーネントのPropsに保存・キャンセルの関数を追
 //}
 
 入力フォームのDatePickerはDateオブジェクトを返しますので、Dateオブジェクトから「YYYYMMDD」に変換する関数を
-「src/utilities/helper.ts」に作成してあるのでDiaryFormコンポーネントにインポートします。
+「src/utilities/helper.ts」に作成してあるので、DiaryFormコンポーネントにインポートします。
 
 //blankline
-保存ボタンがクリックされた場合には、データ検証し問題があれば該当のテキストフィールドにフォーカスを当てます。
+保存ボタンがクリックされた場合には、データ検証し、問題があれば該当のテキストフィールドにフォーカスを当てます。
 そのためにuseRefを使用しています。
 
 //blankline
@@ -2089,7 +2089,7 @@ DiaryFormコンポーネントのPropsに保存・キャンセルの関数を追
   };
 //}
 
-実装の完了したDiaryFormコンポーネントは、こちらになります。
+実装の完了したDiaryFormコンポーネントはこちらになります。
 
 //list[][DiaryFormコンポーネント]{
   import React, { useState, useRef } from 'react';
@@ -2325,7 +2325,7 @@ DiaryFormコンポーネントのPropsに保存・キャンセルの関数を追
 //}
 
 DiaryFormコンポーネントのPropsは、DiaryFormDialogコンポーネントから受け取ります。
-DiaryFormDialogコンポーネントにもDiaryBoadコンポーネントから受け取るPropsに関数を追加し
+DiaryFormDialogコンポーネントにもDiaryBoardコンポーネントから受け取るPropsに関数を追加し、
 DiaryFormコンポーネントへ送ります。
 
 //list[][DiaryFormDialog.tsx]{
@@ -2357,15 +2357,15 @@ DiaryFormコンポーネントへ送ります。
 
 //}
 
-最後にDiaryBoadコンポーネントへ、保存・キャンセルの実装します。保存は、
+最後に、DiaryBoardコンポーネントへ保存・キャンセル実を装します。保存は、
 
- * 新規はdiaryId空欄なのでdiaryIdを作成
+ * 新規はdiaryIdが空欄なので、diaryIdを作成
  * 編集はdiaryIdが既存
 
 となります。保存は、全データから保存対象のdiaryId以外の読書日記データ配列に追加するだけです。
 
 
-diaryIdを重複なく作成するためにユニークなIDを作成してくれるライブラリをインストールします。
+diaryIdを重複なく作成するために、ユニークなIDを作成してくれるライブラリをインストールします。
 TypeScript用の型情報もインストールします。
 
 //terminal[][uuidのインストール]{
@@ -2373,7 +2373,7 @@ TypeScript用の型情報もインストールします。
  > npm install -D @types/uuid
 //}
 
-//list[][DiaryBoad.tsx]{
+//list[][DiaryBoard.tsx]{
   import { v4 as uuidv4 } from 'uuid';
 
   const saveDiary = (diary: Diary) => {
@@ -2408,10 +2408,10 @@ TypeScript用の型情報もインストールします。
 不具合はみつかりましたか？
 
 //blankline
-編集保存した場合、以前の日付で新規追加した場合とも保存したデータが最後尾に表示されます。
-編集後の全データをセットする前にソートするようにしましょう。
+編集保存した場合、以前の日付で新規追加した場合も、保存したデータが最後尾に表示されます。
+編集後の全データをセットする前に、ソートするようにしましょう。
 
-//list[][DiaryBoad.tsx]{
+//list[][DiaryBoard.tsx]{
   // postDateを数値に変換して比較し並べ替え
   const diarySort = (a: Diary, b: Diary) => {
     if (+a.postDate < +b.postDate) return -1;
@@ -2427,9 +2427,9 @@ TypeScript用の型情報もインストールします。
   };
 //}
 
-ソートを追加したDiaryBoadコンポーネントです。
+ソートを追加したDiaryBoardコンポーネントです。
 
-//list[][DiaryBoad.tsx]{
+//list[][DiaryBoard.tsx]{
   import React, { useState } from 'react';
   import AppBar from '@mui/material/AppBar';
   import Grid from '@mui/material/Grid';
@@ -2616,10 +2616,10 @@ TypeScript用の型情報もインストールします。
 
 //}
 
-以上でサンプルアプリケーションは完成です。見栄えを少し修正したものをGitHubへアップロードしてあります。
+以上でサンプルアプリケーションは完成です。見栄えを少し修正したものを、GitHubへアップロードしてあります。
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
   $ > git clone -b 06_implements_data_save https://github.com/yaruo-react-redux/yaruo-cra-template.git
@@ -2630,8 +2630,8 @@ TypeScript用の型情報もインストールします。
 
 =={sec03-sammary} 第３章のまとめ
 
- * Reactのスタートアッププロジェクトがあれば簡単に始めることができる。
- * MUIを使えばサンプルのアレンジで画面が作成できる。
+ * Reactのスタートアッププロジェクトがあれば、簡単に始めることができる。
+ * MUIを使えば、サンプルのアレンジで画面が作成できる。
  * コンポーネント間のバケツリレーはたいへん。
 
 //image[understand][][scale=0.7,pos=H]

@@ -1,8 +1,8 @@
 = 日記アプリケーションの作成(Redux-toolkit使用)
 
 //abstract{
-　本章では、前章で導入したReduxの動作しているサンプルアプリケーションをRedux-toolkitを使い
-どれくらいコード量が減り苦行から解放されるのかを確認します。
+　本章では、前章で導入したReduxの動作しているサンプルアプリケーションを、Redux-toolkitを使い、
+どれくらいコード量が減り、苦行から解放されるのかを確認します。
 @<br>{}
 　
 //}
@@ -20,11 +20,11 @@
 以上でインストールは完了です。
 
 //blankline
-redux-toolkitでは、各データ集合毎にSliceを作成します。Sliceにreduceを登録すると自動でActionCreatorを
+redux-toolkitでは、各データ集合毎にSliceを作成します。Sliceにreduceを登録すると、自動でActionCreatorを
 作成してくれます。
 
 //blankline
-それでは、Sliceを作成するファイルを「src/redux/redux-tk.ts」追加してください。
+それでは、Sliceを作成するファイル「src/redux/redux-tk.ts」を追加してください。
 
 =={sec05-02} Sliceの作成
 
@@ -104,7 +104,7 @@ ActionCreatorになります。
 keyはSliceでreducerに使用した名前で、valueは前章で作成したActionCreator名と同じ名前にしています。
 
 //blankline
-エクスポートされるのはvalueですので、同じ名前でエクスポートされたActionCreatorですので、
+エクスポートされるのはvalueで、同じ名前でエクスポートされたのもActionCreatorですので、
 使用する側の各コンポーネントではActionCreatorのインポートファイルのパスを変更するだけで、コードの変更はありません。
 
 //list[][ActionCreatorのエクスポート]{
@@ -115,7 +115,7 @@ keyはSliceでreducerに使用した名前で、valueは前章で作成したAct
   } = diariesSlice.actions;
 //}
 
-最後に、Storeを作成しエクスポートします。Storeは、「createStore関数」ではなく
+最後に、Storeを作成しエクスポートします。Storeは「createStore関数」ではなく、
 「configureStore関数」となります。
 
 //list[][Storeの作成]{
@@ -125,7 +125,7 @@ keyはSliceでreducerに使用した名前で、valueは前章で作成したAct
   });
 //}
 
-必要なインポート、ソート用の関数、Stateの型情報をいれても５８行です。前章のファイルが101行ですので
+必要なインポート、ソート用の関数、Stateの型情報をいれても５８行です。前章のファイルが101行ですので、
 この最小のサンプルアプリケーションでも40%の削減になります。
 
 //blankline
@@ -134,7 +134,7 @@ keyはSliceでreducerに使用した名前で、valueは前章で作成したAct
 //image[easy][][scale=0.7,pos=H]
 
 =={sec05-03} トップコンポーネントに登録
-トップコンポーネントに登録するのですが、前章で登録してあるのでStoreのインポートパスを変えるだけです。
+トップコンポーネントに登録するのですが、前章で登録してあるので、Storeのインポートパスを変えるだけです。
 
 //list[][トップコンポーネントへ登録]{
   import React from 'react';
@@ -156,7 +156,7 @@ keyはSliceでreducerに使用した名前で、valueは前章で作成したAct
 //image[actionCreator2][][scale=0.7,pos=H]
 
 =={sec05-04} コンポーネントから使用する
-ActionCreatorを使用するコンポーネントもインポートパスを変えるだけです。
+ActionCreatorを使用するコンポーネントも、インポートパスを変えるだけです。
 
 //list[][DiaryBoardコンポーネント]{
   import {
@@ -170,7 +170,7 @@ ActionCreatorを使用するコンポーネントもインポートパスを変�
 import { deleteDiaryActionCreator } from '../redux/redux-tk';
 //}
 
-以上でReduxからRedux-toolkitへ切替が完了しました。動作確認を行います。
+以上で、ReduxからRedux-toolkitへ切替が完了しました。動作確認を行います。
 
 //image[done][][scale=0.8,pos=H]
 
@@ -188,16 +188,16 @@ redux-loggerをMiddlewareとして導入していますので、devToolsのコ�
 
 //image[devTools01][コンソールに表示されたログ][scale=0.8,pos=H]
 
-reduxタブを開くとAction Typeが「Sliceのname/reducerのキー名」で自動作成されているのが確認できます。
+reduxタブを開くと、Action Typeが「Sliceのname/reducerのキー名」で自動作成されているのが確認できます。
 
 //image[devTools02][ActionCreatorの自動生成の確認][scale=0.8,pos=H]
 =={sec05-06} 第５章のまとめ
-Redux-toolkitを使うとコード量を削減できます。コード量が削減できることは、不具合の入り込む可能性を
+Redux-toolkitを使うと、コード量を削減できます。コード量が削減できることは、不具合の入り込む可能性を
 低くすることを意味します。
 
 //blankline
 また、Reduxではコードが分散しがちでしたが、Redux-toolkitではSliceにまとめることができます。
-見通しの良いコードはさらに不具合の入り込みを減らすことでしょう。
+見通しの良いコードは、さらに不具合の入り込みを減らすことでしょう。
 
 
 //image[ending][][scale=0.8,pos=H]

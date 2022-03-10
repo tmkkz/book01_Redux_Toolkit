@@ -11,7 +11,7 @@
   　・ Node.js@<br>{}
   　・ Microsoft Visual Studio Code + 拡張機能@<br>{}
   　・ Google Chrome + 拡張機能@<br>{}
-をインストールしてください。これらは、すべて無償で提供されています。@<br>{}
+をインストールしてください。これらはすべて無償で提供されています。@<br>{}
 @<br>{}
 なお、これらの準備が整っている方は、本章を読み飛ばしていただいてもかまいません。
 //}
@@ -22,9 +22,9 @@
 
 === Node.jsについて
 ==== Node.jsとは？
-「Node.js」は、通常ブラウザ上で実行されるJavaScriptをサーバやPC上で実行できるようする
+「Node.js」は、通常ブラウザ上で実行されるJavaScriptをサーバやPC上で実行できるようにする
 「@<B>{JavaScript実行環境}」です。
-たとえば、WindowsにPythonをインストールすると「python.exe」を使いpythonファイルをWindows上で実行できます。
+たとえば、WindowsにPythonをインストールすると、「python.exe」を使いpythonファイルをWindows上で実行できます。
 
 //image[y01][pythonを実行][scale=1.0]
 
@@ -38,7 +38,7 @@
   console.log(`${name}が、こんなこと言ってます。${message}`);
 //}
 
-このスクリプトをターミナル上で実行します。「node」コマンドに実行したいJavaScriptファイルを引数として渡します。
+このスクリプトをターミナル上で実行します。「node」コマンドに、実行したいJavaScriptファイルを引数として渡します。
 
 //terminal[?][app.jsを実行]{
   ❯ node test01.js
@@ -61,7 +61,7 @@
 ここでダウンロード可能なのは、「16.13.2 LTS(Long Term Support)推奨版」と「17.4.0最新版」@<fn>{fn-101}の2つがあります。
 //footnote[fn-101][2022/1/17現在]
 
-LTS版、最新版は以下のロードマップにより更新されます。
+LTS版、最新版は、以下のロードマップにより更新されます。
 
 //image[newRelease][][scale=1.0,pos=H]
 
@@ -70,7 +70,7 @@ LTS版、最新版は以下のロードマップにより更新されます。
 
 Node.jsのReleases:@<href>{https://nodejs.org/ja/about/releases/}にあるように、
 #@#<!-- textlint-disable -->
-Node.jsは、各年の4月、10月にリリースされ、
+Node.jsは各年の4月、10月にリリースされ、
 #@#<!-- textlint-ensable -->
 
  * Current
@@ -86,7 +86,7 @@ Node.jsは、各年の4月、10月にリリースされ、
 
 === Node.jsのインストールの前に
 //image[y01_whichNodeVer][][scale=1.0]
-Node.jsは、ロードマップにより定期的にバージョンアップされます。又、Node.js自体の不具合の修正などで
+Node.jsは、ロードマップにより定期的にバージョンアップされます。また、Node.js自体の不具合の修正などで
 マイナーバージョンアップも行われます。
 
 //blankline
@@ -98,7 +98,7 @@ Node.jsは、ロードマップにより定期的にバージョンアップさ�
 それを避けるためにも、プロジェクト毎にNode.jsのバージョンは固定して開発します。
 
 //blankline
-通常は、OSにインストールできるNode.jsのバージョンはひとつですが、長期にわたるサポートや新規プロジェクト開発のためには、
+通常はOSにインストールできるNode.jsのバージョンはひとつですが、長期にわたるサポートや新規プロジェクト開発のためには、
 複数のNode.jsのバージョンを切り替えて使用できるしくみを用意しましょう。
 
 //blankline
@@ -120,7 +120,7 @@ nvm(node version manager)を使えば、複数バージョンのNode.jsを1台�
 //image[switchNodejs][][scale=0.6,pos=H]
 
 //blankline
-GitHub上のnvmは、Shellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
+GitHub上のnvmはShellscript(sh, dash, zsh, bash)上で動作するため、Linux(UNIX系)、macOSにインストールできます。
 
 //blankline
 Windows版:@<href>{https://github.com/coreybutler/nvm-windows}は、別な方がGitHub上で公開されています。
@@ -153,9 +153,9 @@ nvm-windowsのリリースページ:@<href>{https://github.com/coreybutler/nvm-w
 
 ==== nvmの使い方
 
-macOSではターミナルを起動し、Windowsではコマンドプロンプト、または、Windows Terminalを起動してください。
+macOSではターミナルを起動し、Windowsではコマンドプロンプト、またはWindows Terminalを起動してください。
 
-nvmとnvm-windowsでは、コマンドが少し違いますが、「nvm --help」を入力することで使用できるコマンドが表示されます。
+nvmとnvm-windowsではコマンドが少し違いますが、「nvm --help」を入力することで使用できるコマンドが表示されます。
 
 //terminal[][Mac OSX]{
 > nvm --help
@@ -351,12 +351,12 @@ HTML・CSS・JavaScriptを使用して、Windows、Mac、Linuxのマルチプラ
 
 //blankline
 Visual Studio Code(以後は、VSCodeと表記します。)は、コードを記述する「テキストエディタ」として非常に優秀ですが、
-拡張機能(Google ChromeやFirefoxなどのブラウザ同様に拡張機能が多くの開発者により公開されています。)を追加することで
+拡張機能(Google ChromeやFirefoxなどのブラウザ同様に、拡張機能が多くの開発者により公開されています。)を追加することで
 JavaScript以外の言語(C#、pythonなど)でも使えます。
 
 //blankline
-デバッグなども行えるため、Web開発では、事実上の標準と言っても良いでしょう。有料では、Jetbrains社:@<href>{https://www.jetbrains.com/}の
-Webstormがありますが、今回は、無償のVSCodeを使用します。
+デバッグなども行えるため、Web開発では事実上の標準と言っても良いでしょう。有料ではJetbrains社:@<href>{https://www.jetbrains.com/}の
+Webstormがありますが、今回は無償のVSCodeを使用します。
 
 //image[freeSoftware][][scale=0.5,pos=H]
 === VSCodeのインストール
@@ -376,7 +376,7 @@ VSCodeのインストールは@<br>{}
 //terminal[][winget]{
   winget install -e --id Microsoft.VisualStudioCode
 //}
-にて、インストールできます。
+にてインストールできます。
 
 ==== macOS
 パッケージマネージャーに「brew」をお使いの方は、
@@ -384,7 +384,7 @@ VSCodeのインストールは@<br>{}
   > brew update
   > brew cask install visual-studio-code
 //}
-にて、インストールできます。
+にてインストールできます。
 
 === VSCodeの拡張機能
 VSCodeは、プラグイン形式で拡張機能を追加できます。
@@ -400,7 +400,7 @@ VSCodeを起動し、左ツールバーの拡張機能アイコンをクリッ�
 
 ==== Debugger for Chrome
 デバッグの際に、PCにインストールされているChromeを自動で起動してくれます。
-ChromeのDevToolsは、非常に強力です。また、ChromeにもReact、Redux用の拡張機能を追加すると
+ChromeのDevToolsは非常に強力です。また、ChromeにもReact、Redux用の拡張機能を追加すると
 更に便利になります。
 
 //image[01_06vscodeExtension_debuggerForChrome][Beautify][scale=1.0,pos=H]
@@ -460,7 +460,7 @@ Reactを使用して作成したページは、最終的にはページ出力用
 
 
 =={sec-chap01review} 第1章のまとめ
-React、Reduxの開発環境は、できましたでしょうか？
+React、Reduxの開発環境はできましたでしょうか？
 
 
  * nvm

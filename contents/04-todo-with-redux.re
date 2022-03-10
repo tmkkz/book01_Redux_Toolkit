@@ -11,12 +11,12 @@
 //clearpage
 =={sec04-01} Reduxとは？
 #@# cafeを例にしてAction actioncreator despatch state
-Reduxとは状態管理をするためのライブラリのひとつです。状態管理とは、アプリケーションで使用するデータの状態
+Reduxとは、状態管理をするためのライブラリのひとつです。状態管理とは、アプリケーションで使用するデータの状態
 (初期値への追加・変更・削除)を正しく保持することです。
 
 //blankline
 Reactを使用したアプリケーションで状態管理をする方法は複数ありますが、
-2022年時点ではデフィアクト・スタンダードと言われるほど使われています。
+2022年時点ではデファクト・スタンダードと言われるほど使われています。
 
 //blankline
 Reactでの状態管理の方法は、
@@ -32,20 +32,20 @@ Reduxを導入するメリットは何があるのでしょうか？
 一番のメリットは、データ管理の一元化ではないでしょうか？
 
 //blankline
-リレーショナル・データベースで言えば、テーブルデータの集合体のStateがあり
+リレーショナル・データベースで言えば、テーブルデータの集合体のStateがあり、
 画面に必要なデータは、親コンポーネントに頼らず「useSelect」を使えば簡単に取得できます。
 
 //blankline
-また、データの追加・更新・削除も親コンポーネントに頼らず「ActionCreator」に
+また、データの追加・更新・削除も親コンポーネントに頼らず、「ActionCreator」に
 データを渡し作成した「Action」を「dispatch関数」に渡すだけで完了します。
 
 ==== バケツリレーからの脱却
-サンプルアプリケーションでの「Reactあるあるのバケツリレー」もコンポーネントから
-自由にアクセスできるのでデータの取得・変更に関しては脱却できます。
+サンプルアプリケーションでの「Reactあるあるのバケツリレー」も、コンポーネントから
+自由にアクセスできるので、データの取得・変更に関しては脱却できます。
 
 ==== メンテナンス性の向上
 データを変更する箇所が「Reducer」に集約されるため、メンテナンス性が高くなります。
-また、middlewareを組み込むことによりデバッグも簡単になります。
+また、middlewareを組み込むことにより、デバッグも簡単になります。
 
 //blankline
 devTools-extentionを導入すると、発行されたActionをさかのぼってデータの変化を確認できます。
@@ -56,31 +56,31 @@ devTools-extentionを導入すると、発行されたActionをさかのぼっ�
 Reduxの動作としては、
 
  1. アプリケーション起動
- 2. 初期値を使用して最初の各Stateが作成されStoreを作る
- 3. 表示画面のコンポーネントはStoreの一部Stateをpropsとして参照
- 4. イベントが発生しActionCreatorへActionオブジェクトを作成してもらう。
- 5. 作成したActionをDispach関数でReducerへ渡す
- 6. Reducerは、現在のStateをもとに新しくStateを作成し、ActionオブジェクトによりStateを変更
- 7. propsが参照していたStateが変化したため再描画が発生する。
+ 2. 初期値を使用して最初の各Stateが作成され、Storeを作る
+ 3. 表示画面のコンポーネントは、Storeの一部Stateをpropsとして参照
+ 4. イベントが発生し、ActionCreatorへActionオブジェクトを作成してもらう
+ 5. 作成したActionを、Dispach関数でReducerへ渡す
+ 6. Reducerは現在のStateをもとに新しくStateを作成し、ActionオブジェクトによりStateを変更
+ 7. propsが参照していたStateが変化したため、再描画が発生する
 
  となります。
 
 //blankline
  例として、Cafeの各テーブルの状態を考えます。
 
- 1. お店オープン。最初はお客がいないためすべてのテーブル上は何もなし。
+ 1. お店オープン。最初はお客がいないため、すべてのテーブル上は何もなし。
  2. あるテーブルへお客が入り、ケーキをオーダー。
- 3. actioncreatorであるウェイトレスが注文伝票を作成
- 4. 注文伝票(Action)が店長により厨房へ運ばれる(dispatch)
- 5. 調理担当が注文したお客の現在のテーブル状態を別なテーブルで作成。
- 6. 調理担当が作成したテーブルに注文の品をのせ、現在のお客のテーブルと入れ換える
+ 3. actioncreatorで、あるウェイトレスが注文伝票を作成。
+ 4. 注文伝票(Action)が、店長により厨房へ運ばれる(dispatch)。
+ 5. 調理担当が、注文したお客の現在のテーブル状態を別なテーブルで作成。
+ 6. 調理担当が作成したテーブルに注文の品をのせ、現在のお客のテーブルと入れ換える。
 
  こんなイメージです。
 
 //image[yaruo-redux][Reduxの動作イメージ][scale=1.0,pos=H]
 
 =={sec04-03} Reduxの導入
-それでは、サンプルアプリケーションにReduxを導入します。現在はRedux-toolkitがあるのですが
+それでは、サンプルアプリケーションにReduxを導入します。現在はRedux-toolkitがあるのですが、
 Reduxの動きを知るために、素のReduxを導入します。
 
 //blankline
@@ -92,8 +92,8 @@ Reduxに必要なパッケージは、Redux関連とMiddlewareとデバッグ用
  * redux-logger
 
 //blankline
-TypeScriptを導入しているので型定義も導入します。
-これらは「devDependencies」にインストールしますので分けて導入します。
+TypeScriptを導入しているので、型定義も導入します。
+これらは「devDependencies」にインストールしますので、分けて導入します。
 
  * @types/react-redex
  * @types/redux-logger
@@ -126,7 +126,7 @@ Reduxのインストールが完了しましたので、サンプルアプリケ
  5. Storeの作成
  6. トップコンポーネントにStoreを登録
 
-の手順となります。
+となります。
 
 //blankline
 　サンプルアプリケーションでは、管理するデータは、
@@ -134,7 +134,7 @@ Reduxのインストールが完了しましたので、サンプルアプリケ
  * 読書日記データ
  * 編集対象・新規追加のdiaryId
 
-の２つだけでActionも少ないのですが、管理するデータカテゴリ(RDBでのテーブル)が増えると
+の２つだけでActionも少ないのですが、管理するデータカテゴリ(RDBでのテーブル)が増えると、
 同じようなファイルをたくさん作成します。
 
 //blankline
@@ -231,14 +231,14 @@ Actionに直接文字列を書き込んでも良いのですが、定数とし�
 
 //blankline
 Reducerは、ActionとStateを受け取って新しいStateを作成し変更を加えます。
-元のStateは変更しないため「不変(英語では、immutable)」と言われます。
+元のStateは変更しないため、「不変(英語では、immutable)」と言われます。
 
 //blankline
 Reducerは自分の管理するStateに対するActionをすべて受け付け、Actionのtypeで
 switch文で処理を分けます。
 
 //blankline
-また、Reducerの受け取るStateに初期値を設定することで初期化できます。
+また、Reducerの受け取るStateに初期値を設定することで、初期化できます。
 
 //list[][Reducerの作成]{
   import diaries, { Diary } from '../diaryData';
@@ -306,8 +306,8 @@ switch文で処理を分けます。
 //}
 
 ===={sec04-04-4} Reducerを組み合わせる
-アプリケーション内のすべてのReducerを「combineReducers関数」でまとめます。
-「combineReducers関数」はreduxパッケージからインポートします。
+アプリケーション内のすべてのReducerを、「combineReducers関数」でまとめます。
+「combineReducers関数」は、reduxパッケージからインポートします。
 
 //list[][combineReducers]{
   const reducers = combineReducers({
@@ -316,28 +316,28 @@ switch文で処理を分けます。
   });
 //}
 
-ここで、「key: value」形式でReducerを登録しますが、Reducerは先ほど作成したもので
-keyは、State内の参照名になります。コンポーネントでデータを参照する際には、
+ここで「key: value」形式でReducerを登録しますが、Reducerは先ほど作成したもので、
+keyはState内の参照名になります。コンポーネントでデータを参照する際には、
 
 //list[][Stateデータの参照方法]{
 　const 参照したいデータ = useSelector((state => state.key名));
 //}
 
-で行いますので、分かりkey名にします。
+で行いますので、分かりやすいkey名にします。
 
 ===={sec04-04-5} Storeの作成
-最後にデータの集合体、Middlewareの集合体のStoreを作成します。
+最後に、データの集合体、Middlewareの集合体のStoreを作成します。
 
 //blankline
-Storeを作成するための「createStore関数」もreduxパッケージからインポートします。
+Storeを作成するための「createStore関数」も、reduxパッケージからインポートします。
 
 //blankline
-Middlewareを登録するのは、reduxパッケージの「compose関数」でも良いのですが、
-今回登録するのは「logger」で開発時のみの使用を想定していますので、@redux-devTools/extentionの
+Middlewareを登録するのはreduxパッケージの「compose関数」でも良いのですが、
+今回登録するのは「logger」で、開発時のみの使用を想定していますので、@redux-devTools/extentionの
 「composeWithDevTools関数」を使用します。
 
 //blankline
-ただ、Middlewareを登録する「applyMiddleware関数」はreduxパッケージからインポートします。
+ただ、Middlewareを登録する「applyMiddleware関数」は、reduxパッケージからインポートします。
 「logger」のインポートも忘れないように。
 
 //blankline
@@ -383,10 +383,10 @@ Middlewareを登録するのは、reduxパッケージの「compose関数」で�
 
 //}
 
-以上が完了しましたら動作確認します。
+以上が完了しましたら、動作確認します。
 
 //blankline
-ブラウザが起動しましたらdevToolsを確認します。Reduxタブを開くとStateの内容を確認できます。
+ブラウザが起動しましたら、devToolsを確認します。Reduxタブを開くとStateの内容を確認できます。
 
 //image[devTools01][Stateの確認][scale=0.8,pos=H]
 =={sec04-05} コンポーネントの修正
@@ -396,13 +396,13 @@ Stateが無事に作成できましたので、各コンポーネントでデー
 //blankline
 サンプルアプリケーションでの変更点は、
 
- 1. DiaryBoadコンポーネントでStateから読書日記データを取得する。
- 2. DiaryCardHeaderコンポーネントで直接データを削除する。
+ 1. DiaryBoardコンポーネントで、Stateから読書日記データを取得する
+ 2. DiaryCardHeaderコンポーネントで、直接データを削除する
 
 の２点が主ですが、それに伴う細かなコードの変更があります。
 
-===={sec04-05-1} DiaryBoadコンポーネントでデータ取得
-Appコンポーネントで取得した「読書日記データdiaries」をDiaryBoadコンポーネントにてStateから取得します。
+===={sec04-05-1} DiaryBoardコンポーネントでデータ取得
+Appコンポーネントで取得した「読書日記データdiaries」を、DiaryBoardコンポーネントにてStateから取得します。
 
 //list[][Appコンポーネント]{
   import React from 'react';
@@ -423,10 +423,10 @@ Appコンポーネントで取得した「読書日記データdiaries」をDiar
   export default App;
 //}
 
-DiaryBoadコンポーネントで読書日記データを取得しますので、propsが不要になりました。useSelectorで
+DiaryBoardコンポーネントで読書日記データを取得しますので、propsが不要になりました。useSelectorで
 データを取得します。今までのコードはコメントアウトしました。
 
-//list[][DiaryBoadコンポーネントでデータ取得]{
+//list[][DiaryBoardコンポーネントでデータ取得]{
   const DiaryBoard = () => {
     // const { diaries } = props;
     const diaryData = useSelector((state: State) => state.diaries);
@@ -473,12 +473,12 @@ Reduxの導入で修正したコードは、
 
  * Appコンポーネント　読書日記データのバケツリレーをやめた
  * DiaryBoardコンポーネント　Stateからデータ取得、削除をDiaryCardHeaderコンポーネントへ委譲
- * DiaryCardコンポーネント 親コンポーネントから子コンポーネントへ渡す関数の引数変更
- * DiaryCardHeaderコンポーネント 削除を自身で行う 編集要求の引数変更
+ * DiaryCardコンポーネント  親コンポーネントから子コンポーネントへ渡す関数の引数変更
+ * DiaryCardHeaderコンポーネント  削除を自身で行う 編集要求の引数変更
 
  です。
 
-変更後のコードは、Appコンポーネントは上記です。ほかのコンポーネントは、こちらになります。
+変更後のコードのAppコンポーネントは上記です。ほかのコンポーネントはこちらになります。
 
 //list[][DiaryBoardコンポーネント]{
   import React, { useState } from 'react';
@@ -987,7 +987,7 @@ DiaryCardHeaderコンポーネントは、編集メニューがクリックさ�
           <DialogTitle>削除の確認だお〜</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              削除すると、基には戻せないお〜！それでも削除するのかお〜？
+              削除すると、元には戻せないお〜！それでも削除するのかお〜？
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -1004,7 +1004,7 @@ DiaryCardHeaderコンポーネントは、編集メニューがクリックさ�
 //}
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
   $ > git clone -b 07_install-redux https://github.com/yaruo-react-redux/yaruo-cra-template.git

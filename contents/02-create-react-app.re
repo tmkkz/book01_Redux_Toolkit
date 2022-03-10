@@ -15,14 +15,14 @@ Reactアプリケーションを作成するための最初のステップとし
 「create-react-app」は、コマンド一発でReactアプリケーション開発が数分で始められます。
 
 　@<br>{}
-ただし、Facebook(Meta社)を中心に開発されている便利なものなのですが、メンドウな設定などが隠されているため
-バージョンの合わないライブラリを導入すると整合性が崩れ手に負えなくなることもあります。
+ただし、Facebook(Meta社)を中心に開発されている便利なものなのですが、メンドウな設定などが隠されているため、
+バージョンの合わないライブラリを導入すると整合性が崩れ、手に負えなくなることもあります。
 
 　@<br>{}
 2021年12月14日にリリースされた「create-react-app V5.0.0」では、webpack、eslintなどは最新のものが使われています。
 
 　@<br>{}
-「ゼロから構築」を選択すると、最新のライブラリが使用できますが、webpack、ESLintなどの設定ファイルは自分で書かなくてはなりません。
+「ゼロから構築」を選択すると最新のライブラリが使用できますが、webpack、ESLintなどの設定ファイルは自分で書かなくてはなりません。
 使用するライブラリの設定自体は難しくないので、ここで勉強しておけば必ず役に立つはずです。
 
 　@<br>{}
@@ -37,7 +37,7 @@ Reactアプリケーションをゼロから作成するためには、
 
  * 「nodeプロジェクト」に必要なpackage.jsonを作成
  * reactなど必要なライブラリのインストール
- * 作成したアプリケーションが、古いブラウザでも実行できるようにコードを変換(Babel使用)
+ * 作成したアプリケーションが古いブラウザでも実行できるようにコードを変換(Babel使用)
  * 出力するファイルをまとめる(バンドルする - webpack使用)
 
 など、reactライブラリのインストール以外にも、Babelやwebpackをインストールして設定ファイルを作成しなくてはなりません。
@@ -46,7 +46,7 @@ Reactアプリケーションをゼロから作成するためには、
 また、使用するライブラリによっては、プラグインのインストールや設定など、アプリケーションのコードを書き始める前の作業がたいへんです。
 
 //blankline
-しかし、「そんなメンドウなことは、やってられない。」と誰しもが思ったか、
+しかし、「そんなメンドウなことはやってられない。」と誰しもが思ったか、
 すぐにでもコードを書き始めることのできるスタート用アプリケーションが、react開発元のFacebook(Meta)から提供されています。
 
 //blankline
@@ -62,8 +62,8 @@ Reactアプリケーションをゼロから作成するためには、
 > npx create react-app プロジェクト名 --template typescript
 //}
 
-エンターキーを押すと、作業が始まり「プロジェクト名」のフォルダが作成され、
-以下のように表示されればスグにでも開発に取りかかれます。
+エンターキーを押すと作業が始まり、「プロジェクト名」のフォルダが作成され、
+以下のように表示されれば、スグにでも開発に取りかかれます。
 
 //image[cra-options][][scale=0.7,pos=H]
 
@@ -117,7 +117,7 @@ Reactアプリケーションをゼロから作成するためには、
  > npm run start @<balloon>{もしくは、yarn start}
 //}
 
-すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトでは、port:3000でアプリケーションへアクセスできます。
+すると、webpackに同梱されている開発用のweb serverが起動し、デフォルトではport:3000でアプリケーションへアクセスできます。
 
 //terminal[][npm run start時]{
 Compiled successfully!
@@ -131,7 +131,7 @@ Note that the development build is not optimized.
 To create a production build, use yarn build.
 //}
 
-Google Chromeが起動し、http://localhost:3000へアクセスし以下のページが表示されます。
+Google Chromeが起動し、http://localhost:3000へアクセスし、以下のページが表示されます。
 
 //image[ok][][scale=0.5,pos=H]
 
@@ -143,7 +143,7 @@ Google Chromeが起動し、http://localhost:3000へアクセスし以下のペ�
 
 ==={sec-03cra-desc} create-react-appで作成された中身
 
-create-react-appで作成された中身は、以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
+create-react-appで作成された中身は以下となります(使用するテンプレートにより作成されるファイル・フォルダは異なる)。
 
 //image[noMatter][][scale=0.7,pos=H]
 
@@ -239,7 +239,7 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 
 =={sec-04-start}　ゼロから構築してみる
 
-本章では、最新のライブラリを使用してゼロからReact/TypeScriptの環境を構築します。
+本章では、最新のライブラリを使用して、ゼロからReact/TypeScriptの環境を構築します。
 
 //blankline
 ステップ毎にGitHub上でブランチを作成してありますので、どこからでも始めていただけます。
@@ -282,7 +282,7 @@ package.jsonの「dependencies」には、実行に必要でインストール�
 作成された「package.json」が表示されます。
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 01_start-node-project https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -307,16 +307,16 @@ webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある�
 //image[bandle][][scale=0.7,pos=H]
 
 //blankline
-しかし、すべてを1つのファルとするよりも「htmlファイル」、「cssファイル」、画像ファイルを別ファイルとして出力し、
+しかし、すべてを1つのファルとするよりも、「htmlファイル」、「cssファイル」、画像ファイルを別ファイルとして出力し、
 ブラウザがファイルを並列にダウンロードできると効率がよくなり、表示速度も速くなります。
-そのため、上図のように、複数ファイルに出力します。
+そのため、上図のように複数ファイルに出力します。
 
 //blankline
 それでは、webpackをインストールし、バンドラーの動きを確認しながら設定ファイルを作成していきます。
 
 //blankline
 ターミナルに以下のコマンドを入力します。「-D(または、--save-dev)」のオプションは、
-開発時のみ必要で製品版には含まないライブラリをインストールするときに使います。
+開発時のみ必要で、製品版には含まないライブラリをインストールするときに使います。
 
 //blankline
 インストールすると、「package.json」の「devDependencies」に追記されます。
@@ -337,7 +337,7 @@ webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある�
   found 0 vulnerabilities
 //}
 
-「package.json」は、以下のようになります。「ーD」オプションを付けたため、「devDependencies」以下に
+「package.json」は以下のようになります。「ーD」オプションを付けたため、「devDependencies」以下に
 追記されています。
 
 //list[][package.json]{
@@ -385,7 +385,7 @@ webpackとは、(@<href>{https://webpack.js.org/, 本家})のトップにある�
 
 //blankline
 @<strong>{2. ファイルを作成}@<br>{}
-「lodash」ライブラリをインストールし、srcフォルダに、下記の「index.js」ファイルを作成します。
+「lodash」ライブラリをインストールし、srcフォルダに下記の「index.js」ファイルを作成します。
 //terminal[][lodashのインストール]{
  > npm install lodash
 //}
@@ -488,7 +488,7 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 
 //clearpage
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 02_webpack-install https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -524,7 +524,7 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 
 //blankline
 @webpack-cli/generatorsと依存関係をもつパッケージがインストールされると、設定ファイルを作成するための質問が始まります。
-私が選んだ答えと括弧内は表示される選択肢です。
+私が選んだ答えと、括弧内は表示される選択肢です。
 
 //blankline
  * どのタイプのJSを使いますか？　--> TypeScript(none, ES6)
@@ -678,7 +678,7 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
 @<strong>{プラグインのインストール}@<br>{}
 
 //image[plugins][][scale=0.7,pos=H]
-追加で、以下のプラグイン、ローダも追加します。
+以下のプラグイン、ローダも追加します。
 
  * uglify-js プロダクション出力時にconsole関数を除去
  * terser-webpack-plugin 上記をwebpackで使用する場合必要
@@ -690,11 +690,11 @@ devToolsで「main.js」を確認すると、node_modulesフォルダ以下に�
  > npm install -D uglify-js terser-webpack-plugin css-minimizer-webpack-plugin webpack-merge
 //}
 
-追加のプラグイン、ローダの設定を追加したwebpack.config.jsです。devServerでページを表示する際に、
-デフォルトのブラウザではなくdevToolsの強力な「Google Chrome」を使うようにしました。
+追加したプラグインと、ローダの設定を追加したwebpack.config.jsです。devServerでページを表示する際に、
+デフォルトのブラウザではなく、devToolsの強力な「Google Chrome」を使うようにしました。
 
 //blankline
-OS毎にChromeのアプリケーション名が違うためOSを取得し対応した「Chrome名」に変換するためのswitch文を追加しています。
+OS毎にChromeのアプリケーション名が違うため、OSを取得し対応した「Chrome名」に変換するためのswitch文を追加しています。
 「create-react-app」だと、結構複雑なことをやってGoogle Chromeを起動しています。
 
 //blankline
@@ -831,7 +831,7 @@ OS毎にChromeのアプリケーション名が違うためOSを取得し対応�
 適当な画像ファイルを用意し、「src/assets/images」フォルダを作成し追加します。
 
 //blankline
-コマンドを「package.json」に、スクリプトとして追加します。
+コマンドを「package.json」にスクリプトとして追加します。
 
 //list[][package.jsonのスクリプト部分]{
   "scripts": {
@@ -849,8 +849,8 @@ OS毎にChromeのアプリケーション名が違うためOSを取得し対応�
  > npm run start
 //}
 
-「div」要素の背景、文字色も「style.css」、「style.scss」から作成された「main.css」から反映されています。
-また、「index.html」には、作成された「main.js」、「main.css」を読み込む部分はありませんが、
+「div」要素の背景、文字色も、「style.css」、「style.scss」から作成された「main.css」から反映されています。
+また、「index.html」には作成された「main.js」、「main.css」を読み込む部分はありませんが、
 webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されています。
 
 //image[webpack_test04][desc][scale=0.6,border=on,pos=H]
@@ -868,14 +868,14 @@ webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されてい�
  * main.css
  * images/画像ファイル
 
-が出力されていますので、ファイル開き内容を確認してください。
+が出力されていますので、ファイル開き、内容を確認してください。
 
 //image[webpack_test05][][scale=1.0]
 
 //clearpage
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 03_setup-webpack-config-file https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -886,7 +886,7 @@ webpackが「HtmlWebpackPlugin」で自動で読込部分が追加されてい�
 
 
 ==={sec-04-webpack-config-all} webpack設定ファイルを分割する
-問題なく動作した「webpack.config.js」ですが、今後の運用を考え「開発用」、「プロダクション用」、「共通分」に切り分けます。
+問題なく動作した「webpack.config.js」ですが、今後の運用を考え、「開発用」、「プロダクション用」、「共通分」に切り分けます。
 devServer関連はプロダクションには関係ありませんし、minimizer関連は開発時には邪魔です。
 
 @<href>{https://webpack.js.org/guides/production/, 本家でも推奨}されています。
@@ -903,8 +903,8 @@ devServer関連はプロダクションには関係ありませんし、minimize
  開発用はdevServer関係、プロダクション用はminimizer関係、それ以外は共用として分けていきます。
 
 //blankline
-「webpack.dev.js」を作成し、「webpack.config.js」全体を貼り付けdevServer、debtoolを
-残し、「module」はCSS関係のみで「style-loader」を使うように変更します。
+「webpack.dev.js」を作成し、「webpack.config.js」全体を貼り付け、devServer、debtoolを
+残し、「module」はCSS関係のみで、「style-loader」を使うように変更します。
 
 //blankline
 また、「mode:'development'」を追加します。
@@ -955,11 +955,11 @@ devServer関連はプロダクションには関係ありませんし、minimize
 
 //}
 
-プロダクション用も、「webpack.config.js」全体を貼り付け、CssMinimizer関連を中心に「module」はCSSの抽出のままで
+プロダクション用も「webpack.config.js」全体を貼り付け、CssMinimizer関連を中心に「module」はCSSの抽出のままで、
 不要な部分を削除します。
 
 //blankline
-こちらは、「mode:'production'」を追加します。
+こちらは「mode:'production'」を追加します。
 
 //list[][webpack.prod.js]{
   const { merge } = require('webpack-merge');
@@ -1003,7 +1003,7 @@ devServer関連はプロダクションには関係ありませんし、minimize
   });
 //}
 
-共通部分も、「webpack.config.js」全体を貼り付け、上記ファイルにあるものを削除します。
+共通部分も「webpack.config.js」全体を貼り付け、上記ファイルにあるものを削除します。
 
 //list[][webpack.common.js]{
   const path = require('path');
@@ -1057,7 +1057,7 @@ webpackの設定ファイル名がデフォルトから変更になったので�
 ターミナル上で、「npm run start」、「npm run build」で動作確認を行います。
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 04_webpack-config-split https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -1081,7 +1081,7 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
 
 //image[babel02][使用するツールを選択][scale=0.9,pos=H]
 
-このプロジェクトでは、「webpack」を使用しますので、「webpack」ボタンをクリックします。
+このプロジェクトでは「webpack」を使用しますので、「webpack」ボタンをクリックします。
 
 //blankline
 手順2〜4が表示されましたので、順に実行していきます。
@@ -1159,7 +1159,7 @@ Babel.jsのトップページの上部にあるメニューの「Setup」をク�
   }
 //}
 
-以上で、Babel.jsの導入は完了です。
+以上でBabel.jsの導入は完了です。
 
 ==== 動作を確認してみる。
 
@@ -1206,7 +1206,7 @@ Babel.js導入後の実行結果です。
 //image[babel07][concatに変換されています。][scale=0.9]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 05_babel-install https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -1216,14 +1216,14 @@ Babel.js導入後の実行結果です。
 
 ==={sec04-react} Reactのインストール
 //warning[index.tsを削除してね。]{
-ここで気が付いたのですが、「src/index.ts」は、現時点で不要なので削除してください。
+ここで気が付いたのですが、「src/index.ts」は現時点で不要なので削除してください。
 //}
 
 そろそろ完成に近付いてきました。Reactをインストールします。
 
 //blankline
 Reactは、拡張子「.jsx」を使ったHTMLにJavaScriptを埋め込むコンポーネントがメインです。
-通常のJavaScriptとは記法が違うため「Babel.js」に理解してもらえるように「@babel/preset-react」を
+通常のJavaScriptとは記法が違うため、「Babel.js」に理解してもらえるように「@babel/preset-react」を
 インストールします。
 
 //image[react-kita][][scale=0.8,pos=H]
@@ -1259,16 +1259,16 @@ Reactを使うためにインストールするパッケージは、
  > npm install react react-dom
 //}
 
-以上で、Reactのインストールは完了しましたので動作確認を行います。
+以上でReactのインストールは完了しましたので、動作確認を行います。
 
 //image[pray3][][scale=0.7,pos=H]
 
 手順は、
 
  1. src/index.htmlに描画する場所を指定する。
- 2. src/index.jsで上記「index.html」へReactDOMで描画する。
- 3. Appコンポーネントをsrc/components/App.jsxファイルへ作成する。
- 4. 「webpack.common.js」へReactコンポーネント「jsx」を扱うよう変更する。
+ 2. src/index.jsで、上記「index.html」へReactDOMで描画する。
+ 3. Appコンポーネントを、src/components/App.jsxファイルへ作成する。
+ 4. 「webpack.common.js」へ、Reactコンポーネント「jsx」を扱うよう変更する。
 
 となります。
 
@@ -1288,7 +1288,7 @@ Reactを使うためにインストールするパッケージは、
 
 //}
 
-「src/index.js」にてReactDOMを使用して「public/index.html」へ描画する。
+「src/index.js」にて、ReactDOMを使用して「public/index.html」へ描画する。
 
 //list[][src/index.js]{
   import React from 'react';
@@ -1391,7 +1391,7 @@ HTML内にJavaScriptを埋め込む記法となります。
 //image[babel09][reactの動作確認][scale=0.7]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 06_react-install https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -1402,12 +1402,12 @@ HTML内にJavaScriptを埋め込む記法となります。
 
 ==={sec04-typescript} TypeScriptのインストール
 ここまで作成したReactプロジェクトにTypeScriptを導入します。
-本家Reactでは、@<href>{https://ja.reactjs.org/docs/static-type-checking.html#typescript, TypeScriptの導入}に関して
+本家Reactでは、@<href>{https://ja.reactjs.org/docs/static-type-checking.html#typescript, TypeScriptの導入}に関して、
 以下のような手順を示しています。
 
 //image[typescript01][TypeScriptの導入][scale=0.8]
 
-では手順に従って、TypeScriptを導入していきます。
+では、手順に従って、TypeScriptを導入していきます。
 
 //blankline
 最初は、TypeScriptパッケージのインストールです。
@@ -1437,7 +1437,7 @@ You can learn more at https://aka.ms/tsconfig.json
 //}
 
 コマンドを実行すると、「tsconfig.json」ファイルが作成されます。
-コメントアウトされているものは、デフォルト値です。
+コメントアウトされているものはデフォルト値です。
 
 //image[typescript04][作成されたtsconfig.json][scale=0.8]
 
@@ -1483,7 +1483,7 @@ TypeScript開発元のMicrosoftは、Reactへ導入した
   }
 //}
 
-Microsoftお勧めの設定に修正したものが、こちらです。コメントアウトされているものは削除しています。
+Microsoftお勧めの設定に修正したものがこちらです。コメントアウトされているものは削除しています。
 
 //list[][修正後のtsconfig.json][fold=off]{
   {
@@ -1573,12 +1573,12 @@ TypeScriptは、ファイル拡張子が、
 declare module '*.png'
 //}
 
-作成したファイルを「tsconfig.json」に型定義ファイルの位置を追加します。
+ファイルを作成したら、「tsconfig.json」に型定義ファイルの位置を追加します。
 
 //list[][tsconfig.json]{
   "compilerOptions": {
     "typeRoots": [
-      "types"
+      "types"　@baloon{/src/types(/index.d.tsは省略)}
     ]
   }
 //}
@@ -1594,7 +1594,7 @@ lodash部分のコードが削除されたトップページを表示します�
 //image[typescript03][TypeScript導入後動作確認][scale=0.6,pos=H]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 07_typescript-install https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -1611,7 +1611,7 @@ lodash部分のコードが削除されたトップページを表示します�
 それが、いつしかコードをチェック・解析することを「lint」、lintを行うプログラムをlinterと呼ぶようになったそうです。
 
 //blankline
-JavaScript(ECMAScript)用のlinterが、「eslint」になります。もちろん、Java、HTML、Pythonなどにもlinterがあります。
+JavaScript(ECMAScript)用のlinterが「eslint」になります。もちろん、Java、HTML、Pythonなどにもlinterがあります。
 
 //image[linter][][scale=0.7,pos=H]
 
@@ -1665,10 +1665,10 @@ Need to install the following packages:
 Ok to proceed? (y) y
 //}
 
-「y」を入力しエンターキーを押すと「eslint」がインストールされ、設定ファイルを作成するための質問が始まります。
+「y」を入力しエンターキーを押すと、「eslint」がインストールされ、設定ファイルを作成するための質問が始まります。
 
 //blankline
-「?」が行頭にある質問と選択枝が表示されますので、カーソルキーで選択枝を選びエンターキーで次ぎの質問に移ります。
+「?」が行頭にある質問と選択枝が表示されますので、カーソルキーで選択枝を選びエンターキーで次の質問に移ります。
 //terminal[][eslintの質問に答える]{
   ? How would you like to use ESLint? …
     To check syntax only　　　　　　　　　　　　
@@ -1676,7 +1676,7 @@ Ok to proceed? (y) y
     To check syntax, find problems, and enforce code style
 //}
 
-最後の質問に答えると必要なパッケージをインストールするか尋ねられますので「Yes」と答えてます。
+最後の質問に答えると、必要なパッケージをインストールするか尋ねられますので、「Yes」と答えています。
 //terminal[][eslintへの答え]{
   ✔ How would you like to use ESLint? · style
   ✔ What type of modules does your project use? · esm
@@ -1737,22 +1737,22 @@ Ok to proceed? (y) y
 //}
 
 設定ファイル「.eslintrc.js」で、どのようなルールが適用されるのかを確認します。
-適用されるルールが、「current_rules.txt」に書き出されます。
+適用されるルールが「current_rules.txt」に書き出されます。
 
 //image[rules][][scale=0.7,pos=H]
 
 //blankline
-書き出されたルールは、ルール名に適用方法{"off(適用しない)","warn(警告)","error(エラー)"}が記されています。
+書き出されたルールは、ルール名に適用方法{"off(適用しない)"、"warn(警告)"、"error(エラー)"}が記されています。
 表記は、{0,1,2}の数字で表示される場合もあります。
 同じルールがあった場合には、後から読み込まれたルールに上書きされます。
-個別に上書きしたいものは「.eslintrc.js」ファイルの「rules」セクションに追加します。
+個別に上書きしたいものは、「.eslintrc.js」ファイルの「rules」セクションに追加します。
 
 //terminal[][eslint設定で適用されるルール]{
 $ npx eslint --print-config .eslintrc.js > current_rules.txt
 //}
 
 //clearpage
-「eslint --init」時にインストールされたルールが適用されるように「extends」に追加します。
+「eslint --init」時にインストールされたルールが適用されるように、「extends」に追加します。
 
 //blankline
 次に、TypeScriptもチェックできるようにルールを追加します。「plugin:」の下3行を追加しました。
@@ -1768,9 +1768,9 @@ $ npx eslint --print-config .eslintrc.js > current_rules.txt
   ],
 //}
 
-再度、ルールを出力すると適用されるルールがずいぶん増えているのが分かります。
+再度ルールを出力すると、適用されるルールがずいぶん増えているのが分かります。
 
-TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更する。
+TypeScript用ルールを追加しましたので、「parserOptions」を以下のように変更します。
 //list[][.eslintrc.jsのparserOptions部分]{
   "parserOptions": {
     "ecmaFeatures": {
@@ -1788,7 +1788,7 @@ TypeScript用ルールを追加しましたので、「parserOptions」を以下
 //image[rules2][][scale=0.7,pos=H]
 
 ルール「import/extensions」は、インポート宣言でnode_modules以下にあるパッケージからは拡張子が不要(import aaa from 'aaa')
-で、相対パスからのimportは、拡張子が必要と言うルールです。
+で、相対パスからのimportは拡張子が必要というルールです。
 
 現在はすべてがエラー、node_modules下のパッケージ内の指定された拡張子は除外となっていますが、
 node_modules下以外でも{js,jsx,ts,tsx}は除外したいのでルールを追加します。
@@ -1806,7 +1806,7 @@ node_modules下以外でも{js,jsx,ts,tsx}は除外したいのでルールを�
 
 「react/jsx-filename-extension」は、JSXを含むファイルの拡張子を制限するルールです。
 
-現時点では、拡張子「.jsx」に制限されていますが、拡張子「.tsx」も追加したいのでルールに追加します。
+現時点では拡張子「.jsx」に制限されていますが、拡張子「.tsx」も追加したいのでルールに追加します。
 //list[][react/jsx-filename-extentionの現時点]{
   "react/jsx-filename-extension": [
     "error",
@@ -1818,8 +1818,8 @@ node_modules下以外でも{js,jsx,ts,tsx}は除外したいのでルールを�
   ],
 //}
 
-「react/react-in-jsx-scope」は、JSXファイルに「import React from 'react'」がない場合にはエラーにしてくれるのですが
-React17からは、「import React from 'react'」を書かなくてもよくなりました。そのため、このルールをOFFにします。
+「react/react-in-jsx-scope」は、JSXファイルに「import React from 'react'」がない場合にはエラーにしてくれるのですが、
+React17からは「import React from 'react'」を書かなくてもよくなりました。そのため、このルールをOFFにします。
 //list[][react/react-in-jsx-scope]{
   "react/react-in-jsx-scope": [
     "error"
@@ -1827,7 +1827,7 @@ React17からは、「import React from 'react'」を書かなくてもよくな
 //}
 
 「react/function-component-definition」は、関数コンポーネントに特定の関数タイプを強制します。
-現時点では、functionの使用を強制されるので、アロー関数強制に変更します。
+現時点ではfunctionの使用を強制されるので、アロー関数強制に変更します。
 //list[][react/function-component-definitionの現在]{
   "react/function-component-definition": [
     "error",
@@ -1838,8 +1838,8 @@ React17からは、「import React from 'react'」を書かなくてもよくな
   ],
 //}
 
-「no-void」は、void演算子を使用するとundefinedを返すため禁止してあります。
-「create-react-app」で作成される「reportWebVitals.ts」でvoid使います。
+「no-void」は、void演算子を使用するとundefinedを返すため、禁止してあります。
+「create-react-app」で作成される「reportWebVitals.ts」でvoidを使います。
 文としての使用だけを可能にします。
 //list[][no-voidの現在]{
   "no-void": [
@@ -1967,7 +1967,7 @@ The file must be included in at least one of the projects provided.
 「tsconfig.json」では、「module」で「commonjs」を指定しています。
 
 //blankline
-そのため、「eslintrc.js」ファイルが、どこからもimportされていないので警告が出ています。
+そのため、「eslintrc.js」ファイルがどこからもimportされていないので、警告が出ています。
 
 //blankline
 解決策として、「eslint」の対象外とするために「.eslintignore」を作成し、「eslintrc.js」を指定します。
@@ -1979,7 +1979,7 @@ The file must be included in at least one of the projects provided.
 これでエラーが解消されます。
 
 //note[]{
-ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
 > git clone -b 07_typescript-install https://github.com/yaruo-react-redux/yaruo-start-template.git
@@ -2013,7 +2013,7 @@ The file must be included in at least one of the projects provided.
 　❯ npm install -D eslint-config-airbnb
 //}
 
-設定ファイル「.eslintrc.js」を「ゼロからの構築」と同じものを作成します。
+設定ファイル「.eslintrc.js」を、「ゼロからの構築」と同じものを作成します。
 
 //list[][.eslintrc.js]{
   module.exports = {
@@ -2071,7 +2071,7 @@ The file must be included in at least one of the projects provided.
 
 //}
 
-Prettierはインストールされていないためインストールします。
+Prettierはインストールされていないため、インストールします。
 
 //terminal[][create-react-app作成プロジェクトへprettierのインストール]{
  > npm install -D prettier eslint-config-prettier
@@ -2116,7 +2116,7 @@ Prettierはインストールされていないためインストールします
   },
 //}
 
-以上で、「create-react-app」で作成したプロジェクトに追加でairbnbのチェックを追加できました。
+以上で、「create-react-app」で作成したプロジェクトにairbnbのチェックを追加できました。
 
 
 =={sec-04fix} eslint、prettierの指摘を修正
@@ -2128,11 +2128,11 @@ VSCodeにPrettier拡張機能を追加してあれば、
 以下のように、VSCode側で設定すると、ファイルを保存する度に自動で修正をいれることもできます。
 
 //blankline
-私は、修正を自分のタイミングで行いたいのでVSCode側の設定は行っていません。
+私は修正を自分のタイミングで行いたいので、VSCode側の設定は行っていません。
 
 //blankline
 もし、VSCode側の設定をする場合には、VSCodeで@<br>{}
-[File]->[Preferences]->[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加するか、
+[File]->[Preferences]->[Settings]にて、以下の各項目を検索して設定するか、settings.jsonへ追加します。
 このプロジェクトのみ適用の場合は、プロジェクトフォルダ直下に「.vscode」フォルダを作成し、「settings.json」ファイルへ書き込みます。
 
 ユーザー設定ファイルの内容が、この設定で上書きされます。
@@ -2171,14 +2171,14 @@ VSCode上で、@<br>{}
 まずは、App.tsxファイルを修正します。
 
 //blankline
-エラー内容は、「Functionコンポーネントは、arrow関数にしなさい。」とのことで、
-これは、rulesに追加したためです。
+エラー内容は「Functionコンポーネントは、arrow関数にしなさい。」とのことで、
+これはrulesに追加したためです。
 
 //image[cra-fix_app_tsx][App.tsxの修正][scale=0.8]
 
 //note[]{
   筆者がVSCodeを日本語化していないのは、エラーメッセージでググる場合を考えてのことです。
-  英語でのエラーメッセージの方が的確なページをみつけやすいと考えています。
+  英語でのエラーメッセージの方が、的確なページをみつけやすいと考えています。
 //}
 
 では、指摘されている点を修正していきます。
@@ -2210,7 +2210,7 @@ VSCode上で、@<br>{}
   export default App;
 //}
 
-次に、「repotWebVitals.ts」でエラーが発生しています。これはimpor文に「void」を付けることで解決します。
+次に、「repotWebVitals.ts」でエラーが発生しています。これはimport文に「void」を付けることで解決します。
 
 //list[][修正後のreportWebVitals.ts]{
   import { ReportHandler } from 'web-vitals';
@@ -2245,7 +2245,7 @@ VSCode上で、@<br>{}
 //image[ok3][][scale=0.5]
 
 //note[]{
-  ここまでの内容は、GitHub上で、以下のコマンドでクローンできます。
+  ここまでの内容は、GitHub上で以下のコマンドでクローンできます。
 #@#<!-- textlint-disable -->
 //terminal[][GitHub]{
   $ > git clone https://github.com/yaruo-react-redux/yaruo-cra-template.git
@@ -2255,7 +2255,7 @@ VSCode上で、@<br>{}
 
 =={sec-chap02review} 第2章のまとめ
 #@#<!-- textlint-disable -->
-Reactを使用しスタートアップ用のアプリケーションの作成方法を
+Reactを使用し、スタートアップ用のアプリケーションの作成方法を、
 #@#<!-- textlint-enable -->
 
  * 「create-react-app」コマンドで作成
@@ -2264,4 +2264,4 @@ Reactを使用しスタートアップ用のアプリケーションの作成方
  の2通りで解説しました。
 
 //blankline
-バグの混入を防いだりより良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
+バグの混入を防いだり、より良いコーディングをするためにも、ESlint、Prettierを導入しましょう。
